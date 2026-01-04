@@ -1,4 +1,3 @@
-// tests/colour/services/colourConversion.test.ts
 import { convertSRGBToOKLCH } from "@/src/colour/services/colourConversion";
 import { describe, expect, it } from "vitest";
 
