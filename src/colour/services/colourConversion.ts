@@ -1,6 +1,6 @@
 import { convert, OKLCH as OKLCHSpace, sRGB } from "@texel/color";
 
-type SRGB ={
+export type SRGB ={
     r: number,
     g: number,
     b: number
