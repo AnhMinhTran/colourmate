@@ -1,6 +1,6 @@
 import { clamp } from "@texel/color";
 
-export type OKLCH = {
+export type OKLCHColour = {
   l: number; // 0..1
   c: number; // >= 0
   h: number; // degrees (may be NaN for neutrals depending on source)
@@ -34,7 +34,7 @@ export function wrapDeg(deg: number): number {
  * Pure function, deterministic, UI-agnostic.
  */
 export function deriveMunsellLikeFromOKLCH(
-  oklch: OKLCH,
+  oklch: OKLCHColour,
   options: DeriveOptions = {}
 ): MunsellLike {
   const {
