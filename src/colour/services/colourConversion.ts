@@ -1,4 +1,4 @@
-import { convert, OKLCH as OKLCHSpace, sRGB } from "@texel/color";
+import { convert, OKLCH, sRGB } from "@texel/color";
 
 export type SRGB ={
     r: number,
@@ -6,17 +6,17 @@ export type SRGB ={
     b: number
 };
 
-type OKLCH = {
+type OKLCHColour = {
     l: number,
     c: number,
     h:number
 };
 
-export function convertSRGBToOKLCH(rgb: SRGB): OKLCH {
+export function convertSRGBToOKLCH(rgb: SRGB): OKLCHColour {
     const r = rgb.r / 255;
     const b = rgb.b / 255;
     const g = rgb.g / 255;
 
-    const [l, c, h] = convert([r, g, b], sRGB, OKLCHSpace);
+    const [l, c, h] = convert([r, g, b], sRGB, OKLCH);
     return {l, c, h}
 }
