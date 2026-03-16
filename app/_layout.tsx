@@ -4,7 +4,7 @@ import { SQLiteProvider } from 'expo-sqlite';
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 
-import { useColorScheme } from '@/hooks/use-color-scheme';
+import { useColorScheme } from '@/src/colour/ui/hooks/use-color-scheme.web';
 import { migrateDb } from '@/src/infrastructure/db/migrate';
 
 export const unstable_settings = {
