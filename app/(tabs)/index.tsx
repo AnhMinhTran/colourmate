@@ -1,98 +1,278 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import {
+  Alert,
+  FlatList,
+  KeyboardAvoidingView,
+  Platform,
+  Pressable,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from 'react-native';
+import { useSQLiteContext } from 'expo-sqlite';
 
-import { HelloWave } from '@/components/hello-wave';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { Link } from 'expo-router';
+import { ColourPoint } from '@/src/colour/models/colourPoint';
+import { SqliteColourPointRepository } from '@/src/colour/repositories/sqliteColourPointRepository';
 
-export default function HomeScreen() {
+export default function ColourPointScreen() {
+  const db = useSQLiteContext();
+  const repository = useMemo(() => new SqliteColourPointRepository(db), [db]);
+
+  const [colours, setColours] = useState<ColourPoint[]>([]);
+  const [name, setName] = useState('');
+  const [brand, setBrand] = useState('');
+  const [r, setR] = useState('');
+  const [g, setG] = useState('');
+  const [b, setB] = useState('');
+  const [tag, setTag] = useState('');
+
+  /**
+   * Loads all colour points from the database and updates state.
+   * @throws If the database query fails
+   */
+  const loadColours = useCallback(async () => {
+    const all = await repository.findAll();
+    setColours(all);
+  }, [repository]);
+
+  useEffect(() => {
+    loadColours();
+  }, [loadColours]);
+
+  /**
+   * Validates RGB input, creates a ColourPoint, persists it, and refreshes the list.
+   * Clears the form on success. Shows an alert on validation or database errors.
+   */
+  const handleAdd = async () => {
+    try {
+      const rVal = parseInt(r, 10);
+      const gVal = parseInt(g, 10);
+      const bVal = parseInt(b, 10);
+
+      if ([rVal, gVal, bVal].some((v) => isNaN(v) || v < 0 || v > 255)) {
+        Alert.alert('Invalid RGB', 'Each RGB value must be an integer between 0 and 255.');
+        return;
+      }
+
+      const tags = tag
+        .split(',')
+        .map((t) => t.trim())
+        .filter(Boolean);
+
+      const point = ColourPoint.create({
+        name,
+        brand,
+        rgb: { r: rVal, g: gVal, b: bVal },
+        tag: tags,
+      });
+
+      await repository.create(point);
+      setName('');
+      setBrand('');
+      setR('');
+      setG('');
+      setB('');
+      setTag('');
+      await loadColours();
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : 'Unknown error';
+      Alert.alert('Error', message);
+    }
+  };
+
+  /**
+   * Deletes a colour point by id and refreshes the list.
+   * @param id - The unique identifier of the colour point to remove
+   */
+  const handleDelete = async (id: string) => {
+    await repository.delete(id);
+    await loadColours();
+  };
+
+  /**
+   * Renders a single colour point row with a colour swatch, details, and delete button.
+   * @param item - The ColourPoint to render
+   */
+  const renderItem = ({ item }: { item: ColourPoint }) => {
+    const bgColor = `rgb(${item.rgb.r}, ${item.rgb.g}, ${item.rgb.b})`;
+    return (
+      <View style={styles.row}>
+        <View style={[styles.swatch, { backgroundColor: bgColor }]} />
+        <View style={styles.rowInfo}>
+          <Text style={styles.rowName}>{item.name}</Text>
+          <Text style={styles.rowDetail}>{item.brand}</Text>
+          <Text style={styles.rowDetail}>
+            RGB({item.rgb.r}, {item.rgb.g}, {item.rgb.b})
+          </Text>
+          <Text style={styles.rowDetail}>
+            XYZ({item.coordinate.x.toFixed(3)}, {item.coordinate.y.toFixed(3)},{' '}
+            {item.coordinate.z.toFixed(3)})
+          </Text>
+          {item.tag.length > 0 && (
+            <Text style={styles.rowDetail}>Tags: {item.tag.join(', ')}</Text>
+          )}
+        </View>
+        <Pressable onPress={() => handleDelete(item.id)} style={styles.deleteBtn}>
+          <Text style={styles.deleteTxt}>Delete</Text>
+        </Pressable>
+      </View>
+    );
+  };
+
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <Link href="/modal">
-          <Link.Trigger>
-            <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-          </Link.Trigger>
-          <Link.Preview />
-          <Link.Menu>
-            <Link.MenuAction title="Action" icon="cube" onPress={() => alert('Action pressed')} />
-            <Link.MenuAction
-              title="Share"
-              icon="square.and.arrow.up"
-              onPress={() => alert('Share pressed')}
-            />
-            <Link.Menu title="More" icon="ellipsis">
-              <Link.MenuAction
-                title="Delete"
-                icon="trash"
-                destructive
-                onPress={() => alert('Delete pressed')}
-              />
-            </Link.Menu>
-          </Link.Menu>
-        </Link>
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+    >
+      <Text style={styles.title}>ColourPoint Test</Text>
 
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+      <View style={styles.form}>
+        <TextInput
+          style={styles.input}
+          placeholder="Name"
+          placeholderTextColor="#999"
+          value={name}
+          onChangeText={setName}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Brand"
+          placeholderTextColor="#999"
+          value={brand}
+          onChangeText={setBrand}
+        />
+        <View style={styles.rgbRow}>
+          <TextInput
+            style={[styles.input, styles.rgbInput]}
+            placeholder="R"
+            placeholderTextColor="#999"
+            keyboardType="numeric"
+            value={r}
+            onChangeText={setR}
+          />
+          <TextInput
+            style={[styles.input, styles.rgbInput]}
+            placeholder="G"
+            placeholderTextColor="#999"
+            keyboardType="numeric"
+            value={g}
+            onChangeText={setG}
+          />
+          <TextInput
+            style={[styles.input, styles.rgbInput]}
+            placeholder="B"
+            placeholderTextColor="#999"
+            keyboardType="numeric"
+            value={b}
+            onChangeText={setB}
+          />
+        </View>
+        <TextInput
+          style={styles.input}
+          placeholder="Tags (comma-separated)"
+          placeholderTextColor="#999"
+          value={tag}
+          onChangeText={setTag}
+        />
+        <Pressable style={styles.addBtn} onPress={handleAdd}>
+          <Text style={styles.addBtnText}>Add Colour</Text>
+        </Pressable>
+      </View>
+
+      <FlatList
+        data={colours}
+        keyExtractor={(item) => item.id}
+        renderItem={renderItem}
+        style={styles.list}
+        ListEmptyComponent={<Text style={styles.empty}>No colours saved yet.</Text>}
+      />
+    </KeyboardAvoidingView>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    paddingTop: 60,
+    paddingHorizontal: 16,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 16,
+    textAlign: 'center',
+  },
+  form: {
+    marginBottom: 16,
+    gap: 8,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 8,
+    padding: 10,
+    fontSize: 16,
+  },
+  rgbRow: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  rgbInput: {
+    flex: 1,
+  },
+  addBtn: {
+    backgroundColor: '#4A90D9',
+    borderRadius: 8,
+    padding: 12,
+    alignItems: 'center',
+  },
+  addBtnText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  list: {
+    flex: 1,
+  },
+  row: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
+    paddingVertical: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#eee',
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+  swatch: {
+    width: 48,
+    height: 48,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#ddd',
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  rowInfo: {
+    flex: 1,
+    marginLeft: 12,
+  },
+  rowName: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  rowDetail: {
+    fontSize: 12,
+    color: '#666',
+  },
+  deleteBtn: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+  },
+  deleteTxt: {
+    color: '#E44',
+    fontWeight: '600',
+  },
+  empty: {
+    textAlign: 'center',
+    color: '#999',
+    marginTop: 32,
   },
 });

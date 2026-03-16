@@ -1,8 +1,8 @@
 import { ColourPoint } from "../models/colourPoint";
 
-interface ColourPointRepository{
-    create(colourPoint: ColourPoint): Promise<ColourPoint>;
-    update(colourPoint: ColourPoint): Promise<ColourPoint>;
+export interface ColourPointRepository{
+    create(colourPoint: ColourPoint): Promise<void>;
+    update(colourPoint: ColourPoint): Promise<void>;
     findbyId(id: string): Promise<ColourPoint | null>
     findAll(): Promise<ColourPoint[]>
     delete(id: string): Promise<void>
