@@ -42,16 +42,10 @@ export class ColourPoint {
         this.tag = props.tag.map(element => element.trim());
     }
 
-    /**
-     * Creates a new ColourPoint from user input, calculating derived color values
-     * @param props - Input properties requiring color space conversion
-     * @returns New ColourPoint with calculated OKLCH and coordinate values
-     */
     static create(props: CreateColourPointProps): ColourPoint {
         if (!props.name.trim()) throw new Error("Name cannot be empty");
         if (!props.brand.trim()) throw new Error("Brand cannot be empty");
 
-        // Calculate derived color values only for new colors
         const oklch: OKLCHColour = convertSRGBToOKLCH(props.rgb);
         const munselConverted: MunsellLike = deriveMunsellLikeFromOKLCH(oklch);
         const coordinate: Vec3 = munsellLikeToXYZ(munselConverted);
@@ -67,11 +61,6 @@ export class ColourPoint {
         });
     }
 
-    /**
-     * Creates a ColourPoint from database data with pre-calculated values
-     * @param props - Complete properties including pre-calculated derived values
-     * @returns ColourPoint instance without recalculating derived values
-     */
     static fromDatabase(props: ColourPointProps): ColourPoint {
         return new ColourPoint(props);
     }

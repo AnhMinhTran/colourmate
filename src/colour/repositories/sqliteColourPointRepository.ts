@@ -38,11 +38,6 @@ function rowToProps(row: ColourPointRow): ColourPointProps {
 export class SqliteColourPointRepository implements ColourPointRepository {
   constructor(private readonly db: SQLite.SQLiteDatabase) {}
 
-  /**
-   * Inserts a ColourPoint into the database with flattened column values.
-   * @param colourPoint - The domain entity to persist
-   * @throws If the database insert fails (e.g. duplicate id)
-   */
   async create(colourPoint: ColourPoint): Promise<void> {
     await this.db.runAsync(
       `INSERT INTO colour_points (id, name, brand, r, g, b, oklch_l, oklch_c, oklch_h, coord_x, coord_y, coord_Z, tags)
@@ -63,11 +58,6 @@ export class SqliteColourPointRepository implements ColourPointRepository {
     );
   }
 
-  /**
-   * Updates an existing ColourPoint in the database by id.
-   * @param colourPoint - The domain entity with updated values
-   * @throws If the database update fails
-   */
   async update(colourPoint: ColourPoint): Promise<void> {
     await this.db.runAsync(
       `UPDATE colour_points
@@ -91,11 +81,6 @@ export class SqliteColourPointRepository implements ColourPointRepository {
     );
   }
 
-  /**
-   * Retrieves a single ColourPoint by its id.
-   * @param id - The unique identifier to search for
-   * @returns The matching ColourPoint, or null if not found
-   */
   async findbyId(id: string): Promise<ColourPoint | null> {
     const row = await this.db.getFirstAsync<ColourPointRow>(
       "SELECT * FROM colour_points WHERE id = ?",
@@ -105,10 +90,6 @@ export class SqliteColourPointRepository implements ColourPointRepository {
     return ColourPoint.fromDatabase(rowToProps(row));
   }
 
-  /**
-   * Retrieves all ColourPoints from the database.
-   * @returns Array of all persisted ColourPoint entities
-   */
   async findAll(): Promise<ColourPoint[]> {
     const rows = await this.db.getAllAsync<ColourPointRow>(
       "SELECT * FROM colour_points"
@@ -116,11 +97,6 @@ export class SqliteColourPointRepository implements ColourPointRepository {
     return rows.map((row) => ColourPoint.fromDatabase(rowToProps(row)));
   }
 
-  /**
-   * Deletes a ColourPoint by its id.
-   * @param id - The unique identifier of the entity to remove
-   * @throws If the database delete fails
-   */
   async delete(id: string): Promise<void> {
     await this.db.runAsync("DELETE FROM colour_points WHERE id = ?", id);
   }
