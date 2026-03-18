@@ -1,6 +1,6 @@
 import * as SQLite from "expo-sqlite";
 import { Inventory, InventoryProps } from "../models/inventory";
-import { InventoryRepository } from "./invenetoryRepository";
+import { InventoryRepository } from "./inventoryRepository";
 
 interface InventoryRow {
     id: string;
