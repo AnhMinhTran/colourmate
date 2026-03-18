@@ -1,6 +1,6 @@
-import { SRGB } from "@/src/colour/services/colourConversion";
-import { describe, it, expect, beforeEach, vi } from "vitest";
 import { ColourPoint } from "@/src/colour/models/colourPoint";
+import { SRGB } from "@/src/colour/services/colourConversion";
+import { describe, expect, it, vi } from "vitest";
 
 vi.mock("expo-crypto", () => ({
   randomUUID: vi.fn(() => "test-uuid-1234"),
@@ -9,8 +9,8 @@ vi.mock("expo-crypto", () => ({
 const validProps = {
   name: "Calgar Blue",
   brand: "Citadel",
-  finish: "Base",
   rgb: { r: 69, g: 107, b: 152 } as SRGB,
+  tag: ["Base"],
 };
 
 describe("ColourPoint.create", () => {
@@ -44,5 +44,14 @@ describe("ColourPoint.create", () => {
     expect(() => ColourPoint.create({ ...validProps, brand: "" })).toThrow(
       "Brand cannot be empty"
     );
+  });
+
+  it("calculates derived color values for new colors", () => {
+    const point = ColourPoint.create(validProps);
+
+    expect(point.coordinate).toBeDefined();
+    expect(point.coordinate.x).toBeTypeOf("number");
+    expect(point.coordinate.y).toBeTypeOf("number");
+    expect(point.coordinate.z).toBeTypeOf("number");
   });
 });

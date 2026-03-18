@@ -13,6 +13,13 @@ export interface ColourPointProps {
     tag: string[];
 }
 
+export interface CreateColourPointProps {
+    name: string;
+    brand: string;
+    rgb: SRGB;
+    tag: string[];
+}
+
 export class ColourPoint {
     readonly id: string;
      name: string;
@@ -26,26 +33,35 @@ export class ColourPoint {
         if (!props.name.trim()) throw new Error("Name cannot be empty");
         if (!props.brand.trim()) throw new Error("Brand cannot be empty");
 
-        let oklch : OKLCHColour = convertSRGBToOKLCH(props.rgb);
-        let munselConverted : MunsellLike = deriveMunsellLikeFromOKLCH(oklch);
-        let coordinate : Vec3 = munsellLikeToXYZ(munselConverted); 
-
         this.id = props.id;
         this.name = props.name.trim();
         this.brand = props.brand.trim();
         this.rgb = props.rgb;
-        this.oklch = oklch;
-        this.coordinate = coordinate;
+        this.oklch = props.oklch;
+        this.coordinate = props.coordinate;
         this.tag = props.tag.map(element => element.trim());
     }
 
-    static create(props: Omit<ColourPointProps, "id">): ColourPoint {
+    static create(props: CreateColourPointProps): ColourPoint {
         if (!props.name.trim()) throw new Error("Name cannot be empty");
         if (!props.brand.trim()) throw new Error("Brand cannot be empty");
 
+        const oklch: OKLCHColour = convertSRGBToOKLCH(props.rgb);
+        const munselConverted: MunsellLike = deriveMunsellLikeFromOKLCH(oklch);
+        const coordinate: Vec3 = munsellLikeToXYZ(munselConverted);
+
         return new ColourPoint({
             id: randomUUID(),
-            ...props,
-        })
+            name: props.name,
+            brand: props.brand,
+            rgb: props.rgb,
+            oklch: oklch,
+            coordinate: coordinate,
+            tag: props.tag,
+        });
+    }
+
+    static fromDatabase(props: ColourPointProps): ColourPoint {
+        return new ColourPoint(props);
     }
 }
