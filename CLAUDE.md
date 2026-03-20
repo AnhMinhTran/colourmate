@@ -29,12 +29,12 @@ ColourMate is an Expo React Native application focused on color management and c
 ## Architecture & Structure
 
 ### Domain-Driven Design Organization
-The codebase follows domain-driven design patterns organized under `src/colour/`:
+The codebase follows domain-driven design patterns:
 
-- **Models**: Core domain entities (e.g., `ColourPoint`) with business logic and validation
-- **Services**: Color conversion logic and business operations
-- **Repositories**: Data access interfaces (currently interface-only)
-- **UI**: React Native components, hooks, and styling organized by feature
+- **`src/colour/`**: Colour domain (models, services, repositories)
+- **`src/inventory/`**: Inventory domain (models, repositories)
+- **`src/ui/`**: Shared app-wide UI components, hooks, and theme constants
+- **`src/infrastructure/`**: Cross-cutting infrastructure (database, migrations)
 
 ### Color Conversion Pipeline
 The core domain revolves around `ColourPoint` which automatically converts colors through this pipeline:
@@ -96,9 +96,9 @@ describe("ColourPoint.create", () => {
 
 ### Theme System
 - Dark/light theme support via `@react-navigation/native`
-- Custom themed components (`ThemedText`, `ThemedView`) in `src/colour/ui/components/`
+- Custom themed components (`ThemedText`, `ThemedView`) in `src/ui/components/`
 - Platform-specific styling where needed
-- Color scheme detection hook at `src/colour/ui/hooks/use-color-scheme`
+- Color scheme detection hook at `src/ui/hooks/use-color-scheme`
 
 ## Dependencies & Libraries
 
@@ -115,6 +115,6 @@ describe("ColourPoint.create", () => {
 
 ## Path Aliases
 - `@/*` maps to project root for absolute imports
-- Use `@/src/colour/...` for domain imports
-- Use `@/components/...` for shared UI components
+- Use `@/src/colour/...` for colour domain imports
+- Use `@/src/ui/...` for shared UI components
 - Use `@/assets/...` for static resources
