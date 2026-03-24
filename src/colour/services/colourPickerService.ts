@@ -54,6 +54,31 @@ export function getCursorCenterPosition(
   };
 }
 
+export interface ContainTransform {
+  offset: [number, number];
+  scale: [number, number];
+}
+
+export function computeContainTransform(
+  container: ImageBounds,
+  image: ImageBounds,
+): ContainTransform {
+  const fitScale = Math.min(container.width / image.width, container.height / image.height);
+  const scaledW = image.width * fitScale;
+  const scaledH = image.height * fitScale;
+  return {
+    offset: [
+      (container.width - scaledW) / 2 / container.width,
+      (container.height - scaledH) / 2 / container.height,
+    ],
+    scale: [scaledW / container.width, scaledH / container.height],
+  };
+}
+
+export function rgbToHex({ r, g, b }: { r: number; g: number; b: number }): string {
+  return `#${[r, g, b].map((v) => v.toString(16).padStart(2, '0')).join('').toUpperCase()}`;
+}
+
 export function mapFramePointToSourcePixel(
   frameBounds: ImageBounds,
   sourceBounds: ImageBounds,
