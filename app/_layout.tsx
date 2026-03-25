@@ -7,6 +7,7 @@ import 'react-native-reanimated';
 
 import { useColorScheme } from '@/src/colour/ui/hooks/use-color-scheme.web';
 import { migrateDb } from '@/src/infrastructure/db/migrate';
+import { seedColours } from '@/src/infrastructure/seed/seedColours';
 
 export const unstable_settings = {
   anchor: '(tabs)',
@@ -16,7 +17,7 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
 
   return (
-    <SQLiteProvider databaseName="colourmate.db" onInit={migrateDb}>
+    <SQLiteProvider databaseName="colourmate.db" onInit={async (db) => { await migrateDb(db); await seedColours(db); }}>
       <GestureHandlerRootView>
         <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
           <Stack>

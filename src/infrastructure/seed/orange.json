@@ -1,0 +1,938 @@
+[
+  {
+    "brand": "AK",
+    "name": "Golden Yellaw",
+    "row": 1,
+    "col": 1,
+    "hex": "#FDB157",
+    "rgb": [
+      253,
+      177,
+      87
+    ],
+    "bbox": [
+      9,
+      11,
+      79,
+      82
+    ]
+  },
+  {
+    "brand": "VMC",
+    "name": "Golden Yellow",
+    "row": 1,
+    "col": 2,
+    "hex": "#FAAB46",
+    "rgb": [
+      250,
+      171,
+      70
+    ],
+    "bbox": [
+      92,
+      11,
+      163,
+      82
+    ]
+  },
+  {
+    "brand": "WPF",
+    "name": "Inner Light",
+    "row": 1,
+    "col": 3,
+    "hex": "#FAAB37",
+    "rgb": [
+      250,
+      171,
+      55
+    ],
+    "bbox": [
+      175,
+      11,
+      246,
+      82
+    ]
+  },
+  {
+    "brand": "AMP",
+    "name": "Orange Yellow",
+    "row": 1,
+    "col": 4,
+    "hex": "#FD9520",
+    "rgb": [
+      253,
+      149,
+      32
+    ],
+    "bbox": [
+      259,
+      11,
+      330,
+      82
+    ]
+  },
+  {
+    "brand": "WPF",
+    "name": "Glowing Inferno",
+    "row": 1,
+    "col": 5,
+    "hex": "#F08D29",
+    "rgb": [
+      240,
+      141,
+      41
+    ],
+    "bbox": [
+      342,
+      11,
+      413,
+      82
+    ]
+  },
+  {
+    "brand": "VGC",
+    "name": "Gold Yellow",
+    "row": 1,
+    "col": 6,
+    "hex": "#FC8D22",
+    "rgb": [
+      252,
+      141,
+      34
+    ],
+    "bbox": [
+      426,
+      11,
+      496,
+      82
+    ]
+  },
+  {
+    "brand": "TTC",
+    "name": "Solar Flare",
+    "row": 1,
+    "col": 7,
+    "hex": "#EB7D1B",
+    "rgb": [
+      235,
+      125,
+      27
+    ],
+    "bbox": [
+      509,
+      11,
+      580,
+      82
+    ]
+  },
+  {
+    "brand": "TTC",
+    "name": "Flaming Forge Orange",
+    "row": 1,
+    "col": 8,
+    "hex": "#EF7B2D",
+    "rgb": [
+      239,
+      123,
+      45
+    ],
+    "bbox": [
+      592,
+      11,
+      663,
+      82
+    ]
+  },
+  {
+    "brand": "WPF",
+    "name": "Flickering Flame",
+    "row": 1,
+    "col": 9,
+    "hex": "#EB762D",
+    "rgb": [
+      235,
+      118,
+      45
+    ],
+    "bbox": [
+      676,
+      11,
+      746,
+      82
+    ]
+  },
+  {
+    "brand": "VMC",
+    "name": "Light Orange",
+    "row": 1,
+    "col": 10,
+    "hex": "#F87218",
+    "rgb": [
+      248,
+      114,
+      24
+    ],
+    "bbox": [
+      759,
+      11,
+      830,
+      82
+    ]
+  },
+  {
+    "brand": "AK",
+    "name": "Light Rust",
+    "row": 1,
+    "col": 11,
+    "hex": "#EA6626",
+    "rgb": [
+      234,
+      102,
+      38
+    ],
+    "bbox": [
+      842,
+      11,
+      913,
+      82
+    ]
+  },
+  {
+    "brand": "AK",
+    "name": "Pastel Peach",
+    "row": 2,
+    "col": 1,
+    "hex": "#FA995C",
+    "rgb": [
+      250,
+      153,
+      92
+    ],
+    "bbox": [
+      9,
+      112,
+      79,
+      184
+    ]
+  },
+  {
+    "brand": "VGC",
+    "name": "Sunset Orange",
+    "row": 2,
+    "col": 2,
+    "hex": "#FA9D5A",
+    "rgb": [
+      250,
+      157,
+      90
+    ],
+    "bbox": [
+      92,
+      112,
+      163,
+      184
+    ]
+  },
+  {
+    "brand": "AK",
+    "name": "Light Orange",
+    "row": 2,
+    "col": 3,
+    "hex": "#FD7935",
+    "rgb": [
+      253,
+      121,
+      53
+    ],
+    "bbox": [
+      175,
+      112,
+      246,
+      184
+    ]
+  },
+  {
+    "brand": "PA",
+    "name": "Orange",
+    "row": 2,
+    "col": 4,
+    "hex": "#FD6A28",
+    "rgb": [
+      253,
+      106,
+      40
+    ],
+    "bbox": [
+      259,
+      112,
+      330,
+      184
+    ]
+  },
+  {
+    "brand": "GW",
+    "name": "Fire Dragon Bright",
+    "row": 2,
+    "col": 5,
+    "hex": "#F26A29",
+    "rgb": [
+      242,
+      106,
+      41
+    ],
+    "bbox": [
+      342,
+      112,
+      413,
+      184
+    ]
+  },
+  {
+    "brand": "AK",
+    "name": "Luminous Orange",
+    "row": 2,
+    "col": 6,
+    "hex": "#EF5C01",
+    "rgb": [
+      239,
+      92,
+      1
+    ],
+    "bbox": [
+      426,
+      112,
+      496,
+      184
+    ]
+  },
+  {
+    "brand": "VGC",
+    "name": "Orange Fire",
+    "row": 2,
+    "col": 7,
+    "hex": "#F75D24",
+    "rgb": [
+      247,
+      93,
+      36
+    ],
+    "bbox": [
+      509,
+      112,
+      580,
+      184
+    ]
+  },
+  {
+    "brand": "VMC",
+    "name": "Bright Orange",
+    "row": 2,
+    "col": 8,
+    "hex": "#FB4A0F",
+    "rgb": [
+      251,
+      74,
+      15
+    ],
+    "bbox": [
+      592,
+      112,
+      663,
+      184
+    ]
+  },
+  {
+    "brand": "AK",
+    "name": "Deep Orange",
+    "row": 2,
+    "col": 9,
+    "hex": "#FA4B1A",
+    "rgb": [
+      250,
+      75,
+      26
+    ],
+    "bbox": [
+      676,
+      112,
+      746,
+      184
+    ]
+  },
+  {
+    "brand": "AMP",
+    "name": "Red Orange",
+    "row": 2,
+    "col": 10,
+    "hex": "#EC4604",
+    "rgb": [
+      236,
+      70,
+      4
+    ],
+    "bbox": [
+      759,
+      112,
+      830,
+      184
+    ]
+  },
+  {
+    "brand": "GW",
+    "name": "Troll Slayer Orange",
+    "row": 2,
+    "col": 11,
+    "hex": "#E44819",
+    "rgb": [
+      228,
+      72,
+      25
+    ],
+    "bbox": [
+      842,
+      112,
+      913,
+      184
+    ]
+  },
+  {
+    "brand": "VMC",
+    "name": "Clear Orange",
+    "row": 2,
+    "col": 12,
+    "hex": "#F13902",
+    "rgb": [
+      241,
+      57,
+      2
+    ],
+    "bbox": [
+      926,
+      112,
+      997,
+      184
+    ]
+  },
+  {
+    "brand": "VGC",
+    "name": "Hot Orange",
+    "row": 2,
+    "col": 13,
+    "hex": "#DC361A",
+    "rgb": [
+      220,
+      54,
+      26
+    ],
+    "bbox": [
+      1009,
+      112,
+      1080,
+      184
+    ]
+  },
+  {
+    "brand": "AK",
+    "name": "Ocher Orange",
+    "row": 3,
+    "col": 1,
+    "hex": "#E99D76",
+    "rgb": [
+      233,
+      157,
+      118
+    ],
+    "bbox": [
+      9,
+      213,
+      79,
+      285
+    ]
+  },
+  {
+    "brand": "GW",
+    "name": "Lugganath Orange",
+    "row": 3,
+    "col": 2,
+    "hex": "#F69069",
+    "rgb": [
+      246,
+      144,
+      105
+    ],
+    "bbox": [
+      92,
+      213,
+      163,
+      285
+    ]
+  },
+  {
+    "brand": "PA",
+    "name": "Nova Orange",
+    "row": 3,
+    "col": 3,
+    "hex": "#FC743E",
+    "rgb": [
+      252,
+      116,
+      62
+    ],
+    "bbox": [
+      175,
+      213,
+      246,
+      285
+    ]
+  },
+  {
+    "brand": "TTC",
+    "name": "Orange Flare",
+    "row": 3,
+    "col": 4,
+    "hex": "#F26B31",
+    "rgb": [
+      242,
+      107,
+      49
+    ],
+    "bbox": [
+      259,
+      213,
+      330,
+      285
+    ]
+  },
+  {
+    "brand": "WPF",
+    "name": "Lava Orange",
+    "row": 3,
+    "col": 5,
+    "hex": "#EA6731",
+    "rgb": [
+      234,
+      103,
+      49
+    ],
+    "bbox": [
+      342,
+      213,
+      413,
+      285
+    ]
+  },
+  {
+    "brand": "WPF",
+    "name": "Burning Ore",
+    "row": 3,
+    "col": 6,
+    "hex": "#F3552B",
+    "rgb": [
+      243,
+      85,
+      43
+    ],
+    "bbox": [
+      426,
+      213,
+      496,
+      285
+    ]
+  },
+  {
+    "brand": "AK",
+    "name": "Medium Orange",
+    "row": 3,
+    "col": 7,
+    "hex": "#F74A1F",
+    "rgb": [
+      247,
+      74,
+      31
+    ],
+    "bbox": [
+      509,
+      213,
+      580,
+      285
+    ]
+  },
+  {
+    "brand": "WPF",
+    "name": "Molten Lava",
+    "row": 3,
+    "col": 8,
+    "hex": "#ED4426",
+    "rgb": [
+      237,
+      68,
+      38
+    ],
+    "bbox": [
+      592,
+      213,
+      663,
+      285
+    ]
+  },
+  {
+    "brand": "TTC",
+    "name": "Fanatic Orange",
+    "row": 3,
+    "col": 9,
+    "hex": "#D84626",
+    "rgb": [
+      216,
+      70,
+      38
+    ],
+    "bbox": [
+      676,
+      213,
+      746,
+      285
+    ]
+  },
+  {
+    "brand": "TTC",
+    "name": "Inferna Orange",
+    "row": 3,
+    "col": 10,
+    "hex": "#C9392B",
+    "rgb": [
+      201,
+      57,
+      43
+    ],
+    "bbox": [
+      759,
+      213,
+      830,
+      285
+    ]
+  },
+  {
+    "brand": "AK",
+    "name": "Burn Orange",
+    "row": 3,
+    "col": 11,
+    "hex": "#CA3A32",
+    "rgb": [
+      202,
+      58,
+      50
+    ],
+    "bbox": [
+      842,
+      213,
+      913,
+      285
+    ]
+  },
+  {
+    "brand": "GW",
+    "name": "Wild Rider Red",
+    "row": 3,
+    "col": 12,
+    "hex": "#DE3C36",
+    "rgb": [
+      222,
+      60,
+      54
+    ],
+    "bbox": [
+      926,
+      213,
+      997,
+      285
+    ]
+  },
+  {
+    "brand": "VMC",
+    "name": "Amaranth Red",
+    "row": 4,
+    "col": 1,
+    "hex": "#CE4618",
+    "rgb": [
+      206,
+      70,
+      24
+    ],
+    "bbox": [
+      9,
+      315,
+      79,
+      385
+    ]
+  },
+  {
+    "brand": "AK",
+    "name": "Cadmium Red",
+    "row": 4,
+    "col": 2,
+    "hex": "#D23D17",
+    "rgb": [
+      210,
+      61,
+      23
+    ],
+    "bbox": [
+      92,
+      315,
+      163,
+      385
+    ]
+  },
+  {
+    "brand": "AK",
+    "name": "Amaranth Red",
+    "row": 4,
+    "col": 3,
+    "hex": "#BE3C29",
+    "rgb": [
+      190,
+      60,
+      41
+    ],
+    "bbox": [
+      175,
+      315,
+      246,
+      385
+    ]
+  },
+  {
+    "brand": "AK",
+    "name": "Sun Red",
+    "row": 4,
+    "col": 4,
+    "hex": "#B12A0D",
+    "rgb": [
+      177,
+      42,
+      13
+    ],
+    "bbox": [
+      259,
+      315,
+      330,
+      385
+    ]
+  },
+  {
+    "brand": "PA",
+    "name": "Red Oxxde",
+    "row": 4,
+    "col": 5,
+    "hex": "#921B16",
+    "rgb": [
+      146,
+      27,
+      22
+    ],
+    "bbox": [
+      342,
+      315,
+      413,
+      385
+    ]
+  },
+  {
+    "brand": "GW",
+    "name": "Jaokaera Orange",
+    "row": 5,
+    "col": 1,
+    "hex": "#BC6240",
+    "rgb": [
+      188,
+      98,
+      64
+    ],
+    "bbox": [
+      9,
+      416,
+      79,
+      486
+    ]
+  },
+  {
+    "brand": "WPF",
+    "name": "Ruddy Terra",
+    "row": 5,
+    "col": 2,
+    "hex": "#AE4C34",
+    "rgb": [
+      174,
+      76,
+      52
+    ],
+    "bbox": [
+      92,
+      416,
+      163,
+      486
+    ]
+  },
+  {
+    "brand": "GW",
+    "name": "Squig Orange",
+    "row": 5,
+    "col": 3,
+    "hex": "#B5564C",
+    "rgb": [
+      181,
+      86,
+      76
+    ],
+    "bbox": [
+      175,
+      416,
+      246,
+      486
+    ]
+  },
+  {
+    "brand": "TTC",
+    "name": "Rust Orange",
+    "row": 5,
+    "col": 4,
+    "hex": "#AA3E2A",
+    "rgb": [
+      170,
+      62,
+      42
+    ],
+    "bbox": [
+      259,
+      416,
+      330,
+      486
+    ]
+  },
+  {
+    "brand": "AK",
+    "name": "Medium Rust",
+    "row": 5,
+    "col": 5,
+    "hex": "#A03B2D",
+    "rgb": [
+      160,
+      59,
+      45
+    ],
+    "bbox": [
+      342,
+      416,
+      413,
+      486
+    ]
+  },
+  {
+    "brand": "GW",
+    "name": "Ungor Fiesh",
+    "row": 6,
+    "col": 1,
+    "hex": "#DE9552",
+    "rgb": [
+      222,
+      149,
+      82
+    ],
+    "bbox": [
+      9,
+      517,
+      79,
+      587
+    ]
+  },
+  {
+    "brand": "GW",
+    "name": "Bestigor Flesh",
+    "row": 6,
+    "col": 2,
+    "hex": "#D6793E",
+    "rgb": [
+      214,
+      121,
+      62
+    ],
+    "bbox": [
+      92,
+      517,
+      163,
+      587
+    ]
+  },
+  {
+    "brand": "AK",
+    "name": "Orange Brown",
+    "row": 6,
+    "col": 3,
+    "hex": "#BE6E2D",
+    "rgb": [
+      190,
+      110,
+      45
+    ],
+    "bbox": [
+      175,
+      517,
+      246,
+      587
+    ]
+  },
+  {
+    "brand": "VMC",
+    "name": "Orange Brown",
+    "row": 6,
+    "col": 4,
+    "hex": "#B15827",
+    "rgb": [
+      177,
+      88,
+      39
+    ],
+    "bbox": [
+      259,
+      517,
+      330,
+      587
+    ]
+  },
+  {
+    "brand": "VMC",
+    "name": "Red Leather",
+    "row": 6,
+    "col": 5,
+    "hex": "#944026",
+    "rgb": [
+      148,
+      64,
+      38
+    ],
+    "bbox": [
+      342,
+      517,
+      413,
+      587
+    ]
+  },
+  {
+    "brand": "AK",
+    "name": "Deep Brown",
+    "row": 6,
+    "col": 6,
+    "hex": "#8C422B",
+    "rgb": [
+      140,
+      66,
+      43
+    ],
+    "bbox": [
+      426,
+      517,
+      496,
+      587
+    ]
+  }
+]
