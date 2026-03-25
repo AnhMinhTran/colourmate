@@ -1,7 +1,7 @@
 [
   {
     "brand": "AK",
-    "name": "Golden Yellaw",
+    "name": "Golden Yellow",
     "row": 1,
     "col": 1,
     "hex": "#FDB157",
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Golden Yellow",
     "row": 1,
     "col": 2,
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Gold Yellow",
     "row": 1,
     "col": 6,
@@ -162,7 +162,7 @@
     ]
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Light Orange",
     "row": 1,
     "col": 10,
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Sunset Orange",
     "row": 2,
     "col": 2,
@@ -306,7 +306,7 @@
     ]
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Orange Fire",
     "row": 2,
     "col": 7,
@@ -324,7 +324,7 @@
     ]
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Bright Orange",
     "row": 2,
     "col": 8,
@@ -396,7 +396,7 @@
     ]
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Clear Orange",
     "row": 2,
     "col": 12,
@@ -414,7 +414,7 @@
     ]
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Hot Orange",
     "row": 2,
     "col": 13,
@@ -595,7 +595,7 @@
   },
   {
     "brand": "TTC",
-    "name": "Inferna Orange",
+    "name": "Inferno Orange",
     "row": 3,
     "col": 10,
     "hex": "#C9392B",
@@ -648,7 +648,7 @@
     ]
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Amaranth Red",
     "row": 4,
     "col": 1,
@@ -739,7 +739,7 @@
   },
   {
     "brand": "GW",
-    "name": "Jaokaera Orange",
+    "name": "Jokaero Orange",
     "row": 5,
     "col": 1,
     "hex": "#BC6240",
@@ -829,7 +829,7 @@
   },
   {
     "brand": "GW",
-    "name": "Ungor Fiesh",
+    "name": "Ungor Flesh",
     "row": 6,
     "col": 1,
     "hex": "#DE9552",
@@ -882,7 +882,7 @@
     ]
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Orange Brown",
     "row": 6,
     "col": 4,
@@ -900,7 +900,7 @@
     ]
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Red Leather",
     "row": 6,
     "col": 5,
