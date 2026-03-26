@@ -27,6 +27,13 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="munsell3d"
+        options={{
+          title: '3D View',
+          tabBarIcon: ({ color }) => <IconSymbol size={26} name="cube.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
         name="explore"
         options={{
           href: null,
