@@ -60,6 +60,7 @@ export function MunsellCanvas({ colours, onSelectColour }: MunsellCanvasProps) {
   }, [dispose]);
 
   const panGesture = Gesture.Pan()
+    .runOnJS(true)
     .onBegin(() => {
       savedThetaRef.current = thetaRef.current;
       savedPhiRef.current = phiRef.current;
@@ -73,6 +74,7 @@ export function MunsellCanvas({ colours, onSelectColour }: MunsellCanvasProps) {
     });
 
   const pinchGesture = Gesture.Pinch()
+    .runOnJS(true)
     .onBegin(() => {
       savedZoomRef.current = zoomRef.current;
     })
@@ -82,7 +84,7 @@ export function MunsellCanvas({ colours, onSelectColour }: MunsellCanvasProps) {
       updateCamera(thetaRef.current, phiRef.current, zoomRef.current);
     });
 
-  const tapGesture = Gesture.Tap().onEnd((event) => {
+  const tapGesture = Gesture.Tap().runOnJS(true).onEnd((event) => {
     const { width, height } = layoutRef.current;
     if (width === 0 || height === 0) return;
 

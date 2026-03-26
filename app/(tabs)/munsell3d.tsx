@@ -1,9 +1,11 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { useFocusEffect } from "expo-router";
 import {
   Modal,
   Pressable,
   ScrollView,
   StyleSheet,
+  Switch,
   Text,
   View,
 } from "react-native";
@@ -12,43 +14,54 @@ import { useSQLiteContext } from "expo-sqlite";
 
 import { ColourPoint } from "@/src/colour/models/colourPoint";
 import { SqliteColourPointRepository } from "@/src/colour/repositories/sqliteColourPointRepository";
+import { SqliteInventoryRepository } from "@/src/inventory/repositories/sqliteInventoryRepository";
 import { filterByBrands } from "@/src/colour/services/munsellSceneService";
 import { MunsellCanvas } from "@/src/colour/ui/components/munsell-canvas";
 import { ColourTooltip } from "@/src/colour/ui/components/colour-tooltip";
 import { IconSymbol } from "@/src/ui/components/icon-symbol";
 
 // ---------------------------------------------------------------------------
-// FilterSheet (brand-only variant for the 3D view)
+// Filter types
+// ---------------------------------------------------------------------------
+interface Filters {
+  brands: Set<string>;
+  inInventoryOnly: boolean;
+}
+
+const EMPTY_FILTERS: Filters = { brands: new Set(), inInventoryOnly: false };
+
+function isActive(f: Filters) {
+  return f.brands.size > 0 || f.inInventoryOnly;
+}
+
+// ---------------------------------------------------------------------------
+// FilterSheet
 // ---------------------------------------------------------------------------
 function FilterSheet({
   visible,
   brands,
-  selectedBrands,
+  filters,
   onApply,
   onClose,
 }: {
   visible: boolean;
   brands: string[];
-  selectedBrands: Set<string>;
-  onApply: (b: Set<string>) => void;
+  filters: Filters;
+  onApply: (f: Filters) => void;
   onClose: () => void;
 }) {
-  const [draft, setDraft] = useState<Set<string>>(selectedBrands);
+  const [draft, setDraft] = useState<Filters>(filters);
   const insets = useSafeAreaInsets();
 
   useEffect(() => {
-    if (visible) setDraft(selectedBrands);
-  }, [visible, selectedBrands]);
+    if (visible) setDraft(filters);
+  }, [visible, filters]);
 
-  /**
-   * Toggles a brand in the draft selection set.
-   * @param brand - The brand name to toggle
-   */
   const toggleBrand = (brand: string) => {
     setDraft((prev) => {
-      const next = new Set(prev);
-      if (next.has(brand)) { next.delete(brand); } else { next.add(brand); }
-      return next;
+      const next = new Set(prev.brands);
+      next.has(brand) ? next.delete(brand) : next.add(brand);
+      return { ...prev, brands: next };
     });
   };
 
@@ -65,24 +78,32 @@ function FilterSheet({
 
         <View style={sheet.header}>
           <Text style={sheet.heading}>Filters</Text>
-          <Pressable onPress={() => setDraft(new Set())}>
+          <Pressable onPress={() => setDraft(EMPTY_FILTERS)}>
             <Text style={sheet.clearAll}>Clear all</Text>
           </Pressable>
+        </View>
+
+        {/* In inventory toggle */}
+        <View style={sheet.row}>
+          <Text style={sheet.rowLabel}>In inventory only</Text>
+          <Switch
+            value={draft.inInventoryOnly}
+            onValueChange={(v) => setDraft((prev) => ({ ...prev, inInventoryOnly: v }))}
+            trackColor={{ true: "#4A90D9" }}
+          />
         </View>
 
         <Text style={sheet.sectionLabel}>Brand</Text>
         <ScrollView style={sheet.brandList} showsVerticalScrollIndicator={false}>
           {brands.map((brand) => {
-            const selected = draft.has(brand);
+            const selected = draft.brands.has(brand);
             return (
               <Pressable
                 key={brand}
                 style={sheet.brandRow}
                 onPress={() => toggleBrand(brand)}
               >
-                <View
-                  style={[sheet.checkbox, selected && sheet.checkboxActive]}
-                >
+                <View style={[sheet.checkbox, selected && sheet.checkboxActive]}>
                   {selected && <Text style={sheet.checkmark}>✓</Text>}
                 </View>
                 <Text style={sheet.brandLabel}>{brand}</Text>
@@ -111,36 +132,42 @@ function FilterSheet({
 export default function Munsell3DScreen() {
   const db = useSQLiteContext();
   const colourRepo = useMemo(() => new SqliteColourPointRepository(db), [db]);
+  const inventoryRepo = useMemo(() => new SqliteInventoryRepository(db), [db]);
 
   const [colours, setColours] = useState<ColourPoint[]>([]);
+  const [inventoryIds, setInventoryIds] = useState<Set<string>>(new Set());
   const [selectedColour, setSelectedColour] = useState<ColourPoint | null>(null);
-  const [brandFilter, setBrandFilter] = useState<Set<string>>(new Set());
+  const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS);
   const [showFilter, setShowFilter] = useState(false);
 
   const loadData = useCallback(async () => {
-    const all = await colourRepo.findAll();
+    const [all, inventories] = await Promise.all([
+      colourRepo.findAll(),
+      inventoryRepo.findAll(),
+    ]);
     setColours(all);
-  }, [colourRepo]);
+    setInventoryIds(new Set(inventories.map((inv) => inv.colour_id)));
+  }, [colourRepo, inventoryRepo]);
 
-  useEffect(() => {
-    loadData();
-  }, [loadData]);
+  useFocusEffect(
+    useCallback(() => {
+      loadData();
+    }, [loadData])
+  );
 
   const allBrands = useMemo(
     () => [...new Set(colours.map((c) => c.brand))].sort(),
     [colours]
   );
 
-  const filteredColours = useMemo(
-    () => filterByBrands(colours, brandFilter),
-    [colours, brandFilter]
-  );
+  const filteredColours = useMemo(() => {
+    let result = filterByBrands(colours, filters.brands);
+    if (filters.inInventoryOnly) {
+      result = result.filter((c) => inventoryIds.has(c.id));
+    }
+    return result;
+  }, [colours, filters, inventoryIds]);
 
-  /**
-   * Handles tap selection on a 3D colour point by finding the matching
-   * ColourPoint and setting it as the selected colour for the tooltip.
-   * @param id - The id of the tapped ColourPoint
-   */
   const handleSelectColour = useCallback(
     (id: string) => {
       const found = colours.find((c) => c.id === id) ?? null;
@@ -150,7 +177,7 @@ export default function Munsell3DScreen() {
   );
 
   const insets = useSafeAreaInsets();
-  const filterActive = brandFilter.size > 0;
+  const filterActive = isActive(filters);
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
@@ -187,8 +214,8 @@ export default function Munsell3DScreen() {
       <FilterSheet
         visible={showFilter}
         brands={allBrands}
-        selectedBrands={brandFilter}
-        onApply={setBrandFilter}
+        filters={filters}
+        onApply={setFilters}
         onClose={() => setShowFilter(false)}
       />
     </View>
@@ -246,10 +273,7 @@ const styles = StyleSheet.create({
 });
 
 const sheet = StyleSheet.create({
-  backdrop: {
-    flex: 1,
-    backgroundColor: "rgba(0,0,0,0.3)",
-  },
+  backdrop: { flex: 1, backgroundColor: "rgba(0,0,0,0.3)" },
   panel: {
     backgroundColor: "#fff",
     borderTopLeftRadius: 20,
@@ -274,6 +298,16 @@ const sheet = StyleSheet.create({
   },
   heading: { fontSize: 17, fontWeight: "700", color: "#111" },
   clearAll: { fontSize: 14, color: "#4A90D9" },
+  row: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: "#f0f0f0",
+    marginBottom: 8,
+  },
+  rowLabel: { fontSize: 15, color: "#111" },
   sectionLabel: {
     fontSize: 13,
     fontWeight: "600",
@@ -283,7 +317,7 @@ const sheet = StyleSheet.create({
     marginTop: 8,
     marginBottom: 8,
   },
-  brandList: { maxHeight: 280 },
+  brandList: { maxHeight: 260 },
   brandRow: {
     flexDirection: "row",
     alignItems: "center",

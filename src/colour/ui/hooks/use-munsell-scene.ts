@@ -16,6 +16,7 @@ interface SceneState {
   camera: THREE.PerspectiveCamera;
   renderer: THREE.WebGLRenderer;
   instancedMesh: THREE.InstancedMesh | null;
+  outlineMesh: THREE.InstancedMesh | null;
   frameId: number;
   disposed: boolean;
 }
@@ -51,17 +52,22 @@ export function useMunsellScene() {
     );
 
     addGuides(scene);
-    addLighting(scene);
 
     const state: SceneState = {
       scene,
       camera,
       renderer,
       instancedMesh: null,
+      outlineMesh: null,
       frameId: 0,
       disposed: false,
     };
     stateRef.current = state;
+
+    // Points may have been set before the context was ready — build them now.
+    if (pointsRef.current.length > 0) {
+      buildPointMeshes(state, pointsRef.current);
+    }
 
     const animate = () => {
       if (state.disposed) return;
@@ -73,52 +79,15 @@ export function useMunsellScene() {
   }, []);
 
   /**
-   * Rebuilds the instanced mesh representing colour points in the scene.
-   * Uses THREE.InstancedMesh for efficient single-draw-call rendering
-   * of potentially hundreds of colour spheres.
-   * @param points - Array of ScenePoint data with positions and colours
+   * Stores points and rebuilds the instanced meshes if the scene is ready.
+   * If called before onContextCreate, the points are queued and applied
+   * automatically once the GL context becomes available.
    */
   const setPoints = useCallback((points: ScenePoint[]) => {
     pointsRef.current = points;
     const state = stateRef.current;
     if (!state) return;
-
-    if (state.instancedMesh) {
-      state.scene.remove(state.instancedMesh);
-      state.instancedMesh.geometry.dispose();
-      (state.instancedMesh.material as THREE.Material).dispose();
-      state.instancedMesh = null;
-    }
-
-    if (points.length === 0) return;
-
-    const geometry = new THREE.SphereGeometry(
-      POINT_RADIUS,
-      SPHERE_SEGMENTS,
-      SPHERE_SEGMENTS
-    );
-    const material = new THREE.MeshStandardMaterial({ vertexColors: false });
-
-    const mesh = new THREE.InstancedMesh(geometry, material, points.length);
-    mesh.instanceMatrix.setUsage(THREE.StaticDrawUsage);
-
-    const dummy = new THREE.Object3D();
-    const color = new THREE.Color();
-
-    for (let i = 0; i < points.length; i++) {
-      const p = points[i];
-      dummy.position.set(p.position.x, p.position.y, p.position.z);
-      dummy.updateMatrix();
-      mesh.setMatrixAt(i, dummy.matrix);
-      color.setRGB(p.color.r / 255, p.color.g / 255, p.color.b / 255);
-      mesh.setColorAt(i, color);
-    }
-
-    mesh.instanceMatrix.needsUpdate = true;
-    if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true;
-
-    state.instancedMesh = mesh;
-    state.scene.add(mesh);
+    buildPointMeshes(state, points);
   }, []);
 
   /**
@@ -190,6 +159,10 @@ export function useMunsellScene() {
       state.instancedMesh.geometry.dispose();
       (state.instancedMesh.material as THREE.Material).dispose();
     }
+    if (state.outlineMesh) {
+      state.outlineMesh.geometry.dispose();
+      (state.outlineMesh.material as THREE.Material).dispose();
+    }
     state.renderer.dispose();
     stateRef.current = null;
   }, []);
@@ -198,35 +171,107 @@ export function useMunsellScene() {
 }
 
 /**
- * Adds visual guide geometry to the scene: a vertical axis line (value axis),
- * a base circle ring (chroma at value=0), and a subtle wireframe cylinder
- * to indicate the Munsell space boundary.
+ * Clears existing colour meshes from the scene and rebuilds them from points.
+ */
+function buildPointMeshes(state: SceneState, points: ScenePoint[]) {
+  if (state.instancedMesh) {
+    state.scene.remove(state.instancedMesh);
+    state.instancedMesh.geometry.dispose();
+    (state.instancedMesh.material as THREE.Material).dispose();
+    state.instancedMesh = null;
+  }
+  if (state.outlineMesh) {
+    state.scene.remove(state.outlineMesh);
+    state.outlineMesh.geometry.dispose();
+    (state.outlineMesh.material as THREE.Material).dispose();
+    state.outlineMesh = null;
+  }
+
+  if (points.length === 0) return;
+
+  const geometry = new THREE.SphereGeometry(POINT_RADIUS, SPHERE_SEGMENTS, SPHERE_SEGMENTS);
+  const outlineGeometry = new THREE.SphereGeometry(POINT_RADIUS * 1.4, SPHERE_SEGMENTS, SPHERE_SEGMENTS);
+  const material = new THREE.MeshBasicMaterial({ vertexColors: false });
+  const outlineMaterial = new THREE.MeshBasicMaterial({ color: 0x000000, side: THREE.BackSide });
+
+  const mesh = new THREE.InstancedMesh(geometry, material, points.length);
+  const outlineMesh = new THREE.InstancedMesh(outlineGeometry, outlineMaterial, points.length);
+  mesh.instanceMatrix.setUsage(THREE.StaticDrawUsage);
+  outlineMesh.instanceMatrix.setUsage(THREE.StaticDrawUsage);
+
+  const dummy = new THREE.Object3D();
+  const color = new THREE.Color();
+
+  for (let i = 0; i < points.length; i++) {
+    const p = points[i];
+    dummy.position.set(p.position.x, p.position.y, p.position.z);
+    dummy.updateMatrix();
+    mesh.setMatrixAt(i, dummy.matrix);
+    outlineMesh.setMatrixAt(i, dummy.matrix);
+    color.setRGB(p.color.r / 255, p.color.g / 255, p.color.b / 255);
+    mesh.setColorAt(i, color);
+  }
+
+  mesh.instanceMatrix.needsUpdate = true;
+  outlineMesh.instanceMatrix.needsUpdate = true;
+  if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true;
+
+  state.outlineMesh = outlineMesh;
+  state.instancedMesh = mesh;
+  state.scene.add(outlineMesh);
+  state.scene.add(mesh);
+}
+
+/**
+ * Adds visual guide geometry to the scene:
+ *  - A gradient cylinder (black→white) along the value axis
+ *  - A full-spectrum hue ring at maximum chroma radius (r=1) at mid-height
+ *  - A subtle wireframe cylinder to indicate the Munsell space boundary
  * @param scene - The Three.js scene to add guides to
  */
 function addGuides(scene: THREE.Scene) {
-  const axisMaterial = new THREE.LineBasicMaterial({
-    color: GUIDE_COLOR,
-    transparent: true,
-    opacity: GUIDE_OPACITY,
-  });
+  // Gradient value column: black at y=0, white at y=1
+  const colGeom = new THREE.CylinderGeometry(0.022, 0.022, 1, 8, 20);
+  const colPos = colGeom.attributes.position as THREE.BufferAttribute;
+  const colColors = new Float32Array(colPos.count * 3);
+  for (let i = 0; i < colPos.count; i++) {
+    const t = Math.max(0, Math.min(1, colPos.getY(i) + 0.5));
+    colColors[i * 3] = t;
+    colColors[i * 3 + 1] = t;
+    colColors[i * 3 + 2] = t;
+  }
+  colGeom.setAttribute("color", new THREE.BufferAttribute(colColors, 3));
+  const column = new THREE.Mesh(
+    colGeom,
+    new THREE.MeshBasicMaterial({ vertexColors: true, transparent: true, opacity: 0.55 })
+  );
+  column.position.y = 0.5;
+  scene.add(column);
 
-  const axisGeometry = new THREE.BufferGeometry().setFromPoints([
-    new THREE.Vector3(0, 0, 0),
-    new THREE.Vector3(0, 1, 0),
-  ]);
-  scene.add(new THREE.Line(axisGeometry, axisMaterial));
+  // Hue ring at maximum chroma (radius=1) at mid-height, full colour spectrum
+  const HUE_SEGS = 180;
+  const huePos = new Float32Array((HUE_SEGS + 1) * 3);
+  const hueCol = new Float32Array((HUE_SEGS + 1) * 3);
+  const tmpColor = new THREE.Color();
+  for (let i = 0; i <= HUE_SEGS; i++) {
+    const t = i / HUE_SEGS;
+    const theta = t * Math.PI * 2;
+    huePos[i * 3] = Math.cos(theta);
+    huePos[i * 3 + 1] = 0.5;
+    huePos[i * 3 + 2] = Math.sin(theta);
+    tmpColor.setHSL(t, 1, 0.5);
+    hueCol[i * 3] = tmpColor.r;
+    hueCol[i * 3 + 1] = tmpColor.g;
+    hueCol[i * 3 + 2] = tmpColor.b;
+  }
+  const hueGeom = new THREE.BufferGeometry();
+  hueGeom.setAttribute("position", new THREE.BufferAttribute(huePos, 3));
+  hueGeom.setAttribute("color", new THREE.BufferAttribute(hueCol, 3));
+  scene.add(
+    new THREE.Points(hueGeom, new THREE.PointsMaterial({ size: 0.05, vertexColors: true, sizeAttenuation: true }))
+  );
 
-  const ringGeometry = new THREE.RingGeometry(0.98, 1, 64);
-  const ringMaterial = new THREE.MeshBasicMaterial({
-    color: GUIDE_COLOR,
-    transparent: true,
-    opacity: GUIDE_OPACITY,
-    side: THREE.DoubleSide,
-  });
-  const ring = new THREE.Mesh(ringGeometry, ringMaterial);
-  ring.rotation.x = -Math.PI / 2;
-  scene.add(ring);
-
+  // Wireframe cylinder outline
   const cylinderGeometry = new THREE.CylinderGeometry(1, 1, 1, 32, 1, true);
   const cylinderMaterial = new THREE.MeshBasicMaterial({
     color: GUIDE_COLOR,
@@ -239,15 +284,3 @@ function addGuides(scene: THREE.Scene) {
   scene.add(cylinder);
 }
 
-/**
- * Adds ambient and directional lighting to the scene for proper colour
- * rendering of the instanced sphere meshes.
- * @param scene - The Three.js scene to add lights to
- */
-function addLighting(scene: THREE.Scene) {
-  scene.add(new THREE.AmbientLight(0xffffff, 0.7));
-
-  const directional = new THREE.DirectionalLight(0xffffff, 0.8);
-  directional.position.set(2, 3, 2);
-  scene.add(directional);
-}
