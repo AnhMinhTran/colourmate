@@ -58,5 +58,8 @@
     "typescript": "~5.9.2",
     "vitest": "^4.0.16"
   },
-  "private": true
+  "private": true,
+  "overrides": {
+    "expo-file-system": "~19.0.21"
+  }
 }

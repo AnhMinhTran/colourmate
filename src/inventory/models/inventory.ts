@@ -8,8 +8,8 @@ export interface InventoryProps {
 
 export class Inventory {
     readonly id: string;
-     colour_id: string;
-     quantity: number
+    colour_id: string;
+    quantity: number;
 
     private constructor(props: InventoryProps) {
         this.id = props.id;
@@ -17,7 +17,7 @@ export class Inventory {
         this.quantity = props.quantity;
     }
 
-    static create(props: InventoryProps): Inventory {
+    static create(props: Omit<InventoryProps, 'id'>): Inventory {
         return new Inventory({
             id: randomUUID(),
             colour_id: props.colour_id,
