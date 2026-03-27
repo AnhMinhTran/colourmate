@@ -1,7 +1,7 @@
 [
   {
     "brand": "TTC",
-    "name": "Pestdence Green",
+    "name": "Pestilence Green",
     "row": 1,
     "col": 1,
     "hex": "#C2CA96",
@@ -39,7 +39,7 @@
   },
   {
     "brand": "GW",
-    "name": "Nurghing Green",
+    "name": "Nurgling Green",
     "row": 1,
     "col": 3,
     "hex": "#83895C",
@@ -77,7 +77,7 @@
   },
   {
     "brand": "PA",
-    "name": "Yellaw Green",
+    "name": "Yellow Green",
     "row": 1,
     "col": 5,
     "hex": "#768034",
@@ -96,7 +96,7 @@
   },
   {
     "brand": "AK",
-    "name": "Golden Dlive",
+    "name": "Golden Olive",
     "row": 1,
     "col": 6,
     "hex": "#79872A",
@@ -153,7 +153,7 @@
   },
   {
     "brand": "VMC",
-    "name": "Dlive Green",
+    "name": "Olive Green",
     "row": 1,
     "col": 9,
     "hex": "#527626",
@@ -209,8 +209,8 @@
     "source": "army_green.png"
   },
   {
-    "brand": "",
-    "name": "WPHWebbing Green",
+    "brand": "WPF",
+    "name": "Webbing Green",
     "row": 2,
     "col": 2,
     "hex": "#5A603F",
@@ -286,7 +286,7 @@
   },
   {
     "brand": "AK",
-    "name": "Dlive Green",
+    "name": "Olive Green",
     "row": 2,
     "col": 6,
     "hex": "#556326",
@@ -627,8 +627,8 @@
     "source": "army_green.png"
   },
   {
-    "brand": "",
-    "name": "WPHBritish Cama Green",
+    "brand": "WPF",
+    "name": "British Cama Green",
     "row": 4,
     "col": 8,
     "hex": "#5C764B",
@@ -855,8 +855,8 @@
     "source": "army_green.png"
   },
   {
-    "brand": "",
-    "name": "WPH Light",
+    "brand": "WPF",
+    "name": "Light Feldgrau",
     "row": 6,
     "col": 1,
     "hex": "#727F78",
@@ -874,8 +874,8 @@
     "source": "army_green.png"
   },
   {
-    "brand": "",
-    "name": "WPHMid",
+    "brand": "WPF",
+    "name": "Mid Feldgrau",
     "row": 6,
     "col": 2,
     "hex": "#545F54",
@@ -931,8 +931,8 @@
     "source": "army_green.png"
   },
   {
-    "brand": "",
-    "name": "WPHDark Drab i",
+    "brand": "WPF",
+    "name": "Dark Drab",
     "row": 6,
     "col": 5,
     "hex": "#192A26",
@@ -1159,8 +1159,8 @@
     "source": "black.png"
   },
   {
-    "brand": "",
-    "name": "WPHStrap Grey",
+    "brand": "WPF",
+    "name": "Strap Grey",
     "row": 1,
     "col": 8,
     "hex": "#1F1E21",
@@ -1463,8 +1463,8 @@
     "source": "black.png"
   },
   {
-    "brand": "",
-    "name": "WPESWPH Matt Black",
+    "brand": "WPF",
+    "name": "Matt Black",
     "row": 3,
     "col": 7,
     "hex": "#151415",
@@ -2812,8 +2812,8 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "",
-    "name": "WPHTanker Grey",
+    "brand": "WPF",
+    "name": "Tanker Grey",
     "row": 1,
     "col": 6,
     "hex": "#748094",
@@ -3895,8 +3895,8 @@
     "source": "bone.png"
   },
   {
-    "brand": "",
-    "name": "WPHCanvas",
+    "brand": "WPF",
+    "name": "Canvas",
     "row": 1,
     "col": 13,
     "hex": "#A4927A",
@@ -3914,8 +3914,8 @@
     "source": "bone.png"
   },
   {
-    "brand": "",
-    "name": "WPHLight Battle Dress",
+    "brand": "WPF",
+    "name": "Light Battle Dress",
     "row": 1,
     "col": 14,
     "hex": "#A48D70",
@@ -4048,7 +4048,7 @@
   },
   {
     "brand": "PA",
-    "name": "Dlive Flesh",
+    "name": "Olive Flesh",
     "row": 2,
     "col": 7,
     "hex": "#D3B9A3",
@@ -4503,8 +4503,8 @@
     "source": "bone.png"
   },
   {
-    "brand": "",
-    "name": "WPHWebbing Khaki",
+    "brand": "WPF",
+    "name": "Webbing Khaki",
     "row": 4,
     "col": 9,
     "hex": "#BC9959",
@@ -4560,8 +4560,8 @@
     "source": "bone.png"
   },
   {
-    "brand": "",
-    "name": "WPHCamo Sand",
+    "brand": "WPF",
+    "name": "Camo Sand",
     "row": 4,
     "col": 12,
     "hex": "#B4874E",
@@ -4902,8 +4902,8 @@
     "source": "bone.png"
   },
   {
-    "brand": "",
-    "name": "WPHDark Battle Oress",
+    "brand": "WPF",
+    "name": "Dark Battle Dress",
     "row": 6,
     "col": 4,
     "hex": "#362410",
@@ -4960,7 +4960,7 @@
   },
   {
     "brand": "WPF",
-    "name": "WPH Paratrooper Tan",
+    "name": "Paratrooper Tan",
     "row": 1,
     "col": 3,
     "hex": "#A37966",
@@ -5092,8 +5092,8 @@
     "source": "brown.png"
   },
   {
-    "brand": "",
-    "name": "WPFs WPH Leather Brown",
+    "brand": "WPF",
+    "name": "Leather Brown",
     "row": 1,
     "col": 10,
     "hex": "#715144",
@@ -5282,8 +5282,8 @@
     "source": "brown.png"
   },
   {
-    "brand": "",
-    "name": "WPHBoot Brown",
+    "brand": "WPF",
+    "name": "Boot Brown",
     "row": 2,
     "col": 7,
     "hex": "#432118",
@@ -5662,8 +5662,8 @@
     "source": "brown.png"
   },
   {
-    "brand": "",
-    "name": "WPHMud Splatter",
+    "brand": "WPF",
+    "name": "Mud Splatter",
     "row": 4,
     "col": 3,
     "hex": "#54311B",
@@ -5814,8 +5814,8 @@
     "source": "brown.png"
   },
   {
-    "brand": "",
-    "name": "WPHDark Olive",
+    "brand": "WPF",
+    "name": "Dark Olive",
     "row": 4,
     "col": 11,
     "hex": "#241E1C",
@@ -7448,8 +7448,8 @@
     "source": "green.png"
   },
   {
-    "brand": "",
-    "name": "WPHGerman Camo Green",
+    "brand": "WPF",
+    "name": "German Camo Green",
     "row": 1,
     "col": 8,
     "hex": "#1E693D",
@@ -8455,8 +8455,8 @@
     "source": "grey.png"
   },
   {
-    "brand": "",
-    "name": "WPEs WPH Matt White",
+    "brand": "WPF",
+    "name": "Matt White",
     "row": 1,
     "col": 7,
     "hex": "#F3F5F3",
@@ -9405,8 +9405,8 @@
     "source": "grey.png"
   },
   {
-    "brand": "",
-    "name": "WPHStrap Grey",
+    "brand": "WPF",
+    "name": "Strap Grey",
     "row": 5,
     "col": 12,
     "hex": "#201E21",
@@ -10564,8 +10564,8 @@
     "source": "magenta.png"
   },
   {
-    "brand": "",
-    "name": "WPHBeret Maroon",
+    "brand": "WPF",
+    "name": "Beret Maroon",
     "row": 2,
     "col": 2,
     "hex": "#78131F",
@@ -11381,8 +11381,8 @@
     "source": "ochre.png"
   },
   {
-    "brand": "",
-    "name": "WPHWebbing Khaki",
+    "brand": "WPF",
+    "name": "Webbing Khaki",
     "row": 1,
     "col": 6,
     "hex": "#BB9858",
@@ -11401,7 +11401,7 @@
   },
   {
     "brand": "AK",
-    "name": "Sand Yellaw",
+    "name": "Sand Yellow",
     "row": 1,
     "col": 7,
     "hex": "#DDAF52",
@@ -11591,7 +11591,7 @@
   },
   {
     "brand": "PA",
-    "name": "Braght Yellaw Ochre",
+    "name": "Braght Yellow Ochre",
     "row": 2,
     "col": 3,
     "hex": "#E8B95F",
@@ -11761,8 +11761,8 @@
     "source": "ochre.png"
   },
   {
-    "brand": "",
-    "name": "WPHCamo Sand",
+    "brand": "WPF",
+    "name": "Camo Sand",
     "row": 3,
     "col": 1,
     "hex": "#B4874E",
@@ -12958,8 +12958,8 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "",
-    "name": "WPHMedium Drab",
+    "brand": "WPF",
+    "name": "Medium Drab",
     "row": 3,
     "col": 6,
     "hex": "#5E583F",
@@ -13301,7 +13301,7 @@
   },
   {
     "brand": "VMC",
-    "name": "Yellow Dlive",
+    "name": "Yellow Olive",
     "row": 5,
     "col": 5,
     "hex": "#212517",
@@ -15580,8 +15580,8 @@
     "source": "red.png"
   },
   {
-    "brand": "",
-    "name": "WPHBeret Maroon",
+    "brand": "WPF",
+    "name": "Beret Maroon",
     "row": 5,
     "col": 7,
     "hex": "#78131F",
@@ -15808,8 +15808,8 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "",
-    "name": "WPHFair Skin",
+    "brand": "WPF",
+    "name": "Fair Skin",
     "row": 1,
     "col": 6,
     "hex": "#DA8F86",
@@ -16207,8 +16207,8 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "",
-    "name": "PFBarbarian Fles be WPHBeng Cee",
+    "brand": "WPF",
+    "name": "Barbarian Flesh",
     "row": 4,
     "col": 2,
     "hex": "#D88C74",
@@ -18259,8 +18259,8 @@
     "source": "tan.png"
   },
   {
-    "brand": "",
-    "name": "WPHCama Brown",
+    "brand": "WPF",
+    "name": "Camo Brown",
     "row": 4,
     "col": 1,
     "hex": "#702613",
@@ -18316,8 +18316,8 @@
     "source": "tan.png"
   },
   {
-    "brand": "",
-    "name": "WPHRifle Brown",
+    "brand": "WPF",
+    "name": "Rifle Brown",
     "row": 4,
     "col": 4,
     "hex": "#622419",
@@ -18601,8 +18601,8 @@
     "source": "tan.png"
   },
   {
-    "brand": "",
-    "name": "WPHBoot Brown",
+    "brand": "WPF",
+    "name": "Boot Brown",
     "row": 5,
     "col": 10,
     "hex": "#432118",
@@ -22706,7 +22706,7 @@
   },
   {
     "brand": "AK",
-    "name": "Pastel Yellaw",
+    "name": "Pastel Yellow",
     "row": 1,
     "col": 6,
     "hex": "#F3DC98",
@@ -22763,7 +22763,7 @@
   },
   {
     "brand": "AK",
-    "name": "Pale Yellaw",
+    "name": "Pale Yellow",
     "row": 1,
     "col": 9,
     "hex": "#F4D37F",
@@ -22782,7 +22782,7 @@
   },
   {
     "brand": "VGC",
-    "name": "Toxic Yellaw",
+    "name": "Toxic Yellow",
     "row": 1,
     "col": 10,
     "hex": "#F1D878",
@@ -23010,7 +23010,7 @@
   },
   {
     "brand": "PA",
-    "name": "Golden Yellaw",
+    "name": "Golden Yellow",
     "row": 2,
     "col": 9,
     "hex": "#F8C126",
@@ -23067,7 +23067,7 @@
   },
   {
     "brand": "VGC",
-    "name": "Moon Yellaw",
+    "name": "Moon Yellow",
     "row": 2,
     "col": 12,
     "hex": "#F5BA23",
@@ -23105,7 +23105,7 @@
   },
   {
     "brand": "TTC",
-    "name": "Yellaw Flame",
+    "name": "Yellow Flame",
     "row": 3,
     "col": 2,
     "hex": "#F5A71F",
@@ -23124,7 +23124,7 @@
   },
   {
     "brand": "PA",
-    "name": "Warm Yellaw",
+    "name": "Warm Yellow",
     "row": 3,
     "col": 3,
     "hex": "#FBAA21",
@@ -23181,7 +23181,7 @@
   },
   {
     "brand": "",
-    "name": "Gv Wv Yriel Yellaw",
+    "name": "Gv Wv Yriel Yellow",
     "row": 3,
     "col": 6,
     "hex": "#F3A013",
@@ -23238,7 +23238,7 @@
   },
   {
     "brand": "AK",
-    "name": "Golden Yellaw",
+    "name": "Golden Yellow",
     "row": 4,
     "col": 1,
     "hex": "#FDB157",

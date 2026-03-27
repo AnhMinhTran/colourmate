@@ -5,8 +5,8 @@
   "scripts": {
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web",
     "lint": "expo lint",
     "test": "vitest",
@@ -35,6 +35,7 @@
     "expo-status-bar": "~3.0.9",
     "expo-symbols": "~1.0.8",
     "expo-system-ui": "~6.0.9",
+    "expo-three": "^8.0.0",
     "expo-web-browser": "~15.0.10",
     "react": "19.1.0",
     "react-dom": "19.1.0",
@@ -44,11 +45,13 @@
     "react-native-safe-area-context": "~5.6.0",
     "react-native-screens": "~4.16.0",
     "react-native-web": "~0.21.0",
-    "react-native-worklets": "0.5.1"
+    "react-native-worklets": "0.5.1",
+    "three": "^0.166.1"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.28.5",
     "@types/react": "~19.1.0",
+    "@types/three": "^0.166.0",
     "@vitest/coverage-v8": "^4.0.16",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~10.0.0",
