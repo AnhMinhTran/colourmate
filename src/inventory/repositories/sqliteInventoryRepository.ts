@@ -8,37 +8,40 @@ interface InventoryRow {
     quantity: number;
 }
 
-function rowToProps(row: Inventory): InventoryProps {
+function rowToProps(row: InventoryRow): InventoryProps {
 	return {
 		id: row.id,
+		colour_id: row.colour_id,
 		quantity: row.quantity,
-		colour_id: row.colour_id
 	}
 }
 
 export class SqliteInventoryRepository implements InventoryRepository {
 	constructor(private readonly db: SQLite.SQLiteDatabase) {}
 	
-	delete(id: string): Promise<void> {
-		throw new Error("Method not implemented.");
+	async delete(id: string): Promise<void> {
+		await this.db.runAsync(`DELETE FROM inventories WHERE id = ?`, id);
+	}
+
+	async deleteByColourId(colourId: string): Promise<void> {
+		await this.db.runAsync(`DELETE FROM inventories WHERE colour_id = ?`, colourId);
 	}
 
 	async create(inventory: Inventory): Promise<void> {
 		await this.db.runAsync(
-			`INSERT INTO inventories (id, colour_id, quantity)
-			VALUES (?, ?, ?)`,
+			`INSERT INTO inventories (id, colour_id, quantity) VALUES (?, ?, ?)`,
 			inventory.id,
 			inventory.colour_id,
-			inventory.quantity
+			inventory.quantity,
 		);
 	}
 
 	async update(inventory: Inventory): Promise<void> {
 		await this.db.runAsync(
-			`UPDATE inventories SET colour_id= ?, quantity= ? WHERE id= ?`,
+			`UPDATE inventories SET colour_id = ?, quantity = ? WHERE id = ?`,
 			inventory.colour_id,
 			inventory.quantity,
-			inventory.id
+			inventory.id,
 		);
 	}
 

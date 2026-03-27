@@ -12,6 +12,7 @@ import {
   View,
 } from 'react-native';
 import { useSQLiteContext } from 'expo-sqlite';
+import { useRouter } from 'expo-router';
 
 import { ColourPoint } from '@/src/colour/models/colourPoint';
 import { SqliteColourPointRepository } from '@/src/colour/repositories/sqliteColourPointRepository';
@@ -120,6 +121,7 @@ export default function InventoryScreen() {
   const [search, setSearch] = useState('');
   const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS);
   const [showFilter, setShowFilter] = useState(false);
+  const router = useRouter();
 
   const loadData = useCallback(async () => {
     const [allColours, allInventory] = await Promise.all([
@@ -132,11 +134,15 @@ export default function InventoryScreen() {
 
   useEffect(() => { loadData(); }, [loadData]);
 
-  const handleAdd = useCallback(async (colour: ColourPoint) => {
-    if (inventoryIds.has(colour.id)) return;
-    const entry = Inventory.create({ id: '', colour_id: colour.id, quantity: 1 });
-    await inventoryRepo.create(entry);
-    setInventoryIds((prev) => new Set([...prev, colour.id]));
+  const handleToggle = useCallback(async (colour: ColourPoint) => {
+    if (inventoryIds.has(colour.id)) {
+      await inventoryRepo.deleteByColourId(colour.id);
+      setInventoryIds((prev) => { const next = new Set(prev); next.delete(colour.id); return next; });
+    } else {
+      const entry = Inventory.create({ colour_id: colour.id, quantity: 1 });
+      await inventoryRepo.create(entry);
+      setInventoryIds((prev) => new Set([...prev, colour.id]));
+    }
   }, [inventoryIds, inventoryRepo]);
 
   const allBrands = useMemo(
@@ -158,7 +164,7 @@ export default function InventoryScreen() {
     const bg = `rgb(${item.rgb.r}, ${item.rgb.g}, ${item.rgb.b})`;
     const inInventory = inventoryIds.has(item.id);
     return (
-      <View style={styles.card}>
+      <Pressable style={styles.card} onPress={() => router.push({ pathname: '/colour/[id]' as any, params: { id: item.id } })}>
         <View style={[styles.swatch, { backgroundColor: bg }]} />
         <View style={styles.cardInfo}>
           <Text style={styles.colourName}>{item.name}</Text>
@@ -175,13 +181,13 @@ export default function InventoryScreen() {
         </View>
         <Pressable
           style={[styles.addBtn, inInventory && styles.addBtnActive]}
-          onPress={() => handleAdd(item)}
+          onPress={() => handleToggle(item)}
         >
           <Text style={[styles.addBtnText, inInventory && styles.addBtnTextActive]}>
             {inInventory ? '✓' : '+'}
           </Text>
         </Pressable>
-      </View>
+      </Pressable>
     );
   };
 
