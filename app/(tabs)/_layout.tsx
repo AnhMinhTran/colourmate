@@ -22,8 +22,8 @@ export default function TabLayout() {
       <Tabs.Screen
         name="colourPicker"
         options={{
-          title: 'Color Sampler',
-          tabBarIcon: ({ color }) => <IconSymbol size={26} name="eyedropper.halffull" color={color} />,
+          title: 'Colour Sampler',
+          tabBarIcon: ({ color }) => <IconSymbol size={26} name="eyedropper" color={color} />,
         }}
       />
       <Tabs.Screen
