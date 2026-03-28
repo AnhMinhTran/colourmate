@@ -19,6 +19,13 @@ const MAPPING = {
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
   'cube.fill': '3d-rotation',
+  'paintpalette.fill': 'palette',
+  'eyedropper': 'colorize',
+  'info.circle': 'info',
+  'square.and.arrow.up': 'upload',
+  'photo': 'image',
+  'magnifyingglass': 'search',
+  'line.3.horizontal.decrease': 'filter-list',
 } as IconMapping;
 
 /**

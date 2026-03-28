@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useFocusEffect, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import {
   FlatList,
@@ -12,7 +13,6 @@ import {
   View,
 } from 'react-native';
 import { useSQLiteContext } from 'expo-sqlite';
-import { useRouter } from 'expo-router';
 
 import { ColourPoint } from '@/src/colour/models/colourPoint';
 import { SqliteColourPointRepository } from '@/src/colour/repositories/sqliteColourPointRepository';
@@ -132,7 +132,7 @@ export default function InventoryScreen() {
     setInventoryIds(new Set(allInventory.map((i) => i.colour_id)));
   }, [colourRepo, inventoryRepo]);
 
-  useEffect(() => { loadData(); }, [loadData]);
+  useFocusEffect(useCallback(() => { loadData(); }, [loadData]));
 
   const handleToggle = useCallback(async (colour: ColourPoint) => {
     if (inventoryIds.has(colour.id)) {

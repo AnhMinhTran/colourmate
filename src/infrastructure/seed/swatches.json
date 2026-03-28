@@ -115,7 +115,7 @@
   },
   {
     "brand": "VGC",
-    "name": "Gablin Green",
+    "name": "Goblin Green",
     "row": 1,
     "col": 7,
     "hex": "#637B3F",
@@ -476,7 +476,7 @@
   },
   {
     "brand": "GW",
-    "name": "Loren Farest",
+    "name": "Loren forest",
     "row": 3,
     "col": 10,
     "hex": "#4C563F",
@@ -665,8 +665,65 @@
     "source": "army_green.png"
   },
   {
+    "brand": "VMC",
+    "name": "Fern Green",
+    "row": 4,
+    "col": 10,
+    "hex": "#345937",
+    "rgb": [
+      52,
+      89,
+      55
+    ],
+    "bbox": [
+      756,
+      310,
+      825,
+      381
+    ],
+    "source": "army_green.png"
+  },
+    {
+    "brand": "AK",
+    "name": "Gunship Green",
+    "row": 4,
+    "col": 10,
+    "hex": "#3b5442",
+    "rgb": [
+      59,
+      84,
+      66
+    ],
+    "bbox": [
+      756,
+      310,
+      825,
+      381
+    ],
+    "source": "army_green.png"
+  },
+      {
     "brand": "GW",
-    "name": "Warbass Green",
+    "name": "Waaagh! Flesh",
+    "row": 4,
+    "col": 10,
+    "hex": "#32483b",
+    "rgb": [
+      50,
+      72,
+      59
+    ],
+    "bbox": [
+      756,
+      310,
+      825,
+      381
+    ],
+    "source": "army_green.png"
+  },
+    {
+    "brand": "GW",
+    "name": "Warboss Green",
     "row": 4,
     "col": 10,
     "hex": "#486E44",
@@ -685,7 +742,7 @@
   },
   {
     "brand": "WPF",
-    "name": "Massy Green",
+    "name": "Mossy Green",
     "row": 5,
     "col": 1,
     "hex": "#BACEC2",
@@ -742,7 +799,7 @@
   },
   {
     "brand": "WPF",
-    "name": "Patagan Pine",
+    "name": "Patagon Pine",
     "row": 5,
     "col": 4,
     "hex": "#7D9281",
@@ -894,7 +951,7 @@
   },
   {
     "brand": "VMC",
-    "name": "Bronze",
+    "name": "Bronze Green",
     "row": 6,
     "col": 3,
     "hex": "#464F4A",
@@ -912,8 +969,8 @@
     "source": "army_green.png"
   },
   {
-    "brand": "",
-    "name": "VMC Cam Dark",
+    "brand": "VMC",
+    "name": "Cam Dark Green",
     "row": 6,
     "col": 4,
     "hex": "#18291B",
@@ -988,8 +1045,8 @@
     "source": "army_green.png"
   },
   {
-    "brand": "",
-    "name": "AK Extra Dark",
+    "brand": "AK",
+    "name": "Extra Dark Green",
     "row": 6,
     "col": 8,
     "hex": "#182119",
@@ -1007,8 +1064,8 @@
     "source": "army_green.png"
   },
   {
-    "brand": "",
-    "name": "VC Extra Dark",
+    "brand": "VMC",
+    "name": "Extra Dark Greeen",
     "row": 6,
     "col": 9,
     "hex": "#202720",
@@ -1059,25 +1116,6 @@
       91,
       134,
       162,
-      176
-    ],
-    "source": "black.png"
-  },
-  {
-    "brand": "",
-    "name": "GWi Eshin Grey",
-    "row": 1,
-    "col": 3,
-    "hex": "#1F2126",
-    "rgb": [
-      31,
-      33,
-      38
-    ],
-    "bbox": [
-      175,
-      134,
-      245,
       176
     ],
     "source": "black.png"
@@ -1274,7 +1312,7 @@
   },
   {
     "brand": "TTC",
-    "name": "Coki Corpse Blue",
+    "name": "Cold Corpse Blue",
     "row": 2,
     "col": 6,
     "hex": "#161E24",
@@ -1312,7 +1350,7 @@
   },
   {
     "brand": "TTC",
-    "name": "VWar Master Green",
+    "name": "War Master Green",
     "row": 2,
     "col": 8,
     "hex": "#1C2229",
@@ -1501,8 +1539,8 @@
     "source": "black.png"
   },
   {
-    "brand": "",
-    "name": "VIMCGloss Black",
+    "brand": "VMC",
+    "name": "Gloss Black",
     "row": 3,
     "col": 9,
     "hex": "#030304",
@@ -1521,7 +1559,7 @@
   },
   {
     "brand": "VMC",
-    "name": "Black Vialet",
+    "name": "Black Violet",
     "row": 4,
     "col": 1,
     "hex": "#23151F",
@@ -1559,7 +1597,7 @@
   },
   {
     "brand": "WPF",
-    "name": "Terrestial Titan",
+    "name": "Terrestrial Titan",
     "row": 4,
     "col": 3,
     "hex": "#1C1923",
@@ -1767,8 +1805,8 @@
     "source": "blue.png"
   },
   {
-    "brand": "",
-    "name": "TTClon Biue",
+    "brand": "TTC",
+    "name": "Ion Blue",
     "row": 1,
     "col": 3,
     "hex": "#A2B8CF",
@@ -1844,7 +1882,7 @@
   },
   {
     "brand": "PA",
-    "name": "Ulframarine",
+    "name": "Ultramarine",
     "row": 1,
     "col": 7,
     "hex": "#314CD7",
@@ -1939,7 +1977,7 @@
   },
   {
     "brand": "GW",
-    "name": "Hoeth Biue",
+    "name": "Hoeth Blue",
     "row": 2,
     "col": 4,
     "hex": "#0B5F9E",
@@ -2053,7 +2091,7 @@
   },
   {
     "brand": "VGC",
-    "name": "Impersal Blue",
+    "name": "Imperial Blue",
     "row": 2,
     "col": 10,
     "hex": "#133056",
@@ -2071,8 +2109,8 @@
     "source": "blue.png"
   },
   {
-    "brand": "",
-    "name": "WPFimperial Navi VPNDeeges Bet",
+    "brand": "WPF",
+    "name": "Imperial Navy",
     "row": 2,
     "col": 11,
     "hex": "#183D61",
@@ -2318,8 +2356,8 @@
     "source": "blue.png"
   },
   {
-    "brand": "",
-    "name": "Gv Wv Teclis Blue",
+    "brand": "GW",
+    "name": "Teclis Blue",
     "row": 4,
     "col": 1,
     "hex": "#0773BA",
@@ -2566,7 +2604,7 @@
   },
   {
     "brand": "VMC",
-    "name": "Dark Biue",
+    "name": "Dark Blue",
     "row": 5,
     "col": 4,
     "hex": "#203DA3",
@@ -2642,7 +2680,7 @@
   },
   {
     "brand": "AK",
-    "name": "Oark Prussian Blue",
+    "name": "Dark Prussian Blue",
     "row": 5,
     "col": 8,
     "hex": "#051B46",
@@ -2793,25 +2831,6 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "",
-    "name": "WPEFWalf Grey",
-    "row": 1,
-    "col": 5,
-    "hex": "#6C83A2",
-    "rgb": [
-      108,
-      131,
-      162
-    ],
-    "bbox": [
-      338,
-      5,
-      409,
-      76
-    ],
-    "source": "blue_grey.png"
-  },
-  {
     "brand": "WPF",
     "name": "Tanker Grey",
     "row": 1,
@@ -2902,25 +2921,6 @@
       755,
       5,
       826,
-      76
-    ],
-    "source": "blue_grey.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Grey Blue",
-    "row": 1,
-    "col": 11,
-    "hex": "#609DC5",
-    "rgb": [
-      96,
-      157,
-      197
-    ],
-    "bbox": [
-      838,
-      5,
-      909,
       76
     ],
     "source": "blue_grey.png"
@@ -3022,7 +3022,7 @@
   },
   {
     "brand": "GW",
-    "name": "Kantor Biue",
+    "name": "Kantor Blue",
     "row": 2,
     "col": 6,
     "hex": "#121F33",
@@ -3054,25 +3054,6 @@
       505,
       106,
       576,
-      176
-    ],
-    "source": "blue_grey.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Paynes Grey",
-    "row": 2,
-    "col": 8,
-    "hex": "#1B1E26",
-    "rgb": [
-      27,
-      30,
-      38
-    ],
-    "bbox": [
-      589,
-      106,
-      659,
       176
     ],
     "source": "blue_grey.png"
@@ -3230,25 +3211,6 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "TTC",
-    "name": "Cold Corpse Blue",
-    "row": 3,
-    "col": 9,
-    "hex": "#161E24",
-    "rgb": [
-      22,
-      30,
-      36
-    ],
-    "bbox": [
-      672,
-      207,
-      742,
-      278
-    ],
-    "source": "blue_grey.png"
-  },
-  {
     "brand": "VMC",
     "name": "Pale Blue",
     "row": 4,
@@ -3401,25 +3363,6 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "GW",
-    "name": "Dark Reaper",
-    "row": 4,
-    "col": 9,
-    "hex": "#18242D",
-    "rgb": [
-      24,
-      36,
-      45
-    ],
-    "bbox": [
-      672,
-      308,
-      742,
-      379
-    ],
-    "source": "blue_grey.png"
-  },
-  {
     "brand": "TTC",
     "name": "Faust Slue",
     "row": 4,
@@ -3434,44 +3377,6 @@
       755,
       308,
       826,
-      379
-    ],
-    "source": "blue_grey.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "War Master Green",
-    "row": 4,
-    "col": 11,
-    "hex": "#1C2229",
-    "rgb": [
-      28,
-      34,
-      41
-    ],
-    "bbox": [
-      838,
-      308,
-      909,
-      379
-    ],
-    "source": "blue_grey.png"
-  },
-  {
-    "brand": "",
-    "name": "Gv Wv Corvus Black",
-    "row": 4,
-    "col": 12,
-    "hex": "#171A1F",
-    "rgb": [
-      23,
-      26,
-      31
-    ],
-    "bbox": [
-      921,
-      308,
-      991,
       379
     ],
     "source": "blue_grey.png"
@@ -4162,7 +4067,7 @@
   },
   {
     "brand": "GW",
-    "name": "Ushabt Bane",
+    "name": "Ushabti Bone",
     "row": 2,
     "col": 13,
     "hex": "#C0A982",
@@ -4238,7 +4143,7 @@
   },
   {
     "brand": "PA",
-    "name": "Bonesatin",
+    "name": "Bone",
     "row": 3,
     "col": 4,
     "hex": "#A89494",
@@ -4883,7 +4788,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "",
+    "brand": "WPF",
     "name": "Mid Battle Dress",
     "row": 6,
     "col": 3,
@@ -5055,7 +4960,7 @@
   },
   {
     "brand": "AK",
-    "name": "Cark",
+    "name": "Cork",
     "row": 1,
     "col": 8,
     "hex": "#AB6F51",
@@ -5225,8 +5130,8 @@
     "source": "brown.png"
   },
   {
-    "brand": "",
-    "name": "AMAPBurnt Umber",
+    "brand": "PA",
+    "name": "Burnt Umber",
     "row": 2,
     "col": 4,
     "hex": "#723A2B",
@@ -5396,25 +5301,6 @@
     "source": "brown.png"
   },
   {
-    "brand": "GW",
-    "name": "Rhinox Hide",
-    "row": 2,
-    "col": 13,
-    "hex": "#201312",
-    "rgb": [
-      32,
-      19,
-      18
-    ],
-    "bbox": [
-      1006,
-      103,
-      1076,
-      174
-    ],
-    "source": "brown.png"
-  },
-  {
     "brand": "AMP",
     "name": "Beige Grey",
     "row": 3,
@@ -5453,8 +5339,8 @@
     "source": "brown.png"
   },
   {
-    "brand": "",
-    "name": "GVWv Gorthor Brown",
+    "brand": "GW",
+    "name": "Gorthor Brown",
     "row": 3,
     "col": 3,
     "hex": "#63473F",
@@ -5644,7 +5530,7 @@
   },
   {
     "brand": "VMC",
-    "name": "New VWoad",
+    "name": "New Wood",
     "row": 4,
     "col": 2,
     "hex": "#8E552B",
@@ -5682,7 +5568,7 @@
   },
   {
     "brand": "TTC",
-    "name": "Nobie Steed Brown",
+    "name": "Noble Steed Brown",
     "row": 4,
     "col": 4,
     "hex": "#633A27",
@@ -5701,7 +5587,7 @@
   },
   {
     "brand": "GW",
-    "name": "Maurnfang Brown",
+    "name": "Mournfang Brown",
     "row": 4,
     "col": 5,
     "hex": "#4F2E1D",
@@ -5777,7 +5663,7 @@
   },
   {
     "brand": "GW",
-    "name": "Thonda Brown",
+    "name": "Thondia Brown",
     "row": 4,
     "col": 9,
     "hex": "#2C1F1B",
@@ -5853,7 +5739,7 @@
   },
   {
     "brand": "VMC",
-    "name": "Okd Wood",
+    "name": "Old Wood",
     "row": 5,
     "col": 2,
     "hex": "#906D52",
@@ -5891,7 +5777,7 @@
   },
   {
     "brand": "GW",
-    "name": "XV8B",
+    "name": "XV88",
     "row": 5,
     "col": 4,
     "hex": "#79573B",
@@ -5929,7 +5815,7 @@
   },
   {
     "brand": "PA",
-    "name": "Dark Gokien Brown",
+    "name": "Dark Golden Brown",
     "row": 5,
     "col": 6,
     "hex": "#583E25",
@@ -6005,7 +5891,7 @@
   },
   {
     "brand": "VMC",
-    "name": "BCDark Brown",
+    "name": "BC Dark Brown",
     "row": 6,
     "col": 1,
     "hex": "#664A33",
@@ -6100,7 +5986,7 @@
   },
   {
     "brand": "VMC",
-    "name": "Chacolate Brown",
+    "name": "Chocolate Brown",
     "row": 6,
     "col": 6,
     "hex": "#372114",
@@ -6119,7 +6005,7 @@
   },
   {
     "brand": "AK",
-    "name": "Chacolate Chippang",
+    "name": "Chocolate (Chipping)",
     "row": 6,
     "col": 7,
     "hex": "#342218",
@@ -6151,25 +6037,6 @@
       591,
       508,
       664,
-      578
-    ],
-    "source": "brown.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Cam Maddie Brown",
-    "row": 6,
-    "col": 9,
-    "hex": "#675344",
-    "rgb": [
-      103,
-      83,
-      68
-    ],
-    "bbox": [
-      675,
-      508,
-      747,
       578
     ],
     "source": "brown.png"
@@ -6232,25 +6099,6 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "PA",
-    "name": "Olive Flesh",
-    "row": 1,
-    "col": 2,
-    "hex": "#D3B9A4",
-    "rgb": [
-      211,
-      185,
-      164
-    ],
-    "bbox": [
-      93,
-      8,
-      164,
-      79
-    ],
-    "source": "golden_flesh.png"
-  },
-  {
     "brand": "GW",
     "name": "Flayed One Flesh",
     "row": 1,
@@ -6270,8 +6118,8 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "",
-    "name": "WPEFAmber Skin",
+    "brand": "WPF",
+    "name": "Amber Skin",
     "row": 1,
     "col": 4,
     "hex": "#C5A080",
@@ -6555,25 +6403,6 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "VMC",
-    "name": "Desert Brown",
-    "row": 2,
-    "col": 8,
-    "hex": "#BC8760",
-    "rgb": [
-      188,
-      135,
-      96
-    ],
-    "bbox": [
-      594,
-      109,
-      664,
-      181
-    ],
-    "source": "golden_flesh.png"
-  },
-  {
     "brand": "AK",
     "name": "Basic Skin Tone",
     "row": 2,
@@ -6746,7 +6575,7 @@
   },
   {
     "brand": "AK",
-    "name": "Oark Flesh",
+    "name": "Dark Flesh",
     "row": 3,
     "col": 6,
     "hex": "#CF8B41",
@@ -6917,7 +6746,7 @@
   },
   {
     "brand": "VGC",
-    "name": "Skin Tane",
+    "name": "Skin Tone",
     "row": 5,
     "col": 3,
     "hex": "#FAB591",
@@ -6974,7 +6803,7 @@
   },
   {
     "brand": "TTC",
-    "name": "Owarven Skin",
+    "name": "Dwarven Skin",
     "row": 5,
     "col": 6,
     "hex": "#B57359",
@@ -7012,7 +6841,7 @@
   },
   {
     "brand": "VMC",
-    "name": "Besge Red",
+    "name": "Beige Red",
     "row": 5,
     "col": 8,
     "hex": "#B67158",
@@ -7050,7 +6879,7 @@
   },
   {
     "brand": "GW",
-    "name": "Bugmans Glaw",
+    "name": "Bugman's Glow",
     "row": 5,
     "col": 10,
     "hex": "#895955",
@@ -7145,7 +6974,7 @@
   },
   {
     "brand": "GW",
-    "name": "Knight Questar Flesh",
+    "name": "Knight-Questor Flesh",
     "row": 6,
     "col": 4,
     "hex": "#724C44",
@@ -7164,7 +6993,7 @@
   },
   {
     "brand": "WPF",
-    "name": "Oryad Brown",
+    "name": "Dryad Brown",
     "row": 6,
     "col": 5,
     "hex": "#68423A",
@@ -7240,7 +7069,7 @@
   },
   {
     "brand": "TTC",
-    "name": "Drund Fiesh",
+    "name": "Druid Flesh",
     "row": 6,
     "col": 9,
     "hex": "#2B1B1A",
@@ -7272,44 +7101,6 @@
       760,
       514,
       831,
-      584
-    ],
-    "source": "golden_flesh.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Afra Shadow",
-    "row": 6,
-    "col": 11,
-    "hex": "#2D1B14",
-    "rgb": [
-      45,
-      27,
-      20
-    ],
-    "bbox": [
-      843,
-      514,
-      914,
-      584
-    ],
-    "source": "golden_flesh.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Catachan Flesh",
-    "row": 6,
-    "col": 12,
-    "hex": "#2F1D18",
-    "rgb": [
-      47,
-      29,
-      24
-    ],
-    "bbox": [
-      927,
-      514,
-      998,
       584
     ],
     "source": "golden_flesh.png"
@@ -7392,7 +7183,7 @@
   },
   {
     "brand": "VGC",
-    "name": "Sxk Green",
+    "name": "Sick Green",
     "row": 1,
     "col": 5,
     "hex": "#377D40",
@@ -7411,7 +7202,7 @@
   },
   {
     "brand": "VMC",
-    "name": "Intermedate Green",
+    "name": "Intermediate Green",
     "row": 1,
     "col": 6,
     "hex": "#317244",
@@ -7544,7 +7335,7 @@
   },
   {
     "brand": "WPF",
-    "name": "Emerakd Forest",
+    "name": "Emerald Forest",
     "row": 2,
     "col": 1,
     "hex": "#55B153",
@@ -7582,7 +7373,7 @@
   },
   {
     "brand": "PA",
-    "name": "Brght Green",
+    "name": "Bright Green",
     "row": 2,
     "col": 3,
     "hex": "#01A352",
@@ -7676,25 +7467,6 @@
     "source": "green.png"
   },
   {
-    "brand": "PA",
-    "name": "Black Green",
-    "row": 2,
-    "col": 8,
-    "hex": "#17261C",
-    "rgb": [
-      23,
-      38,
-      28
-    ],
-    "bbox": [
-      593,
-      109,
-      663,
-      180
-    ],
-    "source": "green.png"
-  },
-  {
     "brand": "WPF",
     "name": "Blighted Green",
     "row": 2,
@@ -7710,25 +7482,6 @@
       109,
       747,
       180
-    ],
-    "source": "green.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Green Sky",
-    "row": 3,
-    "col": 1,
-    "hex": "#91AE82",
-    "rgb": [
-      145,
-      174,
-      130
-    ],
-    "bbox": [
-      9,
-      210,
-      80,
-      281
     ],
     "source": "green.png"
   },
@@ -7766,25 +7519,6 @@
       175,
       210,
       246,
-      281
-    ],
-    "source": "green.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Gunship Green",
-    "row": 3,
-    "col": 4,
-    "hex": "#375948",
-    "rgb": [
-      55,
-      89,
-      72
-    ],
-    "bbox": [
-      259,
-      210,
-      329,
       281
     ],
     "source": "green.png"
@@ -7848,7 +7582,7 @@
   },
   {
     "brand": "GW",
-    "name": "Cabban Green",
+    "name": "Caliban Green",
     "row": 3,
     "col": 8,
     "hex": "#152A26",
@@ -7880,25 +7614,6 @@
       676,
       210,
       747,
-      281
-    ],
-    "source": "green.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Nocturne Green",
-    "row": 3,
-    "col": 10,
-    "hex": "#1A1E1E",
-    "rgb": [
-      26,
-      30,
-      30
-    ],
-    "bbox": [
-      759,
-      210,
-      830,
       281
     ],
     "source": "green.png"
@@ -8000,7 +7715,7 @@
   },
   {
     "brand": "AK",
-    "name": "Pistactmo",
+    "name": "Pistachio",
     "row": 4,
     "col": 6,
     "hex": "#D2CE2E",
@@ -8038,7 +7753,7 @@
   },
   {
     "brand": "PA",
-    "name": "Brght Yellow Green",
+    "name": "Bright Yellow Green",
     "row": 4,
     "col": 8,
     "hex": "#8EB323",
@@ -8133,7 +7848,7 @@
   },
   {
     "brand": "WPF",
-    "name": "Afterglaw",
+    "name": "Afterglow",
     "row": 5,
     "col": 1,
     "hex": "#D8D99B",
@@ -8152,7 +7867,7 @@
   },
   {
     "brand": "WPF",
-    "name": "Rainfarest",
+    "name": "Rainforest",
     "row": 5,
     "col": 2,
     "hex": "#A2CB39",
@@ -8209,7 +7924,7 @@
   },
   {
     "brand": "GW",
-    "name": "Mcat Green",
+    "name": "Moot Green",
     "row": 5,
     "col": 5,
     "hex": "#5D9C33",
@@ -8266,7 +7981,7 @@
   },
   {
     "brand": "AK",
-    "name": "Sime Green",
+    "name": "Slime Green",
     "row": 5,
     "col": 8,
     "hex": "#2A9F01",
@@ -8342,7 +8057,7 @@
   },
   {
     "brand": "GW",
-    "name": "Winte Scar",
+    "name": "White Scar",
     "row": 1,
     "col": 1,
     "hex": "#EAEDEF",
@@ -8380,7 +8095,7 @@
   },
   {
     "brand": "PA",
-    "name": "Bald Titanium White",
+    "name": "Bold Titanium White",
     "row": 1,
     "col": 3,
     "hex": "#E9EBEB",
@@ -8399,7 +8114,7 @@
   },
   {
     "brand": "PA",
-    "name": "Heavy Titani um White",
+    "name": "Heavy Titanium White",
     "row": 1,
     "col": 4,
     "hex": "#EFF4F7",
@@ -8513,7 +8228,7 @@
   },
   {
     "brand": "VMC",
-    "name": "Cald White",
+    "name": "Cold White",
     "row": 1,
     "col": 10,
     "hex": "#E1E6E7",
@@ -8551,7 +8266,7 @@
   },
   {
     "brand": "AK",
-    "name": "Whate Grey",
+    "name": "White Grey",
     "row": 2,
     "col": 1,
     "hex": "#C7C8CC",
@@ -8646,7 +8361,7 @@
   },
   {
     "brand": "VGC",
-    "name": "Stanewall Grey",
+    "name": "Stonewall Grey",
     "row": 2,
     "col": 6,
     "hex": "#9A9A9A",
@@ -8721,8 +8436,8 @@
     "source": "grey.png"
   },
   {
-    "brand": "",
-    "name": "GWi Administra tum Grey",
+    "brand": "GW",
+    "name": "Administratum Grey",
     "row": 2,
     "col": 10,
     "hex": "#8A8E92",
@@ -8741,7 +8456,7 @@
   },
   {
     "brand": "TTC",
-    "name": "Carcharedan Grey",
+    "name": "Carcharodon Grey",
     "row": 2,
     "col": 11,
     "hex": "#838B8D",
@@ -8836,7 +8551,7 @@
   },
   {
     "brand": "VMC",
-    "name": "Dark Biue Grey",
+    "name": "Dark Blue Grey",
     "row": 3,
     "col": 4,
     "hex": "#474C50",
@@ -9063,25 +8778,6 @@
     "source": "grey.png"
   },
   {
-    "brand": "GW",
-    "name": "Celestra Grey",
-    "row": 4,
-    "col": 6,
-    "hex": "#93A1A4",
-    "rgb": [
-      147,
-      161,
-      164
-    ],
-    "bbox": [
-      427,
-      309,
-      497,
-      380
-    ],
-    "source": "grey.png"
-  },
-  {
     "brand": "AMP",
     "name": "Cool Grey",
     "row": 4,
@@ -9253,103 +8949,8 @@
     "source": "grey.png"
   },
   {
-    "brand": "AK",
-    "name": "Dark Grey",
-    "row": 5,
-    "col": 4,
-    "hex": "#424B50",
-    "rgb": [
-      66,
-      75,
-      80
-    ],
-    "bbox": [
-      260,
-      438,
-      331,
-      480
-    ],
-    "source": "grey.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Lead Grey",
-    "row": 5,
-    "col": 5,
-    "hex": "#1D252D",
-    "rgb": [
-      29,
-      37,
-      45
-    ],
-    "bbox": [
-      343,
-      438,
-      414,
-      480
-    ],
-    "source": "grey.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Dark Grey",
-    "row": 5,
-    "col": 6,
-    "hex": "#1A1E24",
-    "rgb": [
-      26,
-      30,
-      36
-    ],
-    "bbox": [
-      427,
-      438,
-      497,
-      480
-    ],
-    "source": "grey.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "German Grey",
-    "row": 5,
-    "col": 7,
-    "hex": "#1D242A",
-    "rgb": [
-      29,
-      36,
-      42
-    ],
-    "bbox": [
-      510,
-      438,
-      581,
-      480
-    ],
-    "source": "grey.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Dark Neutral Grey",
-    "row": 5,
-    "col": 8,
-    "hex": "#232429",
-    "rgb": [
-      35,
-      36,
-      41
-    ],
-    "bbox": [
-      593,
-      438,
-      664,
-      480
-    ],
-    "source": "grey.png"
-  },
-  {
     "brand": "GW",
-    "name": "Estun Grey",
+    "name": "Eshin Grey",
     "row": 5,
     "col": 9,
     "hex": "#202227",
@@ -9362,63 +8963,6 @@
       677,
       438,
       747,
-      480
-    ],
-    "source": "grey.png"
-  },
-  {
-    "brand": "AK",
-    "name": "German Grey",
-    "row": 5,
-    "col": 10,
-    "hex": "#202228",
-    "rgb": [
-      32,
-      34,
-      40
-    ],
-    "bbox": [
-      760,
-      438,
-      831,
-      480
-    ],
-    "source": "grey.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Iranclad Grey",
-    "row": 5,
-    "col": 11,
-    "hex": "#24242C",
-    "rgb": [
-      36,
-      36,
-      44
-    ],
-    "bbox": [
-      843,
-      438,
-      914,
-      480
-    ],
-    "source": "grey.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Strap Grey",
-    "row": 5,
-    "col": 12,
-    "hex": "#201E21",
-    "rgb": [
-      32,
-      30,
-      33
-    ],
-    "bbox": [
-      927,
-      438,
-      997,
       480
     ],
     "source": "grey.png"
@@ -9539,7 +9083,7 @@
   },
   {
     "brand": "VMC",
-    "name": "Rayal Purple",
+    "name": "Royal Purple",
     "row": 1,
     "col": 7,
     "hex": "#4C1953",
@@ -9552,25 +9096,6 @@
       506,
       8,
       577,
-      79
-    ],
-    "source": "lilac.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Black Violet",
-    "row": 1,
-    "col": 8,
-    "hex": "#23161F",
-    "rgb": [
-      35,
-      22,
-      31
-    ],
-    "bbox": [
-      590,
-      8,
-      660,
       79
     ],
     "source": "lilac.png"
@@ -9766,8 +9291,8 @@
     "source": "lilac.png"
   },
   {
-    "brand": "",
-    "name": "GCHexed Lichen",
+    "brand": "VGC",
+    "name": "Hexed Lichen",
     "row": 2,
     "col": 9,
     "hex": "#2A1536",
@@ -9957,7 +9482,7 @@
   },
   {
     "brand": "WPF",
-    "name": "Aben Purple",
+    "name": "Alien Purple",
     "row": 3,
     "col": 8,
     "hex": "#664D7E",
@@ -9970,25 +9495,6 @@
       590,
       210,
       660,
-      281
-    ],
-    "source": "lilac.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Terrestial Titan",
-    "row": 3,
-    "col": 9,
-    "hex": "#1C1923",
-    "rgb": [
-      28,
-      25,
-      35
-    ],
-    "bbox": [
-      677,
-      210,
-      743,
       281
     ],
     "source": "lilac.png"
@@ -10070,25 +9576,6 @@
     "source": "lilac.png"
   },
   {
-    "brand": "AK",
-    "name": "Black Purple",
-    "row": 4,
-    "col": 5,
-    "hex": "#291F1F",
-    "rgb": [
-      41,
-      31,
-      31
-    ],
-    "bbox": [
-      339,
-      311,
-      410,
-      382
-    ],
-    "source": "lilac.png"
-  },
-  {
     "brand": "GW",
     "name": "Slaanesh Grey",
     "row": 4,
@@ -10147,7 +9634,7 @@
   },
   {
     "brand": "AK",
-    "name": "Blue Vialet",
+    "name": "Blue Violet",
     "row": 5,
     "col": 1,
     "hex": "#725DB6",
@@ -10223,7 +9710,7 @@
   },
   {
     "brand": "GW",
-    "name": "Phoenaan Purple",
+    "name": "Phoenician Purple",
     "row": 5,
     "col": 5,
     "hex": "#271B3C",
@@ -10318,7 +9805,7 @@
   },
   {
     "brand": "WPF",
-    "name": "Alpha Biue",
+    "name": "Alpha Blue",
     "row": 6,
     "col": 2,
     "hex": "#636BB6",
@@ -10641,7 +10128,7 @@
   },
   {
     "brand": "TTC",
-    "name": "Asmedeus Red",
+    "name": "Asmodeus Red",
     "row": 2,
     "col": 6,
     "hex": "#622629",
@@ -10717,7 +10204,7 @@
   },
   {
     "brand": "TTC",
-    "name": "Amphora Rec",
+    "name": "Amphora Red",
     "row": 2,
     "col": 10,
     "hex": "#3F161C",
@@ -11021,7 +10508,7 @@
   },
   {
     "brand": "VGC",
-    "name": "Warlard Purple",
+    "name": "Warlord Purple",
     "row": 4,
     "col": 5,
     "hex": "#8D1B4D",
@@ -11362,8 +10849,8 @@
     "source": "ochre.png"
   },
   {
-    "brand": "",
-    "name": "WPEBurnt Turf",
+    "brand": "WPF",
+    "name": "Burnt Turf",
     "row": 1,
     "col": 5,
     "hex": "#C3A060",
@@ -11376,25 +10863,6 @@
       339,
       6,
       410,
-      77
-    ],
-    "source": "ochre.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Webbing Khaki",
-    "row": 1,
-    "col": 6,
-    "hex": "#BB9858",
-    "rgb": [
-      187,
-      152,
-      88
-    ],
-    "bbox": [
-      422,
-      6,
-      493,
       77
     ],
     "source": "ochre.png"
@@ -11420,7 +10888,7 @@
   },
   {
     "brand": "AK",
-    "name": "Oirty Yellow",
+    "name": "Dirty Yellow",
     "row": 1,
     "col": 8,
     "hex": "#CE961F",
@@ -11533,25 +11001,6 @@
     "source": "ochre.png"
   },
   {
-    "brand": "WPF",
-    "name": "Oesert Yellow",
-    "row": 1,
-    "col": 14,
-    "hex": "#947745",
-    "rgb": [
-      148,
-      119,
-      69
-    ],
-    "bbox": [
-      1088,
-      6,
-      1158,
-      77
-    ],
-    "source": "ochre.png"
-  },
-  {
     "brand": "VMC",
     "name": "Beige",
     "row": 2,
@@ -11566,25 +11015,6 @@
       6,
       107,
       76,
-      178
-    ],
-    "source": "ochre.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Sand Yellow",
-    "row": 2,
-    "col": 2,
-    "hex": "#DEAB5E",
-    "rgb": [
-      222,
-      171,
-      94
-    ],
-    "bbox": [
-      89,
-      107,
-      160,
       178
     ],
     "source": "ochre.png"
@@ -11761,44 +11191,6 @@
     "source": "ochre.png"
   },
   {
-    "brand": "WPF",
-    "name": "Camo Sand",
-    "row": 3,
-    "col": 1,
-    "hex": "#B4874E",
-    "rgb": [
-      180,
-      135,
-      78
-    ],
-    "bbox": [
-      6,
-      209,
-      76,
-      279
-    ],
-    "source": "ochre.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Wasteland Clay",
-    "row": 3,
-    "col": 2,
-    "hex": "#B48747",
-    "rgb": [
-      180,
-      135,
-      71
-    ],
-    "bbox": [
-      89,
-      209,
-      160,
-      279
-    ],
-    "source": "ochre.png"
-  },
-  {
     "brand": "VMC",
     "name": "Green Ochre",
     "row": 3,
@@ -11913,101 +11305,6 @@
     "source": "ochre.png"
   },
   {
-    "brand": "PA",
-    "name": "Caramel Brown",
-    "row": 3,
-    "col": 9,
-    "hex": "#997551",
-    "rgb": [
-      153,
-      117,
-      81
-    ],
-    "bbox": [
-      673,
-      209,
-      743,
-      279
-    ],
-    "source": "ochre.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "Gyzmo Fur",
-    "row": 3,
-    "col": 10,
-    "hex": "#79573C",
-    "rgb": [
-      121,
-      87,
-      60
-    ],
-    "bbox": [
-      756,
-      209,
-      827,
-      279
-    ],
-    "source": "ochre.png"
-  },
-  {
-    "brand": "GW",
-    "name": "XV8B",
-    "row": 3,
-    "col": 11,
-    "hex": "#78573B",
-    "rgb": [
-      120,
-      87,
-      59
-    ],
-    "bbox": [
-      839,
-      209,
-      910,
-      279
-    ],
-    "source": "ochre.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Dark Green Brown",
-    "row": 3,
-    "col": 12,
-    "hex": "#594731",
-    "rgb": [
-      89,
-      71,
-      49
-    ],
-    "bbox": [
-      924,
-      209,
-      994,
-      279
-    ],
-    "source": "ochre.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Dark Gokien Brown",
-    "row": 3,
-    "col": 13,
-    "hex": "#583E25",
-    "rgb": [
-      88,
-      62,
-      37
-    ],
-    "bbox": [
-      1006,
-      209,
-      1077,
-      279
-    ],
-    "source": "ochre.png"
-  },
-  {
     "brand": "GW",
     "name": "Balor Brown",
     "row": 4,
@@ -12085,25 +11382,6 @@
   },
   {
     "brand": "VMC",
-    "name": "Flat Earth",
-    "row": 4,
-    "col": 5,
-    "hex": "#73481B",
-    "rgb": [
-      115,
-      72,
-      27
-    ],
-    "bbox": [
-      339,
-      310,
-      410,
-      380
-    ],
-    "source": "ochre.png"
-  },
-  {
-    "brand": "VMC",
     "name": "Khaki Grey",
     "row": 4,
     "col": 6,
@@ -12117,25 +11395,6 @@
       422,
       310,
       493,
-      380
-    ],
-    "source": "ochre.png"
-  },
-  {
-    "brand": "VGC",
-    "name": "Earth",
-    "row": 4,
-    "col": 7,
-    "hex": "#6E512B",
-    "rgb": [
-      110,
-      81,
-      43
-    ],
-    "bbox": [
-      506,
-      310,
-      577,
       380
     ],
     "source": "ochre.png"
@@ -12255,25 +11514,6 @@
     "source": "ochre.png"
   },
   {
-    "brand": "AMP",
-    "name": "Green Brown",
-    "row": 5,
-    "col": 5,
-    "hex": "#7F6546",
-    "rgb": [
-      127,
-      101,
-      70
-    ],
-    "bbox": [
-      339,
-      410,
-      410,
-      480
-    ],
-    "source": "ochre.png"
-  },
-  {
     "brand": "VMC",
     "name": "Green Brown",
     "row": 5,
@@ -12327,25 +11567,6 @@
       410,
       660,
       480
-    ],
-    "source": "ochre.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Khaki",
-    "row": 6,
-    "col": 1,
-    "hex": "#887553",
-    "rgb": [
-      136,
-      117,
-      83
-    ],
-    "bbox": [
-      6,
-      511,
-      76,
-      582
     ],
     "source": "ochre.png"
   },
@@ -12483,8 +11704,8 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "",
-    "name": "GWlonrach Skin",
+    "brand": "GW",
+    "name": "Ionrach Skin",
     "row": 1,
     "col": 3,
     "hex": "#A19F83",
@@ -12654,8 +11875,8 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "",
-    "name": "CField Grey",
+    "brand": "TTC",
+    "name": "Field Grey",
     "row": 1,
     "col": 12,
     "hex": "#282820",
@@ -12882,25 +12103,6 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VMC",
-    "name": "Khaki",
-    "row": 3,
-    "col": 2,
-    "hex": "#887553",
-    "rgb": [
-      136,
-      117,
-      83
-    ],
-    "bbox": [
-      91,
-      213,
-      162,
-      284
-    ],
-    "source": "olive_green.png"
-  },
-  {
     "brand": "TTC",
     "name": "Green Beret",
     "row": 3,
@@ -12915,25 +12117,6 @@
       174,
       213,
       245,
-      284
-    ],
-    "source": "olive_green.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Tundra Taupe",
-    "row": 3,
-    "col": 4,
-    "hex": "#675F4A",
-    "rgb": [
-      103,
-      95,
-      74
-    ],
-    "bbox": [
-      258,
-      213,
-      329,
       284
     ],
     "source": "olive_green.png"
@@ -13224,8 +12407,8 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "",
-    "name": "PHWebbing Green",
+    "brand": "WPF",
+    "name": "Webbing Green",
     "row": 4,
     "col": 12,
     "hex": "#575C3C",
@@ -13338,25 +12521,6 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "AK",
-    "name": "Command Green",
-    "row": 5,
-    "col": 7,
-    "hex": "#222711",
-    "rgb": [
-      34,
-      39,
-      17
-    ],
-    "bbox": [
-      508,
-      415,
-      579,
-      485
-    ],
-    "source": "olive_green.png"
-  },
-  {
     "brand": "VMC",
     "name": "Mailitary Green",
     "row": 5,
@@ -13376,65 +12540,8 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "WPF",
-    "name": "Midmight Olive",
-    "row": 5,
-    "col": 9,
-    "hex": "#4E5043",
-    "rgb": [
-      78,
-      80,
-      67
-    ],
-    "bbox": [
-      675,
-      415,
-      745,
-      485
-    ],
-    "source": "olive_green.png"
-  },
-  {
     "brand": "GW",
-    "name": "Castellan Green",
-    "row": 5,
-    "col": 10,
-    "hex": "#26291A",
-    "rgb": [
-      38,
-      41,
-      26
-    ],
-    "bbox": [
-      759,
-      415,
-      828,
-      485
-    ],
-    "source": "olive_green.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Cam Black Green",
-    "row": 5,
-    "col": 11,
-    "hex": "#1F211A",
-    "rgb": [
-      31,
-      33,
-      26
-    ],
-    "bbox": [
-      842,
-      415,
-      911,
-      485
-    ],
-    "source": "olive_green.png"
-  },
-  {
-    "brand": "",
-    "name": "Death Karps Drab",
+    "name": "Death Korps Drab",
     "row": 5,
     "col": 12,
     "hex": "#24241E",
@@ -13471,25 +12578,6 @@
     "source": "pink.png"
   },
   {
-    "brand": "PA",
-    "name": "Pink",
-    "row": 1,
-    "col": 2,
-    "hex": "#F499B4",
-    "rgb": [
-      244,
-      153,
-      180
-    ],
-    "bbox": [
-      89,
-      8,
-      160,
-      79
-    ],
-    "source": "pink.png"
-  },
-  {
     "brand": "WPF",
     "name": "Raging Rose",
     "row": 1,
@@ -13509,27 +12597,8 @@
     "source": "pink.png"
   },
   {
-    "brand": "AK",
-    "name": "Dead Red",
-    "row": 1,
-    "col": 4,
-    "hex": "#DA3E4B",
-    "rgb": [
-      218,
-      62,
-      75
-    ],
-    "bbox": [
-      256,
-      8,
-      327,
-      79
-    ],
-    "source": "pink.png"
-  },
-  {
     "brand": "WPF",
-    "name": "Bload Chahce",
+    "name": "Blood Chalice",
     "row": 1,
     "col": 5,
     "hex": "#CC3546",
@@ -13600,25 +12669,6 @@
       8,
       660,
       79
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Pastel Pink",
-    "row": 2,
-    "col": 1,
-    "hex": "#D7B1BD",
-    "rgb": [
-      215,
-      177,
-      189
-    ],
-    "bbox": [
-      6,
-      109,
-      77,
-      180
     ],
     "source": "pink.png"
   },
@@ -13870,8 +12920,8 @@
     "source": "pink.png"
   },
   {
-    "brand": "",
-    "name": "WPFimpish Rouge",
+    "brand": "WPF",
+    "name": "Impish Rouge",
     "row": 3,
     "col": 11,
     "hex": "#D74495",
@@ -13928,7 +12978,7 @@
   },
   {
     "brand": "GW",
-    "name": "Emperars Chukiren",
+    "name": "Emperors Children",
     "row": 4,
     "col": 2,
     "hex": "#E5659C",
@@ -13960,158 +13010,6 @@
       172,
       311,
       243,
-      382
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Magenta",
-    "row": 4,
-    "col": 4,
-    "hex": "#C14A7A",
-    "rgb": [
-      193,
-      74,
-      122
-    ],
-    "bbox": [
-      256,
-      311,
-      327,
-      382
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Magenta",
-    "row": 4,
-    "col": 5,
-    "hex": "#AA0E58",
-    "rgb": [
-      170,
-      14,
-      88
-    ],
-    "bbox": [
-      339,
-      311,
-      410,
-      382
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Magenta",
-    "row": 4,
-    "col": 6,
-    "hex": "#961254",
-    "rgb": [
-      150,
-      18,
-      84
-    ],
-    "bbox": [
-      423,
-      311,
-      493,
-      382
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "VGC",
-    "name": "Warlord Purple",
-    "row": 4,
-    "col": 7,
-    "hex": "#8D1B4D",
-    "rgb": [
-      141,
-      27,
-      77
-    ],
-    "bbox": [
-      506,
-      311,
-      577,
-      382
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Laser Magenta",
-    "row": 4,
-    "col": 8,
-    "hex": "#700133",
-    "rgb": [
-      112,
-      1,
-      51
-    ],
-    "bbox": [
-      589,
-      311,
-      660,
-      382
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Dark Magenta",
-    "row": 4,
-    "col": 9,
-    "hex": "#701336",
-    "rgb": [
-      112,
-      19,
-      54
-    ],
-    "bbox": [
-      673,
-      311,
-      743,
-      382
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Screamer Pink",
-    "row": 4,
-    "col": 10,
-    "hex": "#5A1B31",
-    "rgb": [
-      90,
-      27,
-      49
-    ],
-    "bbox": [
-      756,
-      311,
-      827,
-      382
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Baraknar Burgundy",
-    "row": 4,
-    "col": 11,
-    "hex": "#2D161F",
-    "rgb": [
-      45,
-      22,
-      31
-    ],
-    "bbox": [
-      840,
-      311,
-      910,
       382
     ],
     "source": "pink.png"
@@ -14156,7 +13054,7 @@
   },
   {
     "brand": "WPF",
-    "name": "Enchanted Punk",
+    "name": "Enchanted Pink",
     "row": 5,
     "col": 2,
     "hex": "#B44E95",
@@ -14269,158 +13167,6 @@
     "source": "pink.png"
   },
   {
-    "brand": "VGC",
-    "name": "Deep Magenta",
-    "row": 5,
-    "col": 8,
-    "hex": "#591D41",
-    "rgb": [
-      89,
-      29,
-      65
-    ],
-    "bbox": [
-      589,
-      413,
-      660,
-      483
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Voolet Red",
-    "row": 5,
-    "col": 9,
-    "hex": "#331024",
-    "rgb": [
-      51,
-      16,
-      36
-    ],
-    "bbox": [
-      673,
-      413,
-      743,
-      483
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Dark Purple",
-    "row": 5,
-    "col": 10,
-    "hex": "#320E29",
-    "rgb": [
-      50,
-      14,
-      41
-    ],
-    "bbox": [
-      756,
-      413,
-      827,
-      483
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "VGC",
-    "name": "Evil Red",
-    "row": 5,
-    "col": 11,
-    "hex": "#231012",
-    "rgb": [
-      35,
-      16,
-      18
-    ],
-    "bbox": [
-      840,
-      413,
-      910,
-      483
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Purple",
-    "row": 6,
-    "col": 1,
-    "hex": "#632F74",
-    "rgb": [
-      99,
-      47,
-      116
-    ],
-    "bbox": [
-      6,
-      514,
-      77,
-      584
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "Spectral Purple",
-    "row": 6,
-    "col": 2,
-    "hex": "#66326A",
-    "rgb": [
-      102,
-      50,
-      106
-    ],
-    "bbox": [
-      89,
-      514,
-      160,
-      584
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Purpie",
-    "row": 6,
-    "col": 3,
-    "hex": "#552B52",
-    "rgb": [
-      85,
-      43,
-      82
-    ],
-    "bbox": [
-      172,
-      514,
-      243,
-      584
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Magecast Magenta",
-    "row": 6,
-    "col": 4,
-    "hex": "#5E2A69",
-    "rgb": [
-      94,
-      42,
-      105
-    ],
-    "bbox": [
-      256,
-      514,
-      327,
-      584
-    ],
-    "source": "pink.png"
-  },
-  {
     "brand": "WPF",
     "name": "Diabolic Plum",
     "row": 6,
@@ -14435,120 +13181,6 @@
       339,
       514,
       410,
-      584
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Royal Purple",
-    "row": 6,
-    "col": 6,
-    "hex": "#4C1953",
-    "rgb": [
-      76,
-      25,
-      83
-    ],
-    "bbox": [
-      423,
-      514,
-      493,
-      584
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Black Voolet",
-    "row": 6,
-    "col": 7,
-    "hex": "#23151F",
-    "rgb": [
-      35,
-      21,
-      31
-    ],
-    "bbox": [
-      506,
-      514,
-      577,
-      584
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "AK",
-    "name": "King Purple",
-    "row": 6,
-    "col": 8,
-    "hex": "#261520",
-    "rgb": [
-      38,
-      21,
-      32
-    ],
-    "bbox": [
-      589,
-      514,
-      660,
-      584
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "Von Evile Purple",
-    "row": 6,
-    "col": 9,
-    "hex": "#20121B",
-    "rgb": [
-      32,
-      18,
-      27
-    ],
-    "bbox": [
-      673,
-      514,
-      743,
-      584
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "VGC",
-    "name": "Midnight Purple",
-    "row": 6,
-    "col": 10,
-    "hex": "#231721",
-    "rgb": [
-      35,
-      23,
-      33
-    ],
-    "bbox": [
-      756,
-      514,
-      827,
-      584
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Black Purple",
-    "row": 6,
-    "col": 11,
-    "hex": "#291F1F",
-    "rgb": [
-      41,
-      31,
-      31
-    ],
-    "bbox": [
-      840,
-      514,
-      910,
       584
     ],
     "source": "pink.png"
@@ -15143,8 +13775,8 @@
     "source": "red.png"
   },
   {
-    "brand": "",
-    "name": "ASAPBlack Red",
+    "brand": "PA",
+    "name": "Black Red",
     "row": 3,
     "col": 8,
     "hex": "#5C1717",
@@ -15238,8 +13870,8 @@
     "source": "red.png"
   },
   {
-    "brand": "",
-    "name": "WMCVermibon",
+    "brand": "VMC",
+    "name": "Vermilion",
     "row": 4,
     "col": 1,
     "hex": "#E01520",
@@ -15258,7 +13890,7 @@
   },
   {
     "brand": "TTC",
-    "name": "Deman Red",
+    "name": "Demon Red",
     "row": 4,
     "col": 2,
     "hex": "#D52B2D",
@@ -15334,7 +13966,7 @@
   },
   {
     "brand": "AK",
-    "name": "Bload Red",
+    "name": "Blood Red",
     "row": 4,
     "col": 6,
     "hex": "#C71317",
@@ -15353,7 +13985,7 @@
   },
   {
     "brand": "VGC",
-    "name": "Scarlet Bload",
+    "name": "Scarlet Blood",
     "row": 4,
     "col": 7,
     "hex": "#BC0205",
@@ -15404,44 +14036,6 @@
       675,
       311,
       746,
-      382
-    ],
-    "source": "red.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "Asmodeus Red",
-    "row": 4,
-    "col": 10,
-    "hex": "#622629",
-    "rgb": [
-      98,
-      38,
-      41
-    ],
-    "bbox": [
-      758,
-      311,
-      830,
-      382
-    ],
-    "source": "red.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Khorne Red",
-    "row": 4,
-    "col": 11,
-    "hex": "#5F2126",
-    "rgb": [
-      95,
-      33,
-      38
-    ],
-    "bbox": [
-      841,
-      311,
-      913,
       382
     ],
     "source": "red.png"
@@ -15542,101 +14136,6 @@
     "source": "red.png"
   },
   {
-    "brand": "TTC",
-    "name": "Emperor Red",
-    "row": 5,
-    "col": 5,
-    "hex": "#801926",
-    "rgb": [
-      128,
-      25,
-      38
-    ],
-    "bbox": [
-      341,
-      413,
-      412,
-      484
-    ],
-    "source": "red.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Dirty Red",
-    "row": 5,
-    "col": 6,
-    "hex": "#810B18",
-    "rgb": [
-      129,
-      11,
-      24
-    ],
-    "bbox": [
-      425,
-      413,
-      495,
-      484
-    ],
-    "source": "red.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Beret Maroon",
-    "row": 5,
-    "col": 7,
-    "hex": "#78131F",
-    "rgb": [
-      120,
-      19,
-      31
-    ],
-    "bbox": [
-      508,
-      413,
-      579,
-      484
-    ],
-    "source": "red.png"
-  },
-  {
-    "brand": "VGC",
-    "name": "Scarlet Red",
-    "row": 5,
-    "col": 8,
-    "hex": "#6C151E",
-    "rgb": [
-      108,
-      21,
-      30
-    ],
-    "bbox": [
-      591,
-      413,
-      662,
-      484
-    ],
-    "source": "red.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Wine Red",
-    "row": 5,
-    "col": 9,
-    "hex": "#620415",
-    "rgb": [
-      98,
-      4,
-      21
-    ],
-    "bbox": [
-      675,
-      413,
-      746,
-      484
-    ],
-    "source": "red.png"
-  },
-  {
     "brand": "VGC",
     "name": "Nocturnal Red",
     "row": 5,
@@ -15651,63 +14150,6 @@
       758,
       413,
       830,
-      484
-    ],
-    "source": "red.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Gal Varbak Red",
-    "row": 5,
-    "col": 11,
-    "hex": "#41181E",
-    "rgb": [
-      65,
-      24,
-      30
-    ],
-    "bbox": [
-      841,
-      413,
-      913,
-      484
-    ],
-    "source": "red.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "Amphora Red",
-    "row": 5,
-    "col": 12,
-    "hex": "#3F161C",
-    "rgb": [
-      63,
-      22,
-      28
-    ],
-    "bbox": [
-      925,
-      413,
-      996,
-      484
-    ],
-    "source": "red.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Black Red",
-    "row": 5,
-    "col": 13,
-    "hex": "#3A1110",
-    "rgb": [
-      58,
-      17,
-      16
-    ],
-    "bbox": [
-      1008,
-      413,
-      1078,
       484
     ],
     "source": "red.png"
@@ -15922,44 +14364,6 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "VMC",
-    "name": "Light Flesh",
-    "row": 2,
-    "col": 2,
-    "hex": "#EABFA9",
-    "rgb": [
-      234,
-      191,
-      169
-    ],
-    "bbox": [
-      93,
-      105,
-      164,
-      176
-    ],
-    "source": "rosy_flesh.png"
-  },
-  {
-    "brand": "VGC",
-    "name": "Pale Flesh",
-    "row": 2,
-    "col": 3,
-    "hex": "#EDB6A2",
-    "rgb": [
-      237,
-      182,
-      162
-    ],
-    "bbox": [
-      176,
-      105,
-      247,
-      176
-    ],
-    "source": "rosy_flesh.png"
-  },
-  {
     "brand": "VGC",
     "name": "Skin Tone",
     "row": 2,
@@ -15979,25 +14383,6 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "VMC",
-    "name": "Basic Skin Tone",
-    "row": 2,
-    "col": 5,
-    "hex": "#F4AA85",
-    "rgb": [
-      244,
-      170,
-      133
-    ],
-    "bbox": [
-      343,
-      105,
-      414,
-      176
-    ],
-    "source": "rosy_flesh.png"
-  },
-  {
     "brand": "PA",
     "name": "Bright Shadow Flesh",
     "row": 2,
@@ -16012,44 +14397,6 @@
       427,
       105,
       497,
-      176
-    ],
-    "source": "rosy_flesh.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Ratskin Flesh",
-    "row": 2,
-    "col": 7,
-    "hex": "#B35D3D",
-    "rgb": [
-      179,
-      93,
-      61
-    ],
-    "bbox": [
-      510,
-      105,
-      581,
-      176
-    ],
-    "source": "rosy_flesh.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Advanced Flesh Tone",
-    "row": 2,
-    "col": 8,
-    "hex": "#894E39",
-    "rgb": [
-      137,
-      78,
-      57
-    ],
-    "bbox": [
-      593,
-      105,
-      664,
       176
     ],
     "source": "rosy_flesh.png"
@@ -16188,25 +14535,6 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "PA",
-    "name": "Tan Flesh",
-    "row": 4,
-    "col": 1,
-    "hex": "#D58E7D",
-    "rgb": [
-      213,
-      142,
-      125
-    ],
-    "bbox": [
-      10,
-      307,
-      80,
-      378
-    ],
-    "source": "rosy_flesh.png"
-  },
-  {
     "brand": "WPF",
     "name": "Barbarian Flesh",
     "row": 4,
@@ -16302,25 +14630,6 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "WPF",
-    "name": "Fur Brown",
-    "row": 4,
-    "col": 7,
-    "hex": "#894B41",
-    "rgb": [
-      137,
-      75,
-      65
-    ],
-    "bbox": [
-      510,
-      307,
-      581,
-      378
-    ],
-    "source": "rosy_flesh.png"
-  },
-  {
     "brand": "PA",
     "name": "Shadow Filesh",
     "row": 4,
@@ -16379,7 +14688,7 @@
   },
   {
     "brand": "TTC",
-    "name": "Barbanan Brown",
+    "name": "Barbarian Brawn",
     "row": 5,
     "col": 1,
     "hex": "#834E45",
@@ -16398,83 +14707,7 @@
   },
   {
     "brand": "GW",
-    "name": "Bugmans Glow",
-    "row": 5,
-    "col": 2,
-    "hex": "#895955",
-    "rgb": [
-      137,
-      89,
-      85
-    ],
-    "bbox": [
-      93,
-      409,
-      164,
-      479
-    ],
-    "source": "rosy_flesh.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "Bard Skin",
-    "row": 5,
-    "col": 3,
-    "hex": "#77504D",
-    "rgb": [
-      119,
-      80,
-      77
-    ],
-    "bbox": [
-      176,
-      409,
-      247,
-      479
-    ],
-    "source": "rosy_flesh.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Knight Questor Flesh",
-    "row": 5,
-    "col": 4,
-    "hex": "#724C44",
-    "rgb": [
-      114,
-      76,
-      68
-    ],
-    "bbox": [
-      260,
-      409,
-      331,
-      479
-    ],
-    "source": "rosy_flesh.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Dryad Brown",
-    "row": 5,
-    "col": 5,
-    "hex": "#68423A",
-    "rgb": [
-      104,
-      66,
-      58
-    ],
-    "bbox": [
-      343,
-      409,
-      414,
-      479
-    ],
-    "source": "rosy_flesh.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Blaadreaver Flesh",
+    "name": "Bloodreaver Flesh",
     "row": 5,
     "col": 6,
     "hex": "#41211E",
@@ -16487,44 +14720,6 @@
       427,
       409,
       497,
-      479
-    ],
-    "source": "rosy_flesh.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Tree Ancent",
-    "row": 5,
-    "col": 7,
-    "hex": "#5C433E",
-    "rgb": [
-      92,
-      67,
-      62
-    ],
-    "bbox": [
-      510,
-      409,
-      581,
-      479
-    ],
-    "source": "rosy_flesh.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "Paladin Flesh",
-    "row": 5,
-    "col": 8,
-    "hex": "#5E4242",
-    "rgb": [
-      94,
-      66,
-      66
-    ],
-    "bbox": [
-      593,
-      409,
-      664,
       479
     ],
     "source": "rosy_flesh.png"
@@ -16549,25 +14744,6 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "WPF",
-    "name": "Oak Brown",
-    "row": 5,
-    "col": 10,
-    "hex": "#331C17",
-    "rgb": [
-      51,
-      28,
-      23
-    ],
-    "bbox": [
-      760,
-      409,
-      831,
-      479
-    ],
-    "source": "rosy_flesh.png"
-  },
-  {
     "brand": "VGC",
     "name": "Warm Grey",
     "row": 6,
@@ -16582,25 +14758,6 @@
       10,
       510,
       80,
-      580
-    ],
-    "source": "rosy_flesh.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Beige Red",
-    "row": 6,
-    "col": 2,
-    "hex": "#B28180",
-    "rgb": [
-      178,
-      129,
-      128
-    ],
-    "bbox": [
-      93,
-      510,
-      164,
       580
     ],
     "source": "rosy_flesh.png"
@@ -16642,234 +14799,6 @@
       580
     ],
     "source": "rosy_flesh.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Grey Blue",
-    "row": 1,
-    "col": 1,
-    "hex": "#609DC5",
-    "rgb": [
-      96,
-      157,
-      197
-    ],
-    "bbox": [
-      8,
-      8,
-      78,
-      79
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "VGC",
-    "name": "Electric Blue",
-    "row": 1,
-    "col": 2,
-    "hex": "#149DC7",
-    "rgb": [
-      20,
-      157,
-      199
-    ],
-    "bbox": [
-      91,
-      8,
-      162,
-      79
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Lothern Blue",
-    "row": 1,
-    "col": 3,
-    "hex": "#3498C6",
-    "rgb": [
-      52,
-      152,
-      198
-    ],
-    "bbox": [
-      174,
-      8,
-      245,
-      79
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Hoeth Biue",
-    "row": 1,
-    "col": 4,
-    "hex": "#0B5F9E",
-    "rgb": [
-      11,
-      95,
-      158
-    ],
-    "bbox": [
-      258,
-      8,
-      329,
-      79
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Medium Blue",
-    "row": 1,
-    "col": 5,
-    "hex": "#015E95",
-    "rgb": [
-      1,
-      94,
-      149
-    ],
-    "bbox": [
-      341,
-      8,
-      412,
-      79
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Mediurn Blue",
-    "row": 1,
-    "col": 6,
-    "hex": "#0A5188",
-    "rgb": [
-      10,
-      81,
-      136
-    ],
-    "bbox": [
-      425,
-      8,
-      495,
-      79
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Alaitac Blue",
-    "row": 1,
-    "col": 7,
-    "hex": "#13456F",
-    "rgb": [
-      19,
-      69,
-      111
-    ],
-    "bbox": [
-      508,
-      8,
-      579,
-      79
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Light Prussian Blue",
-    "row": 1,
-    "col": 8,
-    "hex": "#0A3C65",
-    "rgb": [
-      10,
-      60,
-      101
-    ],
-    "bbox": [
-      591,
-      8,
-      662,
-      79
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Prussian Blue",
-    "row": 1,
-    "col": 9,
-    "hex": "#043A61",
-    "rgb": [
-      4,
-      58,
-      97
-    ],
-    "bbox": [
-      675,
-      8,
-      745,
-      79
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "",
-    "name": "NVPFImperial Navt be VUPOErage Bews",
-    "row": 1,
-    "col": 10,
-    "hex": "#173C61",
-    "rgb": [
-      23,
-      60,
-      97
-    ],
-    "bbox": [
-      758,
-      8,
-      829,
-      79
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "VGC",
-    "name": "Imperial Blue",
-    "row": 1,
-    "col": 11,
-    "hex": "#133056",
-    "rgb": [
-      19,
-      48,
-      86
-    ],
-    "bbox": [
-      842,
-      8,
-      912,
-      79
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Kantor Blue",
-    "row": 1,
-    "col": 12,
-    "hex": "#121F33",
-    "rgb": [
-      18,
-      31,
-      51
-    ],
-    "bbox": [
-      925,
-      8,
-      995,
-      79
-    ],
-    "source": "sea_blue.png"
   },
   {
     "brand": "PA",
@@ -16944,101 +14873,6 @@
       109,
       329,
       180
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Kantor Blue",
-    "row": 2,
-    "col": 5,
-    "hex": "#122033",
-    "rgb": [
-      18,
-      32,
-      51
-    ],
-    "bbox": [
-      341,
-      109,
-      412,
-      180
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Night Lords Slue",
-    "row": 2,
-    "col": 6,
-    "hex": "#0E1726",
-    "rgb": [
-      14,
-      23,
-      38
-    ],
-    "bbox": [
-      425,
-      109,
-      495,
-      180
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Continental Blue",
-    "row": 2,
-    "col": 7,
-    "hex": "#16151D",
-    "rgb": [
-      22,
-      21,
-      29
-    ],
-    "bbox": [
-      508,
-      109,
-      579,
-      180
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Paynes Grey",
-    "row": 2,
-    "col": 8,
-    "hex": "#1D2029",
-    "rgb": [
-      29,
-      32,
-      41
-    ],
-    "bbox": [
-      591,
-      109,
-      662,
-      180
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "PA",
-    "name": "White Blue",
-    "row": 3,
-    "col": 1,
-    "hex": "#C9F6F9",
-    "rgb": [
-      201,
-      246,
-      249
-    ],
-    "bbox": [
-      8,
-      210,
-      78,
-      281
     ],
     "source": "sea_blue.png"
   },
@@ -17139,7 +14973,7 @@
   },
   {
     "brand": "TTC",
-    "name": "Ray Gun Glaw",
+    "name": "Ray Gun Glow",
     "row": 3,
     "col": 7,
     "hex": "#12B6CF",
@@ -17158,7 +14992,7 @@
   },
   {
     "brand": "PA",
-    "name": "Turquaise",
+    "name": "Turquoise",
     "row": 3,
     "col": 8,
     "hex": "#01AECB",
@@ -17424,7 +15258,7 @@
   },
   {
     "brand": "AK",
-    "name": "Ocean Biue",
+    "name": "Ocean Blue",
     "row": 4,
     "col": 10,
     "hex": "#074757",
@@ -17480,63 +15314,6 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "VMC",
-    "name": "Pale Grey Blue",
-    "row": 5,
-    "col": 1,
-    "hex": "#B3C5CC",
-    "rgb": [
-      179,
-      197,
-      204
-    ],
-    "bbox": [
-      8,
-      412,
-      78,
-      483
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Pale Blue",
-    "row": 5,
-    "col": 2,
-    "hex": "#A7C0BF",
-    "rgb": [
-      167,
-      192,
-      191
-    ],
-    "bbox": [
-      91,
-      412,
-      162,
-      483
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Pale Blue",
-    "row": 5,
-    "col": 3,
-    "hex": "#A4BFBC",
-    "rgb": [
-      164,
-      191,
-      188
-    ],
-    "bbox": [
-      174,
-      412,
-      245,
-      483
-    ],
-    "source": "sea_blue.png"
-  },
-  {
     "brand": "AMP",
     "name": "Bright Green Blue",
     "row": 5,
@@ -17551,139 +15328,6 @@
       258,
       412,
       329,
-      483
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Blue Grey",
-    "row": 5,
-    "col": 5,
-    "hex": "#8A9C9E",
-    "rgb": [
-      138,
-      156,
-      158
-    ],
-    "bbox": [
-      341,
-      412,
-      412,
-      483
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Celestra Grey",
-    "row": 5,
-    "col": 6,
-    "hex": "#93A2A4",
-    "rgb": [
-      147,
-      162,
-      164
-    ],
-    "bbox": [
-      425,
-      412,
-      495,
-      483
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Blue Grey Pale",
-    "row": 5,
-    "col": 7,
-    "hex": "#76868D",
-    "rgb": [
-      118,
-      134,
-      141
-    ],
-    "bbox": [
-      508,
-      412,
-      579,
-      483
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Dark Blue Grey",
-    "row": 5,
-    "col": 8,
-    "hex": "#516F74",
-    "rgb": [
-      81,
-      111,
-      116
-    ],
-    "bbox": [
-      591,
-      412,
-      662,
-      483
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Field Blue",
-    "row": 5,
-    "col": 9,
-    "hex": "#43565E",
-    "rgb": [
-      67,
-      86,
-      94
-    ],
-    "bbox": [
-      675,
-      412,
-      745,
-      483
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Dark Sea Green",
-    "row": 5,
-    "col": 10,
-    "hex": "#1A292C",
-    "rgb": [
-      26,
-      41,
-      44
-    ],
-    "bbox": [
-      758,
-      412,
-      829,
-      483
-    ],
-    "source": "sea_blue.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Thunderhawk Blue",
-    "row": 5,
-    "col": 11,
-    "hex": "#2F4C5A",
-    "rgb": [
-      47,
-      76,
-      90
-    ],
-    "bbox": [
-      842,
-      412,
-      912,
       483
     ],
     "source": "sea_blue.png"
@@ -17708,44 +15352,6 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "PA",
-    "name": "Golden Braown",
-    "row": 1,
-    "col": 1,
-    "hex": "#EAA45D",
-    "rgb": [
-      234,
-      164,
-      93
-    ],
-    "bbox": [
-      5,
-      6,
-      75,
-      77
-    ],
-    "source": "tan.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Ungor Flesh",
-    "row": 1,
-    "col": 2,
-    "hex": "#DE9551",
-    "rgb": [
-      222,
-      149,
-      81
-    ],
-    "bbox": [
-      88,
-      6,
-      159,
-      77
-    ],
-    "source": "tan.png"
-  },
-  {
     "brand": "TTC",
     "name": "Cerberus Brown",
     "row": 1,
@@ -17760,25 +15366,6 @@
       171,
       6,
       242,
-      77
-    ],
-    "source": "tan.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Tau Light Ochre",
-    "row": 1,
-    "col": 4,
-    "hex": "#C67E49",
-    "rgb": [
-      198,
-      126,
-      73
-    ],
-    "bbox": [
-      255,
-      6,
-      325,
       77
     ],
     "source": "tan.png"
@@ -17993,25 +15580,6 @@
     "source": "tan.png"
   },
   {
-    "brand": "GW",
-    "name": "Ratskin Flesh",
-    "row": 2,
-    "col": 4,
-    "hex": "#B35D3D",
-    "rgb": [
-      179,
-      93,
-      61
-    ],
-    "bbox": [
-      255,
-      107,
-      325,
-      178
-    ],
-    "source": "tan.png"
-  },
-  {
     "brand": "PA",
     "name": "Orange Oxide",
     "row": 2,
@@ -18145,25 +15713,6 @@
     "source": "tan.png"
   },
   {
-    "brand": "GW",
-    "name": "Bestigor Flesh",
-    "row": 3,
-    "col": 1,
-    "hex": "#D6793E",
-    "rgb": [
-      214,
-      121,
-      62
-    ],
-    "bbox": [
-      5,
-      209,
-      75,
-      279
-    ],
-    "source": "tan.png"
-  },
-  {
     "brand": "WPF",
     "name": "Ruddy Terra",
     "row": 3,
@@ -18235,25 +15784,6 @@
       338,
       209,
       409,
-      279
-    ],
-    "source": "tan.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Red Oxide",
-    "row": 3,
-    "col": 6,
-    "hex": "#921C16",
-    "rgb": [
-      146,
-      28,
-      22
-    ],
-    "bbox": [
-      422,
-      209,
-      492,
       279
     ],
     "source": "tan.png"
@@ -18430,25 +15960,6 @@
     "source": "tan.png"
   },
   {
-    "brand": "WPF",
-    "name": "Fur Brown",
-    "row": 5,
-    "col": 1,
-    "hex": "#894A41",
-    "rgb": [
-      137,
-      74,
-      65
-    ],
-    "bbox": [
-      5,
-      411,
-      75,
-      481
-    ],
-    "source": "tan.png"
-  },
-  {
     "brand": "AK",
     "name": "Saddle Brown",
     "row": 5,
@@ -18601,25 +16112,6 @@
     "source": "tan.png"
   },
   {
-    "brand": "WPF",
-    "name": "Boot Brown",
-    "row": 5,
-    "col": 10,
-    "hex": "#432118",
-    "rgb": [
-      67,
-      33,
-      24
-    ],
-    "bbox": [
-      755,
-      411,
-      826,
-      481
-    ],
-    "source": "tan.png"
-  },
-  {
     "brand": "TTC",
     "name": "Cuirass Leather",
     "row": 5,
@@ -18635,44 +16127,6 @@
       411,
       909,
       481
-    ],
-    "source": "tan.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Rhinox Hide",
-    "row": 5,
-    "col": 12,
-    "hex": "#201312",
-    "rgb": [
-      32,
-      19,
-      18
-    ],
-    "bbox": [
-      921,
-      411,
-      992,
-      481
-    ],
-    "source": "tan.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Cork",
-    "row": 6,
-    "col": 1,
-    "hex": "#AB6F51",
-    "rgb": [
-      171,
-      111,
-      81
-    ],
-    "bbox": [
-      5,
-      512,
-      75,
-      582
     ],
     "source": "tan.png"
   },
@@ -18734,25 +16188,6 @@
     "source": "tan.png"
   },
   {
-    "brand": "TTC",
-    "name": "Noble Steed Brown",
-    "row": 6,
-    "col": 5,
-    "hex": "#633A27",
-    "rgb": [
-      99,
-      58,
-      39
-    ],
-    "bbox": [
-      338,
-      512,
-      409,
-      582
-    ],
-    "source": "tan.png"
-  },
-  {
     "brand": "VGC",
     "name": "Gorgon Brown",
     "row": 6,
@@ -18786,25 +16221,6 @@
       505,
       512,
       575,
-      582
-    ],
-    "source": "tan.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Bloodreaver Flesh",
-    "row": 6,
-    "col": 8,
-    "hex": "#41221E",
-    "rgb": [
-      65,
-      34,
-      30
-    ],
-    "bbox": [
-      588,
-      512,
-      659,
       582
     ],
     "source": "tan.png"
@@ -18867,25 +16283,6 @@
     "source": "tan.png"
   },
   {
-    "brand": "GW",
-    "name": "Catachan Flesh",
-    "row": 6,
-    "col": 12,
-    "hex": "#2F1D18",
-    "rgb": [
-      47,
-      29,
-      24
-    ],
-    "bbox": [
-      921,
-      512,
-      992,
-      582
-    ],
-    "source": "tan.png"
-  },
-  {
     "brand": "VGC",
     "name": "Verdigris",
     "row": 1,
@@ -18924,27 +16321,8 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "VMC",
-    "name": "Medaum Grey Blue",
-    "row": 1,
-    "col": 3,
-    "hex": "#88C1BB",
-    "rgb": [
-      136,
-      193,
-      187
-    ],
-    "bbox": [
-      174,
-      7,
-      245,
-      78
-    ],
-    "source": "teal_green.png"
-  },
-  {
     "brand": "TTC",
-    "name": "Mythic Turquaise",
+    "name": "Mythic Turquoise",
     "row": 1,
     "col": 4,
     "hex": "#468996",
@@ -19172,7 +16550,7 @@
   },
   {
     "brand": "PA",
-    "name": "Brght Pale Green",
+    "name": "Bright Pale Green",
     "row": 3,
     "col": 5,
     "hex": "#72EAB8",
@@ -19191,7 +16569,7 @@
   },
   {
     "brand": "TTC",
-    "name": "Eluir Green",
+    "name": "Elixir Green",
     "row": 3,
     "col": 6,
     "hex": "#69DFAA",
@@ -19494,8 +16872,8 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "",
-    "name": "INPFScarab Greer IVWCommmareke Coree",
+    "brand": "WPF",
+    "name": "Scarab Green",
     "row": 4,
     "col": 10,
     "hex": "#102E30",
@@ -19585,196 +16963,6 @@
       412,
       245,
       482
-    ],
-    "source": "teal_green.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Deep Green",
-    "row": 5,
-    "col": 4,
-    "hex": "#025F3F",
-    "rgb": [
-      2,
-      95,
-      63
-    ],
-    "bbox": [
-      258,
-      412,
-      328,
-      482
-    ],
-    "source": "teal_green.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "Emerald Green",
-    "row": 5,
-    "col": 5,
-    "hex": "#0F3D26",
-    "rgb": [
-      15,
-      61,
-      38
-    ],
-    "bbox": [
-      341,
-      412,
-      412,
-      482
-    ],
-    "source": "teal_green.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Guardian Green",
-    "row": 5,
-    "col": 6,
-    "hex": "#265341",
-    "rgb": [
-      38,
-      83,
-      65
-    ],
-    "bbox": [
-      425,
-      412,
-      495,
-      482
-    ],
-    "source": "teal_green.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Black Green",
-    "row": 5,
-    "col": 7,
-    "hex": "#0E2F29",
-    "rgb": [
-      14,
-      47,
-      41
-    ],
-    "bbox": [
-      508,
-      412,
-      578,
-      482
-    ],
-    "source": "teal_green.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Angel Green",
-    "row": 5,
-    "col": 8,
-    "hex": "#224A42",
-    "rgb": [
-      34,
-      74,
-      66
-    ],
-    "bbox": [
-      591,
-      412,
-      662,
-      482
-    ],
-    "source": "teal_green.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Blighted Green",
-    "row": 5,
-    "col": 9,
-    "hex": "#192D26",
-    "rgb": [
-      25,
-      45,
-      38
-    ],
-    "bbox": [
-      675,
-      412,
-      745,
-      482
-    ],
-    "source": "teal_green.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Cahban Green",
-    "row": 5,
-    "col": 10,
-    "hex": "#142A24",
-    "rgb": [
-      20,
-      42,
-      36
-    ],
-    "bbox": [
-      758,
-      412,
-      829,
-      482
-    ],
-    "source": "teal_green.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "Wyvern Green",
-    "row": 5,
-    "col": 11,
-    "hex": "#0F241D",
-    "rgb": [
-      15,
-      36,
-      29
-    ],
-    "bbox": [
-      841,
-      412,
-      912,
-      482
-    ],
-    "source": "teal_green.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Nocturne Green",
-    "row": 5,
-    "col": 12,
-    "hex": "#1A1F1E",
-    "rgb": [
-      26,
-      31,
-      30
-    ],
-    "bbox": [
-      925,
-      412,
-      995,
-      482
-    ],
-    "source": "teal_green.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Light Green Blue",
-    "row": 6,
-    "col": 1,
-    "hex": "#9EC1B8",
-    "rgb": [
-      158,
-      193,
-      184
-    ],
-    "bbox": [
-      8,
-      513,
-      78,
-      583
     ],
     "source": "teal_green.png"
   },
@@ -19894,7 +17082,7 @@
   },
   {
     "brand": "TTC",
-    "name": "Mydra Green",
+    "name": "Hydra Green",
     "row": 6,
     "col": 8,
     "hex": "#162329",
@@ -19910,310 +17098,6 @@
       583
     ],
     "source": "teal_green.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Dark Sea Blue",
-    "row": 6,
-    "col": 9,
-    "hex": "#0B2329",
-    "rgb": [
-      11,
-      35,
-      41
-    ],
-    "bbox": [
-      675,
-      513,
-      745,
-      583
-    ],
-    "source": "teal_green.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Incubi Darkness",
-    "row": 6,
-    "col": 10,
-    "hex": "#12262A",
-    "rgb": [
-      18,
-      38,
-      42
-    ],
-    "bbox": [
-      758,
-      513,
-      829,
-      583
-    ],
-    "source": "teal_green.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Oark Sea Blue",
-    "row": 6,
-    "col": 11,
-    "hex": "#102429",
-    "rgb": [
-      16,
-      36,
-      41
-    ],
-    "bbox": [
-      841,
-      513,
-      912,
-      583
-    ],
-    "source": "teal_green.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "War Master Green",
-    "row": 6,
-    "col": 12,
-    "hex": "#1C2229",
-    "rgb": [
-      28,
-      34,
-      41
-    ],
-    "bbox": [
-      925,
-      513,
-      995,
-      583
-    ],
-    "source": "teal_green.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Aegis Aqua",
-    "row": 1,
-    "col": 1,
-    "hex": "#7BBCD2",
-    "rgb": [
-      123,
-      188,
-      210
-    ],
-    "bbox": [
-      13,
-      11,
-      83,
-      82
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Shieldwall Blue",
-    "row": 1,
-    "col": 2,
-    "hex": "#54A5BD",
-    "rgb": [
-      84,
-      165,
-      189
-    ],
-    "bbox": [
-      96,
-      11,
-      167,
-      82
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Phalanx Blue",
-    "row": 1,
-    "col": 3,
-    "hex": "#338DA8",
-    "rgb": [
-      51,
-      141,
-      168
-    ],
-    "bbox": [
-      179,
-      11,
-      250,
-      82
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Baharroth Blue",
-    "row": 1,
-    "col": 4,
-    "hex": "#37B5D0",
-    "rgb": [
-      55,
-      181,
-      208
-    ],
-    "bbox": [
-      263,
-      11,
-      334,
-      82
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "Ray Gun Glow",
-    "row": 1,
-    "col": 5,
-    "hex": "#14B6CF",
-    "rgb": [
-      20,
-      182,
-      207
-    ],
-    "bbox": [
-      346,
-      11,
-      417,
-      82
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Turquoise",
-    "row": 1,
-    "col": 6,
-    "hex": "#01AECB",
-    "rgb": [
-      1,
-      174,
-      203
-    ],
-    "bbox": [
-      430,
-      11,
-      500,
-      82
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Temple Guard Blue",
-    "row": 1,
-    "col": 7,
-    "hex": "#0297B8",
-    "rgb": [
-      2,
-      151,
-      184
-    ],
-    "bbox": [
-      513,
-      11,
-      584,
-      82
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Light Turquoise",
-    "row": 1,
-    "col": 8,
-    "hex": "#0191BC",
-    "rgb": [
-      1,
-      145,
-      188
-    ],
-    "bbox": [
-      596,
-      11,
-      667,
-      82
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Dark Turquaise",
-    "row": 1,
-    "col": 9,
-    "hex": "#017D9E",
-    "rgb": [
-      1,
-      125,
-      158
-    ],
-    "bbox": [
-      680,
-      11,
-      750,
-      82
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Thousand Sons Blue",
-    "row": 1,
-    "col": 10,
-    "hex": "#014B72",
-    "rgb": [
-      1,
-      75,
-      114
-    ],
-    "bbox": [
-      763,
-      11,
-      834,
-      82
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "PA",
-    "name": "White Blue",
-    "row": 2,
-    "col": 1,
-    "hex": "#C9F6F9",
-    "rgb": [
-      201,
-      246,
-      249
-    ],
-    "bbox": [
-      13,
-      112,
-      83,
-      183
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Pastel Blue",
-    "row": 2,
-    "col": 2,
-    "hex": "#A2D2D6",
-    "rgb": [
-      162,
-      210,
-      214
-    ],
-    "bbox": [
-      96,
-      112,
-      167,
-      183
-    ],
-    "source": "turquoise.png"
   },
   {
     "brand": "WPF",
@@ -20387,25 +17271,6 @@
     "source": "turquoise.png"
   },
   {
-    "brand": "WPF",
-    "name": "Tidal Blue",
-    "row": 3,
-    "col": 1,
-    "hex": "#206A83",
-    "rgb": [
-      32,
-      106,
-      131
-    ],
-    "bbox": [
-      13,
-      214,
-      83,
-      284
-    ],
-    "source": "turquoise.png"
-  },
-  {
     "brand": "VGC",
     "name": "Turquoise",
     "row": 3,
@@ -20420,177 +17285,6 @@
       96,
       214,
       167,
-      284
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Ahriman Blue",
-    "row": 3,
-    "col": 3,
-    "hex": "#01667E",
-    "rgb": [
-      1,
-      102,
-      126
-    ],
-    "bbox": [
-      179,
-      214,
-      250,
-      284
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "Cursed Blue",
-    "row": 3,
-    "col": 4,
-    "hex": "#02627D",
-    "rgb": [
-      2,
-      98,
-      125
-    ],
-    "bbox": [
-      263,
-      214,
-      334,
-      284
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Turquoise",
-    "row": 3,
-    "col": 5,
-    "hex": "#015C77",
-    "rgb": [
-      1,
-      92,
-      119
-    ],
-    "bbox": [
-      346,
-      214,
-      417,
-      284
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Archaic Turquoise",
-    "row": 3,
-    "col": 6,
-    "hex": "#015E7A",
-    "rgb": [
-      1,
-      94,
-      122
-    ],
-    "bbox": [
-      430,
-      214,
-      500,
-      284
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Turquaise",
-    "row": 3,
-    "col": 7,
-    "hex": "#01576D",
-    "rgb": [
-      1,
-      87,
-      109
-    ],
-    "bbox": [
-      513,
-      214,
-      584,
-      284
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Sotek Green",
-    "row": 3,
-    "col": 8,
-    "hex": "#01556A",
-    "rgb": [
-      1,
-      85,
-      106
-    ],
-    "bbox": [
-      596,
-      214,
-      667,
-      284
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Abyssal Blue",
-    "row": 3,
-    "col": 9,
-    "hex": "#134C61",
-    "rgb": [
-      19,
-      76,
-      97
-    ],
-    "bbox": [
-      680,
-      214,
-      750,
-      284
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Ocean Biuve",
-    "row": 3,
-    "col": 10,
-    "hex": "#074757",
-    "rgb": [
-      7,
-      71,
-      87
-    ],
-    "bbox": [
-      763,
-      214,
-      834,
-      284
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "Sentient Turquoise",
-    "row": 3,
-    "col": 11,
-    "hex": "#02465E",
-    "rgb": [
-      2,
-      70,
-      94
-    ],
-    "bbox": [
-      847,
-      214,
-      917,
       284
     ],
     "source": "turquoise.png"
@@ -20630,291 +17324,6 @@
       314,
       167,
       385
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Stegadon Scale Green",
-    "row": 4,
-    "col": 3,
-    "hex": "#0F222D",
-    "rgb": [
-      15,
-      34,
-      45
-    ],
-    "bbox": [
-      179,
-      314,
-      250,
-      385
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "Hydra Green",
-    "row": 4,
-    "col": 4,
-    "hex": "#162329",
-    "rgb": [
-      22,
-      35,
-      41
-    ],
-    "bbox": [
-      263,
-      314,
-      334,
-      385
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "Oxidatian Green",
-    "row": 4,
-    "col": 5,
-    "hex": "#141E2A",
-    "rgb": [
-      20,
-      30,
-      42
-    ],
-    "bbox": [
-      346,
-      314,
-      417,
-      385
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "The Darkness",
-    "row": 4,
-    "col": 6,
-    "hex": "#1C232D",
-    "rgb": [
-      28,
-      35,
-      45
-    ],
-    "bbox": [
-      430,
-      314,
-      500,
-      385
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "War Master Green",
-    "row": 4,
-    "col": 7,
-    "hex": "#1C2229",
-    "rgb": [
-      28,
-      34,
-      41
-    ],
-    "bbox": [
-      513,
-      314,
-      584,
-      385
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Marine Mst",
-    "row": 5,
-    "col": 1,
-    "hex": "#A8D9D5",
-    "rgb": [
-      168,
-      217,
-      213
-    ],
-    "bbox": [
-      13,
-      415,
-      83,
-      486
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "VGC",
-    "name": "Verdigris",
-    "row": 5,
-    "col": 2,
-    "hex": "#A2E6E2",
-    "rgb": [
-      162,
-      230,
-      226
-    ],
-    "bbox": [
-      96,
-      415,
-      167,
-      486
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Medaum Grey Blue",
-    "row": 5,
-    "col": 3,
-    "hex": "#87C1BA",
-    "rgb": [
-      135,
-      193,
-      186
-    ],
-    "bbox": [
-      179,
-      415,
-      250,
-      486
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "Mythic Turquaise",
-    "row": 5,
-    "col": 4,
-    "hex": "#468996",
-    "rgb": [
-      70,
-      137,
-      150
-    ],
-    "bbox": [
-      263,
-      415,
-      334,
-      486
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Oeep Azure",
-    "row": 5,
-    "col": 5,
-    "hex": "#01747E",
-    "rgb": [
-      1,
-      116,
-      126
-    ],
-    "bbox": [
-      346,
-      415,
-      417,
-      486
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Dark Jade",
-    "row": 5,
-    "col": 6,
-    "hex": "#0E3039",
-    "rgb": [
-      14,
-      48,
-      57
-    ],
-    "bbox": [
-      430,
-      415,
-      500,
-      486
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Dark Sea Ben",
-    "row": 5,
-    "col": 7,
-    "hex": "#152629",
-    "rgb": [
-      21,
-      38,
-      41
-    ],
-    "bbox": [
-      513,
-      415,
-      584,
-      486
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Dark Sea Blue",
-    "row": 5,
-    "col": 8,
-    "hex": "#0B2329",
-    "rgb": [
-      11,
-      35,
-      41
-    ],
-    "bbox": [
-      596,
-      415,
-      667,
-      486
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Incubi Darkness",
-    "row": 5,
-    "col": 9,
-    "hex": "#12262A",
-    "rgb": [
-      18,
-      38,
-      42
-    ],
-    "bbox": [
-      680,
-      415,
-      750,
-      486
-    ],
-    "source": "turquoise.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Dark Sea Blue",
-    "row": 5,
-    "col": 10,
-    "hex": "#102329",
-    "rgb": [
-      16,
-      35,
-      41
-    ],
-    "bbox": [
-      763,
-      415,
-      834,
-      486
     ],
     "source": "turquoise.png"
   },
@@ -21147,25 +17556,6 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "VMC",
-    "name": "Azure",
-    "row": 2,
-    "col": 2,
-    "hex": "#5677B7",
-    "rgb": [
-      86,
-      119,
-      183
-    ],
-    "bbox": [
-      88,
-      106,
-      159,
-      177
-    ],
-    "source": "ultramarine.png"
-  },
-  {
     "brand": "TTC",
     "name": "Elysium Blue",
     "row": 2,
@@ -21280,63 +17670,6 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "VGC",
-    "name": "Night Blue",
-    "row": 2,
-    "col": 9,
-    "hex": "#1E182A",
-    "rgb": [
-      30,
-      24,
-      42
-    ],
-    "bbox": [
-      672,
-      106,
-      742,
-      177
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Ultramarine",
-    "row": 3,
-    "col": 1,
-    "hex": "#314CD7",
-    "rgb": [
-      49,
-      76,
-      215
-    ],
-    "bbox": [
-      5,
-      208,
-      75,
-      278
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Deep Blue",
-    "row": 3,
-    "col": 2,
-    "hex": "#0142A3",
-    "rgb": [
-      1,
-      66,
-      163
-    ],
-    "bbox": [
-      88,
-      208,
-      159,
-      278
-    ],
-    "source": "ultramarine.png"
-  },
-  {
     "brand": "AK",
     "name": "Ultramarine",
     "row": 3,
@@ -21357,7 +17690,7 @@
   },
   {
     "brand": "AK",
-    "name": "Oark Blue",
+    "name": "Dark Blue",
     "row": 3,
     "col": 4,
     "hex": "#051F69",
@@ -21413,63 +17746,6 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "AK",
-    "name": "Lilac",
-    "row": 4,
-    "col": 2,
-    "hex": "#5E71B3",
-    "rgb": [
-      94,
-      113,
-      179
-    ],
-    "bbox": [
-      88,
-      308,
-      159,
-      379
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Alpha Biue",
-    "row": 4,
-    "col": 3,
-    "hex": "#636BB5",
-    "rgb": [
-      99,
-      107,
-      181
-    ],
-    "bbox": [
-      171,
-      308,
-      242,
-      379
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Blue Vialet",
-    "row": 4,
-    "col": 4,
-    "hex": "#715DB6",
-    "rgb": [
-      113,
-      93,
-      182
-    ],
-    "bbox": [
-      255,
-      308,
-      325,
-      379
-    ],
-    "source": "ultramarine.png"
-  },
-  {
     "brand": "VMC",
     "name": "Bive Violet",
     "row": 4,
@@ -21485,44 +17761,6 @@
       308,
       409,
       379
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "VGC",
-    "name": "Wolf Grey",
-    "row": 5,
-    "col": 1,
-    "hex": "#B8CAD9",
-    "rgb": [
-      184,
-      202,
-      217
-    ],
-    "bbox": [
-      5,
-      409,
-      75,
-      480
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Spectrum Blue",
-    "row": 5,
-    "col": 2,
-    "hex": "#ACC2D9",
-    "rgb": [
-      172,
-      194,
-      217
-    ],
-    "bbox": [
-      88,
-      409,
-      159,
-      480
     ],
     "source": "ultramarine.png"
   },
@@ -21565,25 +17803,6 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "AK",
-    "name": "Grey Blue",
-    "row": 5,
-    "col": 5,
-    "hex": "#6F8BB0",
-    "rgb": [
-      111,
-      139,
-      176
-    ],
-    "bbox": [
-      338,
-      409,
-      409,
-      480
-    ],
-    "source": "ultramarine.png"
-  },
-  {
     "brand": "WPF",
     "name": "Wolf Grey",
     "row": 5,
@@ -21599,253 +17818,6 @@
       409,
       492,
       480
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Grey Blue",
-    "row": 5,
-    "col": 7,
-    "hex": "#609CC4",
-    "rgb": [
-      96,
-      156,
-      196
-    ],
-    "bbox": [
-      505,
-      409,
-      576,
-      480
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "VGC",
-    "name": "Steel Grey",
-    "row": 5,
-    "col": 8,
-    "hex": "#6488AB",
-    "rgb": [
-      100,
-      136,
-      171
-    ],
-    "bbox": [
-      589,
-      409,
-      659,
-      480
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Pastel Blue",
-    "row": 5,
-    "col": 9,
-    "hex": "#5E86A9",
-    "rgb": [
-      94,
-      134,
-      169
-    ],
-    "bbox": [
-      672,
-      409,
-      742,
-      480
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Grey Blue",
-    "row": 5,
-    "col": 10,
-    "hex": "#6581A2",
-    "rgb": [
-      101,
-      129,
-      162
-    ],
-    "bbox": [
-      755,
-      409,
-      826,
-      480
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Fenrisian Grey",
-    "row": 5,
-    "col": 11,
-    "hex": "#5E7C95",
-    "rgb": [
-      94,
-      124,
-      149
-    ],
-    "bbox": [
-      839,
-      409,
-      909,
-      480
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Stratos Blue",
-    "row": 6,
-    "col": 1,
-    "hex": "#526685",
-    "rgb": [
-      82,
-      102,
-      133
-    ],
-    "bbox": [
-      5,
-      511,
-      75,
-      581
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "GW",
-    "name": "Russ Grey",
-    "row": 6,
-    "col": 2,
-    "hex": "#4C6680",
-    "rgb": [
-      76,
-      102,
-      128
-    ],
-    "bbox": [
-      88,
-      511,
-      159,
-      581
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "VGC",
-    "name": "Sombre Grey",
-    "row": 6,
-    "col": 3,
-    "hex": "#4D5E6F",
-    "rgb": [
-      77,
-      94,
-      111
-    ],
-    "bbox": [
-      171,
-      511,
-      242,
-      581
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Thunderous Blue",
-    "row": 6,
-    "col": 4,
-    "hex": "#44516B",
-    "rgb": [
-      68,
-      81,
-      107
-    ],
-    "bbox": [
-      255,
-      511,
-      325,
-      581
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Night Sky",
-    "row": 6,
-    "col": 5,
-    "hex": "#3E4B5B",
-    "rgb": [
-      62,
-      75,
-      91
-    ],
-    "bbox": [
-      338,
-      511,
-      409,
-      581
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "GW",
-    "name": "The Fang",
-    "row": 6,
-    "col": 7,
-    "hex": "#33425D",
-    "rgb": [
-      51,
-      66,
-      93
-    ],
-    "bbox": [
-      505,
-      511,
-      576,
-      581
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Dark Blue",
-    "row": 6,
-    "col": 8,
-    "hex": "#151C2B",
-    "rgb": [
-      21,
-      28,
-      43
-    ],
-    "bbox": [
-      589,
-      511,
-      659,
-      581
-    ],
-    "source": "ultramarine.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Paynes Grey",
-    "row": 6,
-    "col": 9,
-    "hex": "#1D2028",
-    "rgb": [
-      29,
-      32,
-      40
-    ],
-    "bbox": [
-      672,
-      511,
-      742,
-      581
     ],
     "source": "ultramarine.png"
   },
@@ -22098,7 +18070,7 @@
   },
   {
     "brand": "AMP",
-    "name": "Brght Brown Grey",
+    "name": "Bright Brown Grey",
     "row": 2,
     "col": 6,
     "hex": "#8C8079",
@@ -22192,63 +18164,6 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "GW",
-    "name": "Rakarth Flesh",
-    "row": 3,
-    "col": 3,
-    "hex": "#948278",
-    "rgb": [
-      148,
-      130,
-      120
-    ],
-    "bbox": [
-      174,
-      210,
-      244,
-      281
-    ],
-    "source": "warm_grey.png"
-  },
-  {
-    "brand": "TTC",
-    "name": "Griffon Claw",
-    "row": 3,
-    "col": 4,
-    "hex": "#8F7D73",
-    "rgb": [
-      143,
-      125,
-      115
-    ],
-    "bbox": [
-      257,
-      210,
-      328,
-      281
-    ],
-    "source": "warm_grey.png"
-  },
-  {
-    "brand": "AMP",
-    "name": "Beige Grey",
-    "row": 3,
-    "col": 5,
-    "hex": "#9A7F6F",
-    "rgb": [
-      154,
-      127,
-      111
-    ],
-    "bbox": [
-      340,
-      210,
-      411,
-      281
-    ],
-    "source": "warm_grey.png"
-  },
-  {
     "brand": "VMC",
     "name": "Medium Grey",
     "row": 4,
@@ -22288,7 +18203,7 @@
   },
   {
     "brand": "VMC",
-    "name": "Cam Middle Brown",
+    "name": "Cam. Middle Brown",
     "row": 4,
     "col": 3,
     "hex": "#675445",
@@ -22340,44 +18255,6 @@
       312,
       411,
       382
-    ],
-    "source": "warm_grey.png"
-  },
-  {
-    "brand": "PA",
-    "name": "Banesaln",
-    "row": 5,
-    "col": 1,
-    "hex": "#A89494",
-    "rgb": [
-      168,
-      148,
-      148
-    ],
-    "bbox": [
-      7,
-      412,
-      78,
-      483
-    ],
-    "source": "warm_grey.png"
-  },
-  {
-    "brand": "VGC",
-    "name": "Warm Grey",
-    "row": 5,
-    "col": 2,
-    "hex": "#A38184",
-    "rgb": [
-      163,
-      129,
-      132
-    ],
-    "bbox": [
-      90,
-      412,
-      161,
-      483
     ],
     "source": "warm_grey.png"
   },
@@ -22477,25 +18354,6 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "VGC",
-    "name": "Stonewall Grey",
-    "row": 6,
-    "col": 2,
-    "hex": "#9A9A9A",
-    "rgb": [
-      154,
-      154,
-      154
-    ],
-    "bbox": [
-      90,
-      513,
-      161,
-      584
-    ],
-    "source": "warm_grey.png"
-  },
-  {
     "brand": "VMC",
     "name": "Medium Sea Grey",
     "row": 6,
@@ -22553,25 +18411,6 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "PA",
-    "name": "Warm Grey",
-    "row": 6,
-    "col": 6,
-    "hex": "#585B60",
-    "rgb": [
-      88,
-      91,
-      96
-    ],
-    "bbox": [
-      424,
-      513,
-      495,
-      584
-    ],
-    "source": "warm_grey.png"
-  },
-  {
     "brand": "TTC",
     "name": "Wizard Grey",
     "row": 6,
@@ -22586,25 +18425,6 @@
       507,
       513,
       578,
-      584
-    ],
-    "source": "warm_grey.png"
-  },
-  {
-    "brand": "VMC",
-    "name": "Violet Grey",
-    "row": 6,
-    "col": 8,
-    "hex": "#515556",
-    "rgb": [
-      81,
-      85,
-      86
-    ],
-    "bbox": [
-      591,
-      513,
-      661,
       584
     ],
     "source": "warm_grey.png"
@@ -22686,8 +18506,8 @@
     "source": "yellow.png"
   },
   {
-    "brand": "",
-    "name": "AKice Yellow",
+    "brand": "AK",
+    "name": "Ice Yellow",
     "row": 1,
     "col": 5,
     "hex": "#F3DDA4",
@@ -23047,8 +18867,8 @@
     "source": "yellow.png"
   },
   {
-    "brand": "",
-    "name": "IPFDaemonic Yellc NDDhe Rewetewt",
+    "brand": "WPF",
+    "name": "Daemonic Yellow",
     "row": 2,
     "col": 11,
     "hex": "#EFB629",
@@ -23180,8 +19000,8 @@
     "source": "yellow.png"
   },
   {
-    "brand": "",
-    "name": "Gv Wv Yriel Yellow",
+    "brand": "GW",
+    "name": "Yriel Yellow",
     "row": 3,
     "col": 6,
     "hex": "#F3A013",
@@ -23351,44 +19171,6 @@
     "source": "yellow.png"
   },
   {
-    "brand": "AK",
-    "name": "Sand Yellow",
-    "row": 5,
-    "col": 1,
-    "hex": "#DDAF52",
-    "rgb": [
-      221,
-      175,
-      82
-    ],
-    "bbox": [
-      8,
-      413,
-      79,
-      485
-    ],
-    "source": "yellow.png"
-  },
-  {
-    "brand": "AK",
-    "name": "Dirty Yellow",
-    "row": 5,
-    "col": 2,
-    "hex": "#CE961E",
-    "rgb": [
-      206,
-      150,
-      30
-    ],
-    "bbox": [
-      91,
-      413,
-      162,
-      485
-    ],
-    "source": "yellow.png"
-  },
-  {
     "brand": "WPF",
     "name": "Fiendish Yellow",
     "row": 5,
@@ -23428,7 +19210,7 @@
   },
   {
     "brand": "TTC",
-    "name": "Oark Sun Yellow",
+    "name": "Dark Sun Yellow",
     "row": 5,
     "col": 5,
     "hex": "#B97D3B",
@@ -23460,25 +19242,6 @@
       425,
       413,
       495,
-      485
-    ],
-    "source": "yellow.png"
-  },
-  {
-    "brand": "WPF",
-    "name": "Sunburst Ochre",
-    "row": 5,
-    "col": 7,
-    "hex": "#A85526",
-    "rgb": [
-      168,
-      85,
-      38
-    ],
-    "bbox": [
-      508,
-      413,
-      579,
       485
     ],
     "source": "yellow.png"
