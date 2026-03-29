@@ -38,6 +38,16 @@ export function useMunsellScene() {
    * @param gl - The Expo WebGL rendering context from GLView's onContextCreate
    */
   const onContextCreate = useCallback((gl: ExpoWebGLRenderingContext) => {
+    // expo-gl can return null for info log methods; three.js calls .trim() on
+    // the result unconditionally, causing a crash on some devices.
+    const _getShaderInfoLog = gl.getShaderInfoLog.bind(gl);
+    (gl as any).getShaderInfoLog = (s: WebGLShader) => _getShaderInfoLog(s) ?? '';
+    const _getProgramInfoLog = gl.getProgramInfoLog.bind(gl);
+    (gl as any).getProgramInfoLog = (p: WebGLProgram) => _getProgramInfoLog(p) ?? '';
+    const _getShaderPrecisionFormat = gl.getShaderPrecisionFormat.bind(gl);
+    (gl as any).getShaderPrecisionFormat = (...args: [number, number]) =>
+      _getShaderPrecisionFormat(...args) ?? { rangeMin: 127, rangeMax: 127, precision: 23 };
+
     const renderer = new Renderer({ gl });
     renderer.setSize(gl.drawingBufferWidth, gl.drawingBufferHeight);
     renderer.setClearColor(0xf5f5f5, 1);

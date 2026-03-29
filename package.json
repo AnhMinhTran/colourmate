@@ -60,6 +60,8 @@
   },
   "private": true,
   "overrides": {
-    "expo-file-system": "~19.0.21"
+    "expo-file-system": "~19.0.21",
+    "brace-expansion": "^1.1.13",
+    "node-fetch": "^2.7.0"
   }
 }

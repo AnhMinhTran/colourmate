@@ -75,6 +75,20 @@ export function computeContainTransform(
   };
 }
 
+/**
+ * Euclidean distance in Munsell XYZ space — perceptually meaningful since
+ * the coordinate is derived from the perceptually-uniform Munsell model.
+ */
+export function munsellXYZDistance(
+  a: { x: number; y: number; z: number },
+  b: { x: number; y: number; z: number }
+): number {
+  const dx = a.x - b.x;
+  const dy = a.y - b.y;
+  const dz = a.z - b.z;
+  return Math.sqrt(dx * dx + dy * dy + dz * dz);
+}
+
 export function rgbToHex({ r, g, b }: { r: number; g: number; b: number }): string {
   return `#${[r, g, b].map((v) => v.toString(16).padStart(2, '0')).join('').toUpperCase()}`;
 }

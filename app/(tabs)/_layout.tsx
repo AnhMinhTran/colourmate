@@ -22,7 +22,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="colourPicker"
         options={{
-          title: 'Color Sampler',
+          title: 'Colour Sampler',
           tabBarIcon: ({ color }) => <IconSymbol size={26} name="eyedropper.halffull" color={color} />,
         }}
       />
