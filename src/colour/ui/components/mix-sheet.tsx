@@ -13,6 +13,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ColourPoint } from '@/src/colour/models/colourPoint';
 import { convertSRGBToOKLCH } from '@/src/colour/services/colourConversion';
+import { filterColours } from '@/src/colour/services/colourQueryService';
 import { deriveMunsellLikeFromOKLCH } from '@/src/colour/services/deriveMunsellFromOklch';
 import { munsellLikeToXYZ } from '@/src/colour/services/munsellToXYZ';
 import { findBestMix, mixPaints, munsellXYZDistance } from '@/src/colour/services/paintMixService';
@@ -63,11 +64,10 @@ export function MixSheet({
 
   const runAutoSuggest = useCallback(() => {
     const g = goalRef.current;
-    const colours = allColoursRef.current.filter(
-      (c) =>
-        c.id !== g.id &&
-        (filterBrandsRef.current.size === 0 || filterBrandsRef.current.has(c.brand)) &&
-        (!filterInventoryOnlyRef.current || inventoryIdsRef.current.has(c.id))
+    const colours = filterColours(
+      allColoursRef.current.filter((c) => c.id !== g.id),
+      { search: '', brands: filterBrandsRef.current, inInventoryOnly: filterInventoryOnlyRef.current },
+      inventoryIdsRef.current
     );
     if (colours.length < 2) return;
     setComputing(true);
@@ -136,15 +136,11 @@ export function MixSheet({
 
   const filtered = useMemo(() => {
     const excludeOther = activeSelector === 'A' ? selectedBId : selectedAId;
-    return allColours.filter(
-      (c) =>
-        c.id !== goal.id &&
-        c.id !== excludeOther &&
-        (filterBrands.size === 0 || filterBrands.has(c.brand)) &&
-        (!filterInventoryOnly || inventoryIds.has(c.id)) &&
-        (search === '' ||
-          c.name.toLowerCase().includes(search.toLowerCase()) ||
-          c.brand.toLowerCase().includes(search.toLowerCase()))
+    const base = allColours.filter((c) => c.id !== goal.id && c.id !== excludeOther);
+    return filterColours(
+      base,
+      { search, brands: filterBrands, inInventoryOnly: filterInventoryOnly },
+      inventoryIds
     );
   }, [allColours, goal.id, activeSelector, selectedAId, selectedBId, filterBrands, filterInventoryOnly, inventoryIds, search]);
 

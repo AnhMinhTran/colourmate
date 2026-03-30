@@ -6,11 +6,9 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Alert,
   Image,
-  Modal,
   Pressable,
   ScrollView,
   StyleSheet,
-  Switch,
   Text,
   View,
 } from 'react-native';
@@ -20,137 +18,33 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ColourPoint } from '@/src/colour/models/colourPoint';
 import { SqliteColourPointRepository } from '@/src/colour/repositories/sqliteColourPointRepository';
-import { convertSRGBToOKLCH } from '@/src/colour/services/colourConversion';
+import {
+  ColourFilter,
+  ColourMatch,
+  EMPTY_FILTER,
+  filterColours,
+  findNearestColours,
+  isFilterActive,
+} from '@/src/colour/services/colourQueryService';
+import { FilterSheet } from '@/src/colour/ui/components/filter-sheet';
 import { MixSheet } from '@/src/colour/ui/components/mix-sheet';
-import { deriveMunsellLikeFromOKLCH } from '@/src/colour/services/deriveMunsellFromOklch';
-import { munsellLikeToXYZ, Vec3 } from '@/src/colour/services/munsellToXYZ';
 import { PickerCursor } from '@/src/colour/ui/components/picker-cursor';
 import { useGlColourSampler } from '@/src/colour/ui/hooks/use-gl-colour-sampler';
 import { useImageTransform } from '@/src/colour/ui/hooks/use-image-transform';
-import { ImageInfo, RGB } from '@/src/colour/ui/types';
+import { ImageInfo } from '@/src/colour/ui/types';
 import { SqliteInventoryRepository } from '@/src/inventory/repositories/sqliteInventoryRepository';
 import { IconSymbol } from '@/src/ui/components/icon-symbol';
 
 const AnimatedImage = Animated.createAnimatedComponent(Image);
 
-// Max possible distance in the XYZ coordinate space
-// x∈[-1,1], y∈[0,1], z∈[-1,1] → max diff = √(4+1+4) = 3
-const MAX_DIST = 3;
-const TOP_N = 5;
-
 function toHex(r: number, g: number, b: number) {
   return '#' + [r, g, b].map((v) => v.toString(16).padStart(2, '0').toUpperCase()).join('');
-}
-
-function rgbToCoordinate(rgb: RGB): Vec3 {
-  const oklch = convertSRGBToOKLCH({ r: rgb.r, g: rgb.g, b: rgb.b });
-  const munsell = deriveMunsellLikeFromOKLCH(oklch);
-  return munsellLikeToXYZ(munsell);
-}
-
-function colourDistance(a: Vec3, b: Vec3): number {
-  const dx = a.x - b.x;
-  const dy = a.y - b.y;
-  const dz = a.z - b.z;
-  return Math.sqrt(dx * dx + dy * dy + dz * dz);
-}
-
-function toSimilarity(dist: number): number {
-  return Math.max(0, (1 - dist / MAX_DIST)) * 100;
-}
-
-interface Filters {
-  brands: Set<string>;
-  inInventoryOnly: boolean;
-}
-
-const EMPTY_FILTERS: Filters = { brands: new Set(), inInventoryOnly: false };
-
-function isActive(f: Filters) {
-  return f.brands.size > 0 || f.inInventoryOnly;
-}
-
-interface Match {
-  colour: ColourPoint;
-  similarity: number;
-}
-
-// ---------------------------------------------------------------------------
-// FilterSheet
-// ---------------------------------------------------------------------------
-function FilterSheet({
-  visible,
-  brands,
-  filters,
-  onApply,
-  onClose,
-}: {
-  visible: boolean;
-  brands: string[];
-  filters: Filters;
-  onApply: (f: Filters) => void;
-  onClose: () => void;
-}) {
-  const [draft, setDraft] = useState<Filters>(filters);
-  const insets = useSafeAreaInsets();
-
-  useEffect(() => {
-    if (visible) setDraft(filters);
-  }, [visible, filters]);
-
-  const toggleBrand = (brand: string) => {
-    setDraft((prev) => {
-      const next = new Set(prev.brands);
-      next.has(brand) ? next.delete(brand) : next.add(brand);
-      return { ...prev, brands: next };
-    });
-  };
-
-  return (
-    <Modal visible={visible} animationType="slide" transparent onRequestClose={onClose}>
-      <Pressable style={sheet.backdrop} onPress={onClose} />
-      <View style={[sheet.panel, { paddingBottom: insets.bottom + 16 }]}>
-        <View style={sheet.handle} />
-        <View style={sheet.header}>
-          <Text style={sheet.heading}>Filters</Text>
-          <Pressable onPress={() => setDraft(EMPTY_FILTERS)}>
-            <Text style={sheet.clearAll}>Clear all</Text>
-          </Pressable>
-        </View>
-        <View style={sheet.row}>
-          <Text style={sheet.rowLabel}>In inventory only</Text>
-          <Switch
-            value={draft.inInventoryOnly}
-            onValueChange={(v) => setDraft((p) => ({ ...p, inInventoryOnly: v }))}
-            trackColor={{ true: '#4A90D9' }}
-          />
-        </View>
-        <Text style={sheet.sectionLabel}>Brand</Text>
-        <ScrollView style={sheet.brandList} showsVerticalScrollIndicator={false}>
-          {brands.map((brand) => {
-            const selected = draft.brands.has(brand);
-            return (
-              <Pressable key={brand} style={sheet.brandRow} onPress={() => toggleBrand(brand)}>
-                <View style={[sheet.checkbox, selected && sheet.checkboxActive]}>
-                  {selected && <Text style={sheet.checkmark}>✓</Text>}
-                </View>
-                <Text style={sheet.brandLabel}>{brand}</Text>
-              </Pressable>
-            );
-          })}
-        </ScrollView>
-        <Pressable style={sheet.applyBtn} onPress={() => { onApply(draft); onClose(); }}>
-          <Text style={sheet.applyBtnText}>Apply</Text>
-        </Pressable>
-      </View>
-    </Modal>
-  );
 }
 
 // ---------------------------------------------------------------------------
 // MatchCard
 // ---------------------------------------------------------------------------
-function MatchCard({ match, inInventory, onPress }: { match: Match; inInventory: boolean; onPress: () => void }) {
+function MatchCard({ match, inInventory, onPress }: { match: ColourMatch; inInventory: boolean; onPress: () => void }) {
   const { colour } = match;
   const bg = `rgb(${colour.rgb.r}, ${colour.rgb.g}, ${colour.rgb.b})`;
   return (
@@ -198,9 +92,9 @@ export default function ColourPickerScreen() {
 
   const [colours, setColours] = useState<ColourPoint[]>([]);
   const [inventoryIds, setInventoryIds] = useState<Set<string>>(new Set());
-  const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS);
+  const [filter, setFilter] = useState<ColourFilter>(EMPTY_FILTER);
   const [showFilter, setShowFilter] = useState(false);
-  const [matches, setMatches] = useState<Match[] | null>(null);
+  const [matches, setMatches] = useState<ColourMatch[] | null>(null);
   const [showMix, setShowMix] = useState(false);
 
   useEffect(() => {
@@ -232,28 +126,16 @@ export default function ColourPickerScreen() {
 
   const findNearest = useCallback(() => {
     if (!sampledColor) return;
-    const coord = rgbToCoordinate(sampledColor);
-
-    const candidates = colours.filter((c) => {
-      if (filters.brands.size > 0 && !filters.brands.has(c.brand)) return false;
-      if (filters.inInventoryOnly && !inventoryIds.has(c.id)) return false;
-      return true;
-    });
-
-    const ranked = candidates
-      .map((c) => ({ colour: c, similarity: toSimilarity(colourDistance(coord, c.coordinate)) }))
-      .sort((a, b) => b.similarity - a.similarity)
-      .slice(0, TOP_N);
-
-    setMatches(ranked);
-  }, [sampledColor, colours, filters, inventoryIds]);
+    const candidates = filterColours(colours, { ...filter, search: '' }, inventoryIds);
+    setMatches(findNearestColours(sampledColor, candidates));
+  }, [sampledColor, colours, filter, inventoryIds]);
 
   const allBrands = useMemo(
     () => [...new Set(colours.map((c) => c.brand))].sort(),
     [colours],
   );
 
-  const filterActive = isActive(filters);
+  const filterActive = isFilterActive(filter);
   const hex = sampledColor ? toHex(sampledColor.r, sampledColor.g, sampledColor.b) : null;
 
   return (
@@ -386,8 +268,8 @@ export default function ColourPickerScreen() {
       <FilterSheet
         visible={showFilter}
         brands={allBrands}
-        filters={filters}
-        onApply={setFilters}
+        filter={filter}
+        onApply={setFilter}
         onClose={() => setShowFilter(false)}
       />
 
@@ -536,9 +418,6 @@ const s = StyleSheet.create({
   },
   inventoryBadgeText: { fontSize: 11, color: '#fff', fontWeight: '500' },
   matchBrand: { fontSize: 13, color: '#888' },
-  matchPct: { fontSize: 14, fontWeight: '600', color: '#111', minWidth: 40, textAlign: 'right' },
-  barTrack: { height: 5, backgroundColor: '#f0f0f0', borderRadius: 4, overflow: 'hidden' },
-  barFill: { height: '100%', backgroundColor: '#22c55e', borderRadius: 4 },
   actionRow: { flexDirection: 'row' },
   mixBtn: {
     flex: 1,
@@ -551,79 +430,4 @@ const s = StyleSheet.create({
     paddingVertical: 14,
   },
   mixBtnText: { color: '#fff', fontSize: 15, fontWeight: '600' },
-});
-
-const sheet = StyleSheet.create({
-  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.3)' },
-  panel: {
-    backgroundColor: '#fff',
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-    paddingHorizontal: 20,
-    paddingTop: 12,
-    maxHeight: '75%',
-  },
-  handle: {
-    width: 36,
-    height: 4,
-    borderRadius: 2,
-    backgroundColor: '#ddd',
-    alignSelf: 'center',
-    marginBottom: 16,
-  },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 16,
-  },
-  heading: { fontSize: 17, fontWeight: '700', color: '#111' },
-  clearAll: { fontSize: 14, color: '#4A90D9' },
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingVertical: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
-  },
-  rowLabel: { fontSize: 15, color: '#111' },
-  sectionLabel: {
-    fontSize: 13,
-    fontWeight: '600',
-    color: '#888',
-    textTransform: 'uppercase',
-    letterSpacing: 0.5,
-    marginTop: 16,
-    marginBottom: 8,
-  },
-  brandList: { maxHeight: 280 },
-  brandRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: 10,
-    gap: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
-  },
-  checkbox: {
-    width: 22,
-    height: 22,
-    borderRadius: 6,
-    borderWidth: 1.5,
-    borderColor: '#ccc',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  checkboxActive: { backgroundColor: '#4A90D9', borderColor: '#4A90D9' },
-  checkmark: { color: '#fff', fontSize: 13, fontWeight: '700' },
-  brandLabel: { fontSize: 15, color: '#111' },
-  applyBtn: {
-    backgroundColor: '#4A90D9',
-    borderRadius: 12,
-    paddingVertical: 14,
-    alignItems: 'center',
-    marginTop: 16,
-  },
-  applyBtnText: { color: '#fff', fontSize: 16, fontWeight: '600' },
 });

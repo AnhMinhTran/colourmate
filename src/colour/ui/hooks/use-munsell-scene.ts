@@ -31,6 +31,7 @@ interface SceneState {
 export function useMunsellScene() {
   const stateRef = useRef<SceneState | null>(null);
   const pointsRef = useRef<ScenePoint[]>([]);
+  const cameraParamsRef = useRef({ theta: Math.PI / 4, phi: Math.PI / 6, zoom: 2.5 });
 
   /**
    * Initializes the Three.js scene, camera, renderer, and visual guides
@@ -79,6 +80,13 @@ export function useMunsellScene() {
       buildPointMeshes(state, pointsRef.current);
     }
 
+    // Camera params may have been set before the context was ready — apply them now.
+    const { theta, phi, zoom } = cameraParamsRef.current;
+    const clampedPhi = Math.max(-Math.PI / 2 + 0.1, Math.min(Math.PI / 2 - 0.1, phi));
+    const pos = sphericalToCartesian(theta, clampedPhi, zoom);
+    camera.position.set(pos.x + SCENE_CENTER.x, pos.y + SCENE_CENTER.y, pos.z + SCENE_CENTER.z);
+    camera.lookAt(SCENE_CENTER);
+
     const animate = () => {
       if (state.disposed) return;
       state.frameId = requestAnimationFrame(animate);
@@ -109,6 +117,7 @@ export function useMunsellScene() {
    */
   const updateCamera = useCallback(
     (theta: number, phi: number, zoom: number) => {
+      cameraParamsRef.current = { theta, phi, zoom };
       const state = stateRef.current;
       if (!state) return;
 

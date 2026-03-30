@@ -97,12 +97,12 @@ export default function ColourDetailScreen() {
 
   const saveEdit = async () => {
     if (!colour) return;
-    if (!draftName.trim()) { Alert.alert('Name cannot be empty'); return; }
-    if (!draftBrand.trim()) { Alert.alert('Brand cannot be empty'); return; }
-
-    colour.name = draftName.trim();
-    colour.brand = draftBrand.trim();
-    colour.tag = draftTags;
+    try {
+      colour.update({ name: draftName, brand: draftBrand, tag: draftTags });
+    } catch (e: any) {
+      Alert.alert(e.message);
+      return;
+    }
     await colourRepo.update(colour);
     setColour({ ...colour } as ColourPoint);
     setEditing(false);
