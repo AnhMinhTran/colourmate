@@ -191,7 +191,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "StrAK Interactiveen Green",
+    "name": "Straken Green",
     "row": 2,
     "col": 1,
     "hex": "#676D4A",
@@ -343,7 +343,7 @@
   },
   {
     "brand": "Vallejo",
-    "name": "Pro Acrylstel Green",
+    "name": "Pastel Green",
     "row": 3,
     "col": 3,
     "hex": "#9CA389",
@@ -381,7 +381,7 @@
   },
   {
     "brand": "Warpaints Fanatic",
-    "name": "Olive Drab WPLgte Ente",
+    "name": "Olive Drab",
     "row": 3,
     "col": 5,
     "hex": "#707A65",
@@ -457,7 +457,7 @@
   },
   {
     "brand": "Warpaints Fanatic",
-    "name": "Waodland Camo",
+    "name": "Woodland Camo",
     "row": 3,
     "col": 9,
     "hex": "#575D4A",
@@ -799,7 +799,7 @@
   },
   {
     "brand": "Warpaints Fanatic",
-    "name": "Pro Acryltagon Pine",
+    "name": "Patagon Pine",
     "row": 5,
     "col": 4,
     "hex": "#7D9281",
@@ -1141,7 +1141,7 @@
   },
   {
     "brand": "AK Interactive",
-    "name": "SmoAK Interactivee Black",
+    "name": "Smoake Black",
     "row": 1,
     "col": 5,
     "hex": "#222326",
@@ -1616,7 +1616,7 @@
   },
   {
     "brand": "Pro Acryl",
-    "name": "Pro Acrylynes Grey",
+    "name": "Paynes Grey",
     "row": 4,
     "col": 4,
     "hex": "#1C1F27",
@@ -2870,7 +2870,7 @@
   },
   {
     "brand": "Vallejo",
-    "name": "Pro Acrylstel Blue",
+    "name": "Pastel Blue",
     "row": 1,
     "col": 8,
     "hex": "#5E86AA",
@@ -3060,7 +3060,7 @@
   },
   {
     "brand": "Vallejo",
-    "name": "Pro Acrylle Grey Blue",
+    "name": "Pale Grey Blue",
     "row": 3,
     "col": 1,
     "hex": "#B3C5CC",
@@ -3212,7 +3212,7 @@
   },
   {
     "brand": "Vallejo",
-    "name": "Pro Acrylle Blue",
+    "name": "Pale Blue",
     "row": 4,
     "col": 1,
     "hex": "#A7C0BF",
@@ -3231,7 +3231,7 @@
   },
   {
     "brand": "AK Interactive",
-    "name": "Pro Acrylle Blue",
+    "name": "Pale Blue",
     "row": 4,
     "col": 2,
     "hex": "#A4C0BC",
@@ -3288,7 +3288,7 @@
   },
   {
     "brand": "Vallejo",
-    "name": "Blue Grey Pro Acrylle",
+    "name": "Blue Grey Pale",
     "row": 4,
     "col": 5,
     "hex": "#76868D",
@@ -3763,7 +3763,7 @@
   },
   {
     "brand": "AK Interactive",
-    "name": "VPro Acryliric Flesh",
+    "name": "VPAiric Flesh",
     "row": 1,
     "col": 11,
     "hex": "#B8A787",
@@ -3858,7 +3858,7 @@
   },
   {
     "brand": "Warpaints Fanatic",
-    "name": "Pro Acrylle Sand",
+    "name": "Pale Sand",
     "row": 2,
     "col": 2,
     "hex": "#EAD9C9",
@@ -4010,7 +4010,7 @@
   },
   {
     "brand": "Vallejo",
-    "name": "Pro Acrylle Sand",
+    "name": "Pale Sand",
     "row": 2,
     "col": 10,
     "hex": "#DEC4A2",
@@ -4029,7 +4029,7 @@
   },
   {
     "brand": "AK Interactive",
-    "name": "Pro Acrylle Sand",
+    "name": "Pale Sand",
     "row": 2,
     "col": 11,
     "hex": "#DBC4A0",
@@ -4048,7 +4048,7 @@
   },
   {
     "brand": "Two Thin Coats",
-    "name": "VPro Acrylire Fang",
+    "name": "VPAire Fang",
     "row": 2,
     "col": 12,
     "hex": "#CDB594",
@@ -4105,7 +4105,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "Pro Acryllhd Wych Flesh",
+    "name": "Palhd Wych Flesh",
     "row": 3,
     "col": 2,
     "hex": "#D3C5BD",
@@ -4162,7 +4162,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "RAK Interactivearth Flesh",
+    "name": "Rakarth Flesh",
     "row": 3,
     "col": 5,
     "hex": "#948278",
@@ -4219,7 +4219,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "KarAK Interactive Stone",
+    "name": "Karak Stone",
     "row": 3,
     "col": 8,
     "hex": "#947F6A",
@@ -4409,7 +4409,7 @@
   },
   {
     "brand": "Warpaints Fanatic",
-    "name": "Webbing KhAK Interactivei",
+    "name": "Webbing Khaki",
     "row": 4,
     "col": 9,
     "hex": "#BC9959",
@@ -4580,7 +4580,7 @@
   },
   {
     "brand": "Vallejo",
-    "name": "KhAK Interactivei",
+    "name": "Khaki",
     "row": 5,
     "col": 4,
     "hex": "#A78160",
@@ -4770,7 +4770,7 @@
   },
   {
     "brand": "Vallejo",
-    "name": "KhAK Interactivei",
+    "name": "Khaki",
     "row": 6,
     "col": 2,
     "hex": "#887453",
@@ -4846,7 +4846,7 @@
   },
   {
     "brand": "Warpaints Fanatic",
-    "name": "Cammand KhAK Interactivei",
+    "name": "Cammand Khaki",
     "row": 1,
     "col": 2,
     "hex": "#BB9783",
@@ -4865,7 +4865,7 @@
   },
   {
     "brand": "Warpaints Fanatic",
-    "name": "Pro Acrylratrooper Tan",
+    "name": "Paratrooper Tan",
     "row": 1,
     "col": 3,
     "hex": "#A37966",
@@ -4941,7 +4941,7 @@
   },
   {
     "brand": "Vallejo",
-    "name": "Pro Acrylle Brown",
+    "name": "Pale Brown",
     "row": 1,
     "col": 7,
     "hex": "#7F5C48",
@@ -6347,7 +6347,7 @@
   },
   {
     "brand": "Two Thin Coats",
-    "name": "Pro Acrylle Skin",
+    "name": "Pale Skin",
     "row": 2,
     "col": 5,
     "hex": "#C89A82",
@@ -6727,7 +6727,7 @@
   },
   {
     "brand": "Vallejo",
-    "name": "Pro Acrylle Flesh",
+    "name": "Pale Flesh",
     "row": 5,
     "col": 2,
     "hex": "#EDB6A2",
@@ -7050,7 +7050,7 @@
   },
   {
     "brand": "Two Thin Coats",
-    "name": "Pro Acrylladin Flesh",
+    "name": "Paladin Flesh",
     "row": 6,
     "col": 8,
     "hex": "#5E4242",
@@ -7088,7 +7088,7 @@
   },
   {
     "brand": "Warpaints Fanatic",
-    "name": "OAK Interactive Brown",
+    "name": "Oak Brown",
     "row": 6,
     "col": 10,
     "hex": "#331C17",
@@ -8399,7 +8399,7 @@
   },
   {
     "brand": "AK Interactive",
-    "name": "Pro Acrylle Grey",
+    "name": "Pale Grey",
     "row": 2,
     "col": 8,
     "hex": "#92979B",
@@ -8684,7 +8684,7 @@
   },
   {
     "brand": "Warpaints Fanatic",
-    "name": "ComPro Acrylny Grey",
+    "name": "Company Grey",
     "row": 4,
     "col": 1,
     "hex": "#B8C1C9",
@@ -8969,7 +8969,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "KAK Interactiveophani Purple",
+    "name": "Kakophani Purple",
     "row": 1,
     "col": 1,
     "hex": "#986DA2",
@@ -9140,7 +9140,7 @@
   },
   {
     "brand": "Warpaints Fanatic",
-    "name": "KrAK Interactiveen Lavender",
+    "name": "Kraken Lavender",
     "row": 2,
     "col": 1,
     "hex": "#F0DBFB",
@@ -9463,7 +9463,7 @@
   },
   {
     "brand": "Two Thin Coats",
-    "name": "Sorcerors CloAK Interactive",
+    "name": "Sorcerors Cloak",
     "row": 3,
     "col": 7,
     "hex": "#5D4277",
@@ -9501,7 +9501,7 @@
   },
   {
     "brand": "AK Interactive",
-    "name": "Pro Acrylstel Violet",
+    "name": "Pastel Violet",
     "row": 4,
     "col": 1,
     "hex": "#C2B2D6",
@@ -9957,7 +9957,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "WazdAK Interactiveka Red",
+    "name": "Wazdakka Red",
     "row": 1,
     "col": 6,
     "hex": "#A2363C",
@@ -10185,7 +10185,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "Gal VorbAK Interactive Red",
+    "name": "Gal Vorbak Red",
     "row": 2,
     "col": 9,
     "hex": "#41191E",
@@ -10204,7 +10204,7 @@
   },
   {
     "brand": "Two Thin Coats",
-    "name": "Pro Acrylhora Red",
+    "name": "PAhora Red",
     "row": 2,
     "col": 10,
     "hex": "#3F161C",
@@ -10242,7 +10242,7 @@
   },
   {
     "brand": "AK Interactive",
-    "name": "Pro Acrylstel Pink",
+    "name": "Pastel Pink",
     "row": 3,
     "col": 1,
     "hex": "#D7B1BD",
@@ -10641,7 +10641,7 @@
   },
   {
     "brand": "Two Thin Coats",
-    "name": "Royal CloAK Interactive",
+    "name": "Royal Cloak",
     "row": 5,
     "col": 2,
     "hex": "#2D181F",
@@ -10660,7 +10660,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "BarAK Interactivenar Burgundy",
+    "name": "Baraknar Burgundy",
     "row": 5,
     "col": 3,
     "hex": "#2D1620",
@@ -10831,7 +10831,7 @@
   },
   {
     "brand": "Two Thin Coats",
-    "name": "FlAK Interactive Gun Yellow",
+    "name": "Flak Gun Yellow",
     "row": 1,
     "col": 4,
     "hex": "#C1A367",
@@ -10926,7 +10926,7 @@
   },
   {
     "brand": "AK Interactive",
-    "name": "JaPro Acrylnese Brown",
+    "name": "Japanese Brown",
     "row": 1,
     "col": 10,
     "hex": "#9B7111",
@@ -10945,7 +10945,7 @@
   },
   {
     "brand": "Vallejo",
-    "name": "JaPro Acryln Unif WWil",
+    "name": "Japan Unif WWil",
     "row": 1,
     "col": 11,
     "hex": "#997422",
@@ -11382,7 +11382,7 @@
   },
   {
     "brand": "Vallejo",
-    "name": "KhAK Interactivei Grey",
+    "name": "Khaki Grey",
     "row": 4,
     "col": 6,
     "hex": "#815E2C",
@@ -11401,7 +11401,7 @@
   },
   {
     "brand": "AK Interactive",
-    "name": "British KhAK Interactivei",
+    "name": "British Khaki",
     "row": 4,
     "col": 8,
     "hex": "#6E4F26",
@@ -11458,7 +11458,7 @@
   },
   {
     "brand": "Two Thin Coats",
-    "name": "Pro Acrylnzer Yellow",
+    "name": "Panzer Yellow",
     "row": 5,
     "col": 2,
     "hex": "#917641",
@@ -11648,7 +11648,7 @@
   },
   {
     "brand": "Vallejo",
-    "name": "USOlive Drab",
+    "name": "US Olive Drab",
     "row": 6,
     "col": 6,
     "hex": "#342C0D",
@@ -11819,7 +11819,7 @@
   },
   {
     "brand": "Two Thin Coats",
-    "name": "Ranger CloAK Interactive",
+    "name": "Ranger Cloak",
     "row": 1,
     "col": 9,
     "hex": "#575852",
@@ -11914,7 +11914,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "Krieg KhAK Interactivei",
+    "name": "Krieg Khaki",
     "row": 2,
     "col": 2,
     "hex": "#ACA879",
@@ -12085,7 +12085,7 @@
   },
   {
     "brand": "Pro Acryl",
-    "name": "KhAK Interactivei",
+    "name": "Khaki",
     "row": 3,
     "col": 1,
     "hex": "#B3A277",
@@ -12560,7 +12560,7 @@
   },
   {
     "brand": "Pro Acryl",
-    "name": "Pro Acrylle Pink",
+    "name": "Pale Pink",
     "row": 1,
     "col": 1,
     "hex": "#F9C4C7",
@@ -13947,7 +13947,7 @@
   },
   {
     "brand": "Two Thin Coats",
-    "name": "HelsPro Acrylwn Red",
+    "name": "Helspawn Red",
     "row": 4,
     "col": 5,
     "hex": "#CF1426",
@@ -14175,7 +14175,7 @@
   },
   {
     "brand": "Warpaints Fanatic",
-    "name": "OPro Acryll Skin",
+    "name": "Opal Skin",
     "row": 1,
     "col": 2,
     "hex": "#EEC3BD",
@@ -14194,7 +14194,7 @@
   },
   {
     "brand": "Warpaints Fanatic",
-    "name": "LeoPro Acrylrd Stane Skin",
+    "name": "Leopard Stane Skin",
     "row": 1,
     "col": 3,
     "hex": "#E9B6B8",
@@ -14517,7 +14517,7 @@
   },
   {
     "brand": "Warpaints Fanatic",
-    "name": "ToPro Acrylz Skin",
+    "name": "Topaz Skin",
     "row": 3,
     "col": 7,
     "hex": "#BF5C52",
@@ -14878,7 +14878,7 @@
   },
   {
     "brand": "AK Interactive",
-    "name": "Pro Acrylstel Blue",
+    "name": "Pastel Blue",
     "row": 3,
     "col": 2,
     "hex": "#A2D2D6",
@@ -15543,7 +15543,7 @@
   },
   {
     "brand": "Vallejo",
-    "name": "Pro Acrylrasite Brown",
+    "name": "Parasite Brown",
     "row": 2,
     "col": 2,
     "hex": "#AB582C",
@@ -15999,7 +15999,7 @@
   },
   {
     "brand": "Two Thin Coats",
-    "name": "Fur CloAK Interactive",
+    "name": "Fur Cloak",
     "row": 5,
     "col": 4,
     "hex": "#853931",
@@ -16474,7 +16474,7 @@
   },
   {
     "brand": "AK Interactive",
-    "name": "Pro Acrylstel Green",
+    "name": "Pastel Green",
     "row": 3,
     "col": 1,
     "hex": "#A8EDDD",
@@ -16550,7 +16550,7 @@
   },
   {
     "brand": "Pro Acryl",
-    "name": "Bright Pro Acrylle Green",
+    "name": "Bright Pale Green",
     "row": 3,
     "col": 5,
     "hex": "#72EAB8",
@@ -16930,7 +16930,7 @@
   },
   {
     "brand": "Vallejo",
-    "name": "Pro Acrylrk Green Flat",
+    "name": "Park Green Flat",
     "row": 5,
     "col": 2,
     "hex": "#018A62",
@@ -16968,7 +16968,7 @@
   },
   {
     "brand": "Vallejo",
-    "name": "Pro Acrylcifoc Green",
+    "name": "Pacifoc Green",
     "row": 6,
     "col": 2,
     "hex": "#5A907D",
@@ -18127,7 +18127,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "Pro Acrylllid Wych Flesh",
+    "name": "Pallid Wych Flesh",
     "row": 3,
     "col": 1,
     "hex": "#D3C4BD",
@@ -18431,7 +18431,7 @@
   },
   {
     "brand": "Pro Acryl",
-    "name": "Bright Pro Acrylle Yellow",
+    "name": "Bright Pale Yellow",
     "row": 1,
     "col": 1,
     "hex": "#F7EABE",
@@ -18469,7 +18469,7 @@
   },
   {
     "brand": "Pro Acryl",
-    "name": "Pro Acrylle Yellow",
+    "name": "Pale Yellow",
     "row": 1,
     "col": 3,
     "hex": "#E4D39B",
@@ -18526,7 +18526,7 @@
   },
   {
     "brand": "AK Interactive",
-    "name": "Pro Acrylstel Yellow",
+    "name": "Pastel Yellow",
     "row": 1,
     "col": 6,
     "hex": "#F3DC98",
@@ -18583,7 +18583,7 @@
   },
   {
     "brand": "AK Interactive",
-    "name": "Pro Acrylle Yellow",
+    "name": "Pale Yellow",
     "row": 1,
     "col": 9,
     "hex": "#F4D37F",
@@ -18678,7 +18678,7 @@
   },
   {
     "brand": "Warpaints Fanatic",
-    "name": "SPro Acrylce Oust",
+    "name": "Space Oust",
     "row": 2,
     "col": 1,
     "hex": "#F7D470",

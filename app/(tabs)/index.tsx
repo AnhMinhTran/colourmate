@@ -208,6 +208,11 @@ export default function InventoryScreen() {
             value={search}
             onChangeText={setSearch}
           />
+          {search.length > 0 && (
+            <Pressable onPress={() => setSearch('')} style={styles.clearBtn}>
+              <IconSymbol name="xmark.circle.fill" size={16} color="#bbb" />
+            </Pressable>
+          )}
         </View>
         <Pressable
           style={[styles.filterBtn, filterActive && styles.filterBtnActive]}
@@ -279,6 +284,7 @@ const styles = StyleSheet.create({
   },
   searchIcon: { marginRight: 6 },
   searchInput: { flex: 1, fontSize: 15, color: '#111' },
+  clearBtn: { paddingHorizontal: 4 },
   filterBtn: {
     width: 42,
     height: 42,
