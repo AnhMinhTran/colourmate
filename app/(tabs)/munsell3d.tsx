@@ -1,5 +1,6 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
 import { useFocusEffect } from "expo-router";
+import { useSQLiteContext } from "expo-sqlite";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   Modal,
   Pressable,
@@ -10,14 +11,13 @@ import {
   View,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useSQLiteContext } from "expo-sqlite";
 
 import { ColourPoint } from "@/src/colour/models/colourPoint";
 import { SqliteColourPointRepository } from "@/src/colour/repositories/sqliteColourPointRepository";
-import { SqliteInventoryRepository } from "@/src/inventory/repositories/sqliteInventoryRepository";
 import { filterByBrands } from "@/src/colour/services/munsellSceneService";
-import { MunsellCanvas } from "@/src/colour/ui/components/munsell-canvas";
 import { ColourTooltip } from "@/src/colour/ui/components/colour-tooltip";
+import { MunsellCanvas } from "@/src/colour/ui/components/munsell-canvas";
+import { SqliteInventoryRepository } from "@/src/inventory/repositories/sqliteInventoryRepository";
 import { IconSymbol } from "@/src/ui/components/icon-symbol";
 
 // ---------------------------------------------------------------------------
@@ -182,7 +182,7 @@ export default function Munsell3DScreen() {
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
       <View style={styles.titleRow}>
-        <Text style={styles.title}>3D Colour Space</Text>
+        <Text style={styles.title}>3D Munsell Colour View</Text>
         <Pressable
           style={[styles.filterBtn, filterActive && styles.filterBtnActive]}
           onPress={() => setShowFilter(true)}

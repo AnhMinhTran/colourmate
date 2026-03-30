@@ -1,5 +1,6 @@
 import { GLView } from 'expo-gl';
 import * as ImagePicker from 'expo-image-picker';
+import { useRouter } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
@@ -20,6 +21,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { ColourPoint } from '@/src/colour/models/colourPoint';
 import { SqliteColourPointRepository } from '@/src/colour/repositories/sqliteColourPointRepository';
 import { convertSRGBToOKLCH } from '@/src/colour/services/colourConversion';
+import { MixSheet } from '@/src/colour/ui/components/mix-sheet';
 import { deriveMunsellLikeFromOKLCH } from '@/src/colour/services/deriveMunsellFromOklch';
 import { munsellLikeToXYZ, Vec3 } from '@/src/colour/services/munsellToXYZ';
 import { PickerCursor } from '@/src/colour/ui/components/picker-cursor';
@@ -148,11 +150,11 @@ function FilterSheet({
 // ---------------------------------------------------------------------------
 // MatchCard
 // ---------------------------------------------------------------------------
-function MatchCard({ match, inInventory }: { match: Match; inInventory: boolean }) {
+function MatchCard({ match, inInventory, onPress }: { match: Match; inInventory: boolean; onPress: () => void }) {
   const { colour } = match;
   const bg = `rgb(${colour.rgb.r}, ${colour.rgb.g}, ${colour.rgb.b})`;
   return (
-    <View style={s.matchCard}>
+    <Pressable style={s.matchCard} onPress={onPress}>
       <View style={s.matchCardTop}>
         <View style={[s.matchSwatch, { backgroundColor: bg }]} />
         <View style={s.matchInfo}>
@@ -167,7 +169,7 @@ function MatchCard({ match, inInventory }: { match: Match; inInventory: boolean 
           <Text style={s.matchBrand}>{colour.brand}</Text>
         </View>
       </View>
-    </View>
+    </Pressable>
   );
 }
 
@@ -176,6 +178,7 @@ function MatchCard({ match, inInventory }: { match: Match; inInventory: boolean 
 // ---------------------------------------------------------------------------
 export default function ColourPickerScreen() {
   const db = useSQLiteContext();
+  const router = useRouter();
   const colourRepo = useMemo(() => new SqliteColourPointRepository(db), [db]);
   const inventoryRepo = useMemo(() => new SqliteInventoryRepository(db), [db]);
   const insets = useSafeAreaInsets();
@@ -198,6 +201,7 @@ export default function ColourPickerScreen() {
   const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS);
   const [showFilter, setShowFilter] = useState(false);
   const [matches, setMatches] = useState<Match[] | null>(null);
+  const [showMix, setShowMix] = useState(false);
 
   useEffect(() => {
     Promise.all([colourRepo.findAll(), inventoryRepo.findAll()]).then(
@@ -334,10 +338,20 @@ export default function ColourPickerScreen() {
         </View>
       )}
 
+      {/* Action buttons row */}
+      {sampledColor && (
+        <View style={s.actionRow}>
+          <Pressable style={s.mixBtn} onPress={() => { setShowMix(true); setMatches(null); }}>
+            <IconSymbol name="paintbrush.fill" size={16} color="#fff" />
+            <Text style={s.mixBtnText}>Mix this colour</Text>
+          </Pressable>
+        </View>
+      )}
+
       {/* Find nearest row */}
       {sampledColor && (
         <View style={s.findRow}>
-          <Pressable style={s.findBtn} onPress={findNearest}>
+          <Pressable style={s.findBtn} onPress={() => { findNearest(); setShowMix(false); }}>
             <IconSymbol name="magnifyingglass" size={16} color="#fff" />
             <Text style={s.findBtnText}>Find Nearest Colors</Text>
           </Pressable>
@@ -363,7 +377,7 @@ export default function ColourPickerScreen() {
             <Text style={s.noMatches}>No colours match the current filters.</Text>
           ) : (
             matches.map((m) => (
-              <MatchCard key={m.colour.id} match={m} inInventory={inventoryIds.has(m.colour.id)} />
+              <MatchCard key={m.colour.id} match={m} inInventory={inventoryIds.has(m.colour.id)} onPress={() => router.push({ pathname: '/colour/[id]' as any, params: { id: m.colour.id } })} />
             ))
           )}
         </View>
@@ -376,6 +390,16 @@ export default function ColourPickerScreen() {
         onApply={setFilters}
         onClose={() => setShowFilter(false)}
       />
+
+      {sampledColor && (
+        <MixSheet
+          visible={showMix}
+          goal={ColourPoint.create({ name: 'Sampled colour', brand: 'Sampled', rgb: sampledColor, tag: [] })}
+          allColours={colours}
+          inventoryIds={inventoryIds}
+          onClose={() => setShowMix(false)}
+        />
+      )}
     </ScrollView>
   );
 }
@@ -515,6 +539,18 @@ const s = StyleSheet.create({
   matchPct: { fontSize: 14, fontWeight: '600', color: '#111', minWidth: 40, textAlign: 'right' },
   barTrack: { height: 5, backgroundColor: '#f0f0f0', borderRadius: 4, overflow: 'hidden' },
   barFill: { height: '100%', backgroundColor: '#22c55e', borderRadius: 4 },
+  actionRow: { flexDirection: 'row' },
+  mixBtn: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    backgroundColor: '#6B4EFF',
+    borderRadius: 12,
+    paddingVertical: 14,
+  },
+  mixBtnText: { color: '#fff', fontSize: 15, fontWeight: '600' },
 });
 
 const sheet = StyleSheet.create({
