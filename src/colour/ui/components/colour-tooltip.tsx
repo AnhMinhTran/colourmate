@@ -1,5 +1,6 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import { useRouter } from "expo-router";
 
 import { ColourPoint } from "../../models/colourPoint";
 
@@ -16,13 +17,18 @@ interface ColourTooltipProps {
  * @param onDismiss - Callback to close the tooltip
  */
 export function ColourTooltip({ colour, onDismiss }: ColourTooltipProps) {
+  const router = useRouter();
+
   if (!colour) return null;
 
   const bg = `rgb(${colour.rgb.r}, ${colour.rgb.g}, ${colour.rgb.b})`;
 
   return (
     <View style={styles.wrapper}>
-      <View style={styles.card}>
+      <Pressable
+        style={styles.card}
+        onPress={() => router.push({ pathname: '/colour/[id]' as any, params: { id: colour.id } })}
+      >
         <View style={[styles.swatch, { backgroundColor: bg }]} />
         <View style={styles.info}>
           <Text style={styles.name} numberOfLines={1}>
@@ -35,7 +41,7 @@ export function ColourTooltip({ colour, onDismiss }: ColourTooltipProps) {
         <Pressable onPress={onDismiss} style={styles.dismiss} hitSlop={12}>
           <Text style={styles.dismissText}>X</Text>
         </Pressable>
-      </View>
+      </Pressable>
     </View>
   );
 }

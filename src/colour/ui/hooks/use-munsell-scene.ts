@@ -180,12 +180,25 @@ export function useMunsellScene() {
     }
     state.highlightMeshes = [];
 
-    const HIGHLIGHT_COLORS = [0xFFAA00, 0x00CCFF];
-    ids.forEach((id, idx) => {
+    ids.forEach((id) => {
       const pt = pointsRef.current.find((p) => p.id === id);
       if (!pt) return;
+
+      // Black border — slightly larger, rendered from inside out
+      const borderGeom = new THREE.SphereGeometry(POINT_RADIUS * 3.5, SPHERE_SEGMENTS, SPHERE_SEGMENTS);
+      const borderMat = new THREE.MeshBasicMaterial({ color: 0x000000, side: THREE.BackSide });
+      const borderMesh = new THREE.Mesh(borderGeom, borderMat);
+      borderMesh.position.set(pt.position.x, pt.position.y, pt.position.z);
+      state.scene.add(borderMesh);
+      state.highlightMeshes.push(borderMesh);
+
+      // Actual colour, semi-transparent
       const geom = new THREE.SphereGeometry(POINT_RADIUS * 3, SPHERE_SEGMENTS, SPHERE_SEGMENTS);
-      const mat = new THREE.MeshBasicMaterial({ color: HIGHLIGHT_COLORS[idx % HIGHLIGHT_COLORS.length] });
+      const mat = new THREE.MeshBasicMaterial({
+        color: new THREE.Color(pt.color.r / 255, pt.color.g / 255, pt.color.b / 255),
+        transparent: true,
+        opacity: 0.65,
+      });
       const mesh = new THREE.Mesh(geom, mat);
       mesh.position.set(pt.position.x, pt.position.y, pt.position.z);
       state.scene.add(mesh);
