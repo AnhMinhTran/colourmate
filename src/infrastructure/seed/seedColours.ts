@@ -1,6 +1,5 @@
 import { SQLiteDatabase } from 'expo-sqlite';
 import { ColourPoint } from '@/src/colour/models/colourPoint';
-import orangeData from './orange.json';
 import swatchesData from './swatches.json';
 
 interface SeedEntry {
@@ -15,7 +14,7 @@ export async function seedColours(db: SQLiteDatabase): Promise<void> {
   );
   if (existing && existing.count > 0) return;
 
-  const allEntries = [...orangeData, ...swatchesData] as SeedEntry[];
+  const allEntries = [...swatchesData] as SeedEntry[];
 
   await db.withTransactionAsync(async () => {
     for (const entry of allEntries) {
