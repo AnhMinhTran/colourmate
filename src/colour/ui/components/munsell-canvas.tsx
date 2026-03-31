@@ -24,6 +24,9 @@ const ORBIT_SENSITIVITY = 0.005;
 interface MunsellCanvasProps {
   colours: ColourPoint[];
   onSelectColour: (id: string) => void;
+  highlightIds?: string[];
+  spectrumLineA?: { x: number; y: number; z: number } | null;
+  spectrumLineB?: { x: number; y: number; z: number } | null;
 }
 
 /**
@@ -33,8 +36,8 @@ interface MunsellCanvasProps {
  * @param colours - ColourPoint array to render as spheres in 3D space
  * @param onSelectColour - Callback invoked with the id of a tapped colour point
  */
-export function MunsellCanvas({ colours, onSelectColour }: MunsellCanvasProps) {
-  const { onContextCreate, setPoints, updateCamera, raycastAtScreen, dispose } =
+export function MunsellCanvas({ colours, onSelectColour, highlightIds, spectrumLineA, spectrumLineB }: MunsellCanvasProps) {
+  const { onContextCreate, setPoints, updateCamera, raycastAtScreen, setHighlights, setSpectrumLine, dispose } =
     useMunsellScene();
 
   const thetaRef = useRef(INITIAL_THETA);
@@ -54,6 +57,14 @@ export function MunsellCanvas({ colours, onSelectColour }: MunsellCanvasProps) {
   useEffect(() => {
     updateCamera(thetaRef.current, phiRef.current, zoomRef.current);
   }, [updateCamera]);
+
+  useEffect(() => {
+    setHighlights(highlightIds ?? []);
+  }, [highlightIds, setHighlights]);
+
+  useEffect(() => {
+    setSpectrumLine(spectrumLineA ?? null, spectrumLineB ?? null);
+  }, [spectrumLineA, spectrumLineB, setSpectrumLine]);
 
   useEffect(() => {
     return () => dispose();

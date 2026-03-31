@@ -3,8 +3,10 @@ import { useSQLiteContext } from "expo-sqlite";
 import { useCallback, useMemo, useState } from "react";
 import {
   Pressable,
+  ScrollView,
   StyleSheet,
   Text,
+  TextInput,
   View,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -14,12 +16,14 @@ import { SqliteColourPointRepository } from "@/src/colour/repositories/sqliteCol
 import {
   ColourFilter,
   EMPTY_FILTER,
+  computeSpectrumPath,
   filterColours,
   isFilterActive,
 } from "@/src/colour/services/colourQueryService";
-import { FilterSheet } from "@/src/colour/ui/components/filter-sheet";
 import { ColourTooltip } from "@/src/colour/ui/components/colour-tooltip";
+import { FilterSheet } from "@/src/colour/ui/components/filter-sheet";
 import { MunsellCanvas } from "@/src/colour/ui/components/munsell-canvas";
+import { SpectrumSheet } from "@/src/colour/ui/components/spectrum-sheet";
 import { SqliteInventoryRepository } from "@/src/inventory/repositories/sqliteInventoryRepository";
 import { IconSymbol } from "@/src/ui/components/icon-symbol";
 
@@ -36,6 +40,16 @@ export default function Munsell3DScreen() {
   const [selectedColour, setSelectedColour] = useState<ColourPoint | null>(null);
   const [filter, setFilter] = useState<ColourFilter>(EMPTY_FILTER);
   const [showFilter, setShowFilter] = useState(false);
+
+  // Search
+  const [searchMode, setSearchMode] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  // Spectrum mode
+  const [spectrumMode, setSpectrumMode] = useState(false);
+  const [spectrumA, setSpectrumA] = useState<ColourPoint | null>(null);
+  const [spectrumB, setSpectrumB] = useState<ColourPoint | null>(null);
+  const [showSpectrum, setShowSpectrum] = useState(false);
 
   const loadData = useCallback(async () => {
     const [all, inventories] = await Promise.all([
@@ -62,13 +76,68 @@ export default function Munsell3DScreen() {
     [colours, filter, inventoryIds]
   );
 
+  const searchResults = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+    const q = searchQuery.toLowerCase();
+    return filteredColours
+      .filter((c) => c.name.toLowerCase().includes(q) || c.brand.toLowerCase().includes(q))
+      .slice(0, 8);
+  }, [filteredColours, searchQuery]);
+
+  const canvasColours = useMemo(() => {
+    if (searchMode && searchQuery.trim()) return searchResults;
+    return filteredColours;
+  }, [searchMode, searchQuery, searchResults, filteredColours]);
+
+  const spectrumPath = useMemo<ColourPoint[]>(() => {
+    if (!spectrumA || !spectrumB) return [];
+    return computeSpectrumPath(spectrumA, spectrumB, filteredColours);
+  }, [spectrumA, spectrumB, filteredColours]);
+
   const handleSelectColour = useCallback(
     (id: string) => {
       const found = colours.find((c) => c.id === id) ?? null;
-      setSelectedColour(found);
+      if (spectrumMode) {
+        if (!spectrumA) {
+          setSpectrumA(found);
+        } else if (!spectrumB && found?.id !== spectrumA.id) {
+          setSpectrumB(found);
+          setShowSpectrum(true);
+        }
+        setSelectedColour(null);
+      } else {
+        setSelectedColour(found);
+      }
     },
-    [colours]
+    [colours, spectrumMode, spectrumA]
   );
+
+  const toggleSearchMode = useCallback(() => {
+    setSearchMode((prev) => {
+      if (prev) setSearchQuery('');
+      return !prev;
+    });
+  }, []);
+
+  const toggleSpectrumMode = useCallback(() => {
+    setSpectrumMode((prev) => {
+      if (prev) {
+        setSpectrumA(null);
+        setSpectrumB(null);
+        setShowSpectrum(false);
+        setSelectedColour(null);
+      }
+      return !prev;
+    });
+  }, []);
+
+  const highlightIds = useMemo(() => {
+    const ids: string[] = [];
+    if (selectedColour) ids.push(selectedColour.id);
+    if (spectrumA) ids.push(spectrumA.id);
+    if (spectrumB) ids.push(spectrumB.id);
+    return ids;
+  }, [selectedColour, spectrumA, spectrumB]);
 
   const insets = useSafeAreaInsets();
   const filterActive = isFilterActive(filter);
@@ -76,33 +145,123 @@ export default function Munsell3DScreen() {
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
       <View style={styles.titleRow}>
-        <Text style={styles.title}>3D Munsell Colour View</Text>
-        <Pressable
-          style={[styles.filterBtn, filterActive && styles.filterBtnActive]}
-          onPress={() => setShowFilter(true)}
-        >
-          <IconSymbol
-            name="line.3.horizontal.decrease"
-            size={18}
-            color={filterActive ? "#4A90D9" : "#555"}
-          />
-          {filterActive && <View style={styles.filterBadge} />}
-        </Pressable>
+        <Text style={styles.title}>3D Munsell View</Text>
+        <View style={styles.headerBtns}>
+          <Pressable
+            style={[styles.headerBtn, searchMode && styles.headerBtnActive]}
+            onPress={toggleSearchMode}
+          >
+            <IconSymbol
+              name="magnifyingglass"
+              size={18}
+              color={searchMode ? "#4A90D9" : "#555"}
+            />
+          </Pressable>
+          <Pressable
+            style={[styles.headerBtn, spectrumMode && styles.headerBtnActive]}
+            onPress={toggleSpectrumMode}
+          >
+            <IconSymbol
+              name="scope"
+              size={18}
+              color={spectrumMode ? "#4A90D9" : "#555"}
+            />
+          </Pressable>
+          <Pressable
+            style={[styles.headerBtn, filterActive && styles.filterBtnActive]}
+            onPress={() => setShowFilter(true)}
+          >
+            <IconSymbol
+              name="line.3.horizontal.decrease"
+              size={18}
+              color={filterActive ? "#4A90D9" : "#555"}
+            />
+            {filterActive && <View style={styles.filterBadge} />}
+          </Pressable>
+        </View>
       </View>
 
+      {searchMode && (
+        <View style={styles.searchBar}>
+          <IconSymbol name="magnifyingglass" size={16} color="#aaa" />
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Search by name or brand…"
+            placeholderTextColor="#aaa"
+            value={searchQuery}
+            onChangeText={setSearchQuery}
+            autoFocus
+            returnKeyType="search"
+          />
+          {searchQuery.length > 0 && (
+            <Pressable onPress={() => setSearchQuery('')}>
+              <IconSymbol name="xmark.circle.fill" size={16} color="#aaa" />
+            </Pressable>
+          )}
+        </View>
+      )}
+
       <View style={styles.statsRow}>
-        <Text style={styles.stat}>{filteredColours.length} colors</Text>
+        {spectrumMode ? (
+          <>
+            <Text style={styles.statSpectrum}>
+              {!spectrumA
+                ? "Tap a colour to set point A"
+                : !spectrumB
+                ? `A: ${spectrumA.name} — tap another for point B`
+                : `A → B selected`}
+            </Text>
+            {spectrumA && (
+              <Pressable
+                style={styles.resetBtn}
+                onPress={() => { setSpectrumA(null); setSpectrumB(null); setShowSpectrum(false); }}
+              >
+                <Text style={styles.resetBtnText}>Reset</Text>
+              </Pressable>
+            )}
+          </>
+        ) : (
+          <View style={styles.statsCenter}>
+            <Text style={styles.stat}>{canvasColours.length} colors</Text>
+          </View>
+        )}
       </View>
 
       <View style={styles.canvasContainer}>
         <MunsellCanvas
-          colours={filteredColours}
+          colours={canvasColours}
           onSelectColour={handleSelectColour}
+          highlightIds={highlightIds}
+          spectrumLineA={spectrumA?.coordinate ?? null}
+          spectrumLineB={spectrumB?.coordinate ?? null}
         />
-        <ColourTooltip
-          colour={selectedColour}
-          onDismiss={() => setSelectedColour(null)}
-        />
+        {!spectrumMode && (
+          <ColourTooltip
+            colour={selectedColour}
+            onDismiss={() => setSelectedColour(null)}
+          />
+        )}
+        {searchMode && searchQuery.trim().length > 0 && (
+          <ScrollView style={styles.searchResults} keyboardShouldPersistTaps="handled">
+            {searchResults.length === 0 ? (
+              <Text style={styles.searchEmpty}>No colours found</Text>
+            ) : (
+              searchResults.map((c) => (
+                <Pressable
+                  key={c.id}
+                  style={styles.searchResultItem}
+                  onPress={() => { setSelectedColour(c); setSearchQuery(''); setSearchMode(false); }}
+                >
+                  <View style={[styles.searchResultSwatch, { backgroundColor: `rgb(${c.rgb.r},${c.rgb.g},${c.rgb.b})` }]} />
+                  <View style={styles.searchResultText}>
+                    <Text style={styles.searchResultName} numberOfLines={1}>{c.name}</Text>
+                    <Text style={styles.searchResultBrand} numberOfLines={1}>{c.brand}</Text>
+                  </View>
+                </Pressable>
+              ))
+            )}
+          </ScrollView>
+        )}
       </View>
 
       <FilterSheet
@@ -111,6 +270,12 @@ export default function Munsell3DScreen() {
         filter={filter}
         onApply={setFilter}
         onClose={() => setShowFilter(false)}
+      />
+
+      <SpectrumSheet
+        visible={showSpectrum}
+        path={spectrumPath}
+        onClose={() => setShowSpectrum(false)}
       />
     </View>
   );
@@ -158,10 +323,81 @@ const styles = StyleSheet.create({
   },
   statsRow: {
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "space-between",
+    alignItems: "center",
     paddingHorizontal: 16,
     paddingBottom: 6,
   },
   stat: { fontSize: 13, color: "#4A90D9", fontWeight: "500" },
+  statSpectrum: { fontSize: 13, color: "#FF8800", fontWeight: "500" },
   canvasContainer: { flex: 1, position: "relative" },
+  headerBtns: { flexDirection: "row", gap: 8 },
+  headerBtn: {
+    width: 42,
+    height: 42,
+    backgroundColor: "#fff",
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "#e0e0e0",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  headerBtnActive: { borderColor: "#4A90D9", backgroundColor: "#EBF3FD" },
+  resetBtn: {
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 8,
+    backgroundColor: "#FF8800",
+  },
+  resetBtnText: { fontSize: 12, fontWeight: "600", color: "#fff" },
+  statsCenter: { flex: 1, alignItems: "center" },
+  searchBar: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginHorizontal: 14,
+    marginBottom: 6,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    backgroundColor: "#fff",
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "#e0e0e0",
+    gap: 8,
+  },
+  searchInput: {
+    flex: 1,
+    fontSize: 15,
+    color: "#111",
+    paddingVertical: 0,
+  },
+  searchResults: {
+    position: "absolute",
+    top: 0,
+    left: 12,
+    right: 12,
+    maxHeight: 320,
+    backgroundColor: "#fff",
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "#e0e0e0",
+    elevation: 6,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.12,
+    shadowRadius: 6,
+  },
+  searchEmpty: { padding: 16, fontSize: 14, color: "#999", textAlign: "center" },
+  searchResultItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    gap: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: "#f0f0f0",
+  },
+  searchResultSwatch: { width: 36, height: 36, borderRadius: 8 },
+  searchResultText: { flex: 1 },
+  searchResultName: { fontSize: 14, fontWeight: "600", color: "#111" },
+  searchResultBrand: { fontSize: 12, color: "#999", marginTop: 1 },
 });

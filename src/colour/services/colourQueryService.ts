@@ -58,6 +58,34 @@ function xyzDistance(a: Vec3, b: Vec3): number {
   return Math.sqrt(dx * dx + dy * dy + dz * dz);
 }
 
+export function computeSpectrumPath(
+  a: ColourPoint,
+  b: ColourPoint,
+  allColours: ColourPoint[],
+  steps = 7,
+): ColourPoint[] {
+  const seen = new Set<string>([a.id, b.id]);
+  const intermediates: ColourPoint[] = [];
+
+  for (let i = 1; i <= steps; i++) {
+    const t = i / (steps + 1);
+    const target: Vec3 = {
+      x: a.coordinate.x + (b.coordinate.x - a.coordinate.x) * t,
+      y: a.coordinate.y + (b.coordinate.y - a.coordinate.y) * t,
+      z: a.coordinate.z + (b.coordinate.z - a.coordinate.z) * t,
+    };
+    const nearest = allColours
+      .filter((c) => !seen.has(c.id))
+      .sort((c1, c2) => xyzDistance(c1.coordinate, target) - xyzDistance(c2.coordinate, target))[0];
+    if (nearest) {
+      intermediates.push(nearest);
+      seen.add(nearest.id);
+    }
+  }
+
+  return [a, ...intermediates, b];
+}
+
 export function findNearestColours(
   goalRgb: SRGB,
   candidates: ColourPoint[],

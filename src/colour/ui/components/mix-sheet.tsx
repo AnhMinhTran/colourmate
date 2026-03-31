@@ -198,7 +198,7 @@ export function MixSheet({
             style={[ms.filterChip, filterInventoryOnly && ms.filterChipActive]}
             onPress={() => setFilterInventoryOnly((v) => !v)}
           >
-            <Text style={[ms.filterChipText, filterInventoryOnly && ms.filterChipTextActive]}>In stock</Text>
+            <Text style={[ms.filterChipText, filterInventoryOnly && ms.filterChipTextActive]}>In inventory</Text>
           </Pressable>
           {brands.map((brand) => {
             const active = filterBrands.has(brand);
@@ -349,7 +349,7 @@ export function MixSheet({
                         </View>
                         {inventoryIds.has(item.id) && (
                           <View style={ms.inStockBadge}>
-                            <Text style={ms.inStockText}>In stock</Text>
+                            <Text style={ms.inStockText}>In inventory</Text>
                           </View>
                         )}
                         {isSelected && <Text style={ms.colourCheck}>✓</Text>}
