@@ -305,7 +305,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "Oeepkin Flesh",
+    "name": "Deepkin Flesh",
     "row": 3,
     "col": 1,
     "hex": "#B6BBAC",
@@ -571,7 +571,7 @@
   },
   {
     "brand": "Two Thin Coats",
-    "name": "Goblinaid Green",
+    "name": "Goblinoid Green",
     "row": 4,
     "col": 5,
     "hex": "#69905C",
@@ -628,7 +628,7 @@
   },
   {
     "brand": "Warpaints Fanatic",
-    "name": "British Cama Green",
+    "name": "British Camo Green",
     "row": 4,
     "col": 8,
     "hex": "#5C764B",
@@ -3364,7 +3364,7 @@
   },
   {
     "brand": "Two Thin Coats",
-    "name": "Faust Slue",
+    "name": "Faust Blue",
     "row": 4,
     "col": 10,
     "hex": "#18222B",
@@ -4048,7 +4048,7 @@
   },
   {
     "brand": "Two Thin Coats",
-    "name": "VPAire Fang",
+    "name": "Vampire Fang",
     "row": 2,
     "col": 12,
     "hex": "#CDB594",
@@ -4732,7 +4732,7 @@
   },
   {
     "brand": "Two Thin Coats",
-    "name": "Oust Bowl",
+    "name": "Dust Bowl",
     "row": 5,
     "col": 12,
     "hex": "#6B5445",
@@ -7392,7 +7392,7 @@
   },
   {
     "brand": "AK Interactive",
-    "name": "Oeep Green",
+    "name": "Deep Green",
     "row": 2,
     "col": 4,
     "hex": "#018A33",
@@ -12237,7 +12237,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "Ogryn Cama",
+    "name": "Ogryn Camo",
     "row": 4,
     "col": 3,
     "hex": "#A09258",
@@ -15676,7 +15676,7 @@
   },
   {
     "brand": "AK Interactive",
-    "name": "Oeep Brown",
+    "name": "Deep Brown",
     "row": 2,
     "col": 10,
     "hex": "#8C432B",
@@ -16341,7 +16341,7 @@
   },
   {
     "brand": "Warpaints Fanatic",
-    "name": "Oeep Azure",
+    "name": "Deep Azure",
     "row": 1,
     "col": 5,
     "hex": "#01747F",
@@ -18545,7 +18545,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "Darn Yellow",
+    "name": "Dorn Yellow",
     "row": 1,
     "col": 7,
     "hex": "#F1D985",
@@ -18678,7 +18678,7 @@
   },
   {
     "brand": "Warpaints Fanatic",
-    "name": "Space Oust",
+    "name": "Space Dust",
     "row": 2,
     "col": 1,
     "hex": "#F7D470",

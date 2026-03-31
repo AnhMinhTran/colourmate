@@ -27,6 +27,8 @@ const MAPPING = {
   'magnifyingglass': 'search',
   'line.3.horizontal.decrease': 'filter-list',
   'xmark.circle.fill': 'cancel',
+  'paintbrush.fill': 'brush',
+  'scope': 'adjust',
 } as IconMapping;
 
 /**

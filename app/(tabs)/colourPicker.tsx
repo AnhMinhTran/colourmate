@@ -152,7 +152,7 @@ export default function ColourPickerScreen() {
         <View style={s.infoTextBlock}>
           <Text style={s.infoTitle}>How to use:</Text>
           <Text style={s.infoBody}>
-            Choose an image, then drag the colour to sample the colour in your cursor. You can find nearest colour and filter the result below
+            Choose an image, then drag the cursor to sample the colour in your cursor. You can find nearest colour and filter the result below
           </Text>
         </View>
       </View>
@@ -160,7 +160,7 @@ export default function ColourPickerScreen() {
       {/* Image header row */}
       <View style={s.imageHeaderRow}>
         <Text style={s.imageHeaderLabel}>
-          {imageInfo ? 'Tap to sample color' : 'Upload an image to start'}
+          {imageInfo ? 'Drag cursor sample color' : 'Upload an image to start'}
         </Text>
         <Pressable style={s.changeBtn} onPress={pickImage}>
           <IconSymbol name="square.and.arrow.up" size={14} color="#555" />

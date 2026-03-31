@@ -4,6 +4,7 @@ import { Renderer } from "expo-three";
 import * as THREE from "three";
 
 import { ScenePoint, sphericalToCartesian } from "../../services/munsellSceneService";
+import { Vec3 } from "../../services/munsellToXYZ";
 
 const SCENE_CENTER = new THREE.Vector3(0, 0.5, 0);
 const GUIDE_COLOR = 0x888888;
@@ -17,6 +18,8 @@ interface SceneState {
   renderer: THREE.WebGLRenderer;
   instancedMesh: THREE.InstancedMesh | null;
   outlineMesh: THREE.InstancedMesh | null;
+  highlightMeshes: THREE.Mesh[];
+  spectrumLineMesh: THREE.Line | null;
   frameId: number;
   disposed: boolean;
 }
@@ -70,6 +73,8 @@ export function useMunsellScene() {
       renderer,
       instancedMesh: null,
       outlineMesh: null,
+      highlightMeshes: [],
+      spectrumLineMesh: null,
       frameId: 0,
       disposed: false,
     };
@@ -164,6 +169,55 @@ export function useMunsellScene() {
     []
   );
 
+  const setHighlights = useCallback((ids: string[]) => {
+    const state = stateRef.current;
+    if (!state) return;
+
+    for (const m of state.highlightMeshes) {
+      state.scene.remove(m);
+      m.geometry.dispose();
+      (m.material as THREE.Material).dispose();
+    }
+    state.highlightMeshes = [];
+
+    const HIGHLIGHT_COLORS = [0xFFAA00, 0x00CCFF];
+    ids.forEach((id, idx) => {
+      const pt = pointsRef.current.find((p) => p.id === id);
+      if (!pt) return;
+      const geom = new THREE.SphereGeometry(POINT_RADIUS * 3, SPHERE_SEGMENTS, SPHERE_SEGMENTS);
+      const mat = new THREE.MeshBasicMaterial({ color: HIGHLIGHT_COLORS[idx % HIGHLIGHT_COLORS.length] });
+      const mesh = new THREE.Mesh(geom, mat);
+      mesh.position.set(pt.position.x, pt.position.y, pt.position.z);
+      state.scene.add(mesh);
+      state.highlightMeshes.push(mesh);
+    });
+  }, []);
+
+  const setSpectrumLine = useCallback((a: Vec3 | null, b: Vec3 | null) => {
+    const state = stateRef.current;
+    if (!state) return;
+
+    if (state.spectrumLineMesh) {
+      state.scene.remove(state.spectrumLineMesh);
+      state.spectrumLineMesh.geometry.dispose();
+      (state.spectrumLineMesh.material as THREE.Material).dispose();
+      state.spectrumLineMesh = null;
+    }
+
+    if (!a || !b) return;
+
+    // TubeGeometry gives a thick 3D tube since WebGL ignores linewidth > 1
+    const curve = new THREE.LineCurve3(
+      new THREE.Vector3(a.x, a.y, a.z),
+      new THREE.Vector3(b.x, b.y, b.z),
+    );
+    const geom = new THREE.TubeGeometry(curve, 1, 0.012, 8, false);
+    const mat = new THREE.MeshBasicMaterial({ color: 0x000000 });
+    const tube = new THREE.Mesh(geom, mat);
+    state.spectrumLineMesh = tube as unknown as THREE.Line;
+    state.scene.add(tube);
+  }, []);
+
   /**
    * Cleans up the Three.js scene, stopping the render loop and disposing
    * of GPU resources. Should be called when the component unmounts.
@@ -182,11 +236,19 @@ export function useMunsellScene() {
       state.outlineMesh.geometry.dispose();
       (state.outlineMesh.material as THREE.Material).dispose();
     }
+    for (const m of state.highlightMeshes) {
+      m.geometry.dispose();
+      (m.material as THREE.Material).dispose();
+    }
+    if (state.spectrumLineMesh) {
+      state.spectrumLineMesh.geometry.dispose();
+      (state.spectrumLineMesh.material as THREE.Material).dispose();
+    }
     state.renderer.dispose();
     stateRef.current = null;
   }, []);
 
-  return { onContextCreate, setPoints, updateCamera, raycastAtScreen, dispose };
+  return { onContextCreate, setPoints, updateCamera, raycastAtScreen, setHighlights, setSpectrumLine, dispose };
 }
 
 /**
