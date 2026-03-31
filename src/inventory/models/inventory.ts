@@ -28,4 +28,9 @@ export class Inventory {
     static fromDatabase(props: InventoryProps): Inventory {
         return new Inventory(props);
     }
+
+    setQuantity(n: number): void {
+        if (n < 0) throw new Error('Quantity cannot be negative');
+        this.quantity = n;
+    }
 }

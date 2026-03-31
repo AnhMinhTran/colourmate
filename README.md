@@ -48,3 +48,13 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## Build apk
+
+When you're ready, run:
+
+```bash
+npx expo export --platform android 2>&1 | tail -5 && echo "Export done"
+ANDROID_HOME=/home/anhminh/android-sdk ./android/gradlew -p android assembleRelease 2>&1 | tail -30
+find /home/anhminh/Projects/colourmate/android -name "*.apk" 2>/dev/null
+```

@@ -1,6 +1,6 @@
 [
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Pestilence Green",
     "row": 1,
     "col": 1,
@@ -19,7 +19,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Zombie Rot",
     "row": 1,
     "col": 2,
@@ -38,7 +38,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Nurgling Green",
     "row": 1,
     "col": 3,
@@ -57,7 +57,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Orruk Flesh",
     "row": 1,
     "col": 4,
@@ -76,7 +76,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Yellow Green",
     "row": 1,
     "col": 5,
@@ -95,7 +95,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Golden Olive",
     "row": 1,
     "col": 6,
@@ -114,7 +114,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Goblin Green",
     "row": 1,
     "col": 7,
@@ -133,7 +133,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Alga Green",
     "row": 1,
     "col": 8,
@@ -152,7 +152,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Olive Green",
     "row": 1,
     "col": 9,
@@ -171,7 +171,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Uniform Green",
     "row": 1,
     "col": 10,
@@ -190,7 +190,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Straken Green",
     "row": 2,
     "col": 1,
@@ -209,7 +209,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Webbing Green",
     "row": 2,
     "col": 2,
@@ -228,7 +228,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Midnight Olive",
     "row": 2,
     "col": 3,
@@ -247,7 +247,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Command Green",
     "row": 2,
     "col": 4,
@@ -266,7 +266,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Castellan Green",
     "row": 2,
     "col": 5,
@@ -285,7 +285,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Olive Green",
     "row": 2,
     "col": 6,
@@ -304,7 +304,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Oeepkin Flesh",
     "row": 3,
     "col": 1,
@@ -323,7 +323,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Light Green Grey",
     "row": 3,
     "col": 2,
@@ -342,7 +342,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Pastel Green",
     "row": 3,
     "col": 3,
@@ -361,7 +361,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Contagion Green",
     "row": 3,
     "col": 4,
@@ -380,8 +380,8 @@
     "source": "army_green.png"
   },
   {
-    "brand": "WPF",
-    "name": "Olive Drab WPLgte Ente",
+    "brand": "Warpaints Fanatic",
+    "name": "Olive Drab",
     "row": 3,
     "col": 5,
     "hex": "#707A65",
@@ -399,7 +399,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Camouflage Green",
     "row": 3,
     "col": 6,
@@ -418,7 +418,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Army Green",
     "row": 3,
     "col": 7,
@@ -437,7 +437,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Camo Green",
     "row": 3,
     "col": 8,
@@ -456,8 +456,8 @@
     "source": "army_green.png"
   },
   {
-    "brand": "WPF",
-    "name": "Waodland Camo",
+    "brand": "Warpaints Fanatic",
+    "name": "Woodland Camo",
     "row": 3,
     "col": 9,
     "hex": "#575D4A",
@@ -475,7 +475,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Loren forest",
     "row": 3,
     "col": 10,
@@ -494,7 +494,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Faded Green",
     "row": 4,
     "col": 1,
@@ -513,7 +513,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Green Sky",
     "row": 4,
     "col": 2,
@@ -532,7 +532,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Troll Snot Green",
     "row": 4,
     "col": 3,
@@ -551,7 +551,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Skarsnk Green",
     "row": 4,
     "col": 4,
@@ -570,7 +570,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Goblinaid Green",
     "row": 4,
     "col": 5,
@@ -589,7 +589,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Faded Green",
     "row": 4,
     "col": 6,
@@ -608,7 +608,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Orc Hide",
     "row": 4,
     "col": 7,
@@ -627,7 +627,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "British Cama Green",
     "row": 4,
     "col": 8,
@@ -646,7 +646,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Intermediate Green",
     "row": 4,
     "col": 9,
@@ -665,7 +665,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Fern Green",
     "row": 4,
     "col": 10,
@@ -684,7 +684,7 @@
     "source": "army_green.png"
   },
     {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Gunship Green",
     "row": 4,
     "col": 10,
@@ -703,7 +703,7 @@
     "source": "army_green.png"
   },
       {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Waaagh! Flesh",
     "row": 4,
     "col": 10,
@@ -722,7 +722,7 @@
     "source": "army_green.png"
   },
     {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Warboss Green",
     "row": 4,
     "col": 10,
@@ -741,7 +741,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Mossy Green",
     "row": 5,
     "col": 1,
@@ -760,7 +760,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Forest Faun",
     "row": 5,
     "col": 2,
@@ -779,7 +779,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Autumn Sage",
     "row": 5,
     "col": 3,
@@ -798,7 +798,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Patagon Pine",
     "row": 5,
     "col": 4,
@@ -817,7 +817,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Medieval Forest",
     "row": 5,
     "col": 5,
@@ -836,7 +836,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dark Green Grey",
     "row": 5,
     "col": 6,
@@ -855,7 +855,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "German Uniform",
     "row": 5,
     "col": 7,
@@ -874,7 +874,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Evergreen Fog",
     "row": 5,
     "col": 8,
@@ -893,7 +893,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Gunship Green",
     "row": 5,
     "col": 9,
@@ -912,7 +912,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Light Feldgrau",
     "row": 6,
     "col": 1,
@@ -931,7 +931,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Mid Feldgrau",
     "row": 6,
     "col": 2,
@@ -950,7 +950,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Bronze Green",
     "row": 6,
     "col": 3,
@@ -969,7 +969,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Cam Dark Green",
     "row": 6,
     "col": 4,
@@ -988,7 +988,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Dark Drab",
     "row": 6,
     "col": 5,
@@ -1007,7 +1007,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Black Green",
     "row": 6,
     "col": 6,
@@ -1026,7 +1026,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Vulkan Green",
     "row": 6,
     "col": 7,
@@ -1045,7 +1045,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Extra Dark Green",
     "row": 6,
     "col": 8,
@@ -1064,7 +1064,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Extra Dark Greeen",
     "row": 6,
     "col": 9,
@@ -1083,7 +1083,7 @@
     "source": "army_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Ironclad Grey",
     "row": 1,
     "col": 1,
@@ -1102,7 +1102,7 @@
     "source": "black.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Neutral Grey",
     "row": 1,
     "col": 2,
@@ -1121,7 +1121,7 @@
     "source": "black.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "German Grey",
     "row": 1,
     "col": 4,
@@ -1140,7 +1140,7 @@
     "source": "black.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Smoake Black",
     "row": 1,
     "col": 5,
@@ -1159,7 +1159,7 @@
     "source": "black.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Black Grey",
     "row": 1,
     "col": 6,
@@ -1178,7 +1178,7 @@
     "source": "black.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Death Reaper",
     "row": 1,
     "col": 7,
@@ -1197,7 +1197,7 @@
     "source": "black.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Strap Grey",
     "row": 1,
     "col": 8,
@@ -1216,7 +1216,7 @@
     "source": "black.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dark Grey",
     "row": 2,
     "col": 1,
@@ -1235,7 +1235,7 @@
     "source": "black.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Lead Grey",
     "row": 2,
     "col": 2,
@@ -1254,7 +1254,7 @@
     "source": "black.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Dark Grey",
     "row": 2,
     "col": 3,
@@ -1273,7 +1273,7 @@
     "source": "black.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "German Grey",
     "row": 2,
     "col": 4,
@@ -1292,7 +1292,7 @@
     "source": "black.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Dark Reaper",
     "row": 2,
     "col": 5,
@@ -1311,7 +1311,7 @@
     "source": "black.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Cold Corpse Blue",
     "row": 2,
     "col": 6,
@@ -1330,7 +1330,7 @@
     "source": "black.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Faust Blue",
     "row": 2,
     "col": 7,
@@ -1349,7 +1349,7 @@
     "source": "black.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "War Master Green",
     "row": 2,
     "col": 8,
@@ -1368,7 +1368,7 @@
     "source": "black.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Corvus Black",
     "row": 2,
     "col": 9,
@@ -1387,7 +1387,7 @@
     "source": "black.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Coal Black",
     "row": 3,
     "col": 1,
@@ -1406,7 +1406,7 @@
     "source": "black.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Black",
     "row": 3,
     "col": 2,
@@ -1425,7 +1425,7 @@
     "source": "black.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Black",
     "row": 3,
     "col": 3,
@@ -1444,7 +1444,7 @@
     "source": "black.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Black",
     "row": 3,
     "col": 4,
@@ -1463,7 +1463,7 @@
     "source": "black.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Abaddon Black",
     "row": 3,
     "col": 5,
@@ -1482,7 +1482,7 @@
     "source": "black.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Satin Black",
     "row": 3,
     "col": 6,
@@ -1501,7 +1501,7 @@
     "source": "black.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Matt Black",
     "row": 3,
     "col": 7,
@@ -1520,7 +1520,7 @@
     "source": "black.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Doom Death Black",
     "row": 3,
     "col": 8,
@@ -1539,7 +1539,7 @@
     "source": "black.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Gloss Black",
     "row": 3,
     "col": 9,
@@ -1558,7 +1558,7 @@
     "source": "black.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Black Violet",
     "row": 4,
     "col": 1,
@@ -1577,7 +1577,7 @@
     "source": "black.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Black Purple",
     "row": 4,
     "col": 2,
@@ -1596,7 +1596,7 @@
     "source": "black.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Terrestrial Titan",
     "row": 4,
     "col": 3,
@@ -1615,7 +1615,7 @@
     "source": "black.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Paynes Grey",
     "row": 4,
     "col": 4,
@@ -1634,7 +1634,7 @@
     "source": "black.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Night Blue",
     "row": 4,
     "col": 5,
@@ -1653,7 +1653,7 @@
     "source": "black.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Continental Blue",
     "row": 4,
     "col": 6,
@@ -1672,7 +1672,7 @@
     "source": "black.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Nocturne Green",
     "row": 4,
     "col": 7,
@@ -1691,7 +1691,7 @@
     "source": "black.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Cam Black Green",
     "row": 4,
     "col": 8,
@@ -1710,7 +1710,7 @@
     "source": "black.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Death Karps Drab",
     "row": 4,
     "col": 9,
@@ -1729,7 +1729,7 @@
     "source": "black.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Grim Brown",
     "row": 4,
     "col": 10,
@@ -1748,7 +1748,7 @@
     "source": "black.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Rhinox Hide",
     "row": 4,
     "col": 11,
@@ -1767,7 +1767,7 @@
     "source": "black.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "White Blue",
     "row": 1,
     "col": 1,
@@ -1786,7 +1786,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Snow Bue",
     "row": 1,
     "col": 2,
@@ -1805,7 +1805,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Ion Blue",
     "row": 1,
     "col": 3,
@@ -1824,7 +1824,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Blue Morror",
     "row": 1,
     "col": 4,
@@ -1843,7 +1843,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Grey Blue",
     "row": 1,
     "col": 5,
@@ -1862,7 +1862,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Azure",
     "row": 1,
     "col": 6,
@@ -1881,7 +1881,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Ultramarine",
     "row": 1,
     "col": 7,
@@ -1900,7 +1900,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Flat Blue",
     "row": 1,
     "col": 8,
@@ -1919,7 +1919,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Bright Sapphwe",
     "row": 2,
     "col": 1,
@@ -1938,7 +1938,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Electric Blue",
     "row": 2,
     "col": 2,
@@ -1957,7 +1957,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Lothern Blue",
     "row": 2,
     "col": 3,
@@ -1976,7 +1976,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Hoeth Blue",
     "row": 2,
     "col": 4,
@@ -1995,7 +1995,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Medium Blue",
     "row": 2,
     "col": 5,
@@ -2014,7 +2014,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Mediurn Blue",
     "row": 2,
     "col": 6,
@@ -2033,7 +2033,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Alaitac Blue",
     "row": 2,
     "col": 7,
@@ -2052,7 +2052,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Light Prussian Blue",
     "row": 2,
     "col": 8,
@@ -2071,7 +2071,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Prussian Blue",
     "row": 2,
     "col": 9,
@@ -2090,7 +2090,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Imperial Blue",
     "row": 2,
     "col": 10,
@@ -2109,7 +2109,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Imperial Navy",
     "row": 2,
     "col": 11,
@@ -2128,7 +2128,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Night Lords Blue",
     "row": 2,
     "col": 12,
@@ -2147,7 +2147,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Sky Blue",
     "row": 3,
     "col": 1,
@@ -2166,7 +2166,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Sky Blue",
     "row": 3,
     "col": 2,
@@ -2185,7 +2185,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Sunrise Blue",
     "row": 3,
     "col": 3,
@@ -2204,7 +2204,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Deep Sky Blue",
     "row": 3,
     "col": 4,
@@ -2223,7 +2223,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Deep Sky Blue",
     "row": 3,
     "col": 5,
@@ -2242,7 +2242,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Arctx Gem",
     "row": 3,
     "col": 6,
@@ -2261,7 +2261,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Seatarer Blue",
     "row": 3,
     "col": 7,
@@ -2280,7 +2280,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Gigawatt Blue",
     "row": 3,
     "col": 8,
@@ -2299,7 +2299,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Sky Blue",
     "row": 3,
     "col": 9,
@@ -2318,7 +2318,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Oucat Blue",
     "row": 3,
     "col": 10,
@@ -2337,7 +2337,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Andrea Blue",
     "row": 3,
     "col": 11,
@@ -2356,7 +2356,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Teclis Blue",
     "row": 4,
     "col": 1,
@@ -2375,7 +2375,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Magx Blue",
     "row": 4,
     "col": 2,
@@ -2394,7 +2394,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Crystal Blue",
     "row": 4,
     "col": 3,
@@ -2413,7 +2413,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Relx Blue",
     "row": 4,
     "col": 4,
@@ -2432,7 +2432,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Blue",
     "row": 4,
     "col": 5,
@@ -2451,7 +2451,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Leviathan Blue",
     "row": 4,
     "col": 6,
@@ -2470,7 +2470,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Caledor Sky",
     "row": 4,
     "col": 7,
@@ -2489,7 +2489,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Royal Blue",
     "row": 4,
     "col": 8,
@@ -2508,7 +2508,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Star Blue",
     "row": 4,
     "col": 9,
@@ -2527,7 +2527,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Eldar Robe",
     "row": 4,
     "col": 10,
@@ -2546,7 +2546,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Royal Blue",
     "row": 5,
     "col": 1,
@@ -2565,7 +2565,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Regal Blue",
     "row": 5,
     "col": 2,
@@ -2584,7 +2584,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Deep Blue",
     "row": 5,
     "col": 3,
@@ -2603,7 +2603,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Dark Blue",
     "row": 5,
     "col": 4,
@@ -2622,7 +2622,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Witching Hour Blue",
     "row": 5,
     "col": 5,
@@ -2641,7 +2641,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dark Blue",
     "row": 5,
     "col": 6,
@@ -2660,7 +2660,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Blue",
     "row": 5,
     "col": 7,
@@ -2679,7 +2679,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dark Prussian Blue",
     "row": 5,
     "col": 8,
@@ -2698,7 +2698,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Dark Prussian Blue",
     "row": 5,
     "col": 9,
@@ -2717,7 +2717,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Infantry Bue",
     "row": 5,
     "col": 10,
@@ -2736,7 +2736,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Cantmental Blue",
     "row": 5,
     "col": 11,
@@ -2755,7 +2755,7 @@
     "source": "blue.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Wolf Grey",
     "row": 1,
     "col": 1,
@@ -2774,7 +2774,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Spectrum Blue",
     "row": 1,
     "col": 2,
@@ -2793,7 +2793,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Rumec Cabalt",
     "row": 1,
     "col": 3,
@@ -2812,7 +2812,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Grey Blue",
     "row": 1,
     "col": 4,
@@ -2831,7 +2831,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Tanker Grey",
     "row": 1,
     "col": 6,
@@ -2850,7 +2850,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Steel Grey",
     "row": 1,
     "col": 7,
@@ -2869,7 +2869,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Pastel Blue",
     "row": 1,
     "col": 8,
@@ -2888,7 +2888,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Grey Blue",
     "row": 1,
     "col": 9,
@@ -2907,7 +2907,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Fenrisian Grey",
     "row": 1,
     "col": 10,
@@ -2926,7 +2926,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Russ Grey",
     "row": 2,
     "col": 1,
@@ -2945,7 +2945,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Wolf Grey",
     "row": 2,
     "col": 2,
@@ -2964,7 +2964,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Stratos Blue",
     "row": 2,
     "col": 3,
@@ -2983,7 +2983,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Thunderous Blue",
     "row": 2,
     "col": 4,
@@ -3002,7 +3002,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "The Fang",
     "row": 2,
     "col": 5,
@@ -3021,7 +3021,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Kantor Blue",
     "row": 2,
     "col": 6,
@@ -3040,7 +3040,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Blue",
     "row": 2,
     "col": 7,
@@ -3059,7 +3059,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Pale Grey Blue",
     "row": 3,
     "col": 1,
@@ -3078,7 +3078,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Gravestone Blue",
     "row": 3,
     "col": 2,
@@ -3097,7 +3097,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Intermediate Blue",
     "row": 3,
     "col": 3,
@@ -3116,7 +3116,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "French Blue",
     "row": 3,
     "col": 4,
@@ -3135,7 +3135,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Sombre Grey",
     "row": 3,
     "col": 5,
@@ -3154,7 +3154,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "AMP",
+    "brand": "Pro Acryl",
     "name": "Slate Grey",
     "row": 3,
     "col": 6,
@@ -3173,7 +3173,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Luftwaffe Uniform",
     "row": 3,
     "col": 7,
@@ -3192,7 +3192,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Night Sky",
     "row": 3,
     "col": 8,
@@ -3211,7 +3211,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Pale Blue",
     "row": 4,
     "col": 1,
@@ -3230,7 +3230,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Pale Blue",
     "row": 4,
     "col": 2,
@@ -3249,7 +3249,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Blue Grey",
     "row": 4,
     "col": 3,
@@ -3268,7 +3268,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Celestra Grey",
     "row": 4,
     "col": 4,
@@ -3287,7 +3287,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Blue Grey Pale",
     "row": 4,
     "col": 5,
@@ -3306,7 +3306,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Frost Blue",
     "row": 4,
     "col": 6,
@@ -3325,7 +3325,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Thunderhawk Blue",
     "row": 4,
     "col": 7,
@@ -3344,7 +3344,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Shadow Blue",
     "row": 4,
     "col": 8,
@@ -3363,7 +3363,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Faust Slue",
     "row": 4,
     "col": 10,
@@ -3382,7 +3382,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Light Green Blue",
     "row": 5,
     "col": 1,
@@ -3401,7 +3401,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Medium Grey Blue",
     "row": 5,
     "col": 2,
@@ -3420,7 +3420,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dark Blue Grey",
     "row": 5,
     "col": 3,
@@ -3439,7 +3439,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Field Blue",
     "row": 5,
     "col": 4,
@@ -3458,7 +3458,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Dark Sea Green",
     "row": 5,
     "col": 5,
@@ -3477,7 +3477,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Anthracite Grey",
     "row": 5,
     "col": 6,
@@ -3496,7 +3496,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dark Sea Blue",
     "row": 5,
     "col": 7,
@@ -3515,7 +3515,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Dark Sea Blue",
     "row": 5,
     "col": 8,
@@ -3534,7 +3534,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Incubi Darkness",
     "row": 5,
     "col": 9,
@@ -3553,7 +3553,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Oxidation Green",
     "row": 5,
     "col": 10,
@@ -3572,7 +3572,7 @@
     "source": "blue_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Off White",
     "row": 1,
     "col": 1,
@@ -3591,7 +3591,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Ivary",
     "row": 1,
     "col": 2,
@@ -3610,7 +3610,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Off White",
     "row": 1,
     "col": 3,
@@ -3629,7 +3629,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Ivary",
     "row": 1,
     "col": 4,
@@ -3648,7 +3648,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Wraithbone",
     "row": 1,
     "col": 5,
@@ -3667,7 +3667,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Ivory",
     "row": 1,
     "col": 6,
@@ -3686,7 +3686,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Grimy Grey",
     "row": 1,
     "col": 7,
@@ -3705,7 +3705,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Skeleton Bone",
     "row": 1,
     "col": 8,
@@ -3724,7 +3724,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Screarmng Skull",
     "row": 1,
     "col": 9,
@@ -3743,7 +3743,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Bone White",
     "row": 1,
     "col": 10,
@@ -3762,8 +3762,8 @@
     "source": "bone.png"
   },
   {
-    "brand": "AK",
-    "name": "Vampiric Flesh",
+    "brand": "AK Interactive",
+    "name": "VPAiric Flesh",
     "row": 1,
     "col": 11,
     "hex": "#B8A787",
@@ -3781,7 +3781,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Tomb King Tan",
     "row": 1,
     "col": 12,
@@ -3800,7 +3800,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Canvas",
     "row": 1,
     "col": 13,
@@ -3819,7 +3819,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Light Battle Dress",
     "row": 1,
     "col": 14,
@@ -3838,7 +3838,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Bright Ivory",
     "row": 2,
     "col": 1,
@@ -3857,7 +3857,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Pale Sand",
     "row": 2,
     "col": 2,
@@ -3876,7 +3876,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Ivory White",
     "row": 2,
     "col": 3,
@@ -3895,7 +3895,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Cream White",
     "row": 2,
     "col": 4,
@@ -3914,7 +3914,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Ivary",
     "row": 2,
     "col": 5,
@@ -3933,7 +3933,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Boney Spokes",
     "row": 2,
     "col": 6,
@@ -3952,7 +3952,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Olive Flesh",
     "row": 2,
     "col": 7,
@@ -3971,7 +3971,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Ancient Stone",
     "row": 2,
     "col": 8,
@@ -3990,7 +3990,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Heavy Warm Whitesato",
     "row": 2,
     "col": 9,
@@ -4009,7 +4009,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Pale Sand",
     "row": 2,
     "col": 10,
@@ -4028,7 +4028,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Pale Sand",
     "row": 2,
     "col": 11,
@@ -4047,8 +4047,8 @@
     "source": "bone.png"
   },
   {
-    "brand": "TTC",
-    "name": "Vampire Fang",
+    "brand": "Two Thin Coats",
+    "name": "VPAire Fang",
     "row": 2,
     "col": 12,
     "hex": "#CDB594",
@@ -4066,7 +4066,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Ushabti Bone",
     "row": 2,
     "col": 13,
@@ -4085,7 +4085,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Trooper White",
     "row": 3,
     "col": 1,
@@ -4104,7 +4104,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Palhd Wych Flesh",
     "row": 3,
     "col": 2,
@@ -4123,7 +4123,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Ivory Tusk",
     "row": 3,
     "col": 3,
@@ -4142,7 +4142,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Bone",
     "row": 3,
     "col": 4,
@@ -4161,7 +4161,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Rakarth Flesh",
     "row": 3,
     "col": 5,
@@ -4180,7 +4180,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Griffon Claw",
     "row": 3,
     "col": 6,
@@ -4199,7 +4199,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Temple Stone",
     "row": 3,
     "col": 7,
@@ -4218,7 +4218,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Karak Stone",
     "row": 3,
     "col": 8,
@@ -4237,7 +4237,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Sandstone",
     "row": 3,
     "col": 9,
@@ -4256,7 +4256,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Morghast Bone",
     "row": 4,
     "col": 1,
@@ -4275,7 +4275,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Skeleton Legion",
     "row": 4,
     "col": 2,
@@ -4294,7 +4294,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Barren Oune",
     "row": 4,
     "col": 3,
@@ -4313,7 +4313,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dark Sand",
     "row": 4,
     "col": 4,
@@ -4332,7 +4332,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Dark Sand",
     "row": 4,
     "col": 5,
@@ -4351,7 +4351,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Buff",
     "row": 4,
     "col": 6,
@@ -4370,7 +4370,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Beige",
     "row": 4,
     "col": 7,
@@ -4389,7 +4389,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Burnt Turf",
     "row": 4,
     "col": 8,
@@ -4408,7 +4408,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Webbing Khaki",
     "row": 4,
     "col": 9,
@@ -4427,7 +4427,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Sand Yellow",
     "row": 4,
     "col": 10,
@@ -4446,7 +4446,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Wasteland Clay",
     "row": 4,
     "col": 11,
@@ -4465,7 +4465,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Camo Sand",
     "row": 4,
     "col": 12,
@@ -4484,7 +4484,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Desert Yellow",
     "row": 4,
     "col": 13,
@@ -4503,7 +4503,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Earth",
     "row": 4,
     "col": 14,
@@ -4522,7 +4522,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Light Earth",
     "row": 5,
     "col": 1,
@@ -4541,7 +4541,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Iraqi Sand",
     "row": 5,
     "col": 2,
@@ -4560,7 +4560,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Desert Tan",
     "row": 5,
     "col": 3,
@@ -4579,7 +4579,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Khaki",
     "row": 5,
     "col": 4,
@@ -4598,7 +4598,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Decomposed Flesh",
     "row": 5,
     "col": 5,
@@ -4617,7 +4617,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Dragon Fang",
     "row": 5,
     "col": 6,
@@ -4636,7 +4636,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Zandri Dust",
     "row": 5,
     "col": 7,
@@ -4655,7 +4655,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Tallarn Sand",
     "row": 5,
     "col": 8,
@@ -4674,7 +4674,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "AMP",
+    "brand": "Pro Acryl",
     "name": "Green Brown",
     "row": 5,
     "col": 9,
@@ -4693,7 +4693,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Baneblade Brown",
     "row": 5,
     "col": 10,
@@ -4712,7 +4712,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Steel Legion Drab",
     "row": 5,
     "col": 11,
@@ -4731,7 +4731,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Oust Bowl",
     "row": 5,
     "col": 12,
@@ -4750,7 +4750,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Dusty Skull",
     "row": 6,
     "col": 1,
@@ -4769,7 +4769,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Khaki",
     "row": 6,
     "col": 2,
@@ -4788,7 +4788,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Mid Battle Dress",
     "row": 6,
     "col": 3,
@@ -4807,7 +4807,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Dark Battle Dress",
     "row": 6,
     "col": 4,
@@ -4826,7 +4826,7 @@
     "source": "bone.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Urban Buff",
     "row": 1,
     "col": 1,
@@ -4845,7 +4845,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Cammand Khaki",
     "row": 1,
     "col": 2,
@@ -4864,7 +4864,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Paratrooper Tan",
     "row": 1,
     "col": 3,
@@ -4883,7 +4883,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Tan Earth",
     "row": 1,
     "col": 4,
@@ -4902,7 +4902,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Cork Brown",
     "row": 1,
     "col": 5,
@@ -4921,7 +4921,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Brown Sand",
     "row": 1,
     "col": 6,
@@ -4940,7 +4940,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Pale Brown",
     "row": 1,
     "col": 7,
@@ -4959,7 +4959,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Cork",
     "row": 1,
     "col": 8,
@@ -4978,7 +4978,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Tan Earth",
     "row": 1,
     "col": 9,
@@ -4997,7 +4997,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Leather Brown",
     "row": 1,
     "col": 10,
@@ -5016,7 +5016,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Chestnut Brown",
     "row": 1,
     "col": 11,
@@ -5035,7 +5035,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Dryad Brown",
     "row": 1,
     "col": 12,
@@ -5054,7 +5054,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Tree Anaen",
     "row": 1,
     "col": 13,
@@ -5073,7 +5073,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Fur Brown",
     "row": 2,
     "col": 1,
@@ -5092,7 +5092,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Saddle Brown",
     "row": 2,
     "col": 2,
@@ -5111,7 +5111,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Mahogany Brown",
     "row": 2,
     "col": 3,
@@ -5130,7 +5130,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Burnt Umber",
     "row": 2,
     "col": 4,
@@ -5149,7 +5149,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Warm Brown",
     "row": 2,
     "col": 5,
@@ -5168,7 +5168,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Flat Brown",
     "row": 2,
     "col": 6,
@@ -5187,7 +5187,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Boot Brown",
     "row": 2,
     "col": 7,
@@ -5206,7 +5206,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Cam Black Brown",
     "row": 2,
     "col": 8,
@@ -5225,7 +5225,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Afro Shadow",
     "row": 2,
     "col": 9,
@@ -5244,7 +5244,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Catachan Flesh",
     "row": 2,
     "col": 10,
@@ -5263,7 +5263,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Banshee Brown",
     "row": 2,
     "col": 11,
@@ -5282,7 +5282,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Dark Rust",
     "row": 2,
     "col": 12,
@@ -5301,7 +5301,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "AMP",
+    "brand": "Pro Acryl",
     "name": "Beige Grey",
     "row": 3,
     "col": 1,
@@ -5320,7 +5320,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Wasteland Brown",
     "row": 3,
     "col": 2,
@@ -5339,7 +5339,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Gorthor Brown",
     "row": 3,
     "col": 3,
@@ -5358,7 +5358,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Ancient Forest",
     "row": 3,
     "col": 4,
@@ -5377,7 +5377,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Baotstrap Brown",
     "row": 3,
     "col": 5,
@@ -5396,7 +5396,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Umber",
     "row": 3,
     "col": 6,
@@ -5415,7 +5415,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Olive Brown",
     "row": 3,
     "col": 7,
@@ -5434,7 +5434,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Brigadine Brown",
     "row": 3,
     "col": 8,
@@ -5453,7 +5453,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Black Brown",
     "row": 3,
     "col": 9,
@@ -5472,7 +5472,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Scorched Earth",
     "row": 3,
     "col": 10,
@@ -5491,7 +5491,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Dryad Bark",
     "row": 3,
     "col": 11,
@@ -5510,7 +5510,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Desert Brown",
     "row": 4,
     "col": 1,
@@ -5529,7 +5529,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "New Wood",
     "row": 4,
     "col": 2,
@@ -5548,7 +5548,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Mud Splatter",
     "row": 4,
     "col": 3,
@@ -5567,7 +5567,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Noble Steed Brown",
     "row": 4,
     "col": 4,
@@ -5586,7 +5586,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Mournfang Brown",
     "row": 4,
     "col": 5,
@@ -5605,7 +5605,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dark Brown",
     "row": 4,
     "col": 6,
@@ -5624,7 +5624,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Redskin Shadow",
     "row": 4,
     "col": 7,
@@ -5643,7 +5643,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Charred Brown",
     "row": 4,
     "col": 8,
@@ -5662,7 +5662,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Thondia Brown",
     "row": 4,
     "col": 9,
@@ -5681,7 +5681,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Gram Brown",
     "row": 4,
     "col": 10,
@@ -5700,7 +5700,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Dark Olive",
     "row": 4,
     "col": 11,
@@ -5719,7 +5719,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Caramel Brown",
     "row": 5,
     "col": 1,
@@ -5738,7 +5738,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Old Wood",
     "row": 5,
     "col": 2,
@@ -5757,7 +5757,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Gyzmo Fur",
     "row": 5,
     "col": 3,
@@ -5776,7 +5776,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "XV88",
     "row": 5,
     "col": 4,
@@ -5795,7 +5795,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Medium Brown",
     "row": 5,
     "col": 5,
@@ -5814,7 +5814,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Golden Brown",
     "row": 5,
     "col": 6,
@@ -5833,7 +5833,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Flat Earth",
     "row": 5,
     "col": 7,
@@ -5852,7 +5852,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Beasty Brown",
     "row": 5,
     "col": 8,
@@ -5871,7 +5871,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Petroleum Brown",
     "row": 5,
     "col": 9,
@@ -5890,7 +5890,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "BC Dark Brown",
     "row": 6,
     "col": 1,
@@ -5909,7 +5909,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Mud Brown",
     "row": 6,
     "col": 2,
@@ -5928,7 +5928,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Light Umber",
     "row": 6,
     "col": 3,
@@ -5947,7 +5947,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Leather Brown",
     "row": 6,
     "col": 4,
@@ -5966,7 +5966,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Burnt Umber",
     "row": 6,
     "col": 5,
@@ -5985,7 +5985,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Chocolate Brown",
     "row": 6,
     "col": 6,
@@ -6004,7 +6004,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Chocolate (Chipping)",
     "row": 6,
     "col": 7,
@@ -6023,7 +6023,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "USField Orab",
     "row": 6,
     "col": 8,
@@ -6042,7 +6042,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Green Brown",
     "row": 6,
     "col": 10,
@@ -6061,7 +6061,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Burnt Umber",
     "row": 6,
     "col": 11,
@@ -6080,7 +6080,7 @@
     "source": "brown.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Elfic Flesh",
     "row": 1,
     "col": 1,
@@ -6099,7 +6099,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Flayed One Flesh",
     "row": 1,
     "col": 3,
@@ -6118,7 +6118,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Amber Skin",
     "row": 1,
     "col": 4,
@@ -6137,7 +6137,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Ares Flesh",
     "row": 1,
     "col": 5,
@@ -6156,7 +6156,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Barbanan Skin",
     "row": 1,
     "col": 6,
@@ -6175,7 +6175,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Kronas Flesh",
     "row": 1,
     "col": 7,
@@ -6194,7 +6194,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Argonaut Skin",
     "row": 1,
     "col": 8,
@@ -6213,7 +6213,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Mocca Skin",
     "row": 1,
     "col": 9,
@@ -6232,7 +6232,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Onyx Skin",
     "row": 1,
     "col": 10,
@@ -6251,7 +6251,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Obsadian Skin",
     "row": 1,
     "col": 11,
@@ -6270,7 +6270,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Quartz Skin",
     "row": 2,
     "col": 1,
@@ -6289,7 +6289,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Dorado Skin",
     "row": 2,
     "col": 2,
@@ -6308,7 +6308,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Luminous Flesh",
     "row": 2,
     "col": 3,
@@ -6327,7 +6327,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Warm Flesh",
     "row": 2,
     "col": 4,
@@ -6346,7 +6346,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Pale Skin",
     "row": 2,
     "col": 5,
@@ -6365,7 +6365,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Kislev Flesh",
     "row": 2,
     "col": 6,
@@ -6384,7 +6384,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Elven Skin",
     "row": 2,
     "col": 7,
@@ -6403,7 +6403,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Basic Skin Tone",
     "row": 2,
     "col": 9,
@@ -6422,7 +6422,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Elf Skin Tone",
     "row": 2,
     "col": 10,
@@ -6441,7 +6441,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Warm Flesh",
     "row": 2,
     "col": 11,
@@ -6460,7 +6460,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Flat Flesh",
     "row": 2,
     "col": 12,
@@ -6479,7 +6479,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Golden Braown",
     "row": 3,
     "col": 1,
@@ -6498,7 +6498,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Ungor Flesh",
     "row": 3,
     "col": 2,
@@ -6517,7 +6517,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Radiant Flesh",
     "row": 3,
     "col": 3,
@@ -6536,7 +6536,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Tan Yelow",
     "row": 3,
     "col": 4,
@@ -6555,7 +6555,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Dark Flesh",
     "row": 3,
     "col": 5,
@@ -6574,7 +6574,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dark Flesh",
     "row": 3,
     "col": 6,
@@ -6593,7 +6593,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Medium Flesh Tone",
     "row": 3,
     "col": 7,
@@ -6612,7 +6612,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Sunny Skin Tone",
     "row": 4,
     "col": 1,
@@ -6631,7 +6631,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Sunny Skin Tone",
     "row": 4,
     "col": 2,
@@ -6650,7 +6650,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Bestigor Flesh",
     "row": 4,
     "col": 3,
@@ -6669,7 +6669,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Ratskin Flesh",
     "row": 4,
     "col": 4,
@@ -6688,7 +6688,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Advanced Flesh Tone",
     "row": 4,
     "col": 5,
@@ -6707,7 +6707,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Light Flesh",
     "row": 5,
     "col": 1,
@@ -6726,7 +6726,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Pale Flesh",
     "row": 5,
     "col": 2,
@@ -6745,7 +6745,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Skin Tone",
     "row": 5,
     "col": 3,
@@ -6764,7 +6764,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "AMP",
+    "brand": "Pro Acryl",
     "name": "Peach Flesh",
     "row": 5,
     "col": 4,
@@ -6783,7 +6783,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Basic Skin Tone",
     "row": 5,
     "col": 5,
@@ -6802,7 +6802,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Dwarven Skin",
     "row": 5,
     "col": 6,
@@ -6821,7 +6821,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Beige Red",
     "row": 5,
     "col": 7,
@@ -6840,7 +6840,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Beige Red",
     "row": 5,
     "col": 8,
@@ -6859,7 +6859,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Cadian Fleshtone",
     "row": 5,
     "col": 9,
@@ -6878,7 +6878,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Bugman's Glow",
     "row": 5,
     "col": 10,
@@ -6897,7 +6897,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Barbarian Brown",
     "row": 5,
     "col": 11,
@@ -6916,7 +6916,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Tan Flesh",
     "row": 6,
     "col": 1,
@@ -6935,7 +6935,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Beige Red",
     "row": 6,
     "col": 2,
@@ -6954,7 +6954,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Bard Skin",
     "row": 6,
     "col": 3,
@@ -6973,7 +6973,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Knight-Questor Flesh",
     "row": 6,
     "col": 4,
@@ -6992,7 +6992,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Dryad Brown",
     "row": 6,
     "col": 5,
@@ -7011,7 +7011,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Bloodreaver Flesh",
     "row": 6,
     "col": 6,
@@ -7030,7 +7030,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Tree Ancient",
     "row": 6,
     "col": 7,
@@ -7049,7 +7049,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Paladin Flesh",
     "row": 6,
     "col": 8,
@@ -7068,7 +7068,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Druid Flesh",
     "row": 6,
     "col": 9,
@@ -7087,7 +7087,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Oak Brown",
     "row": 6,
     "col": 10,
@@ -7106,7 +7106,7 @@
     "source": "golden_flesh.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Greenish White",
     "row": 1,
     "col": 1,
@@ -7125,7 +7125,7 @@
     "source": "green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Feromous Green",
     "row": 1,
     "col": 2,
@@ -7144,7 +7144,7 @@
     "source": "green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Wild Green",
     "row": 1,
     "col": 3,
@@ -7163,7 +7163,7 @@
     "source": "green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Eternal Hunt",
     "row": 1,
     "col": 4,
@@ -7182,7 +7182,7 @@
     "source": "green.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Sick Green",
     "row": 1,
     "col": 5,
@@ -7201,7 +7201,7 @@
     "source": "green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Intermediate Green",
     "row": 1,
     "col": 6,
@@ -7220,7 +7220,7 @@
     "source": "green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Greenskin",
     "row": 1,
     "col": 7,
@@ -7239,7 +7239,7 @@
     "source": "green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "German Camo Green",
     "row": 1,
     "col": 8,
@@ -7258,7 +7258,7 @@
     "source": "green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Warpstone Glow",
     "row": 1,
     "col": 9,
@@ -7277,7 +7277,7 @@
     "source": "green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dark Green",
     "row": 1,
     "col": 10,
@@ -7296,7 +7296,7 @@
     "source": "green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Greenskin Punch",
     "row": 1,
     "col": 11,
@@ -7315,7 +7315,7 @@
     "source": "green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Black Green",
     "row": 1,
     "col": 12,
@@ -7334,7 +7334,7 @@
     "source": "green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Emerald Forest",
     "row": 2,
     "col": 1,
@@ -7353,7 +7353,7 @@
     "source": "green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Light Green",
     "row": 2,
     "col": 2,
@@ -7372,7 +7372,7 @@
     "source": "green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Bright Green",
     "row": 2,
     "col": 3,
@@ -7391,7 +7391,7 @@
     "source": "green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Oeep Green",
     "row": 2,
     "col": 4,
@@ -7410,7 +7410,7 @@
     "source": "green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Green",
     "row": 2,
     "col": 5,
@@ -7429,7 +7429,7 @@
     "source": "green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Deep Green",
     "row": 2,
     "col": 6,
@@ -7448,7 +7448,7 @@
     "source": "green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Emerald Green",
     "row": 2,
     "col": 7,
@@ -7467,7 +7467,7 @@
     "source": "green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Blighted Green",
     "row": 2,
     "col": 9,
@@ -7486,7 +7486,7 @@
     "source": "green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Bright Green",
     "row": 3,
     "col": 2,
@@ -7505,7 +7505,7 @@
     "source": "green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Green Sky",
     "row": 3,
     "col": 3,
@@ -7524,7 +7524,7 @@
     "source": "green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Guardian Green",
     "row": 3,
     "col": 5,
@@ -7543,7 +7543,7 @@
     "source": "green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Black Green",
     "row": 3,
     "col": 6,
@@ -7562,7 +7562,7 @@
     "source": "green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Angel Green",
     "row": 3,
     "col": 7,
@@ -7581,7 +7581,7 @@
     "source": "green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Caliban Green",
     "row": 3,
     "col": 8,
@@ -7600,7 +7600,7 @@
     "source": "green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Wyvern Green",
     "row": 3,
     "col": 9,
@@ -7619,7 +7619,7 @@
     "source": "green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Yellow Green",
     "row": 4,
     "col": 1,
@@ -7638,7 +7638,7 @@
     "source": "green.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Bile Green",
     "row": 4,
     "col": 2,
@@ -7657,7 +7657,7 @@
     "source": "green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Lumuinous Green",
     "row": 4,
     "col": 3,
@@ -7676,7 +7676,7 @@
     "source": "green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Laser Yellow",
     "row": 4,
     "col": 4,
@@ -7695,7 +7695,7 @@
     "source": "green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Vivid Volt",
     "row": 4,
     "col": 5,
@@ -7714,7 +7714,7 @@
     "source": "green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Pistachio",
     "row": 4,
     "col": 6,
@@ -7733,7 +7733,7 @@
     "source": "green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Electric Lime",
     "row": 4,
     "col": 7,
@@ -7752,7 +7752,7 @@
     "source": "green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Bright Yellow Green",
     "row": 4,
     "col": 8,
@@ -7771,7 +7771,7 @@
     "source": "green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Frag Green",
     "row": 4,
     "col": 9,
@@ -7790,7 +7790,7 @@
     "source": "green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Septic Green",
     "row": 4,
     "col": 10,
@@ -7809,7 +7809,7 @@
     "source": "green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Lime Green",
     "row": 4,
     "col": 11,
@@ -7828,7 +7828,7 @@
     "source": "green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Lime Green",
     "row": 4,
     "col": 12,
@@ -7847,7 +7847,7 @@
     "source": "green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Afterglow",
     "row": 5,
     "col": 1,
@@ -7866,7 +7866,7 @@
     "source": "green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Rainforest",
     "row": 5,
     "col": 2,
@@ -7885,7 +7885,7 @@
     "source": "green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Leafy Green",
     "row": 5,
     "col": 3,
@@ -7904,7 +7904,7 @@
     "source": "green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Taisman Green",
     "row": 5,
     "col": 4,
@@ -7923,7 +7923,7 @@
     "source": "green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Moot Green",
     "row": 5,
     "col": 5,
@@ -7942,7 +7942,7 @@
     "source": "green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Grass Green",
     "row": 5,
     "col": 6,
@@ -7961,7 +7961,7 @@
     "source": "green.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Scorpy Green",
     "row": 5,
     "col": 7,
@@ -7980,7 +7980,7 @@
     "source": "green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Slime Green",
     "row": 5,
     "col": 8,
@@ -7999,7 +7999,7 @@
     "source": "green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Ethereal Green",
     "row": 5,
     "col": 9,
@@ -8018,7 +8018,7 @@
     "source": "green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Flat Green",
     "row": 5,
     "col": 10,
@@ -8037,7 +8037,7 @@
     "source": "green.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Angel Green",
     "row": 5,
     "col": 11,
@@ -8056,7 +8056,7 @@
     "source": "green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "White Scar",
     "row": 1,
     "col": 1,
@@ -8075,7 +8075,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Ceramite White",
     "row": 1,
     "col": 2,
@@ -8094,7 +8094,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Bold Titanium White",
     "row": 1,
     "col": 3,
@@ -8113,7 +8113,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Heavy Titanium White",
     "row": 1,
     "col": 4,
@@ -8132,7 +8132,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Dead White",
     "row": 1,
     "col": 5,
@@ -8151,7 +8151,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "White Star",
     "row": 1,
     "col": 6,
@@ -8170,7 +8170,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Matt White",
     "row": 1,
     "col": 7,
@@ -8189,7 +8189,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "White",
     "row": 1,
     "col": 8,
@@ -8208,7 +8208,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "White",
     "row": 1,
     "col": 9,
@@ -8227,7 +8227,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Cold White",
     "row": 1,
     "col": 10,
@@ -8246,7 +8246,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Brigade Grey",
     "row": 1,
     "col": 11,
@@ -8265,7 +8265,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "White Grey",
     "row": 2,
     "col": 1,
@@ -8284,7 +8284,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "White Grey",
     "row": 2,
     "col": 2,
@@ -8303,7 +8303,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Ulthuan Grey",
     "row": 2,
     "col": 3,
@@ -8322,7 +8322,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Corax White",
     "row": 2,
     "col": 4,
@@ -8341,7 +8341,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Bright Neutral Grey",
     "row": 2,
     "col": 5,
@@ -8360,7 +8360,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Stonewall Grey",
     "row": 2,
     "col": 6,
@@ -8379,7 +8379,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Grey Seer",
     "row": 2,
     "col": 7,
@@ -8398,7 +8398,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Pale Grey",
     "row": 2,
     "col": 8,
@@ -8417,7 +8417,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Sky Grey",
     "row": 2,
     "col": 9,
@@ -8436,7 +8436,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Administratum Grey",
     "row": 2,
     "col": 10,
@@ -8455,7 +8455,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Carcharodon Grey",
     "row": 2,
     "col": 11,
@@ -8474,7 +8474,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Neutral Grey",
     "row": 2,
     "col": 12,
@@ -8493,7 +8493,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Warm Grey",
     "row": 3,
     "col": 1,
@@ -8512,7 +8512,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Violet Grey",
     "row": 3,
     "col": 2,
@@ -8531,7 +8531,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Ash Grey",
     "row": 3,
     "col": 3,
@@ -8550,7 +8550,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Dark Blue Grey",
     "row": 3,
     "col": 4,
@@ -8569,7 +8569,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Basalt Grey",
     "row": 3,
     "col": 5,
@@ -8588,7 +8588,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Basalt Grey",
     "row": 3,
     "col": 6,
@@ -8607,7 +8607,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Warm Grey",
     "row": 3,
     "col": 7,
@@ -8626,7 +8626,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Skavenblight Dinge",
     "row": 3,
     "col": 8,
@@ -8645,7 +8645,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Ashen Grey",
     "row": 3,
     "col": 9,
@@ -8664,7 +8664,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Charcoal",
     "row": 3,
     "col": 10,
@@ -8683,7 +8683,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Company Grey",
     "row": 4,
     "col": 1,
@@ -8702,7 +8702,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Sky Grey",
     "row": 4,
     "col": 2,
@@ -8721,7 +8721,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Medium Grey",
     "row": 4,
     "col": 3,
@@ -8740,7 +8740,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Ash Grey",
     "row": 4,
     "col": 4,
@@ -8759,7 +8759,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Light Grey",
     "row": 4,
     "col": 5,
@@ -8778,7 +8778,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "AMP",
+    "brand": "Pro Acryl",
     "name": "Cool Grey",
     "row": 4,
     "col": 7,
@@ -8797,7 +8797,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Uniform Grey",
     "row": 4,
     "col": 8,
@@ -8816,7 +8816,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Neutral Grey",
     "row": 4,
     "col": 9,
@@ -8835,7 +8835,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Dawnstone",
     "row": 4,
     "col": 10,
@@ -8854,7 +8854,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "English Grey",
     "row": 4,
     "col": 11,
@@ -8873,7 +8873,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Neutral Grey",
     "row": 4,
     "col": 12,
@@ -8892,7 +8892,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "London Grey",
     "row": 5,
     "col": 1,
@@ -8911,7 +8911,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Mechanxus Standard Grey",
     "row": 5,
     "col": 2,
@@ -8930,7 +8930,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Dungean Stone Grey",
     "row": 5,
     "col": 3,
@@ -8949,7 +8949,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Eshin Grey",
     "row": 5,
     "col": 9,
@@ -8968,7 +8968,7 @@
     "source": "grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Kakophani Purple",
     "row": 1,
     "col": 1,
@@ -8987,7 +8987,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Faded Plum",
     "row": 1,
     "col": 2,
@@ -9006,7 +9006,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Spectral Purple",
     "row": 1,
     "col": 3,
@@ -9025,7 +9025,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Purple",
     "row": 1,
     "col": 4,
@@ -9044,7 +9044,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Magecast Magenta",
     "row": 1,
     "col": 5,
@@ -9063,7 +9063,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Diabohc Plum",
     "row": 1,
     "col": 6,
@@ -9082,7 +9082,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Royal Purple",
     "row": 1,
     "col": 7,
@@ -9101,7 +9101,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "King Purple",
     "row": 1,
     "col": 9,
@@ -9120,7 +9120,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Von Evile Purple",
     "row": 1,
     "col": 10,
@@ -9139,7 +9139,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Kraken Lavender",
     "row": 2,
     "col": 1,
@@ -9158,7 +9158,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Violent Coven",
     "row": 2,
     "col": 2,
@@ -9177,7 +9177,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Hexed Voolel",
     "row": 2,
     "col": 3,
@@ -9196,7 +9196,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Light Violet",
     "row": 2,
     "col": 4,
@@ -9215,7 +9215,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Deep Violet",
     "row": 2,
     "col": 5,
@@ -9234,7 +9234,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Purple",
     "row": 2,
     "col": 6,
@@ -9253,7 +9253,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Royal Purple",
     "row": 2,
     "col": 7,
@@ -9272,7 +9272,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Xereus Purple",
     "row": 2,
     "col": 8,
@@ -9291,7 +9291,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Hexed Lichen",
     "row": 2,
     "col": 9,
@@ -9310,7 +9310,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Enchantress Purple",
     "row": 2,
     "col": 10,
@@ -9329,7 +9329,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Midnight Purple",
     "row": 2,
     "col": 11,
@@ -9348,7 +9348,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Dechala Lilac",
     "row": 3,
     "col": 1,
@@ -9367,7 +9367,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Amulet Purple",
     "row": 3,
     "col": 2,
@@ -9386,7 +9386,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Lustful Purple",
     "row": 3,
     "col": 3,
@@ -9405,7 +9405,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Runic Purple",
     "row": 3,
     "col": 4,
@@ -9424,7 +9424,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Cultist Purple",
     "row": 3,
     "col": 5,
@@ -9443,7 +9443,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Genestealer Purple",
     "row": 3,
     "col": 6,
@@ -9462,7 +9462,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Sorcerors Cloak",
     "row": 3,
     "col": 7,
@@ -9481,7 +9481,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Alien Purple",
     "row": 3,
     "col": 8,
@@ -9500,7 +9500,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Pastel Violet",
     "row": 4,
     "col": 1,
@@ -9519,7 +9519,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Decadent Purple",
     "row": 4,
     "col": 2,
@@ -9538,7 +9538,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Enticing Purple",
     "row": 4,
     "col": 3,
@@ -9557,7 +9557,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Incubus Purple",
     "row": 4,
     "col": 4,
@@ -9576,7 +9576,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Slaanesh Grey",
     "row": 4,
     "col": 6,
@@ -9595,7 +9595,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Warpfiend Grey",
     "row": 4,
     "col": 7,
@@ -9614,7 +9614,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Daemanette Hide",
     "row": 4,
     "col": 8,
@@ -9633,7 +9633,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Blue Violet",
     "row": 5,
     "col": 1,
@@ -9652,7 +9652,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Blue Violet",
     "row": 5,
     "col": 2,
@@ -9671,7 +9671,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Alien Purple",
     "row": 5,
     "col": 3,
@@ -9690,7 +9690,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Purple",
     "row": 5,
     "col": 4,
@@ -9709,7 +9709,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Phoenician Purple",
     "row": 5,
     "col": 5,
@@ -9728,7 +9728,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Amethyst Rayne",
     "row": 5,
     "col": 6,
@@ -9747,7 +9747,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Rayal Purple",
     "row": 5,
     "col": 7,
@@ -9766,7 +9766,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Naggaroth Night",
     "row": 5,
     "col": 8,
@@ -9785,7 +9785,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Lilac",
     "row": 6,
     "col": 1,
@@ -9804,7 +9804,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Alpha Blue",
     "row": 6,
     "col": 2,
@@ -9823,7 +9823,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Amethyst Blue",
     "row": 6,
     "col": 3,
@@ -9842,7 +9842,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Violet",
     "row": 6,
     "col": 4,
@@ -9861,7 +9861,7 @@
     "source": "lilac.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Raging Rase",
     "row": 1,
     "col": 1,
@@ -9880,7 +9880,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dead Red",
     "row": 1,
     "col": 2,
@@ -9899,7 +9899,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Blood Chalice",
     "row": 1,
     "col": 3,
@@ -9918,7 +9918,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Pink Horror",
     "row": 1,
     "col": 4,
@@ -9937,7 +9937,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Perisher Pink",
     "row": 1,
     "col": 5,
@@ -9956,7 +9956,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Wazdakka Red",
     "row": 1,
     "col": 6,
@@ -9975,7 +9975,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Bardeaux Red",
     "row": 1,
     "col": 7,
@@ -9994,7 +9994,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Wyvern Fury",
     "row": 1,
     "col": 8,
@@ -10013,7 +10013,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Emperor Red",
     "row": 1,
     "col": 9,
@@ -10032,7 +10032,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dirty Red",
     "row": 2,
     "col": 1,
@@ -10051,7 +10051,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Beret Maroon",
     "row": 2,
     "col": 2,
@@ -10070,7 +10070,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Scarlet Red",
     "row": 2,
     "col": 3,
@@ -10089,7 +10089,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Wine Red",
     "row": 2,
     "col": 4,
@@ -10108,7 +10108,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Khorne Red",
     "row": 2,
     "col": 5,
@@ -10127,7 +10127,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Asmodeus Red",
     "row": 2,
     "col": 6,
@@ -10146,7 +10146,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Burgundy",
     "row": 2,
     "col": 7,
@@ -10165,7 +10165,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Basilisk Red",
     "row": 2,
     "col": 8,
@@ -10184,7 +10184,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Gal Vorbak Red",
     "row": 2,
     "col": 9,
@@ -10203,8 +10203,8 @@
     "source": "magenta.png"
   },
   {
-    "brand": "TTC",
-    "name": "Amphora Red",
+    "brand": "Two Thin Coats",
+    "name": "PAhora Red",
     "row": 2,
     "col": 10,
     "hex": "#3F161C",
@@ -10222,7 +10222,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Black Red",
     "row": 2,
     "col": 11,
@@ -10241,7 +10241,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Pastel Pink",
     "row": 3,
     "col": 1,
@@ -10260,7 +10260,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Wilted Rose",
     "row": 3,
     "col": 2,
@@ -10279,7 +10279,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Figgy Pink",
     "row": 3,
     "col": 3,
@@ -10298,7 +10298,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Forbidden Fruit",
     "row": 3,
     "col": 4,
@@ -10317,7 +10317,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Elder Flower",
     "row": 3,
     "col": 5,
@@ -10336,7 +10336,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Glistening Gurns",
     "row": 3,
     "col": 6,
@@ -10355,7 +10355,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Moldy Wine",
     "row": 3,
     "col": 7,
@@ -10374,7 +10374,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Mulled Berry",
     "row": 3,
     "col": 8,
@@ -10393,7 +10393,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Blanched Berry",
     "row": 3,
     "col": 9,
@@ -10412,7 +10412,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Burgundy",
     "row": 3,
     "col": 10,
@@ -10431,7 +10431,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Pink",
     "row": 4,
     "col": 1,
@@ -10450,7 +10450,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Magenta",
     "row": 4,
     "col": 2,
@@ -10469,7 +10469,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Magenta",
     "row": 4,
     "col": 3,
@@ -10488,7 +10488,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Magenta",
     "row": 4,
     "col": 4,
@@ -10507,7 +10507,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Warlord Purple",
     "row": 4,
     "col": 5,
@@ -10526,7 +10526,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Magenta",
     "row": 4,
     "col": 6,
@@ -10545,7 +10545,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Laser Magenta",
     "row": 4,
     "col": 7,
@@ -10564,7 +10564,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Voolet Red",
     "row": 4,
     "col": 8,
@@ -10583,7 +10583,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Screamer Pink",
     "row": 4,
     "col": 9,
@@ -10602,7 +10602,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Sword Hilt Burgundy",
     "row": 4,
     "col": 10,
@@ -10621,7 +10621,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Plurn",
     "row": 5,
     "col": 1,
@@ -10640,7 +10640,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Royal Cloak",
     "row": 5,
     "col": 2,
@@ -10659,7 +10659,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Baraknar Burgundy",
     "row": 5,
     "col": 3,
@@ -10678,7 +10678,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Evil Red",
     "row": 5,
     "col": 4,
@@ -10697,7 +10697,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Deep Magenta",
     "row": 5,
     "col": 5,
@@ -10716,7 +10716,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Voolet Red",
     "row": 5,
     "col": 6,
@@ -10735,7 +10735,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Dark Purple",
     "row": 5,
     "col": 7,
@@ -10754,7 +10754,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dragon Blaad",
     "row": 5,
     "col": 8,
@@ -10773,7 +10773,7 @@
     "source": "magenta.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Ambush Yellow",
     "row": 1,
     "col": 1,
@@ -10792,7 +10792,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Barren Dune",
     "row": 1,
     "col": 2,
@@ -10811,7 +10811,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Buff",
     "row": 1,
     "col": 3,
@@ -10830,7 +10830,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Flak Gun Yellow",
     "row": 1,
     "col": 4,
@@ -10849,7 +10849,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Burnt Turf",
     "row": 1,
     "col": 5,
@@ -10868,7 +10868,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Sand Yellow",
     "row": 1,
     "col": 7,
@@ -10887,7 +10887,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dirty Yellow",
     "row": 1,
     "col": 8,
@@ -10906,7 +10906,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Sahara Yellow",
     "row": 1,
     "col": 9,
@@ -10925,7 +10925,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Japanese Brown",
     "row": 1,
     "col": 10,
@@ -10944,7 +10944,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Japan Unif WWil",
     "row": 1,
     "col": 11,
@@ -10963,7 +10963,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Military Yellow",
     "row": 1,
     "col": 12,
@@ -10982,7 +10982,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Desert Yellow",
     "row": 1,
     "col": 13,
@@ -11001,7 +11001,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Beige",
     "row": 2,
     "col": 1,
@@ -11020,7 +11020,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Braght Yellow Ochre",
     "row": 2,
     "col": 3,
@@ -11039,7 +11039,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Yellow Ochre",
     "row": 2,
     "col": 4,
@@ -11058,7 +11058,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Yellow Ochre",
     "row": 2,
     "col": 5,
@@ -11077,7 +11077,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Gold Brown",
     "row": 2,
     "col": 6,
@@ -11096,7 +11096,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Plaque Brown",
     "row": 2,
     "col": 7,
@@ -11115,7 +11115,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Ochwe",
     "row": 2,
     "col": 8,
@@ -11134,7 +11134,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Golden Brown",
     "row": 2,
     "col": 9,
@@ -11153,7 +11153,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Ochre Brown",
     "row": 2,
     "col": 10,
@@ -11172,7 +11172,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Tau Light Ochre",
     "row": 2,
     "col": 11,
@@ -11191,7 +11191,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Green Ochre",
     "row": 3,
     "col": 3,
@@ -11210,7 +11210,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Orange Ochre",
     "row": 3,
     "col": 4,
@@ -11229,7 +11229,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Desert Yellow",
     "row": 3,
     "col": 5,
@@ -11248,7 +11248,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Zamesi Desert",
     "row": 3,
     "col": 6,
@@ -11267,7 +11267,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Mediurn Sand",
     "row": 3,
     "col": 7,
@@ -11286,7 +11286,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Green Ochre",
     "row": 3,
     "col": 8,
@@ -11305,7 +11305,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Balor Brown",
     "row": 4,
     "col": 1,
@@ -11324,7 +11324,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Leather Brown",
     "row": 4,
     "col": 2,
@@ -11343,7 +11343,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Orange Brown",
     "row": 4,
     "col": 3,
@@ -11362,7 +11362,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Mustard Brown",
     "row": 4,
     "col": 4,
@@ -11381,7 +11381,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Khaki Grey",
     "row": 4,
     "col": 6,
@@ -11400,7 +11400,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "British Khaki",
     "row": 4,
     "col": 8,
@@ -11419,7 +11419,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "English Uniform",
     "row": 4,
     "col": 9,
@@ -11438,7 +11438,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Hobgrat Hxde",
     "row": 5,
     "col": 1,
@@ -11457,7 +11457,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Panzer Yellow",
     "row": 5,
     "col": 2,
@@ -11476,7 +11476,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Mixddle Stone",
     "row": 5,
     "col": 3,
@@ -11495,7 +11495,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Middle Stone",
     "row": 5,
     "col": 4,
@@ -11514,7 +11514,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Green Brown",
     "row": 5,
     "col": 6,
@@ -11533,7 +11533,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Green Brown",
     "row": 5,
     "col": 7,
@@ -11552,7 +11552,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Grey Brown",
     "row": 5,
     "col": 8,
@@ -11571,7 +11571,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Prairie Ochre",
     "row": 6,
     "col": 2,
@@ -11590,7 +11590,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Tundra Taupe",
     "row": 6,
     "col": 3,
@@ -11609,7 +11609,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Canvas",
     "row": 6,
     "col": 4,
@@ -11628,7 +11628,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Drab Brown",
     "row": 6,
     "col": 5,
@@ -11647,8 +11647,8 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
-    "name": "USOlive Drab",
+    "brand": "Vallejo",
+    "name": "US Olive Drab",
     "row": 6,
     "col": 6,
     "hex": "#342C0D",
@@ -11666,7 +11666,7 @@
     "source": "ochre.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Deck Tan",
     "row": 1,
     "col": 1,
@@ -11685,7 +11685,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Green Grey",
     "row": 1,
     "col": 2,
@@ -11704,7 +11704,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Ionrach Skin",
     "row": 1,
     "col": 3,
@@ -11723,7 +11723,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Necrotic Flesh",
     "row": 1,
     "col": 4,
@@ -11742,7 +11742,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Stone Grey",
     "row": 1,
     "col": 5,
@@ -11761,7 +11761,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Kabold Grey",
     "row": 1,
     "col": 6,
@@ -11780,7 +11780,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Light Mud",
     "row": 1,
     "col": 7,
@@ -11799,7 +11799,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Green Grey",
     "row": 1,
     "col": 8,
@@ -11818,7 +11818,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Ranger Cloak",
     "row": 1,
     "col": 9,
@@ -11837,7 +11837,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Ger Field grey WWIl",
     "row": 1,
     "col": 10,
@@ -11856,7 +11856,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "German Tank Crew",
     "row": 1,
     "col": 11,
@@ -11875,7 +11875,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Field Grey",
     "row": 1,
     "col": 12,
@@ -11894,7 +11894,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Grotesque Green",
     "row": 2,
     "col": 1,
@@ -11913,7 +11913,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Krieg Khaki",
     "row": 2,
     "col": 2,
@@ -11932,7 +11932,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Death Guard Green",
     "row": 2,
     "col": 3,
@@ -11951,7 +11951,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Russian Unif WWIl",
     "row": 2,
     "col": 4,
@@ -11970,7 +11970,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Dirty Grey",
     "row": 2,
     "col": 5,
@@ -11989,7 +11989,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Camouflage Green",
     "row": 2,
     "col": 6,
@@ -12008,7 +12008,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Deathwarid Forest",
     "row": 2,
     "col": 7,
@@ -12027,7 +12027,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Cayman Green",
     "row": 2,
     "col": 8,
@@ -12046,7 +12046,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Refractive Green",
     "row": 2,
     "col": 9,
@@ -12065,7 +12065,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "German Field Grey",
     "row": 2,
     "col": 10,
@@ -12084,7 +12084,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Khaki",
     "row": 3,
     "col": 1,
@@ -12103,7 +12103,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Green Beret",
     "row": 3,
     "col": 3,
@@ -12122,7 +12122,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Gungho Green",
     "row": 3,
     "col": 5,
@@ -12141,7 +12141,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Medium Drab",
     "row": 3,
     "col": 6,
@@ -12160,7 +12160,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Tainted Garden",
     "row": 3,
     "col": 7,
@@ -12179,7 +12179,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Fury Green",
     "row": 3,
     "col": 8,
@@ -12198,7 +12198,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "German Yellow",
     "row": 4,
     "col": 1,
@@ -12217,7 +12217,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Dead Flesh",
     "row": 4,
     "col": 2,
@@ -12236,7 +12236,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Ogryn Cama",
     "row": 4,
     "col": 3,
@@ -12255,7 +12255,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Interiar Yellow Green",
     "row": 4,
     "col": 4,
@@ -12274,7 +12274,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Dark Yellow",
     "row": 4,
     "col": 5,
@@ -12293,7 +12293,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Camouflage Green",
     "row": 4,
     "col": 6,
@@ -12312,7 +12312,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Brownsh Green",
     "row": 4,
     "col": 7,
@@ -12331,7 +12331,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Green Yellow",
     "row": 4,
     "col": 8,
@@ -12350,7 +12350,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Elysian Green",
     "row": 4,
     "col": 9,
@@ -12369,7 +12369,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Yellow Green",
     "row": 4,
     "col": 10,
@@ -12388,7 +12388,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Reflective Green",
     "row": 4,
     "col": 11,
@@ -12407,7 +12407,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Webbing Green",
     "row": 4,
     "col": 12,
@@ -12426,7 +12426,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Olive Grey",
     "row": 5,
     "col": 2,
@@ -12445,7 +12445,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Camo Green",
     "row": 5,
     "col": 3,
@@ -12464,7 +12464,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Cam Olive Green",
     "row": 5,
     "col": 4,
@@ -12483,7 +12483,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Yellow Olive",
     "row": 5,
     "col": 5,
@@ -12502,7 +12502,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Russian Green",
     "row": 5,
     "col": 6,
@@ -12521,7 +12521,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Mailitary Green",
     "row": 5,
     "col": 8,
@@ -12540,7 +12540,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Death Korps Drab",
     "row": 5,
     "col": 12,
@@ -12559,7 +12559,7 @@
     "source": "olive_green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Pale Pink",
     "row": 1,
     "col": 1,
@@ -12578,7 +12578,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Raging Rose",
     "row": 1,
     "col": 3,
@@ -12597,7 +12597,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Blood Chalice",
     "row": 1,
     "col": 5,
@@ -12616,7 +12616,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Ruby",
     "row": 1,
     "col": 6,
@@ -12635,7 +12635,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Hot Pink",
     "row": 1,
     "col": 7,
@@ -12654,7 +12654,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Sunset Red",
     "row": 1,
     "col": 8,
@@ -12673,7 +12673,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Sickly Pink",
     "row": 2,
     "col": 2,
@@ -12692,7 +12692,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Pink Harror",
     "row": 2,
     "col": 3,
@@ -12711,7 +12711,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Perisher Pink",
     "row": 2,
     "col": 4,
@@ -12730,7 +12730,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Doomfire Drab",
     "row": 3,
     "col": 1,
@@ -12749,7 +12749,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Fulgrim Pink",
     "row": 3,
     "col": 2,
@@ -12768,7 +12768,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Neo Pink",
     "row": 3,
     "col": 3,
@@ -12787,7 +12787,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Pink Potion",
     "row": 3,
     "col": 4,
@@ -12806,7 +12806,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Diviner Light",
     "row": 3,
     "col": 5,
@@ -12825,7 +12825,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Weird Ehxir",
     "row": 3,
     "col": 6,
@@ -12844,7 +12844,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Squid Pink",
     "row": 3,
     "col": 7,
@@ -12863,7 +12863,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Pixie Pink",
     "row": 3,
     "col": 8,
@@ -12882,7 +12882,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Pink",
     "row": 3,
     "col": 9,
@@ -12901,7 +12901,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Cyber Pink",
     "row": 3,
     "col": 10,
@@ -12920,7 +12920,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Impish Rouge",
     "row": 3,
     "col": 11,
@@ -12939,7 +12939,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Wicked Pink",
     "row": 3,
     "col": 12,
@@ -12958,7 +12958,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Light Pink",
     "row": 4,
     "col": 1,
@@ -12977,7 +12977,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Emperors Children",
     "row": 4,
     "col": 2,
@@ -12996,7 +12996,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Hot Pink",
     "row": 4,
     "col": 3,
@@ -13015,7 +13015,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dragon Blood",
     "row": 4,
     "col": 12,
@@ -13034,7 +13034,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Intense Pink",
     "row": 5,
     "col": 1,
@@ -13053,7 +13053,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Enchanted Pink",
     "row": 5,
     "col": 2,
@@ -13072,7 +13072,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Spelibound Fuchsia",
     "row": 5,
     "col": 3,
@@ -13091,7 +13091,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Plurm",
     "row": 5,
     "col": 4,
@@ -13110,7 +13110,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Purple",
     "row": 5,
     "col": 5,
@@ -13129,7 +13129,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Warlock Magenta",
     "row": 5,
     "col": 6,
@@ -13148,7 +13148,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Deep Purple",
     "row": 5,
     "col": 7,
@@ -13167,7 +13167,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Diabolic Plum",
     "row": 6,
     "col": 5,
@@ -13186,7 +13186,7 @@
     "source": "pink.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Raging Rouge",
     "row": 1,
     "col": 1,
@@ -13205,7 +13205,7 @@
     "source": "red.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Violent Vermillion",
     "row": 1,
     "col": 2,
@@ -13224,7 +13224,7 @@
     "source": "red.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Sacred Scarlet",
     "row": 1,
     "col": 3,
@@ -13243,7 +13243,7 @@
     "source": "red.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Legendary Red",
     "row": 1,
     "col": 4,
@@ -13262,7 +13262,7 @@
     "source": "red.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Angelic Red",
     "row": 1,
     "col": 5,
@@ -13281,7 +13281,7 @@
     "source": "red.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Wild Rider Red",
     "row": 1,
     "col": 6,
@@ -13300,7 +13300,7 @@
     "source": "red.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Inferno Orange",
     "row": 1,
     "col": 7,
@@ -13319,7 +13319,7 @@
     "source": "red.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Scarlet Red",
     "row": 1,
     "col": 8,
@@ -13338,7 +13338,7 @@
     "source": "red.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Centurson Red",
     "row": 1,
     "col": 9,
@@ -13357,7 +13357,7 @@
     "source": "red.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Resplendant Red",
     "row": 1,
     "col": 10,
@@ -13376,7 +13376,7 @@
     "source": "red.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Scariet",
     "row": 1,
     "col": 11,
@@ -13395,7 +13395,7 @@
     "source": "red.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Sun Red",
     "row": 1,
     "col": 12,
@@ -13414,7 +13414,7 @@
     "source": "red.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Red Oxide",
     "row": 1,
     "col": 13,
@@ -13433,7 +13433,7 @@
     "source": "red.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Faded Red",
     "row": 2,
     "col": 1,
@@ -13452,7 +13452,7 @@
     "source": "red.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Orange Red",
     "row": 2,
     "col": 2,
@@ -13471,7 +13471,7 @@
     "source": "red.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Blaody Red",
     "row": 2,
     "col": 3,
@@ -13490,7 +13490,7 @@
     "source": "red.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Fiery Vermubon",
     "row": 2,
     "col": 4,
@@ -13509,7 +13509,7 @@
     "source": "red.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Deep Red",
     "row": 2,
     "col": 5,
@@ -13528,7 +13528,7 @@
     "source": "red.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Dark Vermilion",
     "row": 2,
     "col": 6,
@@ -13547,7 +13547,7 @@
     "source": "red.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Matt Red",
     "row": 2,
     "col": 7,
@@ -13566,7 +13566,7 @@
     "source": "red.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Mephiston Red",
     "row": 2,
     "col": 8,
@@ -13585,7 +13585,7 @@
     "source": "red.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Brick Red",
     "row": 2,
     "col": 9,
@@ -13604,7 +13604,7 @@
     "source": "red.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Sanquine Scarlet",
     "row": 2,
     "col": 10,
@@ -13623,7 +13623,7 @@
     "source": "red.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Red",
     "row": 2,
     "col": 11,
@@ -13642,7 +13642,7 @@
     "source": "red.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Apocalypse Sky",
     "row": 3,
     "col": 1,
@@ -13661,7 +13661,7 @@
     "source": "red.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Evil Eye Red",
     "row": 3,
     "col": 2,
@@ -13680,7 +13680,7 @@
     "source": "red.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Burnt Red",
     "row": 3,
     "col": 3,
@@ -13699,7 +13699,7 @@
     "source": "red.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Red Rage",
     "row": 3,
     "col": 4,
@@ -13718,7 +13718,7 @@
     "source": "red.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Dark Red",
     "row": 3,
     "col": 5,
@@ -13737,7 +13737,7 @@
     "source": "red.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Gory Red",
     "row": 3,
     "col": 6,
@@ -13756,7 +13756,7 @@
     "source": "red.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Word Bearers Red",
     "row": 3,
     "col": 7,
@@ -13775,7 +13775,7 @@
     "source": "red.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Black Red",
     "row": 3,
     "col": 8,
@@ -13794,7 +13794,7 @@
     "source": "red.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Burnt Red",
     "row": 3,
     "col": 9,
@@ -13813,7 +13813,7 @@
     "source": "red.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Black Red",
     "row": 3,
     "col": 10,
@@ -13832,7 +13832,7 @@
     "source": "red.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Crimson",
     "row": 3,
     "col": 11,
@@ -13851,7 +13851,7 @@
     "source": "red.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Berserker Red",
     "row": 3,
     "col": 12,
@@ -13870,7 +13870,7 @@
     "source": "red.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Vermilion",
     "row": 4,
     "col": 1,
@@ -13889,7 +13889,7 @@
     "source": "red.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Demon Red",
     "row": 4,
     "col": 2,
@@ -13908,7 +13908,7 @@
     "source": "red.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Bold Pyrrole Red",
     "row": 4,
     "col": 3,
@@ -13927,7 +13927,7 @@
     "source": "red.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Pure Red VWPieg Ped Ceoerend Oee",
     "row": 4,
     "col": 4,
@@ -13946,7 +13946,7 @@
     "source": "red.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Helspawn Red",
     "row": 4,
     "col": 5,
@@ -13965,7 +13965,7 @@
     "source": "red.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Blood Red",
     "row": 4,
     "col": 6,
@@ -13984,7 +13984,7 @@
     "source": "red.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Scarlet Blood",
     "row": 4,
     "col": 7,
@@ -14003,7 +14003,7 @@
     "source": "red.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Flat Red",
     "row": 4,
     "col": 8,
@@ -14022,7 +14022,7 @@
     "source": "red.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Carmine Red",
     "row": 4,
     "col": 9,
@@ -14041,7 +14041,7 @@
     "source": "red.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Oread Red",
     "row": 4,
     "col": 12,
@@ -14060,7 +14060,7 @@
     "source": "red.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Evil Sunz Scarlet",
     "row": 5,
     "col": 1,
@@ -14079,7 +14079,7 @@
     "source": "red.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Vermulbon",
     "row": 5,
     "col": 2,
@@ -14098,7 +14098,7 @@
     "source": "red.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Carmine",
     "row": 5,
     "col": 3,
@@ -14117,7 +14117,7 @@
     "source": "red.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Dragon Red",
     "row": 5,
     "col": 4,
@@ -14136,7 +14136,7 @@
     "source": "red.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Nocturnal Red",
     "row": 5,
     "col": 10,
@@ -14155,7 +14155,7 @@
     "source": "red.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Pearl Skin",
     "row": 1,
     "col": 1,
@@ -14174,7 +14174,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Opal Skin",
     "row": 1,
     "col": 2,
@@ -14193,7 +14193,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Leopard Stane Skin",
     "row": 1,
     "col": 3,
@@ -14212,7 +14212,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Ruby Skin",
     "row": 1,
     "col": 4,
@@ -14231,7 +14231,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Tourmaline Skin",
     "row": 1,
     "col": 5,
@@ -14250,7 +14250,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Fair Skin",
     "row": 1,
     "col": 6,
@@ -14269,7 +14269,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Saimon",
     "row": 1,
     "col": 7,
@@ -14288,7 +14288,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Jasper Skin",
     "row": 1,
     "col": 8,
@@ -14307,7 +14307,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Old Rose",
     "row": 1,
     "col": 9,
@@ -14326,7 +14326,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Old Rase",
     "row": 1,
     "col": 10,
@@ -14345,7 +14345,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Light Flesh",
     "row": 2,
     "col": 1,
@@ -14364,7 +14364,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Skin Tone",
     "row": 2,
     "col": 4,
@@ -14383,7 +14383,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Bright Shadow Flesh",
     "row": 2,
     "col": 6,
@@ -14402,7 +14402,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Salmon Rose",
     "row": 3,
     "col": 1,
@@ -14421,7 +14421,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Rosy Flesh",
     "row": 3,
     "col": 2,
@@ -14440,7 +14440,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "German Orange",
     "row": 3,
     "col": 3,
@@ -14459,7 +14459,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Athena Skin",
     "row": 3,
     "col": 4,
@@ -14478,7 +14478,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Agate Skin AMOertredh",
     "row": 3,
     "col": 5,
@@ -14497,7 +14497,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Moonstone Skin",
     "row": 3,
     "col": 6,
@@ -14516,7 +14516,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Topaz Skin",
     "row": 3,
     "col": 7,
@@ -14535,7 +14535,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Barbarian Flesh",
     "row": 4,
     "col": 2,
@@ -14554,7 +14554,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Buffed Hide",
     "row": 4,
     "col": 3,
@@ -14573,7 +14573,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Brown Rose",
     "row": 4,
     "col": 4,
@@ -14592,7 +14592,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Ruddy Umber",
     "row": 4,
     "col": 5,
@@ -14611,7 +14611,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Tan",
     "row": 4,
     "col": 6,
@@ -14630,7 +14630,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Shadow Filesh",
     "row": 4,
     "col": 8,
@@ -14649,7 +14649,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Succubus Skin",
     "row": 4,
     "col": 9,
@@ -14668,7 +14668,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Tigers Eye Skin",
     "row": 4,
     "col": 10,
@@ -14687,7 +14687,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Barbarian Brawn",
     "row": 5,
     "col": 1,
@@ -14706,7 +14706,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Bloodreaver Flesh",
     "row": 5,
     "col": 6,
@@ -14725,7 +14725,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Druid Flesh",
     "row": 5,
     "col": 9,
@@ -14744,7 +14744,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Warm Grey",
     "row": 6,
     "col": 1,
@@ -14763,7 +14763,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Brown Rose",
     "row": 6,
     "col": 3,
@@ -14782,7 +14782,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Dark Rose",
     "row": 6,
     "col": 4,
@@ -14801,7 +14801,7 @@
     "source": "rosy_flesh.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Grey Blue",
     "row": 2,
     "col": 1,
@@ -14820,7 +14820,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Blue Black",
     "row": 2,
     "col": 2,
@@ -14839,7 +14839,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "The Darkness",
     "row": 2,
     "col": 3,
@@ -14858,7 +14858,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Strang Dark Blue",
     "row": 2,
     "col": 4,
@@ -14877,7 +14877,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Pastel Blue",
     "row": 3,
     "col": 2,
@@ -14896,7 +14896,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Aegis Aqua",
     "row": 3,
     "col": 3,
@@ -14915,7 +14915,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Shieldwall Blue",
     "row": 3,
     "col": 4,
@@ -14934,7 +14934,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Phalanx Blue",
     "row": 3,
     "col": 5,
@@ -14953,7 +14953,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Baharroth Blue",
     "row": 3,
     "col": 6,
@@ -14972,7 +14972,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Ray Gun Glow",
     "row": 3,
     "col": 7,
@@ -14991,7 +14991,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Turquoise",
     "row": 3,
     "col": 8,
@@ -15010,7 +15010,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Temple Guard Blue",
     "row": 3,
     "col": 9,
@@ -15029,7 +15029,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Light Turquoise",
     "row": 3,
     "col": 10,
@@ -15048,7 +15048,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Turquoise",
     "row": 3,
     "col": 11,
@@ -15067,7 +15067,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Thousand Sons Blue",
     "row": 3,
     "col": 12,
@@ -15086,7 +15086,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Turquaise",
     "row": 4,
     "col": 1,
@@ -15105,7 +15105,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Tidal Blue",
     "row": 4,
     "col": 2,
@@ -15124,7 +15124,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Ahriman Blue",
     "row": 4,
     "col": 3,
@@ -15143,7 +15143,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Cursed Blue",
     "row": 4,
     "col": 4,
@@ -15162,7 +15162,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Turquoise",
     "row": 4,
     "col": 5,
@@ -15181,7 +15181,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Archaic Turquoise",
     "row": 4,
     "col": 6,
@@ -15200,7 +15200,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Turquaise",
     "row": 4,
     "col": 7,
@@ -15219,7 +15219,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Sotek Green",
     "row": 4,
     "col": 8,
@@ -15238,7 +15238,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Abyssal Blue",
     "row": 4,
     "col": 9,
@@ -15257,7 +15257,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Ocean Blue",
     "row": 4,
     "col": 10,
@@ -15276,7 +15276,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Sentient Turquoise",
     "row": 4,
     "col": 11,
@@ -15295,7 +15295,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Stegadon Scale Green",
     "row": 4,
     "col": 12,
@@ -15314,7 +15314,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "AMP",
+    "brand": "Pro Acryl",
     "name": "Bright Green Blue",
     "row": 5,
     "col": 4,
@@ -15333,7 +15333,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Anthraate Grey",
     "row": 5,
     "col": 12,
@@ -15352,7 +15352,7 @@
     "source": "sea_blue.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Cerberus Brown",
     "row": 1,
     "col": 3,
@@ -15371,7 +15371,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Bronze Brown",
     "row": 1,
     "col": 5,
@@ -15390,7 +15390,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Orange Brown",
     "row": 1,
     "col": 6,
@@ -15409,7 +15409,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Orange Brown",
     "row": 1,
     "col": 7,
@@ -15428,7 +15428,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Scrofulaus Brown",
     "row": 1,
     "col": 8,
@@ -15447,7 +15447,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Mantichore Ochre",
     "row": 1,
     "col": 9,
@@ -15466,7 +15466,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Light Brown",
     "row": 1,
     "col": 10,
@@ -15485,7 +15485,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Light Brown",
     "row": 1,
     "col": 11,
@@ -15504,7 +15504,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Sunburst Ochre",
     "row": 1,
     "col": 12,
@@ -15523,7 +15523,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Orange Brown",
     "row": 2,
     "col": 1,
@@ -15542,7 +15542,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Parasite Brown",
     "row": 2,
     "col": 2,
@@ -15561,7 +15561,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Satyr Brown",
     "row": 2,
     "col": 3,
@@ -15580,7 +15580,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Orange Oxide",
     "row": 2,
     "col": 5,
@@ -15599,7 +15599,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Deathclaw Brown",
     "row": 2,
     "col": 6,
@@ -15618,7 +15618,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Dry Rust Brown",
     "row": 2,
     "col": 7,
@@ -15637,7 +15637,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Skrag Brown",
     "row": 2,
     "col": 8,
@@ -15656,7 +15656,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Grunge Brown",
     "row": 2,
     "col": 9,
@@ -15675,7 +15675,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Oeep Brown",
     "row": 2,
     "col": 10,
@@ -15694,7 +15694,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Beast Brown",
     "row": 2,
     "col": 11,
@@ -15713,7 +15713,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Ruddy Terra",
     "row": 3,
     "col": 2,
@@ -15732,7 +15732,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Red Leather",
     "row": 3,
     "col": 3,
@@ -15751,7 +15751,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Burnt Orange",
     "row": 3,
     "col": 4,
@@ -15770,7 +15770,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Medium Rust",
     "row": 3,
     "col": 5,
@@ -15789,7 +15789,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Camo Brown",
     "row": 4,
     "col": 1,
@@ -15808,7 +15808,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Burnt Sienna",
     "row": 4,
     "col": 2,
@@ -15827,7 +15827,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Burnt Red",
     "row": 4,
     "col": 3,
@@ -15846,7 +15846,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Rifle Brown",
     "row": 4,
     "col": 4,
@@ -15865,7 +15865,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Boar Hide",
     "row": 4,
     "col": 5,
@@ -15884,7 +15884,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Hull Red",
     "row": 4,
     "col": 6,
@@ -15903,7 +15903,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Hull Red",
     "row": 4,
     "col": 7,
@@ -15922,7 +15922,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Dark Fleshtone",
     "row": 4,
     "col": 8,
@@ -15941,7 +15941,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Doombull Brown",
     "row": 4,
     "col": 9,
@@ -15960,7 +15960,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Saddle Brown",
     "row": 5,
     "col": 2,
@@ -15979,7 +15979,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Tuskgor Fur",
     "row": 5,
     "col": 3,
@@ -15998,7 +15998,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Fur Cloak",
     "row": 5,
     "col": 4,
@@ -16017,7 +16017,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Cavalry Brown",
     "row": 5,
     "col": 5,
@@ -16036,7 +16036,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Mahagany Brown",
     "row": 5,
     "col": 6,
@@ -16055,7 +16055,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "AMP",
+    "brand": "Pro Acryl",
     "name": "Burnt Umber",
     "row": 5,
     "col": 7,
@@ -16074,7 +16074,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dark Rust",
     "row": 5,
     "col": 8,
@@ -16093,7 +16093,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Flesh",
     "row": 5,
     "col": 9,
@@ -16112,7 +16112,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Cuirass Leather",
     "row": 5,
     "col": 11,
@@ -16131,7 +16131,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Vambrace Brown",
     "row": 6,
     "col": 2,
@@ -16150,7 +16150,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Beige Brown",
     "row": 6,
     "col": 3,
@@ -16169,7 +16169,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Boot Strap Brown",
     "row": 6,
     "col": 4,
@@ -16188,7 +16188,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Gorgon Brown",
     "row": 6,
     "col": 6,
@@ -16207,7 +16207,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Scabbard Brown",
     "row": 6,
     "col": 7,
@@ -16226,7 +16226,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Mahogany",
     "row": 6,
     "col": 9,
@@ -16245,7 +16245,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Leather Brown",
     "row": 6,
     "col": 10,
@@ -16264,7 +16264,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Afro Shadaw",
     "row": 6,
     "col": 11,
@@ -16283,7 +16283,7 @@
     "source": "tan.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Verdigris",
     "row": 1,
     "col": 1,
@@ -16302,7 +16302,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Marine Mist",
     "row": 1,
     "col": 2,
@@ -16321,7 +16321,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Mythic Turquoise",
     "row": 1,
     "col": 4,
@@ -16340,7 +16340,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Oeep Azure",
     "row": 1,
     "col": 5,
@@ -16359,7 +16359,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Aqua Alchemy",
     "row": 2,
     "col": 1,
@@ -16378,7 +16378,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Light Emerald",
     "row": 2,
     "col": 2,
@@ -16397,7 +16397,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Bright Jade",
     "row": 2,
     "col": 3,
@@ -16416,7 +16416,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Jade",
     "row": 2,
     "col": 4,
@@ -16435,7 +16435,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Antiquity Green",
     "row": 2,
     "col": 5,
@@ -16454,7 +16454,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Jade",
     "row": 2,
     "col": 6,
@@ -16473,7 +16473,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Pastel Green",
     "row": 3,
     "col": 1,
@@ -16492,7 +16492,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Amulet Aqua",
     "row": 3,
     "col": 2,
@@ -16511,7 +16511,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Gauss Blaster Green",
     "row": 3,
     "col": 3,
@@ -16530,7 +16530,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Ghost Green",
     "row": 3,
     "col": 4,
@@ -16549,7 +16549,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Bright Pale Green",
     "row": 3,
     "col": 5,
@@ -16568,7 +16568,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Elixir Green",
     "row": 3,
     "col": 6,
@@ -16587,7 +16587,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Mint Green",
     "row": 3,
     "col": 7,
@@ -16606,7 +16606,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Talisman Teal",
     "row": 3,
     "col": 8,
@@ -16625,7 +16625,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Foul Green",
     "row": 3,
     "col": 9,
@@ -16644,7 +16644,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Ghoul Green",
     "row": 3,
     "col": 10,
@@ -16663,7 +16663,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Pharaoh Guard",
     "row": 3,
     "col": 11,
@@ -16682,7 +16682,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Emerald",
     "row": 3,
     "col": 12,
@@ -16701,7 +16701,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Sybarite Green",
     "row": 4,
     "col": 1,
@@ -16720,7 +16720,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Jade Green",
     "row": 4,
     "col": 2,
@@ -16739,7 +16739,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Emerald",
     "row": 4,
     "col": 3,
@@ -16758,7 +16758,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Green Oxide",
     "row": 4,
     "col": 4,
@@ -16777,7 +16777,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Temple Gate Teal",
     "row": 4,
     "col": 5,
@@ -16796,7 +16796,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Kabalite Green",
     "row": 4,
     "col": 6,
@@ -16815,7 +16815,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Scurvy Green",
     "row": 4,
     "col": 7,
@@ -16834,7 +16834,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Jade Green",
     "row": 4,
     "col": 8,
@@ -16853,7 +16853,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Emerald",
     "row": 4,
     "col": 9,
@@ -16872,7 +16872,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Scarab Green",
     "row": 4,
     "col": 10,
@@ -16891,7 +16891,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Cold Green",
     "row": 4,
     "col": 11,
@@ -16910,7 +16910,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Splinter Green",
     "row": 5,
     "col": 1,
@@ -16929,7 +16929,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Park Green Flat",
     "row": 5,
     "col": 2,
@@ -16948,7 +16948,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Lizard Green",
     "row": 5,
     "col": 3,
@@ -16967,7 +16967,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Pacifoc Green",
     "row": 6,
     "col": 2,
@@ -16986,7 +16986,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Legion Green",
     "row": 6,
     "col": 3,
@@ -17005,7 +17005,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Sonsof HMorus Green",
     "row": 6,
     "col": 4,
@@ -17024,7 +17024,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Traitar Green",
     "row": 6,
     "col": 5,
@@ -17043,7 +17043,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Lupercal Green",
     "row": 6,
     "col": 6,
@@ -17062,7 +17062,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Dark Sea Ben",
     "row": 6,
     "col": 7,
@@ -17081,7 +17081,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Hydra Green",
     "row": 6,
     "col": 8,
@@ -17100,7 +17100,7 @@
     "source": "teal_green.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Neptune Glow",
     "row": 2,
     "col": 3,
@@ -17119,7 +17119,7 @@
     "source": "turquoise.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Aquarmarine",
     "row": 2,
     "col": 4,
@@ -17138,7 +17138,7 @@
     "source": "turquoise.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Light Blue Green",
     "row": 2,
     "col": 5,
@@ -17157,7 +17157,7 @@
     "source": "turquoise.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Turquoise Siren",
     "row": 2,
     "col": 6,
@@ -17176,7 +17176,7 @@
     "source": "turquoise.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Blue Green",
     "row": 2,
     "col": 7,
@@ -17195,7 +17195,7 @@
     "source": "turquoise.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Aquamarine",
     "row": 2,
     "col": 8,
@@ -17214,7 +17214,7 @@
     "source": "turquoise.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Hydra Turquaise",
     "row": 2,
     "col": 9,
@@ -17233,7 +17233,7 @@
     "source": "turquoise.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Blue Green",
     "row": 2,
     "col": 10,
@@ -17252,7 +17252,7 @@
     "source": "turquoise.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Aquatix Turquoise",
     "row": 2,
     "col": 11,
@@ -17271,7 +17271,7 @@
     "source": "turquoise.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Turquoise",
     "row": 3,
     "col": 2,
@@ -17290,7 +17290,7 @@
     "source": "turquoise.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Deep Ocean Blue",
     "row": 4,
     "col": 1,
@@ -17309,7 +17309,7 @@
     "source": "turquoise.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Abyssal Turquoise",
     "row": 4,
     "col": 2,
@@ -17328,7 +17328,7 @@
     "source": "turquoise.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Glacier Blue",
     "row": 1,
     "col": 1,
@@ -17347,7 +17347,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Augur Blue",
     "row": 1,
     "col": 2,
@@ -17366,7 +17366,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Faded Ultramarine",
     "row": 1,
     "col": 3,
@@ -17385,7 +17385,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Elfic Blue",
     "row": 1,
     "col": 4,
@@ -17404,7 +17404,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Calgar Blue",
     "row": 1,
     "col": 5,
@@ -17423,7 +17423,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Ultramarine Blue",
     "row": 1,
     "col": 6,
@@ -17442,7 +17442,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Gottyc Blue",
     "row": 1,
     "col": 7,
@@ -17461,7 +17461,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Trumphant Navy",
     "row": 1,
     "col": 8,
@@ -17480,7 +17480,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Oxford",
     "row": 1,
     "col": 9,
@@ -17499,7 +17499,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Abyss Blue",
     "row": 1,
     "col": 10,
@@ -17518,7 +17518,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "AMP",
+    "brand": "Pro Acryl",
     "name": "Dark Navy Blue",
     "row": 1,
     "col": 11,
@@ -17537,7 +17537,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Celestial Blue",
     "row": 2,
     "col": 1,
@@ -17556,7 +17556,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Elysium Blue",
     "row": 2,
     "col": 3,
@@ -17575,7 +17575,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Ultramarnne Blue",
     "row": 2,
     "col": 4,
@@ -17594,7 +17594,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Altdort Guard Blue",
     "row": 2,
     "col": 5,
@@ -17613,7 +17613,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Macragge Blue",
     "row": 2,
     "col": 6,
@@ -17632,7 +17632,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Marine Blue",
     "row": 2,
     "col": 7,
@@ -17651,7 +17651,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Oxford Blue",
     "row": 2,
     "col": 8,
@@ -17670,7 +17670,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Ultramarine",
     "row": 3,
     "col": 3,
@@ -17689,7 +17689,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dark Blue",
     "row": 3,
     "col": 4,
@@ -17708,7 +17708,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Imperial Blue",
     "row": 3,
     "col": 5,
@@ -17727,7 +17727,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Baron Bluue",
     "row": 4,
     "col": 1,
@@ -17746,7 +17746,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Bive Violet",
     "row": 4,
     "col": 5,
@@ -17765,7 +17765,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Frast Blue",
     "row": 5,
     "col": 3,
@@ -17784,7 +17784,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Runic Cobalt",
     "row": 5,
     "col": 4,
@@ -17803,7 +17803,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Wolf Grey",
     "row": 5,
     "col": 6,
@@ -17822,7 +17822,7 @@
     "source": "ultramarine.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Worn Stane",
     "row": 1,
     "col": 1,
@@ -17841,7 +17841,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Great Hall Grey",
     "row": 1,
     "col": 2,
@@ -17860,7 +17860,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Deck Tan",
     "row": 1,
     "col": 3,
@@ -17879,7 +17879,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Gargoyle Grey",
     "row": 1,
     "col": 4,
@@ -17898,7 +17898,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Grey Castle",
     "row": 1,
     "col": 5,
@@ -17917,7 +17917,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Bright Warm Grey",
     "row": 1,
     "col": 6,
@@ -17936,7 +17936,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Medium Sea Green",
     "row": 1,
     "col": 7,
@@ -17955,7 +17955,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Grey Green",
     "row": 1,
     "col": 8,
@@ -17974,7 +17974,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Offwhite",
     "row": 2,
     "col": 1,
@@ -17993,7 +17993,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Brainmatter Beige",
     "row": 2,
     "col": 2,
@@ -18012,7 +18012,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Silver Grey",
     "row": 2,
     "col": 3,
@@ -18031,7 +18031,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Rock Grey",
     "row": 2,
     "col": 4,
@@ -18050,7 +18050,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Warm Grey",
     "row": 2,
     "col": 5,
@@ -18069,7 +18069,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "AMP",
+    "brand": "Pro Acryl",
     "name": "Bright Brown Grey",
     "row": 2,
     "col": 6,
@@ -18088,7 +18088,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "AMP",
+    "brand": "Pro Acryl",
     "name": "Grey Green",
     "row": 2,
     "col": 7,
@@ -18107,7 +18107,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Stormvermin Fur",
     "row": 2,
     "col": 8,
@@ -18126,7 +18126,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Pallid Wych Flesh",
     "row": 3,
     "col": 1,
@@ -18145,7 +18145,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Wory Tusk",
     "row": 3,
     "col": 2,
@@ -18164,7 +18164,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Medium Grey",
     "row": 4,
     "col": 1,
@@ -18183,7 +18183,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Germ Beige wwil",
     "row": 4,
     "col": 2,
@@ -18202,7 +18202,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Cam. Middle Brown",
     "row": 4,
     "col": 3,
@@ -18221,7 +18221,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Grey Brown",
     "row": 4,
     "col": 4,
@@ -18240,7 +18240,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Brown Grey",
     "row": 4,
     "col": 5,
@@ -18259,7 +18259,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Red Grey",
     "row": 5,
     "col": 3,
@@ -18278,7 +18278,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Lavender Grey",
     "row": 5,
     "col": 4,
@@ -18297,7 +18297,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Reddssh Grey",
     "row": 5,
     "col": 5,
@@ -18316,7 +18316,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Dark Sea Grey",
     "row": 5,
     "col": 6,
@@ -18335,7 +18335,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Silver Grey",
     "row": 6,
     "col": 1,
@@ -18354,7 +18354,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Medium Sea Grey",
     "row": 6,
     "col": 3,
@@ -18373,7 +18373,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Dark Sea Grey",
     "row": 6,
     "col": 4,
@@ -18392,7 +18392,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Graphite",
     "row": 6,
     "col": 5,
@@ -18411,7 +18411,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Wizard Grey",
     "row": 6,
     "col": 7,
@@ -18430,7 +18430,7 @@
     "source": "warm_grey.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Bright Pale Yellow",
     "row": 1,
     "col": 1,
@@ -18449,7 +18449,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Tyvin Suns Yellow",
     "row": 1,
     "col": 2,
@@ -18468,7 +18468,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Pale Yellow",
     "row": 1,
     "col": 3,
@@ -18487,7 +18487,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Ice Yellow",
     "row": 1,
     "col": 4,
@@ -18506,7 +18506,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Ice Yellow",
     "row": 1,
     "col": 5,
@@ -18525,7 +18525,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Pastel Yellow",
     "row": 1,
     "col": 6,
@@ -18544,7 +18544,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Darn Yellow",
     "row": 1,
     "col": 7,
@@ -18563,7 +18563,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Ice Yellow",
     "row": 1,
     "col": 8,
@@ -18582,7 +18582,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Pale Yellow",
     "row": 1,
     "col": 9,
@@ -18601,7 +18601,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Toxic Yellow",
     "row": 1,
     "col": 10,
@@ -18620,7 +18620,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Craven Yellow",
     "row": 1,
     "col": 11,
@@ -18639,7 +18639,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Phalanx Yellow",
     "row": 1,
     "col": 12,
@@ -18658,7 +18658,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Radiant Yellow",
     "row": 1,
     "col": 13,
@@ -18677,7 +18677,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Space Oust",
     "row": 2,
     "col": 1,
@@ -18696,7 +18696,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Sun Bleach Yellow",
     "row": 2,
     "col": 2,
@@ -18715,7 +18715,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Light Yellow",
     "row": 2,
     "col": 3,
@@ -18734,7 +18734,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Warped Yellow",
     "row": 2,
     "col": 4,
@@ -18753,7 +18753,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Deep Yellow",
     "row": 2,
     "col": 5,
@@ -18772,7 +18772,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Yellow",
     "row": 2,
     "col": 6,
@@ -18791,7 +18791,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Deep Yellow",
     "row": 2,
     "col": 7,
@@ -18810,7 +18810,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Serpent Eye Yellow",
     "row": 2,
     "col": 8,
@@ -18829,7 +18829,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Golden Yellow",
     "row": 2,
     "col": 9,
@@ -18848,7 +18848,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Flash Gitz Yellow",
     "row": 2,
     "col": 10,
@@ -18867,7 +18867,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Daemonic Yellow",
     "row": 2,
     "col": 11,
@@ -18886,7 +18886,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Moon Yellow",
     "row": 2,
     "col": 12,
@@ -18905,7 +18905,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Flat Yellow",
     "row": 3,
     "col": 1,
@@ -18924,7 +18924,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Yellow Flame",
     "row": 3,
     "col": 2,
@@ -18943,7 +18943,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Warm Yellow",
     "row": 3,
     "col": 3,
@@ -18962,7 +18962,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Sun Yellow",
     "row": 3,
     "col": 4,
@@ -18981,7 +18981,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Moonbeam Yellow",
     "row": 3,
     "col": 5,
@@ -19000,7 +19000,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Yriel Yellow",
     "row": 3,
     "col": 6,
@@ -19019,7 +19019,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Skulker Yellow",
     "row": 3,
     "col": 7,
@@ -19038,7 +19038,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Volcanxc Yellow",
     "row": 3,
     "col": 8,
@@ -19057,7 +19057,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Golden Yellow",
     "row": 4,
     "col": 1,
@@ -19076,7 +19076,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Golden Yellow",
     "row": 4,
     "col": 2,
@@ -19095,7 +19095,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Inner Light",
     "row": 4,
     "col": 3,
@@ -19114,7 +19114,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "AMP",
+    "brand": "Pro Acryl",
     "name": "Orange Yellow",
     "row": 4,
     "col": 4,
@@ -19133,7 +19133,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Glowing Inferno",
     "row": 4,
     "col": 5,
@@ -19152,7 +19152,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "VGC",
+    "brand": "Vallejo",
     "name": "Gold Yellow",
     "row": 4,
     "col": 6,
@@ -19171,7 +19171,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Fiendish Yellow",
     "row": 5,
     "col": 3,
@@ -19190,7 +19190,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "GW",
+    "brand": "Warhammer",
     "name": "Averland Sunset",
     "row": 5,
     "col": 4,
@@ -19209,7 +19209,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "TTC",
+    "brand": "Two Thin Coats",
     "name": "Dark Sun Yellow",
     "row": 5,
     "col": 5,
@@ -19228,7 +19228,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "WPF",
+    "brand": "Warpaints Fanatic",
     "name": "Demigod Flames",
     "row": 5,
     "col": 6,
@@ -19247,7 +19247,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "PA",
+    "brand": "Pro Acryl",
     "name": "Bismuth Yellow",
     "row": 6,
     "col": 1,
@@ -19266,7 +19266,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Lemon Yellow",
     "row": 6,
     "col": 2,
@@ -19285,7 +19285,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "VMC",
+    "brand": "Vallejo",
     "name": "Lemon Yellow",
     "row": 6,
     "col": 3,
@@ -19304,7 +19304,7 @@
     "source": "yellow.png"
   },
   {
-    "brand": "AK",
+    "brand": "AK Interactive",
     "name": "Purulent Yellow",
     "row": 6,
     "col": 4,

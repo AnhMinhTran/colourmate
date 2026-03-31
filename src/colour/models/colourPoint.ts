@@ -64,4 +64,20 @@ export class ColourPoint {
     static fromDatabase(props: ColourPointProps): ColourPoint {
         return new ColourPoint(props);
     }
+
+    update(props: { name?: string; brand?: string; tag?: string[] }): void {
+        if (props.name !== undefined) {
+            const trimmed = props.name.trim();
+            if (!trimmed) throw new Error('Name cannot be empty');
+            this.name = trimmed;
+        }
+        if (props.brand !== undefined) {
+            const trimmed = props.brand.trim();
+            if (!trimmed) throw new Error('Brand cannot be empty');
+            this.brand = trimmed;
+        }
+        if (props.tag !== undefined) {
+            this.tag = props.tag;
+        }
+    }
 }

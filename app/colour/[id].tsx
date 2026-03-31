@@ -16,6 +16,9 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { ColourPoint } from '@/src/colour/models/colourPoint';
 import { SqliteColourPointRepository } from '@/src/colour/repositories/sqliteColourPointRepository';
 import { deriveMunsellLikeFromOKLCH } from '@/src/colour/services/deriveMunsellFromOklch';
+import { MixSheet } from '@/src/colour/ui/components/mix-sheet';
+import { SqliteInventoryRepository } from '@/src/inventory/repositories/sqliteInventoryRepository';
+import { IconSymbol } from '@/src/ui/components/icon-symbol';
 
 const MUNSELL_HUES = ['R', 'YR', 'Y', 'GY', 'G', 'BG', 'B', 'PB', 'P', 'RP'];
 
@@ -24,10 +27,9 @@ function toHex(r: number, g: number, b: number) {
 }
 
 function munsellHueName(hueDeg: number): string {
-  // Approximate mapping: OKLCH ~30° ≈ 5R
   const normalized = ((hueDeg - 30) % 360 + 360) % 360;
   const sector = Math.floor(normalized / 36) % 10;
-  const within = ((normalized % 36) / 36) * 10; // 0..10 within sector
+  const within = ((normalized % 36) / 36) * 10;
   const hueNum = within < 2.5 ? 2.5 : within < 7.5 ? 5 : 7.5;
   return `${hueNum}${MUNSELL_HUES[sector]}`;
 }
@@ -41,27 +43,42 @@ function munsellLabel(c: ColourPoint): string {
   return `${hue} ${value}/${chroma}`;
 }
 
+// (MixSheet moved to src/colour/ui/components/mix-sheet.tsx)
+
+
+// ---------------------------------------------------------------------------
+// ColourDetailScreen
+// ---------------------------------------------------------------------------
 export default function ColourDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const db = useSQLiteContext();
   const colourRepo = useMemo(() => new SqliteColourPointRepository(db), [db]);
+  const inventoryRepo = useMemo(() => new SqliteInventoryRepository(db), [db]);
   const router = useRouter();
   const insets = useSafeAreaInsets();
 
   const [colour, setColour] = useState<ColourPoint | null>(null);
   const [editing, setEditing] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
+  const [showMix, setShowMix] = useState(false);
+  const [allColours, setAllColours] = useState<ColourPoint[]>([]);
+  const [inventoryIds, setInventoryIds] = useState<Set<string>>(new Set());
 
-  // edit draft state
   const [draftName, setDraftName] = useState('');
   const [draftBrand, setDraftBrand] = useState('');
   const [draftTags, setDraftTags] = useState<string[]>([]);
   const [tagInput, setTagInput] = useState('');
 
   const load = useCallback(async () => {
-    const c = await colourRepo.findbyId(id);
+    const [c, allC, allInv] = await Promise.all([
+      colourRepo.findbyId(id),
+      colourRepo.findAll(),
+      inventoryRepo.findAll(),
+    ]);
     setColour(c);
-  }, [id, colourRepo]);
+    setAllColours(allC);
+    setInventoryIds(new Set(allInv.map((i) => i.colour_id)));
+  }, [id, colourRepo, inventoryRepo]);
 
   useEffect(() => { load(); }, [load]);
 
@@ -80,12 +97,12 @@ export default function ColourDetailScreen() {
 
   const saveEdit = async () => {
     if (!colour) return;
-    if (!draftName.trim()) { Alert.alert('Name cannot be empty'); return; }
-    if (!draftBrand.trim()) { Alert.alert('Brand cannot be empty'); return; }
-
-    colour.name = draftName.trim();
-    colour.brand = draftBrand.trim();
-    colour.tag = draftTags;
+    try {
+      colour.update({ name: draftName, brand: draftBrand, tag: draftTags });
+    } catch (e: any) {
+      Alert.alert(e.message);
+      return;
+    }
     await colourRepo.update(colour);
     setColour({ ...colour } as ColourPoint);
     setEditing(false);
@@ -135,24 +152,12 @@ export default function ColourDetailScreen() {
         style={s.screen}
         contentContainerStyle={[s.content, { paddingBottom: insets.bottom + 24 }]}
       >
-        {/* Swatch */}
         <View style={[s.swatch, { backgroundColor: bg }]} />
 
-        {/* Name & Brand */}
         {editing ? (
           <View style={s.nameBlock}>
-            <TextInput
-              style={s.nameInput}
-              value={draftName}
-              onChangeText={setDraftName}
-              placeholder="Name"
-            />
-            <TextInput
-              style={s.brandInput}
-              value={draftBrand}
-              onChangeText={setDraftBrand}
-              placeholder="Brand"
-            />
+            <TextInput style={s.nameInput} value={draftName} onChangeText={setDraftName} placeholder="Name" />
+            <TextInput style={s.brandInput} value={draftBrand} onChangeText={setDraftBrand} placeholder="Brand" />
           </View>
         ) : (
           <View style={s.nameBlock}>
@@ -161,15 +166,12 @@ export default function ColourDetailScreen() {
           </View>
         )}
 
-        {/* Details card */}
         <View style={s.card}>
           <View style={s.row}>
             <Text style={s.label}>Hex Code</Text>
             <Text style={s.value}>{hex}</Text>
           </View>
-
           <View style={s.divider} />
-
           <Text style={s.label}>RGB Values</Text>
           <View style={s.rgbRow}>
             {(['R', 'G', 'B'] as const).map((ch, i) => {
@@ -184,9 +186,7 @@ export default function ColourDetailScreen() {
               );
             })}
           </View>
-
           <View style={s.divider} />
-
           <View style={s.row}>
             <View style={s.rowLeft}>
               <Text style={s.label}>Munsell Notation</Text>
@@ -202,9 +202,7 @@ export default function ColourDetailScreen() {
           <Pressable style={s.tooltipBackdrop} onPress={() => setShowTooltip(false)}>
             <View style={s.tooltipBox}>
               <Text style={s.tooltipTitle}>Munsell Notation</Text>
-              <Text style={s.tooltipBody}>
-                Munsell describes a colour using three attributes:
-              </Text>
+              <Text style={s.tooltipBody}>Munsell describes a colour using three attributes:</Text>
               <Text style={s.tooltipItem}><Text style={s.tooltipBold}>Hue</Text> — There are five fundamental hues: yellow, red, green, blue, purple (e.g. 5R = mid Red, 5Y = mid Yellow, N = neutral grey)</Text>
               <Text style={s.tooltipItem}><Text style={s.tooltipBold}>Value</Text> — lightness on a scale of 0 (black) to 10 (white)</Text>
               <Text style={s.tooltipItem}><Text style={s.tooltipBold}>Chroma</Text> — saturation strength, starting at 0 (grey) with no upper bound</Text>
@@ -216,7 +214,6 @@ export default function ColourDetailScreen() {
           </Pressable>
         </Modal>
 
-        {/* Tags */}
         <Text style={s.sectionTitle}>Tags</Text>
         <View style={s.tagRow}>
           {(editing ? draftTags : colour.tag).map((t) => (
@@ -246,11 +243,29 @@ export default function ColourDetailScreen() {
             </Pressable>
           </View>
         )}
+
+        {!editing && (
+          <Pressable style={s.mixBtn} onPress={() => setShowMix(true)}>
+            <IconSymbol name="paintbrush.fill" size={18} color="#fff" />
+            <Text style={s.mixBtnText}>Mix this colour</Text>
+          </Pressable>
+        )}
       </ScrollView>
+
+      <MixSheet
+        visible={showMix}
+        goal={colour}
+        allColours={allColours}
+        inventoryIds={inventoryIds}
+        onClose={() => setShowMix(false)}
+      />
     </>
   );
 }
 
+// ---------------------------------------------------------------------------
+// Styles — main screen
+// ---------------------------------------------------------------------------
 const s = StyleSheet.create({
   screen: { flex: 1, backgroundColor: '#f5f5f5' },
   content: { padding: 16, gap: 16 },
@@ -296,13 +311,7 @@ const s = StyleSheet.create({
   value: { fontSize: 14, fontWeight: '500', color: '#111' },
   divider: { height: 1, backgroundColor: '#f0f0f0' },
   rgbRow: { flexDirection: 'row', gap: 10 },
-  rgbBox: {
-    flex: 1,
-    borderRadius: 10,
-    paddingVertical: 12,
-    alignItems: 'center',
-    gap: 4,
-  },
+  rgbBox: { flex: 1, borderRadius: 10, paddingVertical: 12, alignItems: 'center', gap: 4 },
   rgbLabel: { fontSize: 11, fontWeight: '600' },
   rgbVal: { fontSize: 18, fontWeight: '600', color: '#111' },
   sectionTitle: { fontSize: 13, fontWeight: '600', color: '#888', textTransform: 'uppercase', letterSpacing: 0.5 },
@@ -330,60 +339,33 @@ const s = StyleSheet.create({
     fontSize: 14,
     backgroundColor: '#fff',
   },
-  tagAddBtn: {
-    backgroundColor: '#4A90D9',
-    borderRadius: 10,
-    paddingHorizontal: 16,
-    justifyContent: 'center',
-  },
+  tagAddBtn: { backgroundColor: '#4A90D9', borderRadius: 10, paddingHorizontal: 16, justifyContent: 'center' },
   tagAddBtnText: { color: '#fff', fontWeight: '600' },
   rowLeft: { flexDirection: 'row', alignItems: 'center', gap: 6 },
-  tooltipBtn: {
-    width: 16,
-    height: 16,
-    borderRadius: 8,
-    backgroundColor: '#ccc',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+  tooltipBtn: { width: 16, height: 16, borderRadius: 8, backgroundColor: '#ccc', justifyContent: 'center', alignItems: 'center' },
   tooltipBtnText: { fontSize: 10, fontWeight: '700', color: '#555' },
-  tooltipBackdrop: {
-    flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.4)',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 24,
-  },
-  tooltipBox: {
-    backgroundColor: '#fff',
-    borderRadius: 16,
-    padding: 20,
-    gap: 10,
-    width: '100%',
-  },
+  tooltipBackdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.4)', justifyContent: 'center', alignItems: 'center', padding: 24 },
+  tooltipBox: { backgroundColor: '#fff', borderRadius: 16, padding: 20, gap: 10, width: '100%' },
   tooltipTitle: { fontSize: 16, fontWeight: '700', color: '#111' },
   tooltipBody: { fontSize: 14, color: '#555' },
   tooltipItem: { fontSize: 13, color: '#444', lineHeight: 20 },
   tooltipBold: { fontWeight: '700', color: '#111' },
-  tooltipExample: {
-    fontSize: 13,
-    color: '#555',
-    backgroundColor: '#f5f5f5',
-    borderRadius: 8,
-    padding: 10,
-    lineHeight: 20,
-  },
-  tooltipClose: {
-    backgroundColor: '#4A90D9',
-    borderRadius: 10,
-    paddingVertical: 10,
-    alignItems: 'center',
-    marginTop: 4,
-  },
+  tooltipExample: { fontSize: 13, color: '#555', backgroundColor: '#f5f5f5', borderRadius: 8, padding: 10, lineHeight: 20 },
+  tooltipClose: { backgroundColor: '#4A90D9', borderRadius: 10, paddingVertical: 10, alignItems: 'center', marginTop: 4 },
   tooltipCloseText: { color: '#fff', fontWeight: '600', fontSize: 15 },
   headerBtns: { flexDirection: 'row', gap: 12 },
   headerBtn: { paddingHorizontal: 4 },
   editText: { color: '#4A90D9', fontSize: 16 },
   saveText: { color: '#4A90D9', fontSize: 16, fontWeight: '600' },
   cancelText: { color: '#888', fontSize: 16 },
+  mixBtn: {
+    backgroundColor: '#4A90D9',
+    borderRadius: 12,
+    paddingVertical: 14,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+  },
+  mixBtnText: { color: '#fff', fontSize: 16, fontWeight: '600' },
 });
