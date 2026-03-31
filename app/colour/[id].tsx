@@ -16,6 +16,8 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { ColourPoint } from '@/src/colour/models/colourPoint';
 import { SqliteColourPointRepository } from '@/src/colour/repositories/sqliteColourPointRepository';
 import { deriveMunsellLikeFromOKLCH } from '@/src/colour/services/deriveMunsellFromOklch';
+import { ColourFilter, ColourMatch, EMPTY_FILTER, filterColours, findNearestColours, isFilterActive } from '@/src/colour/services/colourQueryService';
+import { FilterSheet } from '@/src/colour/ui/components/filter-sheet';
 import { MixSheet } from '@/src/colour/ui/components/mix-sheet';
 import { SqliteInventoryRepository } from '@/src/inventory/repositories/sqliteInventoryRepository';
 import { IconSymbol } from '@/src/ui/components/icon-symbol';
@@ -43,8 +45,31 @@ function munsellLabel(c: ColourPoint): string {
   return `${hue} ${value}/${chroma}`;
 }
 
-// (MixSheet moved to src/colour/ui/components/mix-sheet.tsx)
-
+// ---------------------------------------------------------------------------
+// MatchCard
+// ---------------------------------------------------------------------------
+function MatchCard({ match, inInventory, onPress }: { match: ColourMatch; inInventory: boolean; onPress: () => void }) {
+  const { colour } = match;
+  const bg = `rgb(${colour.rgb.r}, ${colour.rgb.g}, ${colour.rgb.b})`;
+  return (
+    <Pressable style={s.matchCard} onPress={onPress}>
+      <View style={s.matchCardTop}>
+        <View style={[s.matchSwatch, { backgroundColor: bg }]} />
+        <View style={s.matchInfo}>
+          <View style={s.matchNameRow}>
+            <Text style={s.matchName}>{colour.name}</Text>
+            {inInventory && (
+              <View style={s.inventoryBadge}>
+                <Text style={s.inventoryBadgeText}>In Inventory</Text>
+              </View>
+            )}
+          </View>
+          <Text style={s.matchBrand}>{colour.brand}</Text>
+        </View>
+      </View>
+    </Pressable>
+  );
+}
 
 // ---------------------------------------------------------------------------
 // ColourDetailScreen
@@ -63,6 +88,20 @@ export default function ColourDetailScreen() {
   const [showMix, setShowMix] = useState(false);
   const [allColours, setAllColours] = useState<ColourPoint[]>([]);
   const [inventoryIds, setInventoryIds] = useState<Set<string>>(new Set());
+  const [nearestFilter, setNearestFilter] = useState<ColourFilter>(EMPTY_FILTER);
+  const [showNearestFilter, setShowNearestFilter] = useState(false);
+
+  const allBrands = useMemo(() => [...new Set(allColours.map((c) => c.brand))].sort(), [allColours]);
+
+  const nearest = useMemo<ColourMatch[]>(() => {
+    if (!colour || allColours.length === 0) return [];
+    const candidates = filterColours(
+      allColours.filter((c) => c.id !== colour.id),
+      { ...nearestFilter, search: '' },
+      inventoryIds,
+    );
+    return findNearestColours({ r: colour.rgb.r, g: colour.rgb.g, b: colour.rgb.b }, candidates);
+  }, [colour, allColours, nearestFilter, inventoryIds]);
 
   const [draftName, setDraftName] = useState('');
   const [draftBrand, setDraftBrand] = useState('');
@@ -250,6 +289,37 @@ export default function ColourDetailScreen() {
             <Text style={s.mixBtnText}>Mix this colour</Text>
           </Pressable>
         )}
+
+        {!editing && (
+          <>
+            <View style={s.nearestHeader}>
+              <Text style={s.sectionTitle}>Nearest Colours</Text>
+              <Pressable
+                style={[s.filterBtn, isFilterActive(nearestFilter) && s.filterBtnActive]}
+                onPress={() => setShowNearestFilter(true)}
+              >
+                <IconSymbol
+                  name="line.3.horizontal.decrease"
+                  size={16}
+                  color={isFilterActive(nearestFilter) ? '#4A90D9' : '#555'}
+                />
+                {isFilterActive(nearestFilter) && <View style={s.filterBadge} />}
+              </Pressable>
+            </View>
+            {nearest.length === 0 ? (
+              <Text style={s.noMatches}>No colours match the current filters.</Text>
+            ) : (
+              nearest.map((m) => (
+                <MatchCard
+                  key={m.colour.id}
+                  match={m}
+                  inInventory={inventoryIds.has(m.colour.id)}
+                  onPress={() => router.push({ pathname: '/colour/[id]' as any, params: { id: m.colour.id } })}
+                />
+              ))
+            )}
+          </>
+        )}
       </ScrollView>
 
       <MixSheet
@@ -258,6 +328,14 @@ export default function ColourDetailScreen() {
         allColours={allColours}
         inventoryIds={inventoryIds}
         onClose={() => setShowMix(false)}
+      />
+
+      <FilterSheet
+        visible={showNearestFilter}
+        brands={allBrands}
+        filter={nearestFilter}
+        onApply={setNearestFilter}
+        onClose={() => setShowNearestFilter(false)}
       />
     </>
   );
@@ -358,6 +436,43 @@ const s = StyleSheet.create({
   editText: { color: '#4A90D9', fontSize: 16 },
   saveText: { color: '#4A90D9', fontSize: 16, fontWeight: '600' },
   cancelText: { color: '#888', fontSize: 16 },
+  matchCard: {
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#ebebeb',
+    padding: 12,
+  },
+  matchCardTop: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  matchSwatch: { width: 48, height: 48, borderRadius: 8 },
+  matchInfo: { flex: 1, gap: 2 },
+  matchNameRow: { flexDirection: 'row', alignItems: 'center', gap: 8, flexWrap: 'wrap' },
+  matchName: { fontSize: 15, fontWeight: '600', color: '#111' },
+  inventoryBadge: { backgroundColor: '#111', borderRadius: 6, paddingHorizontal: 7, paddingVertical: 2 },
+  inventoryBadgeText: { fontSize: 11, color: '#fff', fontWeight: '500' },
+  matchBrand: { fontSize: 13, color: '#888' },
+  nearestHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
+  filterBtn: {
+    width: 36,
+    height: 36,
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#e0e0e0',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  filterBtnActive: { borderColor: '#4A90D9', backgroundColor: '#EBF3FD' },
+  filterBadge: {
+    position: 'absolute',
+    top: 6,
+    right: 6,
+    width: 6,
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: '#4A90D9',
+  },
+  noMatches: { fontSize: 14, color: '#999', textAlign: 'center', marginTop: 4 },
   mixBtn: {
     backgroundColor: '#4A90D9',
     borderRadius: 12,
