@@ -144,7 +144,7 @@ export default function ColourPickerScreen() {
       contentContainerStyle={s.content}
       keyboardShouldPersistTaps="handled"
     >
-      <Text style={s.title}>Mini Paint Collection</Text>
+      <Text style={s.title}>Colourmate</Text>
 
       {/* How to use banner */}
       <View style={s.infoBanner}>

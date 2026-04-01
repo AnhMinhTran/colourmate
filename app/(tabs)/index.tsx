@@ -107,7 +107,7 @@ export default function InventoryScreen() {
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
-      <Text style={styles.title}>Mini Paint Collection</Text>
+      <Text style={styles.title}>Colourmate</Text>
 
       <View style={styles.searchRow}>
         <View style={styles.searchBar}>
