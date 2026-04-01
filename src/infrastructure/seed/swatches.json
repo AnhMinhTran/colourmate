@@ -552,7 +552,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "Skarsnk Green",
+    "name": "Skarsnik Green",
     "row": 4,
     "col": 4,
     "hex": "#769358",
@@ -1710,25 +1710,6 @@
     "source": "black.png"
   },
   {
-    "brand": "Warhammer",
-    "name": "Death Karps Drab",
-    "row": 4,
-    "col": 9,
-    "hex": "#21211C",
-    "rgb": [
-      33,
-      33,
-      28
-    ],
-    "bbox": [
-      675,
-      410,
-      745,
-      480
-    ],
-    "source": "black.png"
-  },
-  {
     "brand": "AK Interactive",
     "name": "Grim Brown",
     "row": 4,
@@ -1825,7 +1806,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "Blue Morror",
+    "name": "Blue Horror",
     "row": 1,
     "col": 4,
     "hex": "#91B6D3",
@@ -2034,7 +2015,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "Alaitac Blue",
+    "name": "Alaitoc Blue",
     "row": 2,
     "col": 7,
     "hex": "#13446E",
@@ -3725,7 +3706,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "Screarmng Skull",
+    "name": "Screaming Skull",
     "row": 1,
     "col": 9,
     "hex": "#D1BFA0",
@@ -4099,25 +4080,6 @@
       8,
       209,
       79,
-      279
-    ],
-    "source": "bone.png"
-  },
-  {
-    "brand": "Warhammer",
-    "name": "Palhd Wych Flesh",
-    "row": 3,
-    "col": 2,
-    "hex": "#D3C5BD",
-    "rgb": [
-      211,
-      197,
-      189
-    ],
-    "bbox": [
-      91,
-      209,
-      162,
       279
     ],
     "source": "bone.png"
@@ -6024,7 +5986,7 @@
   },
   {
     "brand": "Vallejo",
-    "name": "USField Orab",
+    "name": "US Field Drab",
     "row": 6,
     "col": 8,
     "hex": "#74593C",
@@ -9615,7 +9577,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "Daemanette Hide",
+    "name": "Daemonette Hide",
     "row": 4,
     "col": 8,
     "hex": "#4D465E",
@@ -10204,7 +10166,7 @@
   },
   {
     "brand": "Two Thin Coats",
-    "name": "PAhora Red",
+    "name": "Amphora Red",
     "row": 2,
     "col": 10,
     "hex": "#3F161C",
@@ -12009,7 +11971,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "Deathwarid Forest",
+    "name": "Deathworld Forest",
     "row": 2,
     "col": 7,
     "hex": "#575338",
@@ -12693,25 +12655,6 @@
   },
   {
     "brand": "Warhammer",
-    "name": "Pink Harror",
-    "row": 2,
-    "col": 3,
-    "hex": "#BA4856",
-    "rgb": [
-      186,
-      72,
-      86
-    ],
-    "bbox": [
-      172,
-      109,
-      243,
-      180
-    ],
-    "source": "pink.png"
-  },
-  {
-    "brand": "Warhammer",
     "name": "Perisher Pink",
     "row": 2,
     "col": 4,
@@ -12978,7 +12921,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "Emperors Children",
+    "name": "Emperor's Children",
     "row": 4,
     "col": 2,
     "hex": "#E5659C",
@@ -14631,7 +14574,7 @@
   },
   {
     "brand": "Pro Acryl",
-    "name": "Shadow Filesh",
+    "name": "Shadow Flesh",
     "row": 4,
     "col": 8,
     "hex": "#944D47",
@@ -17006,7 +16949,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "Sonsof HMorus Green",
+    "name": "Sons of Horus Green",
     "row": 6,
     "col": 4,
     "hex": "#325257",
@@ -17595,7 +17538,7 @@
   },
   {
     "brand": "Warhammer",
-    "name": "Altdort Guard Blue",
+    "name": "Altdorf Guard Blue",
     "row": 2,
     "col": 5,
     "hex": "#243E7F",
@@ -19338,7 +19281,8 @@
       11,
       79,
       82
-    ]
+    ],
+    "source": "orange.png"
   },
   {
     "brand": "Vallejo",
@@ -19356,7 +19300,8 @@
       11,
       163,
       82
-    ]
+    ],
+    "source": "orange.png"
   },
   {
     "brand": "Warpaints Fanatic",
