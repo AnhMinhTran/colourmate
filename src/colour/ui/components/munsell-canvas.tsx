@@ -4,7 +4,6 @@ import { GLView } from "expo-gl";
 import {
   Gesture,
   GestureDetector,
-  GestureHandlerRootView,
 } from "react-native-gesture-handler";
 
 import { ColourPoint } from "../../models/colourPoint";
@@ -122,13 +121,11 @@ export function MunsellCanvas({ colours, onSelectColour, highlightIds, spectrumL
   );
 
   return (
-    <GestureHandlerRootView style={styles.container}>
-      <GestureDetector gesture={composedGesture}>
-        <View style={styles.container} onLayout={handleLayout}>
-          <GLView style={styles.gl} onContextCreate={onContextCreate} />
-        </View>
-      </GestureDetector>
-    </GestureHandlerRootView>
+    <GestureDetector gesture={composedGesture}>
+      <View style={styles.container} onLayout={handleLayout}>
+        <GLView style={styles.gl} onContextCreate={onContextCreate} />
+      </View>
+    </GestureDetector>
   );
 }
 

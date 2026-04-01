@@ -21,17 +21,24 @@ function delinearizeChannel(v: number): number {
 }
 
 /**
- * Mixes two paints using geometric mean in linear light space.
- * Approximates Kubelka-Munk subtractive mixing from RGB values alone.
+ * Mixes two paints using simplified Kubelka-Munk theory.
+ * Each linearised RGB channel is treated as a reflectance value.
+ * K/S ratios are mixed linearly by concentration then reconstructed
+ * back to reflectance, giving better results than geometric mean
+ * especially for dark colours and complementary pairs.
  * @param a - First paint RGB
  * @param b - Second paint RGB
  * @param ratioA - Proportion of paint A (0.0 to 1.0)
  */
 export function mixPaints(a: RGB, b: RGB, ratioA: number): RGB {
   const mix = (ca: number, cb: number): number => {
-    const la = Math.max(linearizeChannel(ca), 1e-6);
-    const lb = Math.max(linearizeChannel(cb), 1e-6);
-    return delinearizeChannel(Math.pow(la, ratioA) * Math.pow(lb, 1 - ratioA));
+    const ra = Math.max(linearizeChannel(ca), 1e-6);
+    const rb = Math.max(linearizeChannel(cb), 1e-6);
+    const ksA = (1 - ra) ** 2 / (2 * ra);
+    const ksB = (1 - rb) ** 2 / (2 * rb);
+    const ksMix = ratioA * ksA + (1 - ratioA) * ksB;
+    const rMix = 1 + ksMix - Math.sqrt(ksMix ** 2 + 2 * ksMix);
+    return delinearizeChannel(Math.max(0, Math.min(1, rMix)));
   };
   return { r: mix(a.r, b.r), g: mix(a.g, b.g), b: mix(a.b, b.b) };
 }

@@ -29,6 +29,14 @@ const MAPPING = {
   'xmark.circle.fill': 'cancel',
   'paintbrush.fill': 'brush',
   'scope': 'adjust',
+  'plus': 'add',
+  'trash': 'delete',
+  'chevron.left': 'arrow-back',
+  'chevron.up': 'keyboard-arrow-up',
+  'chevron.down': 'keyboard-arrow-down',
+  'photo.badge.plus': 'add-photo-alternate',
+  'xmark': 'close',
+  'checkmark': 'check',
 } as IconMapping;
 
 /**
