@@ -3,6 +3,14 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 
 import { ColourPoint } from "../../models/colourPoint";
+import {
+  ACCENT_GOLD,
+  BG_CARD,
+  BORDER_DEFAULT,
+  SWATCH_BORDER,
+  TEXT_PRIMARY,
+  TEXT_SECONDARY,
+} from "@/src/ui/constants/theme";
 
 interface ColourTooltipProps {
   colour: ColourPoint | null;
@@ -58,14 +66,16 @@ const styles = StyleSheet.create({
   card: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#fff",
+    backgroundColor: BG_CARD,
     borderRadius: 12,
+    borderWidth: 1,
+    borderColor: BORDER_DEFAULT,
     paddingVertical: 10,
     paddingHorizontal: 12,
     gap: 10,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.15,
+    shadowOpacity: 0.3,
     shadowRadius: 6,
     elevation: 4,
   },
@@ -73,6 +83,8 @@ const styles = StyleSheet.create({
     width: 36,
     height: 36,
     borderRadius: 8,
+    borderWidth: 1,
+    borderColor: SWATCH_BORDER,
   },
   info: {
     flex: 1,
@@ -81,23 +93,25 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 15,
     fontWeight: "600",
-    color: "#111",
+    color: TEXT_PRIMARY,
+    fontFamily: "Inter_SemiBold",
   },
   brand: {
     fontSize: 12,
-    color: "#888",
+    color: TEXT_SECONDARY,
+    fontFamily: "Inter",
   },
   dismiss: {
     width: 28,
     height: 28,
     borderRadius: 14,
-    backgroundColor: "#f0f0f0",
+    backgroundColor: BORDER_DEFAULT,
     justifyContent: "center",
     alignItems: "center",
   },
   dismissText: {
     fontSize: 13,
     fontWeight: "700",
-    color: "#666",
+    color: TEXT_SECONDARY,
   },
 });

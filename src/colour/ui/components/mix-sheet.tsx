@@ -19,6 +19,19 @@ import { munsellLikeToXYZ } from '@/src/colour/services/munsellToXYZ';
 import { findBestMix, mixPaints, munsellXYZDistance } from '@/src/colour/services/paintMixService';
 import { RGB } from '@/src/colour/ui/types';
 import { IconSymbol } from '@/src/ui/components/icon-symbol';
+import {
+  ACCENT_GOLD,
+  ACCENT_GOLD_DARK,
+  BG_ACTIVE,
+  BG_CARD,
+  BG_ELEVATED,
+  BG_PRIMARY,
+  BORDER_DEFAULT,
+  SWATCH_BORDER,
+  TEXT_MUTED,
+  TEXT_PRIMARY,
+  TEXT_SECONDARY,
+} from '@/src/ui/constants/theme';
 
 type Selector = 'A' | 'B';
 
@@ -123,10 +136,10 @@ export function MixSheet({
 
   const matchLabel = useMemo(() => {
     if (distanceToGoal === null) return null;
-    if (distanceToGoal < 5) return { text: 'Excellent match', color: '#2a9d2a' };
-    if (distanceToGoal < 15) return { text: 'Good match', color: '#4A90D9' };
-    if (distanceToGoal < 30) return { text: 'Moderate match', color: '#e09a00' };
-    return { text: 'Far off', color: '#cc3300' };
+    if (distanceToGoal < 5) return { text: 'Excellent match', color: '#4CAF50' };
+    if (distanceToGoal < 15) return { text: 'Good match', color: ACCENT_GOLD };
+    if (distanceToGoal < 30) return { text: 'Moderate match', color: '#E09A00' };
+    return { text: 'Far off', color: '#CC3300' };
   }, [distanceToGoal]);
 
   const brands = useMemo(
@@ -173,7 +186,7 @@ export function MixSheet({
         <View style={ms.titleRow}>
           <Text style={ms.title}>Mix to recreate</Text>
           <Pressable onPress={onClose}>
-            <Text style={ms.closeBtn}>✕</Text>
+            <Text style={ms.closeBtn}>{'\u2715'}</Text>
           </Pressable>
         </View>
 
@@ -222,7 +235,7 @@ export function MixSheet({
 
         {computing ? (
           <View style={ms.computingRow}>
-            <Text style={ms.computingText}>Finding best combination…</Text>
+            <Text style={ms.computingText}>Finding best combination\u2026</Text>
           </View>
         ) : (
           <>
@@ -241,7 +254,7 @@ export function MixSheet({
                 )}
                 <View style={ms.selectorInfo}>
                   <Text style={ms.selectorLabel}>Paint A  (tap to change)</Text>
-                  <Text style={ms.selectorName} numberOfLines={1}>{paintA ? paintA.name : 'Select…'}</Text>
+                  <Text style={ms.selectorName} numberOfLines={1}>{paintA ? paintA.name : 'Select\u2026'}</Text>
                   {paintA && <Text style={ms.selectorBrand} numberOfLines={1}>{paintA.brand}</Text>}
                 </View>
               </Pressable>
@@ -261,7 +274,7 @@ export function MixSheet({
                 )}
                 <View style={ms.selectorInfo}>
                   <Text style={ms.selectorLabel}>Paint B  (tap to change)</Text>
-                  <Text style={ms.selectorName} numberOfLines={1}>{paintB ? paintB.name : 'Select…'}</Text>
+                  <Text style={ms.selectorName} numberOfLines={1}>{paintB ? paintB.name : 'Select\u2026'}</Text>
                   {paintB && <Text style={ms.selectorBrand} numberOfLines={1}>{paintB.brand}</Text>}
                 </View>
               </Pressable>
@@ -272,7 +285,7 @@ export function MixSheet({
               <View style={ms.mixResultCard}>
                 <View style={ms.ratioRow}>
                   <Pressable style={ms.ratioBtn} onPress={() => adjustRatio(-0.1)}>
-                    <Text style={ms.ratioBtnText}>−</Text>
+                    <Text style={ms.ratioBtnText}>{'\u2212'}</Text>
                   </Pressable>
                   <View style={ms.ratioTrack}>
                     <View style={[ms.ratioFillA, { flex: ratioA }]} />
@@ -284,7 +297,7 @@ export function MixSheet({
                 </View>
                 <Text style={ms.ratioLabel}>
                   {Math.round(ratioA * 100)}% {paintA.name.split(' ')[0]}
-                  {'  ·  '}
+                  {'  \u00b7  '}
                   {Math.round((1 - ratioA) * 100)}% {paintB.name.split(' ')[0]}
                 </Text>
                 <View style={ms.presetRow}>
@@ -306,7 +319,7 @@ export function MixSheet({
                     <Text style={ms.resultSwatchLabel}>Mix result</Text>
                     <Text style={ms.resultHex}>{toHex(mixedRgb!.r, mixedRgb!.g, mixedRgb!.b)}</Text>
                   </View>
-                  <IconSymbol name="arrow.right" size={16} color="#bbb" />
+                  <IconSymbol name="arrow.right" size={16} color={TEXT_MUTED} />
                   <View style={ms.resultBlock}>
                     <View style={[ms.resultSwatch, { backgroundColor: goalBg }]} />
                     <Text style={ms.resultSwatchLabel}>Goal</Text>
@@ -325,7 +338,7 @@ export function MixSheet({
                   value={search}
                   onChangeText={setSearch}
                   placeholder="Search colours..."
-                  placeholderTextColor="#999"
+                  placeholderTextColor={TEXT_MUTED}
                   autoFocus
                 />
                 <FlatList
@@ -352,7 +365,7 @@ export function MixSheet({
                             <Text style={ms.inStockText}>In inventory</Text>
                           </View>
                         )}
-                        {isSelected && <Text style={ms.colourCheck}>✓</Text>}
+                        {isSelected && <Text style={ms.colourCheck}>{'\u2713'}</Text>}
                       </Pressable>
                     );
                   }}
@@ -367,105 +380,109 @@ export function MixSheet({
 }
 
 const ms = StyleSheet.create({
-  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.35)' },
+  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)' },
   panel: {
-    backgroundColor: '#fff',
+    backgroundColor: BG_ELEVATED,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     paddingHorizontal: 16,
     paddingTop: 12,
     maxHeight: '90%',
   },
-  handle: { width: 36, height: 4, borderRadius: 2, backgroundColor: '#ddd', alignSelf: 'center', marginBottom: 12 },
+  handle: { width: 36, height: 4, borderRadius: 2, backgroundColor: BORDER_DEFAULT, alignSelf: 'center', marginBottom: 12 },
   titleRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 },
-  title: { fontSize: 17, fontWeight: '700', color: '#111' },
-  closeBtn: { fontSize: 18, color: '#888', padding: 4 },
+  title: { fontSize: 17, fontWeight: '700', color: TEXT_PRIMARY, fontFamily: 'Inter_Bold' },
+  closeBtn: { fontSize: 18, color: TEXT_SECONDARY, padding: 4 },
   goalRow: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 12,
-    backgroundColor: '#f8f8f8',
+    backgroundColor: BG_CARD,
     borderRadius: 12,
+    borderWidth: 1,
+    borderColor: BORDER_DEFAULT,
     padding: 12,
     marginBottom: 12,
   },
-  goalSwatch: { width: 52, height: 52, borderRadius: 10 },
+  goalSwatch: { width: 52, height: 52, borderRadius: 10, borderWidth: 1, borderColor: SWATCH_BORDER },
   goalInfo: { flex: 1 },
-  goalHint: { fontSize: 11, color: '#888', marginBottom: 2 },
-  goalName: { fontSize: 15, fontWeight: '700', color: '#111' },
-  goalBrand: { fontSize: 12, color: '#888' },
+  goalHint: { fontSize: 11, color: TEXT_SECONDARY, marginBottom: 2, fontFamily: 'Inter' },
+  goalName: { fontSize: 15, fontWeight: '700', color: TEXT_PRIMARY, fontFamily: 'Inter_Bold' },
+  goalBrand: { fontSize: 12, color: TEXT_SECONDARY, fontFamily: 'Inter' },
   matchBadge: { borderWidth: 1, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 5 },
-  matchBadgeText: { fontSize: 11, fontWeight: '700' },
+  matchBadgeText: { fontSize: 11, fontWeight: '700', fontFamily: 'Inter_Bold' },
   selectorRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 12 },
   selectorBtn: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: BG_CARD,
     borderRadius: 12,
     padding: 10,
     borderWidth: 1.5,
-    borderColor: 'transparent',
+    borderColor: BORDER_DEFAULT,
   },
-  selectorBtnActive: { borderColor: '#4A90D9', backgroundColor: '#EBF3FD' },
-  selectorSwatch: { width: 36, height: 36, borderRadius: 8 },
+  selectorBtnActive: { borderColor: ACCENT_GOLD, backgroundColor: BG_ACTIVE },
+  selectorSwatch: { width: 36, height: 36, borderRadius: 8, borderWidth: 1, borderColor: SWATCH_BORDER },
   selectorSwatchEmpty: {
     width: 36,
     height: 36,
     borderRadius: 8,
-    backgroundColor: '#ddd',
+    backgroundColor: BORDER_DEFAULT,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  selectorSwatchEmptyText: { fontSize: 14, fontWeight: '700', color: '#999' },
+  selectorSwatchEmptyText: { fontSize: 14, fontWeight: '700', color: TEXT_MUTED },
   computingRow: { paddingVertical: 24, alignItems: 'center' },
-  computingText: { fontSize: 14, color: '#888' },
+  computingText: { fontSize: 14, color: TEXT_SECONDARY, fontFamily: 'Inter' },
   selectorInfo: { flex: 1 },
-  selectorLabel: { fontSize: 10, color: '#888', marginBottom: 2 },
-  selectorName: { fontSize: 12, fontWeight: '600', color: '#111' },
-  selectorBrand: { fontSize: 11, color: '#888' },
-  mixOp: { fontSize: 20, color: '#bbb', fontWeight: '400' },
+  selectorLabel: { fontSize: 10, color: TEXT_SECONDARY, marginBottom: 2, fontFamily: 'Inter' },
+  selectorName: { fontSize: 12, fontWeight: '600', color: TEXT_PRIMARY, fontFamily: 'Inter_SemiBold' },
+  selectorBrand: { fontSize: 11, color: TEXT_SECONDARY, fontFamily: 'Inter' },
+  mixOp: { fontSize: 20, color: TEXT_MUTED, fontWeight: '400' },
   mixResultCard: {
-    backgroundColor: '#f8f8f8',
+    backgroundColor: BG_CARD,
     borderRadius: 12,
+    borderWidth: 1,
+    borderColor: BORDER_DEFAULT,
     padding: 12,
     gap: 10,
     marginBottom: 12,
   },
   ratioRow: { flexDirection: 'row', alignItems: 'center', gap: 10 },
-  ratioBtn: { width: 32, height: 32, borderRadius: 16, backgroundColor: '#e8e8e8', justifyContent: 'center', alignItems: 'center' },
-  ratioBtnText: { fontSize: 20, color: '#333', lineHeight: 24 },
+  ratioBtn: { width: 32, height: 32, borderRadius: 16, backgroundColor: BORDER_DEFAULT, justifyContent: 'center', alignItems: 'center' },
+  ratioBtnText: { fontSize: 20, color: TEXT_PRIMARY, lineHeight: 24 },
   ratioTrack: { flex: 1, height: 12, borderRadius: 6, flexDirection: 'row', overflow: 'hidden' },
-  ratioFillA: { backgroundColor: '#4A90D9' },
-  ratioFillB: { backgroundColor: '#ddd' },
-  ratioLabel: { fontSize: 12, color: '#666', textAlign: 'center' },
+  ratioFillA: { backgroundColor: ACCENT_GOLD },
+  ratioFillB: { backgroundColor: BORDER_DEFAULT },
+  ratioLabel: { fontSize: 12, color: TEXT_SECONDARY, textAlign: 'center', fontFamily: 'Inter' },
   presetRow: { flexDirection: 'row', gap: 8, justifyContent: 'center' },
-  preset: { borderWidth: 1, borderColor: '#ddd', borderRadius: 8, paddingHorizontal: 16, paddingVertical: 6, backgroundColor: '#fff' },
-  presetActive: { borderColor: '#4A90D9', backgroundColor: '#EBF3FD' },
-  presetText: { fontSize: 13, color: '#555' },
-  presetTextActive: { color: '#4A90D9', fontWeight: '600' },
+  preset: { borderWidth: 1, borderColor: BORDER_DEFAULT, borderRadius: 8, paddingHorizontal: 16, paddingVertical: 6, backgroundColor: BG_PRIMARY },
+  presetActive: { borderColor: ACCENT_GOLD, backgroundColor: BG_ACTIVE },
+  presetText: { fontSize: 13, color: TEXT_SECONDARY, fontFamily: 'Inter' },
+  presetTextActive: { color: ACCENT_GOLD, fontWeight: '600' },
   resultCompareRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 16 },
   resultBlock: { alignItems: 'center', gap: 4 },
-  resultSwatch: { width: 56, height: 56, borderRadius: 10 },
-  resultSwatchLabel: { fontSize: 11, color: '#888' },
-  resultHex: { fontSize: 11, color: '#555', fontWeight: '500' },
-  sectionLabel: { fontSize: 13, fontWeight: '600', color: '#888', textTransform: 'uppercase', letterSpacing: 0.5, marginBottom: 8 },
-  searchInput: { borderWidth: 1, borderColor: '#ddd', borderRadius: 10, paddingHorizontal: 12, paddingVertical: 8, fontSize: 14, backgroundColor: '#fff', marginBottom: 8 },
+  resultSwatch: { width: 56, height: 56, borderRadius: 10, borderWidth: 1, borderColor: SWATCH_BORDER },
+  resultSwatchLabel: { fontSize: 11, color: TEXT_SECONDARY, fontFamily: 'Inter' },
+  resultHex: { fontSize: 11, color: TEXT_PRIMARY, fontWeight: '500', fontFamily: 'Inter_Medium' },
+  sectionLabel: { fontSize: 13, fontWeight: '600', color: ACCENT_GOLD, textTransform: 'uppercase', letterSpacing: 0.5, marginBottom: 8, fontFamily: 'Inter_SemiBold' },
+  searchInput: { borderWidth: 1, borderColor: BORDER_DEFAULT, borderRadius: 10, paddingHorizontal: 12, paddingVertical: 8, fontSize: 14, color: TEXT_PRIMARY, backgroundColor: BG_PRIMARY, marginBottom: 8, fontFamily: 'Inter' },
   list: { maxHeight: 200 },
-  colourRow: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingVertical: 10, borderBottomWidth: 1, borderBottomColor: '#f0f0f0' },
-  colourRowActive: { backgroundColor: '#EBF3FD', borderRadius: 10, paddingHorizontal: 8 },
-  colourSwatch: { width: 36, height: 36, borderRadius: 8 },
+  colourRow: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingVertical: 10, borderBottomWidth: 1, borderBottomColor: BORDER_DEFAULT },
+  colourRowActive: { backgroundColor: BG_ACTIVE, borderRadius: 10, paddingHorizontal: 8 },
+  colourSwatch: { width: 36, height: 36, borderRadius: 8, borderWidth: 1, borderColor: SWATCH_BORDER },
   colourInfo: { flex: 1 },
-  colourName: { fontSize: 14, fontWeight: '500', color: '#111' },
-  colourBrand: { fontSize: 12, color: '#888' },
-  colourCheck: { fontSize: 16, color: '#4A90D9', fontWeight: '700' },
-  inStockBadge: { backgroundColor: '#EBF3FD', borderRadius: 6, paddingHorizontal: 8, paddingVertical: 4, borderWidth: 1, borderColor: '#4A90D9' },
-  inStockText: { fontSize: 11, color: '#4A90D9', fontWeight: '600' },
+  colourName: { fontSize: 14, fontWeight: '500', color: TEXT_PRIMARY, fontFamily: 'Inter_Medium' },
+  colourBrand: { fontSize: 12, color: TEXT_SECONDARY, fontFamily: 'Inter' },
+  colourCheck: { fontSize: 16, color: ACCENT_GOLD, fontWeight: '700' },
+  inStockBadge: { backgroundColor: BG_ACTIVE, borderRadius: 6, paddingHorizontal: 8, paddingVertical: 4, borderWidth: 1, borderColor: ACCENT_GOLD_DARK },
+  inStockText: { fontSize: 11, color: ACCENT_GOLD, fontWeight: '600', fontFamily: 'Inter_SemiBold' },
   filterRow: { maxHeight: 40, marginBottom: 8 },
   filterRowContent: { flexDirection: 'row', alignItems: 'center', gap: 8, paddingHorizontal: 2 },
-  filterChip: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 16, borderWidth: 1, borderColor: '#ccc', backgroundColor: '#f5f5f5' },
-  filterChipActive: { borderColor: '#4A90D9', backgroundColor: '#4A90D918' },
-  filterChipText: { fontSize: 13, color: '#555' },
-  filterChipTextActive: { color: '#4A90D9', fontWeight: '600' },
+  filterChip: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 16, borderWidth: 1, borderColor: BORDER_DEFAULT, backgroundColor: BG_CARD },
+  filterChipActive: { borderColor: ACCENT_GOLD, backgroundColor: BG_ACTIVE },
+  filterChipText: { fontSize: 13, color: TEXT_SECONDARY, fontFamily: 'Inter' },
+  filterChipTextActive: { color: ACCENT_GOLD, fontWeight: '600' },
 });

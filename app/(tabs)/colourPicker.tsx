@@ -34,6 +34,21 @@ import { useImageTransform } from '@/src/colour/ui/hooks/use-image-transform';
 import { ImageInfo } from '@/src/colour/ui/types';
 import { SqliteInventoryRepository } from '@/src/inventory/repositories/sqliteInventoryRepository';
 import { IconSymbol } from '@/src/ui/components/icon-symbol';
+import {
+  ACCENT_GOLD,
+  ACCENT_GOLD_DARK,
+  ACCENT_PURPLE,
+  BG_ACTIVE,
+  BG_CARD,
+  BG_INFO,
+  BG_PRIMARY,
+  BORDER_DEFAULT,
+  BORDER_INFO,
+  SWATCH_BORDER,
+  TEXT_MUTED,
+  TEXT_PRIMARY,
+  TEXT_SECONDARY,
+} from '@/src/ui/constants/theme';
 
 const AnimatedImage = Animated.createAnimatedComponent(Image);
 
@@ -148,7 +163,7 @@ export default function ColourPickerScreen() {
 
       {/* How to use banner */}
       <View style={s.infoBanner}>
-        <IconSymbol name="info.circle" size={18} color="#4A90D9" style={s.infoIcon} />
+        <IconSymbol name="info.circle" size={18} color={ACCENT_GOLD} style={s.infoIcon} />
         <View style={s.infoTextBlock}>
           <Text style={s.infoTitle}>How to use:</Text>
           <Text style={s.infoBody}>
@@ -163,7 +178,7 @@ export default function ColourPickerScreen() {
           {imageInfo ? 'Drag cursor sample color' : 'Upload an image to start'}
         </Text>
         <Pressable style={s.changeBtn} onPress={pickImage}>
-          <IconSymbol name="square.and.arrow.up" size={14} color="#555" />
+          <IconSymbol name="square.and.arrow.up" size={14} color={TEXT_SECONDARY} />
           <Text style={s.changeBtnText}>Change</Text>
         </Pressable>
       </View>
@@ -196,7 +211,7 @@ export default function ColourPickerScreen() {
           </>
         ) : (
           <View style={s.imagePlaceholder}>
-            <IconSymbol name="photo" size={40} color="#666" />
+            <IconSymbol name="photo" size={40} color={TEXT_MUTED} />
             <Text style={s.imagePlaceholderText}>Tap to upload image</Text>
           </View>
         )}
@@ -234,7 +249,7 @@ export default function ColourPickerScreen() {
       {sampledColor && (
         <View style={s.findRow}>
           <Pressable style={s.findBtn} onPress={() => { findNearest(); setShowMix(false); }}>
-            <IconSymbol name="magnifyingglass" size={16} color="#fff" />
+            <IconSymbol name="magnifyingglass" size={16} color={BG_PRIMARY} />
             <Text style={s.findBtnText}>Find Nearest Colors</Text>
           </Pressable>
           <Pressable
@@ -244,7 +259,7 @@ export default function ColourPickerScreen() {
             <IconSymbol
               name="line.3.horizontal.decrease"
               size={18}
-              color={filterActive ? '#4A90D9' : '#555'}
+              color={filterActive ? ACCENT_GOLD : TEXT_MUTED}
             />
             {filterActive && <View style={s.filterBadge} />}
           </Pressable>
@@ -290,53 +305,57 @@ export default function ColourPickerScreen() {
 // Styles
 // ---------------------------------------------------------------------------
 const s = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: '#f5f5f5' },
+  screen: { flex: 1, backgroundColor: BG_PRIMARY },
   content: { padding: 16, gap: 14, paddingBottom: 40 },
   title: {
     fontSize: 22,
+    fontFamily: 'Cinzel_Bold',
     fontWeight: '700',
     textAlign: 'center',
-    color: '#111',
+    color: ACCENT_GOLD,
     marginBottom: 2,
+    letterSpacing: 1,
   },
   infoBanner: {
     flexDirection: 'row',
-    backgroundColor: '#EBF3FD',
+    backgroundColor: BG_INFO,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#B8D4F5',
+    borderColor: BORDER_INFO,
     padding: 12,
     gap: 10,
     alignItems: 'flex-start',
   },
   infoIcon: { marginTop: 1 },
   infoTextBlock: { flex: 1, gap: 2 },
-  infoTitle: { fontSize: 13, fontWeight: '700', color: '#2A6BB5' },
-  infoBody: { fontSize: 13, color: '#3A5F8A', lineHeight: 18 },
+  infoTitle: { fontSize: 13, fontWeight: '700', color: ACCENT_GOLD, fontFamily: 'Inter_Bold' },
+  infoBody: { fontSize: 13, color: TEXT_SECONDARY, lineHeight: 18, fontFamily: 'Inter' },
   imageHeaderRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  imageHeaderLabel: { fontSize: 15, fontWeight: '500', color: '#111' },
+  imageHeaderLabel: { fontSize: 15, fontWeight: '500', color: TEXT_PRIMARY, fontFamily: 'Inter_Medium' },
   changeBtn: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 5,
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: BORDER_DEFAULT,
     borderRadius: 8,
     paddingHorizontal: 10,
     paddingVertical: 6,
-    backgroundColor: '#fff',
+    backgroundColor: BG_CARD,
   },
-  changeBtnText: { fontSize: 13, color: '#555' },
+  changeBtnText: { fontSize: 13, color: TEXT_SECONDARY, fontFamily: 'Inter' },
   imageContainer: {
     width: '100%',
     aspectRatio: 4 / 3,
     overflow: 'hidden',
     borderRadius: 12,
-    backgroundColor: '#222',
+    backgroundColor: '#0A0A0C',
+    borderWidth: 1,
+    borderColor: BORDER_DEFAULT,
   },
   glHidden: { opacity: 0 },
   imagePlaceholder: {
@@ -345,23 +364,21 @@ const s = StyleSheet.create({
     alignItems: 'center',
     gap: 10,
   },
-  imagePlaceholderText: { color: '#888', fontSize: 14 },
+  imagePlaceholderText: { color: TEXT_MUTED, fontSize: 14, fontFamily: 'Inter' },
   sampledCard: {
-    backgroundColor: '#fff',
+    backgroundColor: BG_CARD,
     borderRadius: 14,
+    borderWidth: 1,
+    borderColor: BORDER_DEFAULT,
     padding: 16,
     gap: 12,
-    shadowColor: '#000',
-    shadowOpacity: 0.05,
-    shadowRadius: 4,
-    elevation: 1,
   },
-  sampledTitle: { fontSize: 16, fontWeight: '600', color: '#111' },
+  sampledTitle: { fontSize: 16, fontWeight: '600', color: TEXT_PRIMARY, fontFamily: 'Inter_SemiBold' },
   sampledRow: { flexDirection: 'row', alignItems: 'center', gap: 16 },
-  sampledSwatch: { width: 64, height: 64, borderRadius: 10 },
+  sampledSwatch: { width: 64, height: 64, borderRadius: 10, borderWidth: 1, borderColor: SWATCH_BORDER },
   sampledDetails: { flex: 1 },
-  sampledLabel: { fontSize: 12, color: '#888' },
-  sampledValue: { fontSize: 15, fontWeight: '500', color: '#111' },
+  sampledLabel: { fontSize: 12, color: TEXT_SECONDARY, fontFamily: 'Inter' },
+  sampledValue: { fontSize: 15, fontWeight: '500', color: TEXT_PRIMARY, fontFamily: 'Inter_Medium' },
   findRow: { flexDirection: 'row', gap: 8 },
   findBtn: {
     flex: 1,
@@ -369,22 +386,22 @@ const s = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     gap: 8,
-    backgroundColor: '#111',
+    backgroundColor: ACCENT_GOLD,
     borderRadius: 12,
     paddingVertical: 14,
   },
-  findBtnText: { color: '#fff', fontSize: 15, fontWeight: '600' },
+  findBtnText: { color: BG_PRIMARY, fontSize: 15, fontWeight: '600', fontFamily: 'Inter_SemiBold' },
   filterBtn: {
     width: 48,
     height: 48,
-    backgroundColor: '#fff',
+    backgroundColor: BG_CARD,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#e0e0e0',
+    borderColor: BORDER_DEFAULT,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  filterBtnActive: { borderColor: '#4A90D9', backgroundColor: '#EBF3FD' },
+  filterBtnActive: { borderColor: ACCENT_GOLD, backgroundColor: BG_ACTIVE },
   filterBadge: {
     position: 'absolute',
     top: 8,
@@ -392,32 +409,32 @@ const s = StyleSheet.create({
     width: 7,
     height: 7,
     borderRadius: 4,
-    backgroundColor: '#4A90D9',
+    backgroundColor: ACCENT_GOLD,
   },
   matchesSection: { gap: 8 },
-  matchesTitle: { fontSize: 15, fontWeight: '600', color: '#111' },
-  noMatches: { fontSize: 14, color: '#999', textAlign: 'center', marginTop: 8 },
+  matchesTitle: { fontSize: 15, fontWeight: '600', color: TEXT_PRIMARY, fontFamily: 'Inter_SemiBold' },
+  noMatches: { fontSize: 14, color: TEXT_MUTED, textAlign: 'center', marginTop: 8, fontFamily: 'Inter' },
   matchCard: {
-    backgroundColor: '#fff',
+    backgroundColor: BG_CARD,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#ebebeb',
+    borderColor: BORDER_DEFAULT,
     padding: 12,
     gap: 10,
   },
   matchCardTop: { flexDirection: 'row', alignItems: 'center', gap: 12 },
-  matchSwatch: { width: 48, height: 48, borderRadius: 8 },
+  matchSwatch: { width: 48, height: 48, borderRadius: 8, borderWidth: 1, borderColor: SWATCH_BORDER },
   matchInfo: { flex: 1, gap: 2 },
   matchNameRow: { flexDirection: 'row', alignItems: 'center', gap: 8, flexWrap: 'wrap' },
-  matchName: { fontSize: 15, fontWeight: '600', color: '#111' },
+  matchName: { fontSize: 15, fontWeight: '600', color: TEXT_PRIMARY, fontFamily: 'Inter_SemiBold' },
   inventoryBadge: {
-    backgroundColor: '#111',
+    backgroundColor: ACCENT_GOLD_DARK,
     borderRadius: 6,
     paddingHorizontal: 7,
     paddingVertical: 2,
   },
-  inventoryBadgeText: { fontSize: 11, color: '#fff', fontWeight: '500' },
-  matchBrand: { fontSize: 13, color: '#888' },
+  inventoryBadgeText: { fontSize: 11, color: TEXT_PRIMARY, fontWeight: '500', fontFamily: 'Inter_Medium' },
+  matchBrand: { fontSize: 13, color: TEXT_SECONDARY, fontFamily: 'Inter' },
   actionRow: { flexDirection: 'row' },
   mixBtn: {
     flex: 1,
@@ -425,9 +442,9 @@ const s = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     gap: 8,
-    backgroundColor: '#6B4EFF',
+    backgroundColor: ACCENT_PURPLE,
     borderRadius: 12,
     paddingVertical: 14,
   },
-  mixBtnText: { color: '#fff', fontSize: 15, fontWeight: '600' },
+  mixBtnText: { color: '#fff', fontSize: 15, fontWeight: '600', fontFamily: 'Inter_SemiBold' },
 });

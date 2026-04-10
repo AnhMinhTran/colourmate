@@ -21,6 +21,18 @@ import { SqliteColourPointRepository } from "@/src/colour/repositories/sqliteCol
 import { Recipe, RecipeProps, RecipeStepColourProps, RecipeStepProps } from "@/src/recipe/models/recipe";
 import { SqliteRecipeRepository } from "@/src/recipe/repositories/sqliteRecipeRepository";
 import { IconSymbol } from "@/src/ui/components/icon-symbol";
+import {
+  ACCENT_GOLD,
+  BG_CARD,
+  BG_ELEVATED,
+  BG_PRIMARY,
+  BORDER_DEFAULT,
+  DANGER,
+  SWATCH_BORDER,
+  TEXT_MUTED,
+  TEXT_PRIMARY,
+  TEXT_SECONDARY,
+} from "@/src/ui/constants/theme";
 
 // ---------------------------------------------------------------------------
 // Colour Picker Modal
@@ -57,11 +69,11 @@ function ColourPickerModal({
           </Pressable>
         </View>
         <View style={ps.searchBar}>
-          <IconSymbol name="magnifyingglass" size={16} color="#aaa" />
+          <IconSymbol name="magnifyingglass" size={16} color={TEXT_MUTED} />
           <TextInput
             style={ps.searchInput}
-            placeholder="Search…"
-            placeholderTextColor="#aaa"
+            placeholder="Search\u2026"
+            placeholderTextColor={TEXT_MUTED}
             value={query}
             onChangeText={setQuery}
             autoFocus
@@ -248,7 +260,7 @@ export default function RecipeDetailScreen() {
   if (!recipe) {
     return (
       <View style={[styles.screen, { paddingTop: insets.top }]}>
-        <Text style={styles.loading}>Loading…</Text>
+        <Text style={styles.loading}>Loading\u2026</Text>
       </View>
     );
   }
@@ -258,14 +270,14 @@ export default function RecipeDetailScreen() {
       {/* Header */}
       <View style={styles.header}>
         <Pressable onPress={() => router.back()} style={styles.backBtn} hitSlop={12}>
-          <IconSymbol name="chevron.left" size={24} color="#4A90D9" />
+          <IconSymbol name="chevron.left" size={24} color={ACCENT_GOLD} />
         </Pressable>
         <TextInput
           style={styles.nameInput}
           value={recipe.name}
           onChangeText={handleNameChange}
           placeholder="Recipe name"
-          placeholderTextColor="#bbb"
+          placeholderTextColor={TEXT_MUTED}
           autoFocus={recipe.steps.length === 0}
           selectTextOnFocus
         />
@@ -289,17 +301,17 @@ export default function RecipeDetailScreen() {
                     disabled={idx === 0}
                     hitSlop={8}
                   >
-                    <IconSymbol name="chevron.up" size={18} color={idx === 0 ? "#ccc" : "#555"} />
+                    <IconSymbol name="chevron.up" size={18} color={idx === 0 ? BORDER_DEFAULT : TEXT_SECONDARY} />
                   </Pressable>
                   <Pressable
                     onPress={() => handleMoveStep(step.id, 1)}
                     disabled={idx === recipe.steps.length - 1}
                     hitSlop={8}
                   >
-                    <IconSymbol name="chevron.down" size={18} color={idx === recipe.steps.length - 1 ? "#ccc" : "#555"} />
+                    <IconSymbol name="chevron.down" size={18} color={idx === recipe.steps.length - 1 ? BORDER_DEFAULT : TEXT_SECONDARY} />
                   </Pressable>
                   <Pressable onPress={() => handleDeleteStep(step.id)} hitSlop={8}>
-                    <IconSymbol name="trash" size={18} color="#e05252" />
+                    <IconSymbol name="trash" size={18} color={DANGER} />
                   </Pressable>
                 </View>
               </View>
@@ -326,7 +338,7 @@ export default function RecipeDetailScreen() {
                   style={styles.addColourBtn}
                   onPress={() => setPickerStepId(step.id)}
                 >
-                  <IconSymbol name="plus" size={16} color="#4A90D9" />
+                  <IconSymbol name="plus" size={16} color={ACCENT_GOLD} />
                 </Pressable>
               </View>
 
@@ -340,7 +352,7 @@ export default function RecipeDetailScreen() {
                 </View>
               ) : (
                 <Pressable style={styles.imagePlaceholder} onPress={() => handlePickImage(step.id)}>
-                  <IconSymbol name="photo.badge.plus" size={22} color="#aaa" />
+                  <IconSymbol name="photo.badge.plus" size={22} color={TEXT_MUTED} />
                   <Text style={styles.imagePlaceholderText}>Add photo</Text>
                 </Pressable>
               )}
@@ -348,8 +360,8 @@ export default function RecipeDetailScreen() {
               {/* Comment */}
               <TextInput
                 style={styles.commentInput}
-                placeholder="Add a note…"
-                placeholderTextColor="#bbb"
+                placeholder="Add a note\u2026"
+                placeholderTextColor={TEXT_MUTED}
                 value={step.comment ?? ""}
                 onChangeText={(t) => handleCommentChange(step.id, t)}
                 multiline
@@ -359,7 +371,7 @@ export default function RecipeDetailScreen() {
         })}
 
         <Pressable style={styles.addStepBtn} onPress={handleAddStep}>
-          <IconSymbol name="plus" size={18} color="#4A90D9" />
+          <IconSymbol name="plus" size={18} color={ACCENT_GOLD} />
           <Text style={styles.addStepText}>Add Step</Text>
         </Pressable>
       </ScrollView>
@@ -397,48 +409,46 @@ function stepToProps(s: import("@/src/recipe/models/recipe").RecipeStep): Recipe
 // Styles
 // ---------------------------------------------------------------------------
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: "#f5f5f5" },
-  loading: { padding: 20, color: "#999" },
+  screen: { flex: 1, backgroundColor: BG_PRIMARY },
+  loading: { padding: 20, color: TEXT_MUTED, fontFamily: "Inter" },
   header: {
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 14,
     paddingVertical: 12,
     gap: 10,
-    backgroundColor: "#fff",
+    backgroundColor: BG_CARD,
     borderBottomWidth: 1,
-    borderBottomColor: "#eee",
+    borderBottomColor: BORDER_DEFAULT,
   },
   backBtn: { padding: 4 },
   nameInput: {
     flex: 1,
     fontSize: 20,
     fontWeight: "700",
-    color: "#111",
+    color: TEXT_PRIMARY,
     paddingVertical: 0,
+    fontFamily: "Cinzel_Bold",
   },
   stepList: { padding: 16, gap: 14, paddingBottom: 40 },
   stepCard: {
-    backgroundColor: "#fff",
+    backgroundColor: BG_CARD,
     borderRadius: 14,
+    borderWidth: 1,
+    borderColor: BORDER_DEFAULT,
     padding: 14,
     gap: 12,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.07,
-    shadowRadius: 4,
-    elevation: 2,
   },
   stepHeader: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
   },
-  stepLabel: { fontSize: 14, fontWeight: "700", color: "#555", textTransform: "uppercase", letterSpacing: 0.5 },
+  stepLabel: { fontSize: 14, fontWeight: "700", color: ACCENT_GOLD, textTransform: "uppercase", letterSpacing: 0.5, fontFamily: "Inter_Bold" },
   stepHeaderActions: { flexDirection: "row", gap: 14, alignItems: "center" },
   coloursRow: { flexDirection: "row", flexWrap: "wrap", gap: 8, alignItems: "center" },
   colourChipWrapper: { position: "relative" },
-  colourChip: { width: 36, height: 36, borderRadius: 10 },
+  colourChip: { width: 36, height: 36, borderRadius: 10, borderWidth: 1, borderColor: SWATCH_BORDER },
   colourChipRemove: {
     position: "absolute",
     top: -4,
@@ -455,7 +465,7 @@ const styles = StyleSheet.create({
     height: 36,
     borderRadius: 10,
     borderWidth: 1.5,
-    borderColor: "#4A90D9",
+    borderColor: ACCENT_GOLD,
     borderStyle: "dashed",
     justifyContent: "center",
     alignItems: "center",
@@ -477,25 +487,26 @@ const styles = StyleSheet.create({
     height: 80,
     borderRadius: 10,
     borderWidth: 1.5,
-    borderColor: "#e0e0e0",
+    borderColor: BORDER_DEFAULT,
     borderStyle: "dashed",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
     gap: 8,
-    backgroundColor: "#fafafa",
+    backgroundColor: BG_PRIMARY,
   },
-  imagePlaceholderText: { fontSize: 14, color: "#aaa" },
+  imagePlaceholderText: { fontSize: 14, color: TEXT_MUTED, fontFamily: "Inter" },
   commentInput: {
     fontSize: 14,
-    color: "#333",
+    color: TEXT_PRIMARY,
     borderWidth: 1,
-    borderColor: "#eee",
+    borderColor: BORDER_DEFAULT,
     borderRadius: 8,
     paddingHorizontal: 10,
     paddingVertical: 8,
     minHeight: 40,
-    backgroundColor: "#fafafa",
+    backgroundColor: BG_PRIMARY,
+    fontFamily: "Inter",
   },
   addStepBtn: {
     flexDirection: "row",
@@ -505,41 +516,43 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     borderRadius: 14,
     borderWidth: 1.5,
-    borderColor: "#4A90D9",
+    borderColor: ACCENT_GOLD,
     borderStyle: "dashed",
-    backgroundColor: "#fff",
+    backgroundColor: BG_CARD,
   },
-  addStepText: { fontSize: 15, fontWeight: "600", color: "#4A90D9" },
+  addStepText: { fontSize: 15, fontWeight: "600", color: ACCENT_GOLD, fontFamily: "Inter_SemiBold" },
 });
 
 const ps = StyleSheet.create({
-  backdrop: { flex: 1, backgroundColor: "rgba(0,0,0,0.3)" },
+  backdrop: { flex: 1, backgroundColor: "rgba(0,0,0,0.5)" },
   panel: {
-    backgroundColor: "#fff",
+    backgroundColor: BG_ELEVATED,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     paddingHorizontal: 20,
     paddingTop: 12,
     height: "75%",
   },
-  handle: { width: 36, height: 4, borderRadius: 2, backgroundColor: "#ddd", alignSelf: "center", marginBottom: 16 },
+  handle: { width: 36, height: 4, borderRadius: 2, backgroundColor: BORDER_DEFAULT, alignSelf: "center", marginBottom: 16 },
   header: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 12 },
-  heading: { fontSize: 17, fontWeight: "700", color: "#111" },
-  closeText: { fontSize: 15, color: "#e05252", fontWeight: "600" },
+  heading: { fontSize: 17, fontWeight: "700", color: TEXT_PRIMARY, fontFamily: "Inter_Bold" },
+  closeText: { fontSize: 15, color: DANGER, fontWeight: "600", fontFamily: "Inter_SemiBold" },
   searchBar: {
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 12,
     paddingVertical: 8,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: BG_PRIMARY,
     borderRadius: 10,
+    borderWidth: 1,
+    borderColor: BORDER_DEFAULT,
     gap: 8,
     marginBottom: 8,
   },
-  searchInput: { flex: 1, fontSize: 15, color: "#111", paddingVertical: 0 },
-  row: { flexDirection: "row", alignItems: "center", paddingVertical: 10, gap: 12, borderBottomWidth: 1, borderBottomColor: "#f0f0f0" },
-  swatch: { width: 36, height: 36, borderRadius: 8 },
+  searchInput: { flex: 1, fontSize: 15, color: TEXT_PRIMARY, paddingVertical: 0, fontFamily: "Inter" },
+  row: { flexDirection: "row", alignItems: "center", paddingVertical: 10, gap: 12, borderBottomWidth: 1, borderBottomColor: BORDER_DEFAULT },
+  swatch: { width: 36, height: 36, borderRadius: 8, borderWidth: 1, borderColor: SWATCH_BORDER },
   rowText: { flex: 1 },
-  rowName: { fontSize: 14, fontWeight: "600", color: "#111" },
-  rowBrand: { fontSize: 12, color: "#999" },
+  rowName: { fontSize: 14, fontWeight: "600", color: TEXT_PRIMARY, fontFamily: "Inter_SemiBold" },
+  rowBrand: { fontSize: 12, color: TEXT_SECONDARY, fontFamily: "Inter" },
 });

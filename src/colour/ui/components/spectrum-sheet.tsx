@@ -3,6 +3,16 @@ import { Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-nati
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ColourPoint } from '../../models/colourPoint';
+import {
+  ACCENT_GOLD,
+  BG_CARD,
+  BG_ELEVATED,
+  BORDER_DEFAULT,
+  SWATCH_BORDER,
+  TEXT_MUTED,
+  TEXT_PRIMARY,
+  TEXT_SECONDARY,
+} from '@/src/ui/constants/theme';
 
 export function SpectrumSheet({
   visible,
@@ -42,7 +52,7 @@ export function SpectrumSheet({
           </View>
           <View style={s.arrow}>
             <View style={s.arrowLine} />
-            <Text style={s.arrowHead}>›</Text>
+            <Text style={s.arrowHead}>{'\u203A'}</Text>
           </View>
           <View style={s.endpoint}>
             <View style={[s.endpointSwatch, { backgroundColor: `rgb(${b.rgb.r},${b.rgb.g},${b.rgb.b})` }]} />
@@ -91,9 +101,9 @@ export function SpectrumSheet({
 }
 
 const s = StyleSheet.create({
-  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.3)' },
+  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)' },
   panel: {
-    backgroundColor: '#fff',
+    backgroundColor: BG_ELEVATED,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     paddingHorizontal: 20,
@@ -104,7 +114,7 @@ const s = StyleSheet.create({
     width: 36,
     height: 4,
     borderRadius: 2,
-    backgroundColor: '#ddd',
+    backgroundColor: BORDER_DEFAULT,
     alignSelf: 'center',
     marginBottom: 16,
   },
@@ -114,8 +124,8 @@ const s = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 16,
   },
-  heading: { fontSize: 17, fontWeight: '700', color: '#111' },
-  closeText: { fontSize: 15, color: '#4A90D9', fontWeight: '600' },
+  heading: { fontSize: 17, fontWeight: '700', color: TEXT_PRIMARY, fontFamily: 'Inter_Bold' },
+  closeText: { fontSize: 15, color: ACCENT_GOLD, fontWeight: '600', fontFamily: 'Inter_SemiBold' },
   endpointsRow: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -128,27 +138,28 @@ const s = StyleSheet.create({
     height: 52,
     borderRadius: 10,
     borderWidth: 2,
-    borderColor: '#e0e0e0',
+    borderColor: BORDER_DEFAULT,
   },
-  endpointLabel: { fontSize: 12, fontWeight: '600', color: '#111', textAlign: 'center' },
-  endpointBrand: { fontSize: 11, color: '#999', textAlign: 'center' },
+  endpointLabel: { fontSize: 12, fontWeight: '600', color: TEXT_PRIMARY, textAlign: 'center', fontFamily: 'Inter_SemiBold' },
+  endpointBrand: { fontSize: 11, color: TEXT_SECONDARY, textAlign: 'center', fontFamily: 'Inter' },
   arrow: { flexDirection: 'row', alignItems: 'center', width: 40 },
-  arrowLine: { flex: 1, height: 1.5, backgroundColor: '#ccc' },
-  arrowHead: { fontSize: 22, color: '#ccc', marginLeft: -4, lineHeight: 24 },
+  arrowLine: { flex: 1, height: 1.5, backgroundColor: BORDER_DEFAULT },
+  arrowHead: { fontSize: 22, color: BORDER_DEFAULT, marginLeft: -4, lineHeight: 24 },
   sectionLabel: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#888',
+    color: ACCENT_GOLD,
     textTransform: 'uppercase',
     letterSpacing: 0.5,
     marginBottom: 12,
+    fontFamily: 'Inter_SemiBold',
   },
   swatchRow: { gap: 10, paddingBottom: 4 },
   swatchItem: { width: 72, alignItems: 'center', gap: 4 },
-  swatch: { width: 60, height: 60, borderRadius: 10 },
+  swatch: { width: 60, height: 60, borderRadius: 10, borderWidth: 1, borderColor: SWATCH_BORDER },
   swatchEndpoint: {
     borderWidth: 2.5,
-    borderColor: '#111',
+    borderColor: ACCENT_GOLD,
   },
   endpointDot: {
     position: 'absolute',
@@ -157,11 +168,11 @@ const s = StyleSheet.create({
     width: 18,
     height: 18,
     borderRadius: 9,
-    backgroundColor: '#111',
+    backgroundColor: ACCENT_GOLD,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  endpointDotText: { fontSize: 10, fontWeight: '700', color: '#fff' },
-  swatchName: { fontSize: 11, color: '#333', textAlign: 'center', lineHeight: 14 },
-  swatchBrand: { fontSize: 10, color: '#999', textAlign: 'center' },
+  endpointDotText: { fontSize: 10, fontWeight: '700', color: '#000' },
+  swatchName: { fontSize: 11, color: TEXT_PRIMARY, textAlign: 'center', lineHeight: 14, fontFamily: 'Inter' },
+  swatchBrand: { fontSize: 10, color: TEXT_SECONDARY, textAlign: 'center', fontFamily: 'Inter' },
 });

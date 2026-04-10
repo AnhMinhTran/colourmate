@@ -21,6 +21,21 @@ import { FilterSheet } from '@/src/colour/ui/components/filter-sheet';
 import { MixSheet } from '@/src/colour/ui/components/mix-sheet';
 import { SqliteInventoryRepository } from '@/src/inventory/repositories/sqliteInventoryRepository';
 import { IconSymbol } from '@/src/ui/components/icon-symbol';
+import {
+  ACCENT_GOLD,
+  ACCENT_GOLD_DARK,
+  ACCENT_PURPLE,
+  BG_ACTIVE,
+  BG_CARD,
+  BG_ELEVATED,
+  BG_PRIMARY,
+  BORDER_DEFAULT,
+  DANGER,
+  SWATCH_BORDER,
+  TEXT_MUTED,
+  TEXT_PRIMARY,
+  TEXT_SECONDARY,
+} from '@/src/ui/constants/theme';
 
 const MUNSELL_HUES = ['R', 'YR', 'Y', 'GY', 'G', 'BG', 'B', 'PB', 'P', 'RP'];
 
@@ -170,6 +185,9 @@ export default function ColourDetailScreen() {
       <Stack.Screen
         options={{
           title: 'Color Details',
+          headerStyle: { backgroundColor: BG_CARD },
+          headerTintColor: ACCENT_GOLD,
+          headerTitleStyle: { color: TEXT_PRIMARY },
           headerRight: () =>
             editing ? (
               <View style={s.headerBtns}>
@@ -195,8 +213,8 @@ export default function ColourDetailScreen() {
 
         {editing ? (
           <View style={s.nameBlock}>
-            <TextInput style={s.nameInput} value={draftName} onChangeText={setDraftName} placeholder="Name" />
-            <TextInput style={s.brandInput} value={draftBrand} onChangeText={setDraftBrand} placeholder="Brand" />
+            <TextInput style={s.nameInput} value={draftName} onChangeText={setDraftName} placeholder="Name" placeholderTextColor={TEXT_MUTED} />
+            <TextInput style={s.brandInput} value={draftBrand} onChangeText={setDraftBrand} placeholder="Brand" placeholderTextColor={TEXT_MUTED} />
           </View>
         ) : (
           <View style={s.nameBlock}>
@@ -215,10 +233,10 @@ export default function ColourDetailScreen() {
           <View style={s.rgbRow}>
             {(['R', 'G', 'B'] as const).map((ch, i) => {
               const val = [colour.rgb.r, colour.rgb.g, colour.rgb.b][i];
-              const bg = ch === 'R' ? '#FFF0F0' : ch === 'G' ? '#F0FFF0' : '#F0F0FF';
-              const fg = ch === 'R' ? '#D00' : ch === 'G' ? '#0A0' : '#00C';
+              const bgColor = ch === 'R' ? '#2A1515' : ch === 'G' ? '#152A15' : '#15152A';
+              const fg = ch === 'R' ? '#E06060' : ch === 'G' ? '#60C060' : '#6080E0';
               return (
-                <View key={ch} style={[s.rgbBox, { backgroundColor: bg }]}>
+                <View key={ch} style={[s.rgbBox, { backgroundColor: bgColor }]}>
                   <Text style={[s.rgbLabel, { color: fg }]}>{ch}</Text>
                   <Text style={s.rgbVal}>{val}</Text>
                 </View>
@@ -262,7 +280,7 @@ export default function ColourDetailScreen() {
               onPress={editing ? () => removeTag(t) : undefined}
             >
               <Text style={s.tagText}>{t}</Text>
-              {editing && <Text style={s.tagX}> ×</Text>}
+              {editing && <Text style={s.tagX}> \u00d7</Text>}
             </Pressable>
           ))}
         </View>
@@ -274,6 +292,7 @@ export default function ColourDetailScreen() {
               value={tagInput}
               onChangeText={setTagInput}
               placeholder="Add tag..."
+              placeholderTextColor={TEXT_MUTED}
               onSubmitEditing={addTag}
               returnKeyType="done"
             />
@@ -301,7 +320,7 @@ export default function ColourDetailScreen() {
                 <IconSymbol
                   name="line.3.horizontal.decrease"
                   size={16}
-                  color={isFilterActive(nearestFilter) ? '#4A90D9' : '#555'}
+                  color={isFilterActive(nearestFilter) ? ACCENT_GOLD : TEXT_MUTED}
                 />
                 {isFilterActive(nearestFilter) && <View style={s.filterBadge} />}
               </Pressable>
@@ -345,124 +364,124 @@ export default function ColourDetailScreen() {
 // Styles — main screen
 // ---------------------------------------------------------------------------
 const s = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: '#f5f5f5' },
+  screen: { flex: 1, backgroundColor: BG_PRIMARY },
   content: { padding: 16, gap: 16 },
   swatch: {
     height: 200,
     borderRadius: 16,
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
-    elevation: 3,
+    borderWidth: 1,
+    borderColor: SWATCH_BORDER,
   },
   nameBlock: { gap: 4 },
-  name: { fontSize: 26, fontWeight: '700', color: '#111' },
-  brand: { fontSize: 15, color: '#888' },
+  name: { fontSize: 26, fontWeight: '700', color: TEXT_PRIMARY, fontFamily: 'Cinzel_Bold' },
+  brand: { fontSize: 15, color: TEXT_SECONDARY, fontFamily: 'Inter' },
   nameInput: {
     fontSize: 22,
     fontWeight: '700',
-    color: '#111',
+    color: TEXT_PRIMARY,
     borderBottomWidth: 1.5,
-    borderColor: '#4A90D9',
+    borderColor: ACCENT_GOLD,
     paddingVertical: 4,
     marginBottom: 4,
+    fontFamily: 'Inter_Bold',
   },
   brandInput: {
     fontSize: 15,
-    color: '#555',
+    color: TEXT_SECONDARY,
     borderBottomWidth: 1,
-    borderColor: '#ccc',
+    borderColor: BORDER_DEFAULT,
     paddingVertical: 4,
+    fontFamily: 'Inter',
   },
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: BG_CARD,
     borderRadius: 14,
+    borderWidth: 1,
+    borderColor: BORDER_DEFAULT,
     padding: 16,
     gap: 12,
-    shadowColor: '#000',
-    shadowOpacity: 0.05,
-    shadowRadius: 4,
-    elevation: 1,
   },
   row: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  label: { fontSize: 13, color: '#888' },
-  value: { fontSize: 14, fontWeight: '500', color: '#111' },
-  divider: { height: 1, backgroundColor: '#f0f0f0' },
+  label: { fontSize: 13, color: TEXT_SECONDARY, fontFamily: 'Inter' },
+  value: { fontSize: 14, fontWeight: '500', color: TEXT_PRIMARY, fontFamily: 'Inter_Medium' },
+  divider: { height: 1, backgroundColor: BORDER_DEFAULT },
   rgbRow: { flexDirection: 'row', gap: 10 },
   rgbBox: { flex: 1, borderRadius: 10, paddingVertical: 12, alignItems: 'center', gap: 4 },
-  rgbLabel: { fontSize: 11, fontWeight: '600' },
-  rgbVal: { fontSize: 18, fontWeight: '600', color: '#111' },
-  sectionTitle: { fontSize: 13, fontWeight: '600', color: '#888', textTransform: 'uppercase', letterSpacing: 0.5 },
+  rgbLabel: { fontSize: 11, fontWeight: '600', fontFamily: 'Inter_SemiBold' },
+  rgbVal: { fontSize: 18, fontWeight: '600', color: TEXT_PRIMARY, fontFamily: 'Inter_SemiBold' },
+  sectionTitle: { fontSize: 13, fontWeight: '600', color: ACCENT_GOLD, textTransform: 'uppercase', letterSpacing: 0.5, fontFamily: 'Inter_SemiBold' },
   tagRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   tag: {
     flexDirection: 'row',
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: ACCENT_GOLD_DARK,
     borderRadius: 20,
     paddingHorizontal: 12,
     paddingVertical: 6,
-    backgroundColor: '#fff',
+    backgroundColor: BG_CARD,
   },
-  tagRemovable: { borderColor: '#e05' },
-  tagText: { fontSize: 13, color: '#555' },
-  tagX: { fontSize: 13, color: '#e05', fontWeight: '700' },
+  tagRemovable: { borderColor: DANGER },
+  tagText: { fontSize: 13, color: ACCENT_GOLD, fontFamily: 'Inter' },
+  tagX: { fontSize: 13, color: DANGER, fontWeight: '700' },
   tagInputRow: { flexDirection: 'row', gap: 8 },
   tagInput: {
     flex: 1,
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: BORDER_DEFAULT,
     borderRadius: 10,
     paddingHorizontal: 12,
     paddingVertical: 8,
     fontSize: 14,
-    backgroundColor: '#fff',
+    color: TEXT_PRIMARY,
+    backgroundColor: BG_CARD,
+    fontFamily: 'Inter',
   },
-  tagAddBtn: { backgroundColor: '#4A90D9', borderRadius: 10, paddingHorizontal: 16, justifyContent: 'center' },
-  tagAddBtnText: { color: '#fff', fontWeight: '600' },
+  tagAddBtn: { backgroundColor: ACCENT_GOLD, borderRadius: 10, paddingHorizontal: 16, justifyContent: 'center' },
+  tagAddBtnText: { color: BG_PRIMARY, fontWeight: '600', fontFamily: 'Inter_SemiBold' },
   rowLeft: { flexDirection: 'row', alignItems: 'center', gap: 6 },
-  tooltipBtn: { width: 16, height: 16, borderRadius: 8, backgroundColor: '#ccc', justifyContent: 'center', alignItems: 'center' },
-  tooltipBtnText: { fontSize: 10, fontWeight: '700', color: '#555' },
-  tooltipBackdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.4)', justifyContent: 'center', alignItems: 'center', padding: 24 },
-  tooltipBox: { backgroundColor: '#fff', borderRadius: 16, padding: 20, gap: 10, width: '100%' },
-  tooltipTitle: { fontSize: 16, fontWeight: '700', color: '#111' },
-  tooltipBody: { fontSize: 14, color: '#555' },
-  tooltipItem: { fontSize: 13, color: '#444', lineHeight: 20 },
-  tooltipBold: { fontWeight: '700', color: '#111' },
-  tooltipExample: { fontSize: 13, color: '#555', backgroundColor: '#f5f5f5', borderRadius: 8, padding: 10, lineHeight: 20 },
-  tooltipClose: { backgroundColor: '#4A90D9', borderRadius: 10, paddingVertical: 10, alignItems: 'center', marginTop: 4 },
-  tooltipCloseText: { color: '#fff', fontWeight: '600', fontSize: 15 },
+  tooltipBtn: { width: 16, height: 16, borderRadius: 8, backgroundColor: ACCENT_GOLD_DARK, justifyContent: 'center', alignItems: 'center' },
+  tooltipBtnText: { fontSize: 10, fontWeight: '700', color: TEXT_PRIMARY },
+  tooltipBackdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.6)', justifyContent: 'center', alignItems: 'center', padding: 24 },
+  tooltipBox: { backgroundColor: BG_ELEVATED, borderRadius: 16, borderWidth: 1, borderColor: BORDER_DEFAULT, padding: 20, gap: 10, width: '100%' },
+  tooltipTitle: { fontSize: 16, fontWeight: '700', color: TEXT_PRIMARY, fontFamily: 'Inter_Bold' },
+  tooltipBody: { fontSize: 14, color: TEXT_SECONDARY, fontFamily: 'Inter' },
+  tooltipItem: { fontSize: 13, color: TEXT_SECONDARY, lineHeight: 20, fontFamily: 'Inter' },
+  tooltipBold: { fontWeight: '700', color: TEXT_PRIMARY },
+  tooltipExample: { fontSize: 13, color: TEXT_SECONDARY, backgroundColor: BG_PRIMARY, borderRadius: 8, padding: 10, lineHeight: 20, fontFamily: 'Inter' },
+  tooltipClose: { backgroundColor: ACCENT_GOLD, borderRadius: 10, paddingVertical: 10, alignItems: 'center', marginTop: 4 },
+  tooltipCloseText: { color: BG_PRIMARY, fontWeight: '600', fontSize: 15, fontFamily: 'Inter_SemiBold' },
   headerBtns: { flexDirection: 'row', gap: 12 },
   headerBtn: { paddingHorizontal: 4 },
-  editText: { color: '#4A90D9', fontSize: 16 },
-  saveText: { color: '#4A90D9', fontSize: 16, fontWeight: '600' },
-  cancelText: { color: '#888', fontSize: 16 },
+  editText: { color: ACCENT_GOLD, fontSize: 16, fontFamily: 'Inter' },
+  saveText: { color: ACCENT_GOLD, fontSize: 16, fontWeight: '600', fontFamily: 'Inter_SemiBold' },
+  cancelText: { color: TEXT_SECONDARY, fontSize: 16, fontFamily: 'Inter' },
   matchCard: {
-    backgroundColor: '#fff',
+    backgroundColor: BG_CARD,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#ebebeb',
+    borderColor: BORDER_DEFAULT,
     padding: 12,
   },
   matchCardTop: { flexDirection: 'row', alignItems: 'center', gap: 12 },
-  matchSwatch: { width: 48, height: 48, borderRadius: 8 },
+  matchSwatch: { width: 48, height: 48, borderRadius: 8, borderWidth: 1, borderColor: SWATCH_BORDER },
   matchInfo: { flex: 1, gap: 2 },
   matchNameRow: { flexDirection: 'row', alignItems: 'center', gap: 8, flexWrap: 'wrap' },
-  matchName: { fontSize: 15, fontWeight: '600', color: '#111' },
-  inventoryBadge: { backgroundColor: '#111', borderRadius: 6, paddingHorizontal: 7, paddingVertical: 2 },
-  inventoryBadgeText: { fontSize: 11, color: '#fff', fontWeight: '500' },
-  matchBrand: { fontSize: 13, color: '#888' },
+  matchName: { fontSize: 15, fontWeight: '600', color: TEXT_PRIMARY, fontFamily: 'Inter_SemiBold' },
+  inventoryBadge: { backgroundColor: ACCENT_GOLD_DARK, borderRadius: 6, paddingHorizontal: 7, paddingVertical: 2 },
+  inventoryBadgeText: { fontSize: 11, color: TEXT_PRIMARY, fontWeight: '500', fontFamily: 'Inter_Medium' },
+  matchBrand: { fontSize: 13, color: TEXT_SECONDARY, fontFamily: 'Inter' },
   nearestHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   filterBtn: {
     width: 36,
     height: 36,
-    backgroundColor: '#fff',
+    backgroundColor: BG_CARD,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: '#e0e0e0',
+    borderColor: BORDER_DEFAULT,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  filterBtnActive: { borderColor: '#4A90D9', backgroundColor: '#EBF3FD' },
+  filterBtnActive: { borderColor: ACCENT_GOLD, backgroundColor: BG_ACTIVE },
   filterBadge: {
     position: 'absolute',
     top: 6,
@@ -470,11 +489,11 @@ const s = StyleSheet.create({
     width: 6,
     height: 6,
     borderRadius: 3,
-    backgroundColor: '#4A90D9',
+    backgroundColor: ACCENT_GOLD,
   },
-  noMatches: { fontSize: 14, color: '#999', textAlign: 'center', marginTop: 4 },
+  noMatches: { fontSize: 14, color: TEXT_MUTED, textAlign: 'center', marginTop: 4, fontFamily: 'Inter' },
   mixBtn: {
-    backgroundColor: '#4A90D9',
+    backgroundColor: ACCENT_PURPLE,
     borderRadius: 12,
     paddingVertical: 14,
     flexDirection: 'row',
@@ -482,5 +501,5 @@ const s = StyleSheet.create({
     justifyContent: 'center',
     gap: 8,
   },
-  mixBtnText: { color: '#fff', fontSize: 16, fontWeight: '600' },
+  mixBtnText: { color: '#fff', fontSize: 16, fontWeight: '600', fontFamily: 'Inter_SemiBold' },
 });

@@ -3,6 +3,16 @@ import { Modal, Pressable, ScrollView, StyleSheet, Switch, Text, View } from 're
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ColourFilter, EMPTY_FILTER } from '@/src/colour/services/colourQueryService';
+import {
+  ACCENT_GOLD,
+  BG_ACTIVE,
+  BG_CARD,
+  BG_ELEVATED,
+  BORDER_DEFAULT,
+  TEXT_MUTED,
+  TEXT_PRIMARY,
+  TEXT_SECONDARY,
+} from '@/src/ui/constants/theme';
 
 export function FilterSheet({
   visible,
@@ -48,7 +58,7 @@ export function FilterSheet({
           <Switch
             value={draft.inInventoryOnly}
             onValueChange={(v) => setDraft((p) => ({ ...p, inInventoryOnly: v }))}
-            trackColor={{ true: '#4A90D9' }}
+            trackColor={{ true: ACCENT_GOLD }}
           />
         </View>
         <Text style={s.sectionLabel}>Brand</Text>
@@ -58,7 +68,7 @@ export function FilterSheet({
             return (
               <Pressable key={brand} style={s.brandRow} onPress={() => toggleBrand(brand)}>
                 <View style={[s.checkbox, selected && s.checkboxActive]}>
-                  {selected && <Text style={s.checkmark}>✓</Text>}
+                  {selected && <Text style={s.checkmark}>{'\u2713'}</Text>}
                 </View>
                 <Text style={s.brandLabel}>{brand}</Text>
               </Pressable>
@@ -74,9 +84,9 @@ export function FilterSheet({
 }
 
 const s = StyleSheet.create({
-  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.3)' },
+  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)' },
   panel: {
-    backgroundColor: '#fff',
+    backgroundColor: BG_ELEVATED,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     paddingHorizontal: 20,
@@ -87,7 +97,7 @@ const s = StyleSheet.create({
     width: 36,
     height: 4,
     borderRadius: 2,
-    backgroundColor: '#ddd',
+    backgroundColor: BORDER_DEFAULT,
     alignSelf: 'center',
     marginBottom: 16,
   },
@@ -97,25 +107,26 @@ const s = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 16,
   },
-  heading: { fontSize: 17, fontWeight: '700', color: '#111' },
-  clearAll: { fontSize: 14, color: '#4A90D9' },
+  heading: { fontSize: 17, fontWeight: '700', color: TEXT_PRIMARY, fontFamily: 'Inter_Bold' },
+  clearAll: { fontSize: 14, color: ACCENT_GOLD, fontFamily: 'Inter' },
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingVertical: 12,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: BORDER_DEFAULT,
   },
-  rowLabel: { fontSize: 15, color: '#111' },
+  rowLabel: { fontSize: 15, color: TEXT_PRIMARY, fontFamily: 'Inter' },
   sectionLabel: {
     fontSize: 13,
     fontWeight: '600',
-    color: '#888',
+    color: ACCENT_GOLD,
     textTransform: 'uppercase',
     letterSpacing: 0.5,
     marginTop: 16,
     marginBottom: 8,
+    fontFamily: 'Inter_SemiBold',
   },
   brandList: { maxHeight: 280 },
   brandRow: {
@@ -124,26 +135,26 @@ const s = StyleSheet.create({
     paddingVertical: 10,
     gap: 12,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: BORDER_DEFAULT,
   },
   checkbox: {
     width: 22,
     height: 22,
     borderRadius: 6,
     borderWidth: 1.5,
-    borderColor: '#ccc',
+    borderColor: BORDER_DEFAULT,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  checkboxActive: { backgroundColor: '#4A90D9', borderColor: '#4A90D9' },
-  checkmark: { color: '#fff', fontSize: 13, fontWeight: '700' },
-  brandLabel: { fontSize: 15, color: '#111' },
+  checkboxActive: { backgroundColor: ACCENT_GOLD, borderColor: ACCENT_GOLD },
+  checkmark: { color: '#000', fontSize: 13, fontWeight: '700' },
+  brandLabel: { fontSize: 15, color: TEXT_PRIMARY, fontFamily: 'Inter' },
   applyBtn: {
-    backgroundColor: '#4A90D9',
+    backgroundColor: ACCENT_GOLD,
     borderRadius: 12,
     paddingVertical: 14,
     alignItems: 'center',
     marginTop: 16,
   },
-  applyBtnText: { color: '#fff', fontSize: 16, fontWeight: '600' },
+  applyBtnText: { color: '#121214', fontSize: 16, fontWeight: '600', fontFamily: 'Inter_SemiBold' },
 });

@@ -15,6 +15,17 @@ import { SqliteColourPointRepository } from "@/src/colour/repositories/sqliteCol
 import { Recipe } from "@/src/recipe/models/recipe";
 import { SqliteRecipeRepository } from "@/src/recipe/repositories/sqliteRecipeRepository";
 import { IconSymbol } from "@/src/ui/components/icon-symbol";
+import {
+  ACCENT_GOLD,
+  BG_CARD,
+  BG_PRIMARY,
+  BORDER_DEFAULT,
+  DANGER,
+  SWATCH_BORDER,
+  TEXT_MUTED,
+  TEXT_PRIMARY,
+  TEXT_SECONDARY,
+} from "@/src/ui/constants/theme";
 
 export default function RecipesScreen() {
   const db = useSQLiteContext();
@@ -54,7 +65,7 @@ export default function RecipesScreen() {
       <View style={styles.titleRow}>
         <Text style={styles.title}>Recipes</Text>
         <Pressable style={styles.addBtn} onPress={handleCreate}>
-          <IconSymbol name="plus" size={20} color="#fff" />
+          <IconSymbol name="plus" size={20} color={BG_PRIMARY} />
         </Pressable>
       </View>
 
@@ -97,7 +108,7 @@ export default function RecipesScreen() {
                 )}
               </View>
               <Pressable style={styles.deleteBtn} onPress={() => handleDelete(recipe.id)} hitSlop={8}>
-                <IconSymbol name="trash" size={16} color="#e05252" />
+                <IconSymbol name="trash" size={16} color={DANGER} />
               </Pressable>
             </Pressable>
           );
@@ -108,7 +119,7 @@ export default function RecipesScreen() {
 }
 
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: "#f5f5f5" },
+  screen: { flex: 1, backgroundColor: BG_PRIMARY },
   titleRow: {
     flexDirection: "row",
     alignItems: "center",
@@ -116,35 +127,39 @@ const styles = StyleSheet.create({
     paddingTop: 16,
     paddingBottom: 12,
   },
-  title: { flex: 1, fontSize: 28, fontWeight: "700", color: "#111" },
+  title: {
+    flex: 1,
+    fontSize: 28,
+    fontFamily: "Cinzel_Bold",
+    fontWeight: "700",
+    color: ACCENT_GOLD,
+    letterSpacing: 1,
+  },
   addBtn: {
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: "#4A90D9",
+    backgroundColor: ACCENT_GOLD,
     justifyContent: "center",
     alignItems: "center",
   },
   list: { padding: 16, gap: 12 },
   empty: { alignItems: "center", paddingTop: 60, gap: 8 },
-  emptyText: { fontSize: 17, fontWeight: "600", color: "#555" },
-  emptyHint: { fontSize: 14, color: "#999" },
+  emptyText: { fontSize: 17, fontWeight: "600", color: TEXT_SECONDARY, fontFamily: "Inter_SemiBold" },
+  emptyHint: { fontSize: 14, color: TEXT_MUTED, fontFamily: "Inter" },
   card: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#fff",
+    backgroundColor: BG_CARD,
     borderRadius: 14,
+    borderWidth: 1,
+    borderColor: BORDER_DEFAULT,
     padding: 14,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.08,
-    shadowRadius: 4,
-    elevation: 2,
   },
   cardBody: { flex: 1, gap: 4 },
-  cardName: { fontSize: 16, fontWeight: "700", color: "#111" },
-  cardMeta: { fontSize: 13, color: "#888" },
+  cardName: { fontSize: 16, fontWeight: "700", color: TEXT_PRIMARY, fontFamily: "Inter_Bold" },
+  cardMeta: { fontSize: 13, color: TEXT_SECONDARY, fontFamily: "Inter" },
   swatchRow: { flexDirection: "row", gap: 4, marginTop: 4 },
-  swatch: { width: 22, height: 22, borderRadius: 6 },
+  swatch: { width: 22, height: 22, borderRadius: 6, borderWidth: 1, borderColor: SWATCH_BORDER },
   deleteBtn: { padding: 6 },
 });

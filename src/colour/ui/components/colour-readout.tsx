@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { rgbToHex } from '@/src/colour/services/colourPickerService';
 import { RGB } from '@/src/colour/ui/types';
+import { BG_CARD, BORDER_DEFAULT, SWATCH_BORDER, TEXT_PRIMARY, TEXT_SECONDARY } from '@/src/ui/constants/theme';
 
 interface Props {
   colour: RGB;
@@ -29,8 +30,10 @@ const styles = StyleSheet.create({
     gap: 12,
     paddingHorizontal: 16,
     paddingVertical: 12,
-    backgroundColor: '#222',
+    backgroundColor: BG_CARD,
     borderRadius: 10,
+    borderWidth: 1,
+    borderColor: BORDER_DEFAULT,
     width: '90%',
   },
   swatch: {
@@ -38,17 +41,19 @@ const styles = StyleSheet.create({
     height: 44,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.15)',
+    borderColor: SWATCH_BORDER,
   },
   hexText: {
-    color: '#fff',
+    color: TEXT_PRIMARY,
     fontSize: 16,
     fontWeight: '600',
     letterSpacing: 1,
+    fontFamily: 'Inter_SemiBold',
   },
   rgbText: {
-    color: '#888',
+    color: TEXT_SECONDARY,
     fontSize: 12,
     marginTop: 2,
+    fontFamily: 'Inter',
   },
 });

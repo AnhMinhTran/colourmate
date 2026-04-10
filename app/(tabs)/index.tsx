@@ -23,6 +23,18 @@ import { FilterSheet } from '@/src/colour/ui/components/filter-sheet';
 import { Inventory } from '@/src/inventory/models/inventory';
 import { SqliteInventoryRepository } from '@/src/inventory/repositories/sqliteInventoryRepository';
 import { IconSymbol } from '@/src/ui/components/icon-symbol';
+import {
+  ACCENT_GOLD,
+  ACCENT_GOLD_DARK,
+  BG_ACTIVE,
+  BG_CARD,
+  BG_PRIMARY,
+  BORDER_DEFAULT,
+  SWATCH_BORDER,
+  TEXT_MUTED,
+  TEXT_PRIMARY,
+  TEXT_SECONDARY,
+} from '@/src/ui/constants/theme';
 
 // ---------------------------------------------------------------------------
 // InventoryScreen
@@ -95,7 +107,7 @@ export default function InventoryScreen() {
           onPress={() => handleToggle(item)}
         >
           <Text style={[styles.addBtnText, inInventory && styles.addBtnTextActive]}>
-            {inInventory ? '✓' : '+'}
+            {inInventory ? '\u2713' : '+'}
           </Text>
         </Pressable>
       </Pressable>
@@ -111,17 +123,17 @@ export default function InventoryScreen() {
 
       <View style={styles.searchRow}>
         <View style={styles.searchBar}>
-          <IconSymbol name="magnifyingglass" size={16} color="#999" style={styles.searchIcon} />
+          <IconSymbol name="magnifyingglass" size={16} color={TEXT_MUTED} style={styles.searchIcon} />
           <TextInput
             style={styles.searchInput}
             placeholder="Search colors..."
-            placeholderTextColor="#999"
+            placeholderTextColor={TEXT_MUTED}
             value={search}
             onChangeText={setSearch}
           />
           {search.length > 0 && (
             <Pressable onPress={() => setSearch('')} style={styles.clearBtn}>
-              <IconSymbol name="xmark.circle.fill" size={16} color="#999" />
+              <IconSymbol name="xmark.circle.fill" size={16} color={TEXT_MUTED} />
             </Pressable>
           )}
         </View>
@@ -132,7 +144,7 @@ export default function InventoryScreen() {
           <IconSymbol
             name="line.3.horizontal.decrease"
             size={18}
-            color={filterActive ? '#4A90D9' : '#555'}
+            color={filterActive ? ACCENT_GOLD : TEXT_MUTED}
           />
           {filterActive && <View style={styles.filterBadge} />}
         </Pressable>
@@ -166,14 +178,16 @@ export default function InventoryScreen() {
 // Styles
 // ---------------------------------------------------------------------------
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: '#f5f5f5' },
+  screen: { flex: 1, backgroundColor: BG_PRIMARY },
   title: {
     fontSize: 22,
+    fontFamily: 'Cinzel_Bold',
     fontWeight: '700',
     textAlign: 'center',
     paddingTop: 16,
     paddingBottom: 12,
-    color: '#111',
+    color: ACCENT_GOLD,
+    letterSpacing: 1,
   },
   searchRow: {
     flexDirection: 'row',
@@ -186,27 +200,27 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: BG_CARD,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#e0e0e0',
+    borderColor: BORDER_DEFAULT,
     paddingHorizontal: 10,
     height: 42,
   },
   searchIcon: { marginRight: 6 },
-  searchInput: { flex: 1, fontSize: 15, color: '#111' },
+  searchInput: { flex: 1, fontSize: 15, color: TEXT_PRIMARY, fontFamily: 'Inter' },
   clearBtn: { paddingHorizontal: 4 },
   filterBtn: {
     width: 42,
     height: 42,
-    backgroundColor: '#fff',
+    backgroundColor: BG_CARD,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#e0e0e0',
+    borderColor: BORDER_DEFAULT,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  filterBtnActive: { borderColor: '#4A90D9', backgroundColor: '#EBF3FD' },
+  filterBtnActive: { borderColor: ACCENT_GOLD, backgroundColor: BG_ACTIVE },
   filterBadge: {
     position: 'absolute',
     top: 6,
@@ -214,7 +228,7 @@ const styles = StyleSheet.create({
     width: 7,
     height: 7,
     borderRadius: 4,
-    backgroundColor: '#4A90D9',
+    backgroundColor: ACCENT_GOLD,
   },
   statsRow: {
     flexDirection: 'row',
@@ -222,42 +236,42 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 6,
   },
-  stat: { fontSize: 13, color: '#4A90D9', fontWeight: '500' },
+  stat: { fontSize: 13, color: ACCENT_GOLD, fontWeight: '500', fontFamily: 'Inter_Medium' },
   list: { paddingHorizontal: 14, paddingBottom: 16, gap: 8 },
   card: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: BG_CARD,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#ebebeb',
+    borderColor: BORDER_DEFAULT,
     padding: 12,
   },
-  swatch: { width: 56, height: 56, borderRadius: 10 },
+  swatch: { width: 56, height: 56, borderRadius: 10, borderWidth: 1, borderColor: SWATCH_BORDER },
   cardInfo: { flex: 1, marginLeft: 12, gap: 2 },
-  colourName: { fontSize: 16, fontWeight: '600', color: '#111' },
-  colourBrand: { fontSize: 13, color: '#888' },
+  colourName: { fontSize: 16, fontWeight: '600', color: TEXT_PRIMARY, fontFamily: 'Inter_SemiBold' },
+  colourBrand: { fontSize: 13, color: TEXT_SECONDARY, fontFamily: 'Inter' },
   tagRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 4, marginTop: 4 },
   tag: {
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: ACCENT_GOLD_DARK,
     borderRadius: 20,
     paddingHorizontal: 8,
     paddingVertical: 2,
   },
-  tagText: { fontSize: 11, color: '#555' },
+  tagText: { fontSize: 11, color: ACCENT_GOLD, fontFamily: 'Inter' },
   addBtn: {
     width: 32,
     height: 32,
     borderRadius: 8,
     borderWidth: 1.5,
-    borderColor: '#ccc',
+    borderColor: BORDER_DEFAULT,
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft: 8,
   },
-  addBtnActive: { borderColor: '#4A90D9', backgroundColor: '#EBF3FD' },
-  addBtnText: { fontSize: 18, color: '#888', lineHeight: 20 },
-  addBtnTextActive: { fontSize: 14, color: '#4A90D9' },
-  empty: { textAlign: 'center', color: '#999', marginTop: 40 },
+  addBtnActive: { borderColor: ACCENT_GOLD, backgroundColor: BG_ACTIVE },
+  addBtnText: { fontSize: 18, color: TEXT_MUTED, lineHeight: 20 },
+  addBtnTextActive: { fontSize: 14, color: ACCENT_GOLD },
+  empty: { textAlign: 'center', color: TEXT_MUTED, marginTop: 40, fontFamily: 'Inter' },
 });

@@ -26,6 +26,17 @@ import { MunsellCanvas } from "@/src/colour/ui/components/munsell-canvas";
 import { SpectrumSheet } from "@/src/colour/ui/components/spectrum-sheet";
 import { SqliteInventoryRepository } from "@/src/inventory/repositories/sqliteInventoryRepository";
 import { IconSymbol } from "@/src/ui/components/icon-symbol";
+import {
+  ACCENT_GOLD,
+  BG_ACTIVE,
+  BG_CARD,
+  BG_PRIMARY,
+  BORDER_DEFAULT,
+  SWATCH_BORDER,
+  TEXT_MUTED,
+  TEXT_PRIMARY,
+  TEXT_SECONDARY,
+} from "@/src/ui/constants/theme";
 
 // ---------------------------------------------------------------------------
 // Munsell3DScreen
@@ -154,7 +165,7 @@ export default function Munsell3DScreen() {
             <IconSymbol
               name="magnifyingglass"
               size={18}
-              color={searchMode ? "#4A90D9" : "#555"}
+              color={searchMode ? ACCENT_GOLD : TEXT_MUTED}
             />
           </Pressable>
           <Pressable
@@ -164,7 +175,7 @@ export default function Munsell3DScreen() {
             <IconSymbol
               name="scope"
               size={18}
-              color={spectrumMode ? "#4A90D9" : "#555"}
+              color={spectrumMode ? ACCENT_GOLD : TEXT_MUTED}
             />
           </Pressable>
           <Pressable
@@ -174,7 +185,7 @@ export default function Munsell3DScreen() {
             <IconSymbol
               name="line.3.horizontal.decrease"
               size={18}
-              color={filterActive ? "#4A90D9" : "#555"}
+              color={filterActive ? ACCENT_GOLD : TEXT_MUTED}
             />
             {filterActive && <View style={styles.filterBadge} />}
           </Pressable>
@@ -183,11 +194,11 @@ export default function Munsell3DScreen() {
 
       {searchMode && (
         <View style={styles.searchBar}>
-          <IconSymbol name="magnifyingglass" size={16} color="#aaa" />
+          <IconSymbol name="magnifyingglass" size={16} color={TEXT_MUTED} />
           <TextInput
             style={styles.searchInput}
-            placeholder="Search by name or brand…"
-            placeholderTextColor="#aaa"
+            placeholder="Search by name or brand\u2026"
+            placeholderTextColor={TEXT_MUTED}
             value={searchQuery}
             onChangeText={setSearchQuery}
             autoFocus
@@ -195,7 +206,7 @@ export default function Munsell3DScreen() {
           />
           {searchQuery.length > 0 && (
             <Pressable onPress={() => setSearchQuery('')}>
-              <IconSymbol name="xmark.circle.fill" size={16} color="#aaa" />
+              <IconSymbol name="xmark.circle.fill" size={16} color={TEXT_MUTED} />
             </Pressable>
           )}
         </View>
@@ -208,8 +219,8 @@ export default function Munsell3DScreen() {
               {!spectrumA
                 ? "Tap a colour to set point A"
                 : !spectrumB
-                ? `A: ${spectrumA.name} — tap another for point B`
-                : `A → B selected`}
+                ? `A: ${spectrumA.name} \u2014 tap another for point B`
+                : `A \u2192 B selected`}
             </Text>
             {spectrumA && (
               <Pressable
@@ -285,7 +296,7 @@ export default function Munsell3DScreen() {
 // Styles
 // ---------------------------------------------------------------------------
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: "#f5f5f5" },
+  screen: { flex: 1, backgroundColor: BG_PRIMARY },
   titleRow: {
     flexDirection: "row",
     alignItems: "center",
@@ -297,21 +308,13 @@ const styles = StyleSheet.create({
   title: {
     flex: 1,
     fontSize: 22,
+    fontFamily: "Cinzel_Bold",
     fontWeight: "700",
     textAlign: "center",
-    color: "#111",
+    color: ACCENT_GOLD,
+    letterSpacing: 1,
   },
-  filterBtn: {
-    width: 42,
-    height: 42,
-    backgroundColor: "#fff",
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: "#e0e0e0",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  filterBtnActive: { borderColor: "#4A90D9", backgroundColor: "#EBF3FD" },
+  filterBtnActive: { borderColor: ACCENT_GOLD, backgroundColor: BG_ACTIVE },
   filterBadge: {
     position: "absolute",
     top: 6,
@@ -319,7 +322,7 @@ const styles = StyleSheet.create({
     width: 7,
     height: 7,
     borderRadius: 4,
-    backgroundColor: "#4A90D9",
+    backgroundColor: ACCENT_GOLD,
   },
   statsRow: {
     flexDirection: "row",
@@ -328,28 +331,28 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingBottom: 6,
   },
-  stat: { fontSize: 13, color: "#4A90D9", fontWeight: "500" },
-  statSpectrum: { fontSize: 13, color: "#FF8800", fontWeight: "500" },
+  stat: { fontSize: 13, color: ACCENT_GOLD, fontWeight: "500", fontFamily: "Inter_Medium" },
+  statSpectrum: { fontSize: 13, color: "#FF8800", fontWeight: "500", fontFamily: "Inter_Medium" },
   canvasContainer: { flex: 1, position: "relative" },
   headerBtns: { flexDirection: "row", gap: 8 },
   headerBtn: {
     width: 42,
     height: 42,
-    backgroundColor: "#fff",
+    backgroundColor: BG_CARD,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#e0e0e0",
+    borderColor: BORDER_DEFAULT,
     justifyContent: "center",
     alignItems: "center",
   },
-  headerBtnActive: { borderColor: "#4A90D9", backgroundColor: "#EBF3FD" },
+  headerBtnActive: { borderColor: ACCENT_GOLD, backgroundColor: BG_ACTIVE },
   resetBtn: {
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 8,
     backgroundColor: "#FF8800",
   },
-  resetBtnText: { fontSize: 12, fontWeight: "600", color: "#fff" },
+  resetBtnText: { fontSize: 12, fontWeight: "600", color: "#fff", fontFamily: "Inter_SemiBold" },
   statsCenter: { flex: 1, alignItems: "center" },
   searchBar: {
     flexDirection: "row",
@@ -358,17 +361,18 @@ const styles = StyleSheet.create({
     marginBottom: 6,
     paddingHorizontal: 12,
     paddingVertical: 8,
-    backgroundColor: "#fff",
+    backgroundColor: BG_CARD,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#e0e0e0",
+    borderColor: BORDER_DEFAULT,
     gap: 8,
   },
   searchInput: {
     flex: 1,
     fontSize: 15,
-    color: "#111",
+    color: TEXT_PRIMARY,
     paddingVertical: 0,
+    fontFamily: "Inter",
   },
   searchResults: {
     position: "absolute",
@@ -376,17 +380,17 @@ const styles = StyleSheet.create({
     left: 12,
     right: 12,
     maxHeight: 320,
-    backgroundColor: "#fff",
+    backgroundColor: BG_CARD,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#e0e0e0",
+    borderColor: BORDER_DEFAULT,
     elevation: 6,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.12,
+    shadowOpacity: 0.3,
     shadowRadius: 6,
   },
-  searchEmpty: { padding: 16, fontSize: 14, color: "#999", textAlign: "center" },
+  searchEmpty: { padding: 16, fontSize: 14, color: TEXT_MUTED, textAlign: "center", fontFamily: "Inter" },
   searchResultItem: {
     flexDirection: "row",
     alignItems: "center",
@@ -394,10 +398,10 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     gap: 12,
     borderBottomWidth: 1,
-    borderBottomColor: "#f0f0f0",
+    borderBottomColor: BORDER_DEFAULT,
   },
-  searchResultSwatch: { width: 36, height: 36, borderRadius: 8 },
+  searchResultSwatch: { width: 36, height: 36, borderRadius: 8, borderWidth: 1, borderColor: SWATCH_BORDER },
   searchResultText: { flex: 1 },
-  searchResultName: { fontSize: 14, fontWeight: "600", color: "#111" },
-  searchResultBrand: { fontSize: 12, color: "#999", marginTop: 1 },
+  searchResultName: { fontSize: 14, fontWeight: "600", color: TEXT_PRIMARY, fontFamily: "Inter_SemiBold" },
+  searchResultBrand: { fontSize: 12, color: TEXT_SECONDARY, marginTop: 1, fontFamily: "Inter" },
 });
