@@ -21,6 +21,7 @@ import { SqliteColourPointRepository } from "@/src/colour/repositories/sqliteCol
 import { Recipe, RecipeProps, RecipeStepColourProps, RecipeStepProps } from "@/src/recipe/models/recipe";
 import { SqliteRecipeRepository } from "@/src/recipe/repositories/sqliteRecipeRepository";
 import { IconSymbol } from "@/src/ui/components/icon-symbol";
+import { AppColors } from "@/src/ui/constants/theme";
 
 // ---------------------------------------------------------------------------
 // Colour Picker Modal
@@ -57,11 +58,11 @@ function ColourPickerModal({
           </Pressable>
         </View>
         <View style={ps.searchBar}>
-          <IconSymbol name="magnifyingglass" size={16} color="#aaa" />
+          <IconSymbol name="magnifyingglass" size={16} color={AppColors.muted} />
           <TextInput
             style={ps.searchInput}
             placeholder="Search…"
-            placeholderTextColor="#aaa"
+            placeholderTextColor={AppColors.muted}
             value={query}
             onChangeText={setQuery}
             autoFocus
@@ -258,14 +259,14 @@ export default function RecipeDetailScreen() {
       {/* Header */}
       <View style={styles.header}>
         <Pressable onPress={() => router.back()} style={styles.backBtn} hitSlop={12}>
-          <IconSymbol name="chevron.left" size={24} color="#4A90D9" />
+          <IconSymbol name="chevron.left" size={24} color={AppColors.interactive} />
         </Pressable>
         <TextInput
           style={styles.nameInput}
           value={recipe.name}
           onChangeText={handleNameChange}
           placeholder="Recipe name"
-          placeholderTextColor="#bbb"
+          placeholderTextColor={AppColors.muted}
           autoFocus={recipe.steps.length === 0}
           selectTextOnFocus
         />
@@ -289,17 +290,17 @@ export default function RecipeDetailScreen() {
                     disabled={idx === 0}
                     hitSlop={8}
                   >
-                    <IconSymbol name="chevron.up" size={18} color={idx === 0 ? "#ccc" : "#555"} />
+                    <IconSymbol name="chevron.up" size={18} color={idx === 0 ? AppColors.border : AppColors.muted} />
                   </Pressable>
                   <Pressable
                     onPress={() => handleMoveStep(step.id, 1)}
                     disabled={idx === recipe.steps.length - 1}
                     hitSlop={8}
                   >
-                    <IconSymbol name="chevron.down" size={18} color={idx === recipe.steps.length - 1 ? "#ccc" : "#555"} />
+                    <IconSymbol name="chevron.down" size={18} color={idx === recipe.steps.length - 1 ? AppColors.border : AppColors.muted} />
                   </Pressable>
                   <Pressable onPress={() => handleDeleteStep(step.id)} hitSlop={8}>
-                    <IconSymbol name="trash" size={18} color="#e05252" />
+                    <IconSymbol name="trash" size={18} color={AppColors.action} />
                   </Pressable>
                 </View>
               </View>
@@ -326,7 +327,7 @@ export default function RecipeDetailScreen() {
                   style={styles.addColourBtn}
                   onPress={() => setPickerStepId(step.id)}
                 >
-                  <IconSymbol name="plus" size={16} color="#4A90D9" />
+                  <IconSymbol name="plus" size={16} color={AppColors.interactive} />
                 </Pressable>
               </View>
 
@@ -340,7 +341,7 @@ export default function RecipeDetailScreen() {
                 </View>
               ) : (
                 <Pressable style={styles.imagePlaceholder} onPress={() => handlePickImage(step.id)}>
-                  <IconSymbol name="photo.badge.plus" size={22} color="#aaa" />
+                  <IconSymbol name="photo.badge.plus" size={22} color={AppColors.muted} />
                   <Text style={styles.imagePlaceholderText}>Add photo</Text>
                 </Pressable>
               )}
@@ -349,7 +350,7 @@ export default function RecipeDetailScreen() {
               <TextInput
                 style={styles.commentInput}
                 placeholder="Add a note…"
-                placeholderTextColor="#bbb"
+                placeholderTextColor={AppColors.muted}
                 value={step.comment ?? ""}
                 onChangeText={(t) => handleCommentChange(step.id, t)}
                 multiline
@@ -359,7 +360,7 @@ export default function RecipeDetailScreen() {
         })}
 
         <Pressable style={styles.addStepBtn} onPress={handleAddStep}>
-          <IconSymbol name="plus" size={18} color="#4A90D9" />
+          <IconSymbol name="plus" size={18} color={AppColors.interactive} />
           <Text style={styles.addStepText}>Add Step</Text>
         </Pressable>
       </ScrollView>
@@ -397,44 +398,41 @@ function stepToProps(s: import("@/src/recipe/models/recipe").RecipeStep): Recipe
 // Styles
 // ---------------------------------------------------------------------------
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: "#f5f5f5" },
-  loading: { padding: 20, color: "#999" },
+  screen: { flex: 1, backgroundColor: AppColors.bg },
+  loading: { padding: 20, color: AppColors.muted },
   header: {
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 14,
     paddingVertical: 12,
     gap: 10,
-    backgroundColor: "#fff",
+    backgroundColor: AppColors.surface,
     borderBottomWidth: 1,
-    borderBottomColor: "#eee",
+    borderBottomColor: AppColors.border,
   },
   backBtn: { padding: 4 },
   nameInput: {
     flex: 1,
     fontSize: 20,
     fontWeight: "700",
-    color: "#111",
+    color: AppColors.text,
     paddingVertical: 0,
   },
   stepList: { padding: 16, gap: 14, paddingBottom: 40 },
   stepCard: {
-    backgroundColor: "#fff",
+    backgroundColor: AppColors.card,
     borderRadius: 14,
     padding: 14,
     gap: 12,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.07,
-    shadowRadius: 4,
-    elevation: 2,
+    borderWidth: 1,
+    borderColor: AppColors.border,
   },
   stepHeader: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
   },
-  stepLabel: { fontSize: 14, fontWeight: "700", color: "#555", textTransform: "uppercase", letterSpacing: 0.5 },
+  stepLabel: { fontSize: 14, fontWeight: "700", color: AppColors.muted, textTransform: "uppercase", letterSpacing: 0.5 },
   stepHeaderActions: { flexDirection: "row", gap: 14, alignItems: "center" },
   coloursRow: { flexDirection: "row", flexWrap: "wrap", gap: 8, alignItems: "center" },
   colourChipWrapper: { position: "relative" },
@@ -446,7 +444,7 @@ const styles = StyleSheet.create({
     width: 16,
     height: 16,
     borderRadius: 8,
-    backgroundColor: "#333",
+    backgroundColor: AppColors.surface,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -455,7 +453,7 @@ const styles = StyleSheet.create({
     height: 36,
     borderRadius: 10,
     borderWidth: 1.5,
-    borderColor: "#4A90D9",
+    borderColor: AppColors.interactive,
     borderStyle: "dashed",
     justifyContent: "center",
     alignItems: "center",
@@ -477,25 +475,25 @@ const styles = StyleSheet.create({
     height: 80,
     borderRadius: 10,
     borderWidth: 1.5,
-    borderColor: "#e0e0e0",
+    borderColor: AppColors.border,
     borderStyle: "dashed",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
     gap: 8,
-    backgroundColor: "#fafafa",
+    backgroundColor: AppColors.surface,
   },
-  imagePlaceholderText: { fontSize: 14, color: "#aaa" },
+  imagePlaceholderText: { fontSize: 14, color: AppColors.muted },
   commentInput: {
     fontSize: 14,
-    color: "#333",
+    color: AppColors.text,
     borderWidth: 1,
-    borderColor: "#eee",
+    borderColor: AppColors.border,
     borderRadius: 8,
     paddingHorizontal: 10,
     paddingVertical: 8,
     minHeight: 40,
-    backgroundColor: "#fafafa",
+    backgroundColor: AppColors.surface,
   },
   addStepBtn: {
     flexDirection: "row",
@@ -505,41 +503,41 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     borderRadius: 14,
     borderWidth: 1.5,
-    borderColor: "#4A90D9",
+    borderColor: AppColors.interactive,
     borderStyle: "dashed",
-    backgroundColor: "#fff",
+    backgroundColor: AppColors.card,
   },
-  addStepText: { fontSize: 15, fontWeight: "600", color: "#4A90D9" },
+  addStepText: { fontSize: 15, fontWeight: "600", color: AppColors.interactive },
 });
 
 const ps = StyleSheet.create({
-  backdrop: { flex: 1, backgroundColor: "rgba(0,0,0,0.3)" },
+  backdrop: { flex: 1, backgroundColor: "rgba(0,0,0,0.5)" },
   panel: {
-    backgroundColor: "#fff",
+    backgroundColor: AppColors.surface,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     paddingHorizontal: 20,
     paddingTop: 12,
     height: "75%",
   },
-  handle: { width: 36, height: 4, borderRadius: 2, backgroundColor: "#ddd", alignSelf: "center", marginBottom: 16 },
+  handle: { width: 36, height: 4, borderRadius: 2, backgroundColor: AppColors.border, alignSelf: "center", marginBottom: 16 },
   header: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 12 },
-  heading: { fontSize: 17, fontWeight: "700", color: "#111" },
-  closeText: { fontSize: 15, color: "#e05252", fontWeight: "600" },
+  heading: { fontSize: 17, fontWeight: "700", color: AppColors.text },
+  closeText: { fontSize: 15, color: AppColors.action, fontWeight: "600" },
   searchBar: {
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 12,
     paddingVertical: 8,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: AppColors.card,
     borderRadius: 10,
     gap: 8,
     marginBottom: 8,
   },
-  searchInput: { flex: 1, fontSize: 15, color: "#111", paddingVertical: 0 },
-  row: { flexDirection: "row", alignItems: "center", paddingVertical: 10, gap: 12, borderBottomWidth: 1, borderBottomColor: "#f0f0f0" },
+  searchInput: { flex: 1, fontSize: 15, color: AppColors.text, paddingVertical: 0 },
+  row: { flexDirection: "row", alignItems: "center", paddingVertical: 10, gap: 12, borderBottomWidth: 1, borderBottomColor: AppColors.border },
   swatch: { width: 36, height: 36, borderRadius: 8 },
   rowText: { flex: 1 },
-  rowName: { fontSize: 14, fontWeight: "600", color: "#111" },
-  rowBrand: { fontSize: 12, color: "#999" },
+  rowName: { fontSize: 14, fontWeight: "600", color: AppColors.text },
+  rowBrand: { fontSize: 12, color: AppColors.muted },
 });

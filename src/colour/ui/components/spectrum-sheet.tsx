@@ -3,6 +3,7 @@ import { Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-nati
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ColourPoint } from '../../models/colourPoint';
+import { AppColors } from '@/src/ui/constants/theme';
 
 export function SpectrumSheet({
   visible,
@@ -91,9 +92,9 @@ export function SpectrumSheet({
 }
 
 const s = StyleSheet.create({
-  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.3)' },
+  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)' },
   panel: {
-    backgroundColor: '#fff',
+    backgroundColor: AppColors.surface,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     paddingHorizontal: 20,
@@ -104,7 +105,7 @@ const s = StyleSheet.create({
     width: 36,
     height: 4,
     borderRadius: 2,
-    backgroundColor: '#ddd',
+    backgroundColor: AppColors.border,
     alignSelf: 'center',
     marginBottom: 16,
   },
@@ -114,8 +115,8 @@ const s = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 16,
   },
-  heading: { fontSize: 17, fontWeight: '700', color: '#111' },
-  closeText: { fontSize: 15, color: '#4A90D9', fontWeight: '600' },
+  heading: { fontSize: 17, fontWeight: '700', color: AppColors.text },
+  closeText: { fontSize: 15, color: AppColors.interactive, fontWeight: '600' },
   endpointsRow: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -128,17 +129,17 @@ const s = StyleSheet.create({
     height: 52,
     borderRadius: 10,
     borderWidth: 2,
-    borderColor: '#e0e0e0',
+    borderColor: AppColors.border,
   },
-  endpointLabel: { fontSize: 12, fontWeight: '600', color: '#111', textAlign: 'center' },
-  endpointBrand: { fontSize: 11, color: '#999', textAlign: 'center' },
+  endpointLabel: { fontSize: 12, fontWeight: '600', color: AppColors.text, textAlign: 'center' },
+  endpointBrand: { fontSize: 11, color: AppColors.muted, textAlign: 'center' },
   arrow: { flexDirection: 'row', alignItems: 'center', width: 40 },
-  arrowLine: { flex: 1, height: 1.5, backgroundColor: '#ccc' },
-  arrowHead: { fontSize: 22, color: '#ccc', marginLeft: -4, lineHeight: 24 },
+  arrowLine: { flex: 1, height: 1.5, backgroundColor: AppColors.muted },
+  arrowHead: { fontSize: 22, color: AppColors.muted, marginLeft: -4, lineHeight: 24 },
   sectionLabel: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#888',
+    color: AppColors.muted,
     textTransform: 'uppercase',
     letterSpacing: 0.5,
     marginBottom: 12,
@@ -148,7 +149,7 @@ const s = StyleSheet.create({
   swatch: { width: 60, height: 60, borderRadius: 10 },
   swatchEndpoint: {
     borderWidth: 2.5,
-    borderColor: '#111',
+    borderColor: AppColors.text,
   },
   endpointDot: {
     position: 'absolute',
@@ -157,11 +158,11 @@ const s = StyleSheet.create({
     width: 18,
     height: 18,
     borderRadius: 9,
-    backgroundColor: '#111',
+    backgroundColor: AppColors.text,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  endpointDotText: { fontSize: 10, fontWeight: '700', color: '#fff' },
-  swatchName: { fontSize: 11, color: '#333', textAlign: 'center', lineHeight: 14 },
-  swatchBrand: { fontSize: 10, color: '#999', textAlign: 'center' },
+  endpointDotText: { fontSize: 10, fontWeight: '700', color: AppColors.bg },
+  swatchName: { fontSize: 11, color: AppColors.text, textAlign: 'center', lineHeight: 14 },
+  swatchBrand: { fontSize: 10, color: AppColors.muted, textAlign: 'center' },
 });
