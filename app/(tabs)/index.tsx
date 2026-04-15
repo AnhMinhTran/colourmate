@@ -79,14 +79,24 @@ export default function InventoryScreen() {
       <Pressable
         style={styles.card}
         onPress={() => router.push({ pathname: '/colour/[id]' as any, params: { id: item.id } })}
-        onLongPress={() => handleToggle(item)}
       >
-        <View style={[styles.swatch, { backgroundColor: bg }]}>
-          <View style={[styles.ownershipDot, { backgroundColor: inInventory ? AppColors.success : AppColors.action }]} />
-        </View>
-        <View style={styles.cardInfo}>
-          <Text style={styles.colourName} numberOfLines={1}>{item.name}</Text>
-          <Text style={styles.colourBrand} numberOfLines={1}>{item.brand}</Text>
+        <View style={[styles.swatch, { backgroundColor: bg }]} />
+        <View style={styles.cardBottom}>
+          <View style={styles.cardInfo}>
+            <Text style={styles.colourName} numberOfLines={1}>{item.name}</Text>
+            <Text style={styles.colourBrand} numberOfLines={1}>{item.brand}</Text>
+          </View>
+          <Pressable
+            style={[styles.inventoryBtn, inInventory && styles.inventoryBtnActive]}
+            onPress={() => handleToggle(item)}
+            hitSlop={6}
+          >
+            <IconSymbol
+              name={inInventory ? 'checkmark' : 'plus'}
+              size={14}
+              color={inInventory ? AppColors.success : AppColors.muted}
+            />
+          </Pressable>
         </View>
       </Pressable>
     );
@@ -225,18 +235,27 @@ const styles = StyleSheet.create({
     borderColor: AppColors.border,
     overflow: 'hidden',
   },
-  swatch: { width: '100%', height: 90, position: 'relative' },
-  ownershipDot: {
-    position: 'absolute',
-    top: 8,
-    right: 8,
-    width: 12,
-    height: 12,
-    borderRadius: 6,
-    borderWidth: 1.5,
-    borderColor: 'rgba(0,0,0,0.25)',
+  swatch: { width: '100%', height: 90 },
+  cardBottom: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 10,
+    gap: 6,
   },
-  cardInfo: { padding: 10, gap: 2 },
+  cardInfo: { flex: 1, gap: 2 },
+  inventoryBtn: {
+    width: 28,
+    height: 28,
+    borderRadius: 14,
+    borderWidth: 2.5,
+    borderColor: AppColors.muted,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  inventoryBtnActive: {
+    borderColor: AppColors.success,
+    backgroundColor: 'rgba(0,0,0,0.04)',
+  },
   colourName: { fontSize: 14, fontWeight: '600', color: AppColors.text },
   colourBrand: { fontSize: 12, color: AppColors.muted },
   empty: { textAlign: 'center', color: AppColors.muted, marginTop: 40 },
