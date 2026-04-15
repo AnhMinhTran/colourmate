@@ -21,6 +21,7 @@ import { FilterSheet } from '@/src/colour/ui/components/filter-sheet';
 import { MixSheet } from '@/src/colour/ui/components/mix-sheet';
 import { SqliteInventoryRepository } from '@/src/inventory/repositories/sqliteInventoryRepository';
 import { IconSymbol } from '@/src/ui/components/icon-symbol';
+import { AppColors } from '@/src/ui/constants/theme';
 
 const MUNSELL_HUES = ['R', 'YR', 'Y', 'GY', 'G', 'BG', 'B', 'PB', 'P', 'RP'];
 
@@ -195,8 +196,8 @@ export default function ColourDetailScreen() {
 
         {editing ? (
           <View style={s.nameBlock}>
-            <TextInput style={s.nameInput} value={draftName} onChangeText={setDraftName} placeholder="Name" />
-            <TextInput style={s.brandInput} value={draftBrand} onChangeText={setDraftBrand} placeholder="Brand" />
+            <TextInput style={s.nameInput} value={draftName} onChangeText={setDraftName} placeholder="Name" placeholderTextColor={AppColors.muted} />
+            <TextInput style={s.brandInput} value={draftBrand} onChangeText={setDraftBrand} placeholder="Brand" placeholderTextColor={AppColors.muted} />
           </View>
         ) : (
           <View style={s.nameBlock}>
@@ -215,10 +216,10 @@ export default function ColourDetailScreen() {
           <View style={s.rgbRow}>
             {(['R', 'G', 'B'] as const).map((ch, i) => {
               const val = [colour.rgb.r, colour.rgb.g, colour.rgb.b][i];
-              const bg = ch === 'R' ? '#FFF0F0' : ch === 'G' ? '#F0FFF0' : '#F0F0FF';
-              const fg = ch === 'R' ? '#D00' : ch === 'G' ? '#0A0' : '#00C';
+              const rgbBg = ch === 'R' ? 'rgba(255,100,100,0.15)' : ch === 'G' ? 'rgba(100,255,100,0.15)' : 'rgba(100,100,255,0.15)';
+              const fg = ch === 'R' ? '#FF6B6B' : ch === 'G' ? '#6BCB77' : '#6B9BFF';
               return (
-                <View key={ch} style={[s.rgbBox, { backgroundColor: bg }]}>
+                <View key={ch} style={[s.rgbBox, { backgroundColor: rgbBg }]}>
                   <Text style={[s.rgbLabel, { color: fg }]}>{ch}</Text>
                   <Text style={s.rgbVal}>{val}</Text>
                 </View>
@@ -274,6 +275,7 @@ export default function ColourDetailScreen() {
               value={tagInput}
               onChangeText={setTagInput}
               placeholder="Add tag..."
+              placeholderTextColor={AppColors.muted}
               onSubmitEditing={addTag}
               returnKeyType="done"
             />
@@ -301,7 +303,7 @@ export default function ColourDetailScreen() {
                 <IconSymbol
                   name="line.3.horizontal.decrease"
                   size={16}
-                  color={isFilterActive(nearestFilter) ? '#4A90D9' : '#555'}
+                  color={isFilterActive(nearestFilter) ? AppColors.interactive : AppColors.muted}
                 />
                 {isFilterActive(nearestFilter) && <View style={s.filterBadge} />}
               </Pressable>
@@ -345,124 +347,119 @@ export default function ColourDetailScreen() {
 // Styles — main screen
 // ---------------------------------------------------------------------------
 const s = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: '#f5f5f5' },
+  screen: { flex: 1, backgroundColor: AppColors.bg },
   content: { padding: 16, gap: 16 },
   swatch: {
     height: 200,
     borderRadius: 16,
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
-    elevation: 3,
   },
   nameBlock: { gap: 4 },
-  name: { fontSize: 26, fontWeight: '700', color: '#111' },
-  brand: { fontSize: 15, color: '#888' },
+  name: { fontSize: 26, fontWeight: '700', color: AppColors.text },
+  brand: { fontSize: 15, color: AppColors.muted },
   nameInput: {
     fontSize: 22,
     fontWeight: '700',
-    color: '#111',
+    color: AppColors.text,
     borderBottomWidth: 1.5,
-    borderColor: '#4A90D9',
+    borderColor: AppColors.interactive,
     paddingVertical: 4,
     marginBottom: 4,
   },
   brandInput: {
     fontSize: 15,
-    color: '#555',
+    color: AppColors.muted,
     borderBottomWidth: 1,
-    borderColor: '#ccc',
+    borderColor: AppColors.border,
     paddingVertical: 4,
   },
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: AppColors.card,
     borderRadius: 14,
     padding: 16,
     gap: 12,
-    shadowColor: '#000',
-    shadowOpacity: 0.05,
-    shadowRadius: 4,
-    elevation: 1,
+    borderWidth: 1,
+    borderColor: AppColors.border,
   },
   row: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  label: { fontSize: 13, color: '#888' },
-  value: { fontSize: 14, fontWeight: '500', color: '#111' },
-  divider: { height: 1, backgroundColor: '#f0f0f0' },
+  label: { fontSize: 13, color: AppColors.muted },
+  value: { fontSize: 14, fontWeight: '500', color: AppColors.text },
+  divider: { height: 1, backgroundColor: AppColors.border },
   rgbRow: { flexDirection: 'row', gap: 10 },
   rgbBox: { flex: 1, borderRadius: 10, paddingVertical: 12, alignItems: 'center', gap: 4 },
   rgbLabel: { fontSize: 11, fontWeight: '600' },
-  rgbVal: { fontSize: 18, fontWeight: '600', color: '#111' },
-  sectionTitle: { fontSize: 13, fontWeight: '600', color: '#888', textTransform: 'uppercase', letterSpacing: 0.5 },
+  rgbVal: { fontSize: 18, fontWeight: '600', color: AppColors.text },
+  sectionTitle: { fontSize: 13, fontWeight: '600', color: AppColors.muted, textTransform: 'uppercase', letterSpacing: 0.5 },
   tagRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   tag: {
     flexDirection: 'row',
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: AppColors.border,
     borderRadius: 20,
     paddingHorizontal: 12,
     paddingVertical: 6,
-    backgroundColor: '#fff',
+    backgroundColor: AppColors.surface,
   },
-  tagRemovable: { borderColor: '#e05' },
-  tagText: { fontSize: 13, color: '#555' },
-  tagX: { fontSize: 13, color: '#e05', fontWeight: '700' },
+  tagRemovable: { borderColor: AppColors.action },
+  tagText: { fontSize: 13, color: AppColors.text },
+  tagX: { fontSize: 13, color: AppColors.action, fontWeight: '700' },
   tagInputRow: { flexDirection: 'row', gap: 8 },
   tagInput: {
     flex: 1,
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: AppColors.border,
     borderRadius: 10,
     paddingHorizontal: 12,
     paddingVertical: 8,
     fontSize: 14,
-    backgroundColor: '#fff',
+    backgroundColor: AppColors.surface,
+    color: AppColors.text,
   },
-  tagAddBtn: { backgroundColor: '#4A90D9', borderRadius: 10, paddingHorizontal: 16, justifyContent: 'center' },
+  tagAddBtn: { backgroundColor: AppColors.interactive, borderRadius: 10, paddingHorizontal: 16, justifyContent: 'center' },
   tagAddBtnText: { color: '#fff', fontWeight: '600' },
   rowLeft: { flexDirection: 'row', alignItems: 'center', gap: 6 },
-  tooltipBtn: { width: 16, height: 16, borderRadius: 8, backgroundColor: '#ccc', justifyContent: 'center', alignItems: 'center' },
-  tooltipBtnText: { fontSize: 10, fontWeight: '700', color: '#555' },
-  tooltipBackdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.4)', justifyContent: 'center', alignItems: 'center', padding: 24 },
-  tooltipBox: { backgroundColor: '#fff', borderRadius: 16, padding: 20, gap: 10, width: '100%' },
-  tooltipTitle: { fontSize: 16, fontWeight: '700', color: '#111' },
-  tooltipBody: { fontSize: 14, color: '#555' },
-  tooltipItem: { fontSize: 13, color: '#444', lineHeight: 20 },
-  tooltipBold: { fontWeight: '700', color: '#111' },
-  tooltipExample: { fontSize: 13, color: '#555', backgroundColor: '#f5f5f5', borderRadius: 8, padding: 10, lineHeight: 20 },
-  tooltipClose: { backgroundColor: '#4A90D9', borderRadius: 10, paddingVertical: 10, alignItems: 'center', marginTop: 4 },
+  tooltipBtn: { width: 16, height: 16, borderRadius: 8, backgroundColor: AppColors.surface, justifyContent: 'center', alignItems: 'center' },
+  tooltipBtnText: { fontSize: 10, fontWeight: '700', color: AppColors.muted },
+  tooltipBackdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.6)', justifyContent: 'center', alignItems: 'center', padding: 24 },
+  tooltipBox: { backgroundColor: AppColors.card, borderRadius: 16, padding: 20, gap: 10, width: '100%' },
+  tooltipTitle: { fontSize: 16, fontWeight: '700', color: AppColors.text },
+  tooltipBody: { fontSize: 14, color: AppColors.muted },
+  tooltipItem: { fontSize: 13, color: AppColors.text, lineHeight: 20 },
+  tooltipBold: { fontWeight: '700', color: AppColors.highlight },
+  tooltipExample: { fontSize: 13, color: AppColors.muted, backgroundColor: AppColors.surface, borderRadius: 8, padding: 10, lineHeight: 20 },
+  tooltipClose: { backgroundColor: AppColors.interactive, borderRadius: 10, paddingVertical: 10, alignItems: 'center', marginTop: 4 },
   tooltipCloseText: { color: '#fff', fontWeight: '600', fontSize: 15 },
   headerBtns: { flexDirection: 'row', gap: 12 },
   headerBtn: { paddingHorizontal: 4 },
-  editText: { color: '#4A90D9', fontSize: 16 },
-  saveText: { color: '#4A90D9', fontSize: 16, fontWeight: '600' },
-  cancelText: { color: '#888', fontSize: 16 },
+  editText: { color: AppColors.interactive, fontSize: 16 },
+  saveText: { color: AppColors.interactive, fontSize: 16, fontWeight: '600' },
+  cancelText: { color: AppColors.muted, fontSize: 16 },
   matchCard: {
-    backgroundColor: '#fff',
+    backgroundColor: AppColors.card,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#ebebeb',
+    borderColor: AppColors.border,
     padding: 12,
   },
   matchCardTop: { flexDirection: 'row', alignItems: 'center', gap: 12 },
   matchSwatch: { width: 48, height: 48, borderRadius: 8 },
   matchInfo: { flex: 1, gap: 2 },
   matchNameRow: { flexDirection: 'row', alignItems: 'center', gap: 8, flexWrap: 'wrap' },
-  matchName: { fontSize: 15, fontWeight: '600', color: '#111' },
-  inventoryBadge: { backgroundColor: '#111', borderRadius: 6, paddingHorizontal: 7, paddingVertical: 2 },
-  inventoryBadgeText: { fontSize: 11, color: '#fff', fontWeight: '500' },
-  matchBrand: { fontSize: 13, color: '#888' },
+  matchName: { fontSize: 15, fontWeight: '600', color: AppColors.text },
+  inventoryBadge: { backgroundColor: AppColors.surface, borderRadius: 6, paddingHorizontal: 7, paddingVertical: 2 },
+  inventoryBadgeText: { fontSize: 11, color: AppColors.interactive, fontWeight: '500' },
+  matchBrand: { fontSize: 13, color: AppColors.muted },
   nearestHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   filterBtn: {
     width: 36,
     height: 36,
-    backgroundColor: '#fff',
+    backgroundColor: AppColors.surface,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: '#e0e0e0',
+    borderColor: AppColors.border,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  filterBtnActive: { borderColor: '#4A90D9', backgroundColor: '#EBF3FD' },
+  filterBtnActive: { borderColor: AppColors.interactive, backgroundColor: AppColors.card },
   filterBadge: {
     position: 'absolute',
     top: 6,
@@ -470,11 +467,11 @@ const s = StyleSheet.create({
     width: 6,
     height: 6,
     borderRadius: 3,
-    backgroundColor: '#4A90D9',
+    backgroundColor: AppColors.interactive,
   },
-  noMatches: { fontSize: 14, color: '#999', textAlign: 'center', marginTop: 4 },
+  noMatches: { fontSize: 14, color: AppColors.muted, textAlign: 'center', marginTop: 4 },
   mixBtn: {
-    backgroundColor: '#4A90D9',
+    backgroundColor: AppColors.interactive,
     borderRadius: 12,
     paddingVertical: 14,
     flexDirection: 'row',

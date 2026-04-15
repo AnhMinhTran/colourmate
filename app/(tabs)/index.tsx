@@ -23,6 +23,7 @@ import { FilterSheet } from '@/src/colour/ui/components/filter-sheet';
 import { Inventory } from '@/src/inventory/models/inventory';
 import { SqliteInventoryRepository } from '@/src/inventory/repositories/sqliteInventoryRepository';
 import { IconSymbol } from '@/src/ui/components/icon-symbol';
+import { AppColors } from '@/src/ui/constants/theme';
 
 // ---------------------------------------------------------------------------
 // InventoryScreen
@@ -75,29 +76,28 @@ export default function InventoryScreen() {
     const bg = `rgb(${item.rgb.r}, ${item.rgb.g}, ${item.rgb.b})`;
     const inInventory = inventoryIds.has(item.id);
     return (
-      <Pressable style={styles.card} onPress={() => router.push({ pathname: '/colour/[id]' as any, params: { id: item.id } })}>
+      <Pressable
+        style={styles.card}
+        onPress={() => router.push({ pathname: '/colour/[id]' as any, params: { id: item.id } })}
+      >
         <View style={[styles.swatch, { backgroundColor: bg }]} />
-        <View style={styles.cardInfo}>
-          <Text style={styles.colourName}>{item.name}</Text>
-          <Text style={styles.colourBrand}>{item.brand}</Text>
-          {item.tag.length > 0 && (
-            <View style={styles.tagRow}>
-              {item.tag.map((t) => (
-                <View key={t} style={styles.tag}>
-                  <Text style={styles.tagText}>{t}</Text>
-                </View>
-              ))}
-            </View>
-          )}
+        <View style={styles.cardBottom}>
+          <View style={styles.cardInfo}>
+            <Text style={styles.colourName} numberOfLines={1}>{item.name}</Text>
+            <Text style={styles.colourBrand} numberOfLines={1}>{item.brand}</Text>
+          </View>
+          <Pressable
+            style={[styles.inventoryBtn, inInventory && styles.inventoryBtnActive]}
+            onPress={() => handleToggle(item)}
+            hitSlop={6}
+          >
+            <IconSymbol
+              name={inInventory ? 'checkmark' : 'plus'}
+              size={14}
+              color={inInventory ? AppColors.success : AppColors.muted}
+            />
+          </Pressable>
         </View>
-        <Pressable
-          style={[styles.addBtn, inInventory && styles.addBtnActive]}
-          onPress={() => handleToggle(item)}
-        >
-          <Text style={[styles.addBtnText, inInventory && styles.addBtnTextActive]}>
-            {inInventory ? '✓' : '+'}
-          </Text>
-        </Pressable>
       </Pressable>
     );
   };
@@ -111,17 +111,17 @@ export default function InventoryScreen() {
 
       <View style={styles.searchRow}>
         <View style={styles.searchBar}>
-          <IconSymbol name="magnifyingglass" size={16} color="#999" style={styles.searchIcon} />
+          <IconSymbol name="magnifyingglass" size={16} color={AppColors.muted} style={styles.searchIcon} />
           <TextInput
             style={styles.searchInput}
             placeholder="Search colors..."
-            placeholderTextColor="#999"
+            placeholderTextColor={AppColors.muted}
             value={search}
             onChangeText={setSearch}
           />
           {search.length > 0 && (
             <Pressable onPress={() => setSearch('')} style={styles.clearBtn}>
-              <IconSymbol name="xmark.circle.fill" size={16} color="#999" />
+              <IconSymbol name="xmark.circle.fill" size={16} color={AppColors.muted} />
             </Pressable>
           )}
         </View>
@@ -132,7 +132,7 @@ export default function InventoryScreen() {
           <IconSymbol
             name="line.3.horizontal.decrease"
             size={18}
-            color={filterActive ? '#4A90D9' : '#555'}
+            color={filterActive ? AppColors.interactive : AppColors.muted}
           />
           {filterActive && <View style={styles.filterBadge} />}
         </Pressable>
@@ -147,6 +147,8 @@ export default function InventoryScreen() {
         data={filtered}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
+        numColumns={2}
+        columnWrapperStyle={styles.columnWrapper}
         contentContainerStyle={styles.list}
         ListEmptyComponent={<Text style={styles.empty}>No colours found.</Text>}
       />
@@ -166,14 +168,14 @@ export default function InventoryScreen() {
 // Styles
 // ---------------------------------------------------------------------------
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: '#f5f5f5' },
+  screen: { flex: 1, backgroundColor: AppColors.bg },
   title: {
     fontSize: 22,
     fontWeight: '700',
     textAlign: 'center',
     paddingTop: 16,
     paddingBottom: 12,
-    color: '#111',
+    color: AppColors.text,
   },
   searchRow: {
     flexDirection: 'row',
@@ -186,27 +188,27 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: AppColors.surface,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#e0e0e0',
+    borderColor: AppColors.border,
     paddingHorizontal: 10,
     height: 42,
   },
   searchIcon: { marginRight: 6 },
-  searchInput: { flex: 1, fontSize: 15, color: '#111' },
+  searchInput: { flex: 1, fontSize: 15, color: AppColors.text },
   clearBtn: { paddingHorizontal: 4 },
   filterBtn: {
     width: 42,
     height: 42,
-    backgroundColor: '#fff',
+    backgroundColor: AppColors.surface,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#e0e0e0',
+    borderColor: AppColors.border,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  filterBtnActive: { borderColor: '#4A90D9', backgroundColor: '#EBF3FD' },
+  filterBtnActive: { borderColor: AppColors.interactive, backgroundColor: AppColors.card },
   filterBadge: {
     position: 'absolute',
     top: 6,
@@ -214,7 +216,7 @@ const styles = StyleSheet.create({
     width: 7,
     height: 7,
     borderRadius: 4,
-    backgroundColor: '#4A90D9',
+    backgroundColor: AppColors.interactive,
   },
   statsRow: {
     flexDirection: 'row',
@@ -222,42 +224,39 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 6,
   },
-  stat: { fontSize: 13, color: '#4A90D9', fontWeight: '500' },
-  list: { paddingHorizontal: 14, paddingBottom: 16, gap: 8 },
+  stat: { fontSize: 13, color: AppColors.interactive, fontWeight: '500' },
+  list: { paddingHorizontal: 10, paddingBottom: 16 },
+  columnWrapper: { gap: 10, marginBottom: 10 },
   card: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#fff',
+    flex: 1,
+    backgroundColor: AppColors.card,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#ebebeb',
-    padding: 12,
+    borderColor: AppColors.border,
+    overflow: 'hidden',
   },
-  swatch: { width: 56, height: 56, borderRadius: 10 },
-  cardInfo: { flex: 1, marginLeft: 12, gap: 2 },
-  colourName: { fontSize: 16, fontWeight: '600', color: '#111' },
-  colourBrand: { fontSize: 13, color: '#888' },
-  tagRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 4, marginTop: 4 },
-  tag: {
-    borderWidth: 1,
-    borderColor: '#ccc',
-    borderRadius: 20,
-    paddingHorizontal: 8,
-    paddingVertical: 2,
+  swatch: { width: '100%', height: 90 },
+  cardBottom: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 10,
+    gap: 6,
   },
-  tagText: { fontSize: 11, color: '#555' },
-  addBtn: {
-    width: 32,
-    height: 32,
-    borderRadius: 8,
-    borderWidth: 1.5,
-    borderColor: '#ccc',
+  cardInfo: { flex: 1, gap: 2 },
+  inventoryBtn: {
+    width: 28,
+    height: 28,
+    borderRadius: 14,
+    borderWidth: 2.5,
+    borderColor: AppColors.muted,
     justifyContent: 'center',
     alignItems: 'center',
-    marginLeft: 8,
   },
-  addBtnActive: { borderColor: '#4A90D9', backgroundColor: '#EBF3FD' },
-  addBtnText: { fontSize: 18, color: '#888', lineHeight: 20 },
-  addBtnTextActive: { fontSize: 14, color: '#4A90D9' },
-  empty: { textAlign: 'center', color: '#999', marginTop: 40 },
+  inventoryBtnActive: {
+    borderColor: AppColors.success,
+    backgroundColor: 'rgba(0,0,0,0.04)',
+  },
+  colourName: { fontSize: 14, fontWeight: '600', color: AppColors.text },
+  colourBrand: { fontSize: 12, color: AppColors.muted },
+  empty: { textAlign: 'center', color: AppColors.muted, marginTop: 40 },
 });

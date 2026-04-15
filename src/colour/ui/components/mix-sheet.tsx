@@ -19,6 +19,7 @@ import { munsellLikeToXYZ } from '@/src/colour/services/munsellToXYZ';
 import { findBestMix, mixPaints, munsellXYZDistance } from '@/src/colour/services/paintMixService';
 import { RGB } from '@/src/colour/ui/types';
 import { IconSymbol } from '@/src/ui/components/icon-symbol';
+import { AppColors } from '@/src/ui/constants/theme';
 
 type Selector = 'A' | 'B';
 
@@ -123,10 +124,10 @@ export function MixSheet({
 
   const matchLabel = useMemo(() => {
     if (distanceToGoal === null) return null;
-    if (distanceToGoal < 5) return { text: 'Excellent match', color: '#2a9d2a' };
-    if (distanceToGoal < 15) return { text: 'Good match', color: '#4A90D9' };
-    if (distanceToGoal < 30) return { text: 'Moderate match', color: '#e09a00' };
-    return { text: 'Far off', color: '#cc3300' };
+    if (distanceToGoal < 5) return { text: 'Excellent match', color: AppColors.success };
+    if (distanceToGoal < 15) return { text: 'Good match', color: AppColors.interactive };
+    if (distanceToGoal < 30) return { text: 'Moderate match', color: AppColors.highlight };
+    return { text: 'Far off', color: AppColors.action };
   }, [distanceToGoal]);
 
   const brands = useMemo(
@@ -306,7 +307,7 @@ export function MixSheet({
                     <Text style={ms.resultSwatchLabel}>Mix result</Text>
                     <Text style={ms.resultHex}>{toHex(mixedRgb!.r, mixedRgb!.g, mixedRgb!.b)}</Text>
                   </View>
-                  <IconSymbol name="arrow.right" size={16} color="#bbb" />
+                  <IconSymbol name="arrow.right" size={16} color={AppColors.muted} />
                   <View style={ms.resultBlock}>
                     <View style={[ms.resultSwatch, { backgroundColor: goalBg }]} />
                     <Text style={ms.resultSwatchLabel}>Goal</Text>
@@ -325,7 +326,7 @@ export function MixSheet({
                   value={search}
                   onChangeText={setSearch}
                   placeholder="Search colours..."
-                  placeholderTextColor="#999"
+                  placeholderTextColor={AppColors.muted}
                   autoFocus
                 />
                 <FlatList
@@ -367,33 +368,33 @@ export function MixSheet({
 }
 
 const ms = StyleSheet.create({
-  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.35)' },
+  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)' },
   panel: {
-    backgroundColor: '#fff',
+    backgroundColor: AppColors.surface,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     paddingHorizontal: 16,
     paddingTop: 12,
     maxHeight: '90%',
   },
-  handle: { width: 36, height: 4, borderRadius: 2, backgroundColor: '#ddd', alignSelf: 'center', marginBottom: 12 },
+  handle: { width: 36, height: 4, borderRadius: 2, backgroundColor: AppColors.border, alignSelf: 'center', marginBottom: 12 },
   titleRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 },
-  title: { fontSize: 17, fontWeight: '700', color: '#111' },
-  closeBtn: { fontSize: 18, color: '#888', padding: 4 },
+  title: { fontSize: 17, fontWeight: '700', color: AppColors.text },
+  closeBtn: { fontSize: 18, color: AppColors.muted, padding: 4 },
   goalRow: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 12,
-    backgroundColor: '#f8f8f8',
+    backgroundColor: AppColors.card,
     borderRadius: 12,
     padding: 12,
     marginBottom: 12,
   },
   goalSwatch: { width: 52, height: 52, borderRadius: 10 },
   goalInfo: { flex: 1 },
-  goalHint: { fontSize: 11, color: '#888', marginBottom: 2 },
-  goalName: { fontSize: 15, fontWeight: '700', color: '#111' },
-  goalBrand: { fontSize: 12, color: '#888' },
+  goalHint: { fontSize: 11, color: AppColors.muted, marginBottom: 2 },
+  goalName: { fontSize: 15, fontWeight: '700', color: AppColors.text },
+  goalBrand: { fontSize: 12, color: AppColors.muted },
   matchBadge: { borderWidth: 1, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 5 },
   matchBadgeText: { fontSize: 11, fontWeight: '700' },
   selectorRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 12 },
@@ -402,70 +403,70 @@ const ms = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: AppColors.card,
     borderRadius: 12,
     padding: 10,
     borderWidth: 1.5,
     borderColor: 'transparent',
   },
-  selectorBtnActive: { borderColor: '#4A90D9', backgroundColor: '#EBF3FD' },
+  selectorBtnActive: { borderColor: AppColors.interactive, backgroundColor: AppColors.card },
   selectorSwatch: { width: 36, height: 36, borderRadius: 8 },
   selectorSwatchEmpty: {
     width: 36,
     height: 36,
     borderRadius: 8,
-    backgroundColor: '#ddd',
+    backgroundColor: AppColors.surface,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  selectorSwatchEmptyText: { fontSize: 14, fontWeight: '700', color: '#999' },
+  selectorSwatchEmptyText: { fontSize: 14, fontWeight: '700', color: AppColors.muted },
   computingRow: { paddingVertical: 24, alignItems: 'center' },
-  computingText: { fontSize: 14, color: '#888' },
+  computingText: { fontSize: 14, color: AppColors.muted },
   selectorInfo: { flex: 1 },
-  selectorLabel: { fontSize: 10, color: '#888', marginBottom: 2 },
-  selectorName: { fontSize: 12, fontWeight: '600', color: '#111' },
-  selectorBrand: { fontSize: 11, color: '#888' },
-  mixOp: { fontSize: 20, color: '#bbb', fontWeight: '400' },
+  selectorLabel: { fontSize: 10, color: AppColors.muted, marginBottom: 2 },
+  selectorName: { fontSize: 12, fontWeight: '600', color: AppColors.text },
+  selectorBrand: { fontSize: 11, color: AppColors.muted },
+  mixOp: { fontSize: 20, color: AppColors.muted, fontWeight: '400' },
   mixResultCard: {
-    backgroundColor: '#f8f8f8',
+    backgroundColor: AppColors.card,
     borderRadius: 12,
     padding: 12,
     gap: 10,
     marginBottom: 12,
   },
   ratioRow: { flexDirection: 'row', alignItems: 'center', gap: 10 },
-  ratioBtn: { width: 32, height: 32, borderRadius: 16, backgroundColor: '#e8e8e8', justifyContent: 'center', alignItems: 'center' },
-  ratioBtnText: { fontSize: 20, color: '#333', lineHeight: 24 },
+  ratioBtn: { width: 32, height: 32, borderRadius: 16, backgroundColor: AppColors.surface, justifyContent: 'center', alignItems: 'center' },
+  ratioBtnText: { fontSize: 20, color: AppColors.text, lineHeight: 24 },
   ratioTrack: { flex: 1, height: 12, borderRadius: 6, flexDirection: 'row', overflow: 'hidden' },
-  ratioFillA: { backgroundColor: '#4A90D9' },
-  ratioFillB: { backgroundColor: '#ddd' },
-  ratioLabel: { fontSize: 12, color: '#666', textAlign: 'center' },
+  ratioFillA: { backgroundColor: AppColors.interactive },
+  ratioFillB: { backgroundColor: AppColors.surface },
+  ratioLabel: { fontSize: 12, color: AppColors.muted, textAlign: 'center' },
   presetRow: { flexDirection: 'row', gap: 8, justifyContent: 'center' },
-  preset: { borderWidth: 1, borderColor: '#ddd', borderRadius: 8, paddingHorizontal: 16, paddingVertical: 6, backgroundColor: '#fff' },
-  presetActive: { borderColor: '#4A90D9', backgroundColor: '#EBF3FD' },
-  presetText: { fontSize: 13, color: '#555' },
-  presetTextActive: { color: '#4A90D9', fontWeight: '600' },
+  preset: { borderWidth: 1, borderColor: AppColors.border, borderRadius: 8, paddingHorizontal: 16, paddingVertical: 6, backgroundColor: AppColors.surface },
+  presetActive: { borderColor: AppColors.interactive, backgroundColor: AppColors.interactive + '18' },
+  presetText: { fontSize: 13, color: AppColors.muted },
+  presetTextActive: { color: AppColors.interactive, fontWeight: '600' },
   resultCompareRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 16 },
   resultBlock: { alignItems: 'center', gap: 4 },
   resultSwatch: { width: 56, height: 56, borderRadius: 10 },
-  resultSwatchLabel: { fontSize: 11, color: '#888' },
-  resultHex: { fontSize: 11, color: '#555', fontWeight: '500' },
-  sectionLabel: { fontSize: 13, fontWeight: '600', color: '#888', textTransform: 'uppercase', letterSpacing: 0.5, marginBottom: 8 },
-  searchInput: { borderWidth: 1, borderColor: '#ddd', borderRadius: 10, paddingHorizontal: 12, paddingVertical: 8, fontSize: 14, backgroundColor: '#fff', marginBottom: 8 },
+  resultSwatchLabel: { fontSize: 11, color: AppColors.muted },
+  resultHex: { fontSize: 11, color: AppColors.text, fontWeight: '500' },
+  sectionLabel: { fontSize: 13, fontWeight: '600', color: AppColors.muted, textTransform: 'uppercase', letterSpacing: 0.5, marginBottom: 8 },
+  searchInput: { borderWidth: 1, borderColor: AppColors.border, borderRadius: 10, paddingHorizontal: 12, paddingVertical: 8, fontSize: 14, backgroundColor: AppColors.card, color: AppColors.text, marginBottom: 8 },
   list: { maxHeight: 200 },
-  colourRow: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingVertical: 10, borderBottomWidth: 1, borderBottomColor: '#f0f0f0' },
-  colourRowActive: { backgroundColor: '#EBF3FD', borderRadius: 10, paddingHorizontal: 8 },
+  colourRow: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingVertical: 10, borderBottomWidth: 1, borderBottomColor: AppColors.border },
+  colourRowActive: { backgroundColor: AppColors.card, borderRadius: 10, paddingHorizontal: 8 },
   colourSwatch: { width: 36, height: 36, borderRadius: 8 },
   colourInfo: { flex: 1 },
-  colourName: { fontSize: 14, fontWeight: '500', color: '#111' },
-  colourBrand: { fontSize: 12, color: '#888' },
-  colourCheck: { fontSize: 16, color: '#4A90D9', fontWeight: '700' },
-  inStockBadge: { backgroundColor: '#EBF3FD', borderRadius: 6, paddingHorizontal: 8, paddingVertical: 4, borderWidth: 1, borderColor: '#4A90D9' },
-  inStockText: { fontSize: 11, color: '#4A90D9', fontWeight: '600' },
+  colourName: { fontSize: 14, fontWeight: '500', color: AppColors.text },
+  colourBrand: { fontSize: 12, color: AppColors.muted },
+  colourCheck: { fontSize: 16, color: AppColors.interactive, fontWeight: '700' },
+  inStockBadge: { backgroundColor: AppColors.interactive + '18', borderRadius: 6, paddingHorizontal: 8, paddingVertical: 4, borderWidth: 1, borderColor: AppColors.interactive },
+  inStockText: { fontSize: 11, color: AppColors.interactive, fontWeight: '600' },
   filterRow: { maxHeight: 40, marginBottom: 8 },
   filterRowContent: { flexDirection: 'row', alignItems: 'center', gap: 8, paddingHorizontal: 2 },
-  filterChip: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 16, borderWidth: 1, borderColor: '#ccc', backgroundColor: '#f5f5f5' },
-  filterChipActive: { borderColor: '#4A90D9', backgroundColor: '#4A90D918' },
-  filterChipText: { fontSize: 13, color: '#555' },
-  filterChipTextActive: { color: '#4A90D9', fontWeight: '600' },
+  filterChip: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 16, borderWidth: 1, borderColor: AppColors.border, backgroundColor: AppColors.card },
+  filterChipActive: { borderColor: AppColors.interactive, backgroundColor: AppColors.interactive + '18' },
+  filterChipText: { fontSize: 13, color: AppColors.muted },
+  filterChipTextActive: { color: AppColors.interactive, fontWeight: '600' },
 });

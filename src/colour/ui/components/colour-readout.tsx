@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { rgbToHex } from '@/src/colour/services/colourPickerService';
 import { RGB } from '@/src/colour/ui/types';
+import { AppColors } from '@/src/ui/constants/theme';
 
 interface Props {
   colour: RGB;
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
     gap: 12,
     paddingHorizontal: 16,
     paddingVertical: 12,
-    backgroundColor: '#222',
+    backgroundColor: AppColors.card,
     borderRadius: 10,
     width: '90%',
   },
@@ -38,16 +39,16 @@ const styles = StyleSheet.create({
     height: 44,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.15)',
+    borderColor: AppColors.border,
   },
   hexText: {
-    color: '#fff',
+    color: AppColors.text,
     fontSize: 16,
     fontWeight: '600',
     letterSpacing: 1,
   },
   rgbText: {
-    color: '#888',
+    color: AppColors.muted,
     fontSize: 12,
     marginTop: 2,
   },
