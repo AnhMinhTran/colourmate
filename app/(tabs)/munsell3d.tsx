@@ -26,6 +26,7 @@ import { MunsellCanvas } from "@/src/colour/ui/components/munsell-canvas";
 import { SpectrumSheet } from "@/src/colour/ui/components/spectrum-sheet";
 import { SqliteInventoryRepository } from "@/src/inventory/repositories/sqliteInventoryRepository";
 import { IconSymbol } from "@/src/ui/components/icon-symbol";
+import { AppColors } from "@/src/ui/constants/theme";
 
 // ---------------------------------------------------------------------------
 // Munsell3DScreen
@@ -154,7 +155,7 @@ export default function Munsell3DScreen() {
             <IconSymbol
               name="magnifyingglass"
               size={18}
-              color={searchMode ? "#4A90D9" : "#555"}
+              color={searchMode ? AppColors.interactive : AppColors.muted}
             />
           </Pressable>
           <Pressable
@@ -164,7 +165,7 @@ export default function Munsell3DScreen() {
             <IconSymbol
               name="scope"
               size={18}
-              color={spectrumMode ? "#4A90D9" : "#555"}
+              color={spectrumMode ? AppColors.interactive : AppColors.muted}
             />
           </Pressable>
           <Pressable
@@ -174,7 +175,7 @@ export default function Munsell3DScreen() {
             <IconSymbol
               name="line.3.horizontal.decrease"
               size={18}
-              color={filterActive ? "#4A90D9" : "#555"}
+              color={filterActive ? AppColors.interactive : AppColors.muted}
             />
             {filterActive && <View style={styles.filterBadge} />}
           </Pressable>
@@ -183,11 +184,11 @@ export default function Munsell3DScreen() {
 
       {searchMode && (
         <View style={styles.searchBar}>
-          <IconSymbol name="magnifyingglass" size={16} color="#aaa" />
+          <IconSymbol name="magnifyingglass" size={16} color={AppColors.muted} />
           <TextInput
             style={styles.searchInput}
             placeholder="Search by name or brand…"
-            placeholderTextColor="#aaa"
+            placeholderTextColor={AppColors.muted}
             value={searchQuery}
             onChangeText={setSearchQuery}
             autoFocus
@@ -195,7 +196,7 @@ export default function Munsell3DScreen() {
           />
           {searchQuery.length > 0 && (
             <Pressable onPress={() => setSearchQuery('')}>
-              <IconSymbol name="xmark.circle.fill" size={16} color="#aaa" />
+              <IconSymbol name="xmark.circle.fill" size={16} color={AppColors.muted} />
             </Pressable>
           )}
         </View>
@@ -285,7 +286,7 @@ export default function Munsell3DScreen() {
 // Styles
 // ---------------------------------------------------------------------------
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: "#f5f5f5" },
+  screen: { flex: 1, backgroundColor: AppColors.bg },
   titleRow: {
     flexDirection: "row",
     alignItems: "center",
@@ -299,19 +300,9 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: "700",
     textAlign: "center",
-    color: "#111",
+    color: AppColors.text,
   },
-  filterBtn: {
-    width: 42,
-    height: 42,
-    backgroundColor: "#fff",
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: "#e0e0e0",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  filterBtnActive: { borderColor: "#4A90D9", backgroundColor: "#EBF3FD" },
+  filterBtnActive: { borderColor: AppColors.interactive, backgroundColor: AppColors.card },
   filterBadge: {
     position: "absolute",
     top: 6,
@@ -319,7 +310,7 @@ const styles = StyleSheet.create({
     width: 7,
     height: 7,
     borderRadius: 4,
-    backgroundColor: "#4A90D9",
+    backgroundColor: AppColors.interactive,
   },
   statsRow: {
     flexDirection: "row",
@@ -328,26 +319,26 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingBottom: 6,
   },
-  stat: { fontSize: 13, color: "#4A90D9", fontWeight: "500" },
-  statSpectrum: { fontSize: 13, color: "#FF8800", fontWeight: "500" },
+  stat: { fontSize: 13, color: AppColors.interactive, fontWeight: "500" },
+  statSpectrum: { fontSize: 13, color: AppColors.warning, fontWeight: "500" },
   canvasContainer: { flex: 1, position: "relative" },
   headerBtns: { flexDirection: "row", gap: 8 },
   headerBtn: {
     width: 42,
     height: 42,
-    backgroundColor: "#fff",
+    backgroundColor: AppColors.surface,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#e0e0e0",
+    borderColor: AppColors.border,
     justifyContent: "center",
     alignItems: "center",
   },
-  headerBtnActive: { borderColor: "#4A90D9", backgroundColor: "#EBF3FD" },
+  headerBtnActive: { borderColor: AppColors.interactive, backgroundColor: AppColors.card },
   resetBtn: {
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 8,
-    backgroundColor: "#FF8800",
+    backgroundColor: AppColors.warning,
   },
   resetBtnText: { fontSize: 12, fontWeight: "600", color: "#fff" },
   statsCenter: { flex: 1, alignItems: "center" },
@@ -358,16 +349,16 @@ const styles = StyleSheet.create({
     marginBottom: 6,
     paddingHorizontal: 12,
     paddingVertical: 8,
-    backgroundColor: "#fff",
+    backgroundColor: AppColors.surface,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#e0e0e0",
+    borderColor: AppColors.border,
     gap: 8,
   },
   searchInput: {
     flex: 1,
     fontSize: 15,
-    color: "#111",
+    color: AppColors.text,
     paddingVertical: 0,
   },
   searchResults: {
@@ -376,17 +367,17 @@ const styles = StyleSheet.create({
     left: 12,
     right: 12,
     maxHeight: 320,
-    backgroundColor: "#fff",
+    backgroundColor: AppColors.card,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#e0e0e0",
+    borderColor: AppColors.border,
     elevation: 6,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.12,
+    shadowOpacity: 0.3,
     shadowRadius: 6,
   },
-  searchEmpty: { padding: 16, fontSize: 14, color: "#999", textAlign: "center" },
+  searchEmpty: { padding: 16, fontSize: 14, color: AppColors.muted, textAlign: "center" },
   searchResultItem: {
     flexDirection: "row",
     alignItems: "center",
@@ -394,10 +385,10 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     gap: 12,
     borderBottomWidth: 1,
-    borderBottomColor: "#f0f0f0",
+    borderBottomColor: AppColors.border,
   },
   searchResultSwatch: { width: 36, height: 36, borderRadius: 8 },
   searchResultText: { flex: 1 },
-  searchResultName: { fontSize: 14, fontWeight: "600", color: "#111" },
-  searchResultBrand: { fontSize: 12, color: "#999", marginTop: 1 },
+  searchResultName: { fontSize: 14, fontWeight: "600", color: AppColors.text },
+  searchResultBrand: { fontSize: 12, color: AppColors.muted, marginTop: 1 },
 });

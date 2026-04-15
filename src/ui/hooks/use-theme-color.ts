@@ -1,21 +1,24 @@
+import { AppColors } from '../constants/theme';
+
+const colorMap = {
+  text: AppColors.text,
+  background: AppColors.bg,
+  tint: AppColors.interactive,
+  icon: AppColors.muted,
+  tabIconDefault: AppColors.muted,
+  tabIconSelected: AppColors.interactive,
+};
+
 /**
- * Learn more about light and dark modes:
- * https://docs.expo.dev/guides/color-schemes/
+ * Returns a themed color value from the AppColors palette.
+ * @param props - Optional light/dark overrides (ignored; dark-only theme)
+ * @param colorName - Semantic color key from the color map
+ * @returns The resolved color string
  */
-
-import { useColorScheme } from 'react-native';
-import { Colors } from '../constants/theme';
-
 export function useThemeColor(
   props: { light?: string; dark?: string },
-  colorName: keyof typeof Colors.light & keyof typeof Colors.dark
+  colorName: keyof typeof colorMap
 ) {
-  const theme = useColorScheme() ?? 'light';
-  const colorFromProps = props[theme];
-
-  if (colorFromProps) {
-    return colorFromProps;
-  } else {
-    return Colors[theme][colorName];
-  }
+  if (props.dark) return props.dark;
+  return colorMap[colorName];
 }

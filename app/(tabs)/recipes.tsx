@@ -15,6 +15,7 @@ import { SqliteColourPointRepository } from "@/src/colour/repositories/sqliteCol
 import { Recipe } from "@/src/recipe/models/recipe";
 import { SqliteRecipeRepository } from "@/src/recipe/repositories/sqliteRecipeRepository";
 import { IconSymbol } from "@/src/ui/components/icon-symbol";
+import { AppColors } from "@/src/ui/constants/theme";
 
 export default function RecipesScreen() {
   const db = useSQLiteContext();
@@ -97,7 +98,7 @@ export default function RecipesScreen() {
                 )}
               </View>
               <Pressable style={styles.deleteBtn} onPress={() => handleDelete(recipe.id)} hitSlop={8}>
-                <IconSymbol name="trash" size={16} color="#e05252" />
+                <IconSymbol name="trash" size={16} color={AppColors.action} />
               </Pressable>
             </Pressable>
           );
@@ -108,7 +109,7 @@ export default function RecipesScreen() {
 }
 
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: "#f5f5f5" },
+  screen: { flex: 1, backgroundColor: AppColors.bg },
   titleRow: {
     flexDirection: "row",
     alignItems: "center",
@@ -116,34 +117,31 @@ const styles = StyleSheet.create({
     paddingTop: 16,
     paddingBottom: 12,
   },
-  title: { flex: 1, fontSize: 28, fontWeight: "700", color: "#111" },
+  title: { flex: 1, fontSize: 28, fontWeight: "700", color: AppColors.text },
   addBtn: {
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: "#4A90D9",
+    backgroundColor: AppColors.interactive,
     justifyContent: "center",
     alignItems: "center",
   },
   list: { padding: 16, gap: 12 },
   empty: { alignItems: "center", paddingTop: 60, gap: 8 },
-  emptyText: { fontSize: 17, fontWeight: "600", color: "#555" },
-  emptyHint: { fontSize: 14, color: "#999" },
+  emptyText: { fontSize: 17, fontWeight: "600", color: AppColors.muted },
+  emptyHint: { fontSize: 14, color: AppColors.muted },
   card: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#fff",
+    backgroundColor: AppColors.card,
     borderRadius: 14,
     padding: 14,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.08,
-    shadowRadius: 4,
-    elevation: 2,
+    borderWidth: 1,
+    borderColor: AppColors.border,
   },
   cardBody: { flex: 1, gap: 4 },
-  cardName: { fontSize: 16, fontWeight: "700", color: "#111" },
-  cardMeta: { fontSize: 13, color: "#888" },
+  cardName: { fontSize: 16, fontWeight: "700", color: AppColors.text },
+  cardMeta: { fontSize: 13, color: AppColors.muted },
   swatchRow: { flexDirection: "row", gap: 4, marginTop: 4 },
   swatch: { width: 22, height: 22, borderRadius: 6 },
   deleteBtn: { padding: 6 },

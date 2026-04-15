@@ -34,6 +34,7 @@ import { useImageTransform } from '@/src/colour/ui/hooks/use-image-transform';
 import { ImageInfo } from '@/src/colour/ui/types';
 import { SqliteInventoryRepository } from '@/src/inventory/repositories/sqliteInventoryRepository';
 import { IconSymbol } from '@/src/ui/components/icon-symbol';
+import { AppColors } from '@/src/ui/constants/theme';
 
 const AnimatedImage = Animated.createAnimatedComponent(Image);
 
@@ -148,7 +149,7 @@ export default function ColourPickerScreen() {
 
       {/* How to use banner */}
       <View style={s.infoBanner}>
-        <IconSymbol name="info.circle" size={18} color="#4A90D9" style={s.infoIcon} />
+        <IconSymbol name="info.circle" size={18} color={AppColors.interactive} style={s.infoIcon} />
         <View style={s.infoTextBlock}>
           <Text style={s.infoTitle}>How to use:</Text>
           <Text style={s.infoBody}>
@@ -163,7 +164,7 @@ export default function ColourPickerScreen() {
           {imageInfo ? 'Drag cursor sample color' : 'Upload an image to start'}
         </Text>
         <Pressable style={s.changeBtn} onPress={pickImage}>
-          <IconSymbol name="square.and.arrow.up" size={14} color="#555" />
+          <IconSymbol name="square.and.arrow.up" size={14} color={AppColors.muted} />
           <Text style={s.changeBtnText}>Change</Text>
         </Pressable>
       </View>
@@ -196,7 +197,7 @@ export default function ColourPickerScreen() {
           </>
         ) : (
           <View style={s.imagePlaceholder}>
-            <IconSymbol name="photo" size={40} color="#666" />
+            <IconSymbol name="photo" size={40} color={AppColors.muted} />
             <Text style={s.imagePlaceholderText}>Tap to upload image</Text>
           </View>
         )}
@@ -244,7 +245,7 @@ export default function ColourPickerScreen() {
             <IconSymbol
               name="line.3.horizontal.decrease"
               size={18}
-              color={filterActive ? '#4A90D9' : '#555'}
+              color={filterActive ? AppColors.interactive : AppColors.muted}
             />
             {filterActive && <View style={s.filterBadge} />}
           </Pressable>
@@ -290,53 +291,53 @@ export default function ColourPickerScreen() {
 // Styles
 // ---------------------------------------------------------------------------
 const s = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: '#f5f5f5' },
+  screen: { flex: 1, backgroundColor: AppColors.bg },
   content: { padding: 16, gap: 14, paddingBottom: 40 },
   title: {
     fontSize: 22,
     fontWeight: '700',
     textAlign: 'center',
-    color: '#111',
+    color: AppColors.text,
     marginBottom: 2,
   },
   infoBanner: {
     flexDirection: 'row',
-    backgroundColor: '#EBF3FD',
+    backgroundColor: AppColors.card,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#B8D4F5',
+    borderColor: AppColors.border,
     padding: 12,
     gap: 10,
     alignItems: 'flex-start',
   },
   infoIcon: { marginTop: 1 },
   infoTextBlock: { flex: 1, gap: 2 },
-  infoTitle: { fontSize: 13, fontWeight: '700', color: '#2A6BB5' },
-  infoBody: { fontSize: 13, color: '#3A5F8A', lineHeight: 18 },
+  infoTitle: { fontSize: 13, fontWeight: '700', color: AppColors.interactive },
+  infoBody: { fontSize: 13, color: AppColors.muted, lineHeight: 18 },
   imageHeaderRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  imageHeaderLabel: { fontSize: 15, fontWeight: '500', color: '#111' },
+  imageHeaderLabel: { fontSize: 15, fontWeight: '500', color: AppColors.text },
   changeBtn: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 5,
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: AppColors.border,
     borderRadius: 8,
     paddingHorizontal: 10,
     paddingVertical: 6,
-    backgroundColor: '#fff',
+    backgroundColor: AppColors.surface,
   },
-  changeBtnText: { fontSize: 13, color: '#555' },
+  changeBtnText: { fontSize: 13, color: AppColors.muted },
   imageContainer: {
     width: '100%',
     aspectRatio: 4 / 3,
     overflow: 'hidden',
     borderRadius: 12,
-    backgroundColor: '#222',
+    backgroundColor: AppColors.surface,
   },
   glHidden: { opacity: 0 },
   imagePlaceholder: {
@@ -345,23 +346,21 @@ const s = StyleSheet.create({
     alignItems: 'center',
     gap: 10,
   },
-  imagePlaceholderText: { color: '#888', fontSize: 14 },
+  imagePlaceholderText: { color: AppColors.muted, fontSize: 14 },
   sampledCard: {
-    backgroundColor: '#fff',
+    backgroundColor: AppColors.card,
     borderRadius: 14,
     padding: 16,
     gap: 12,
-    shadowColor: '#000',
-    shadowOpacity: 0.05,
-    shadowRadius: 4,
-    elevation: 1,
+    borderWidth: 1,
+    borderColor: AppColors.border,
   },
-  sampledTitle: { fontSize: 16, fontWeight: '600', color: '#111' },
+  sampledTitle: { fontSize: 16, fontWeight: '600', color: AppColors.text },
   sampledRow: { flexDirection: 'row', alignItems: 'center', gap: 16 },
   sampledSwatch: { width: 64, height: 64, borderRadius: 10 },
   sampledDetails: { flex: 1 },
-  sampledLabel: { fontSize: 12, color: '#888' },
-  sampledValue: { fontSize: 15, fontWeight: '500', color: '#111' },
+  sampledLabel: { fontSize: 12, color: AppColors.muted },
+  sampledValue: { fontSize: 15, fontWeight: '500', color: AppColors.text },
   findRow: { flexDirection: 'row', gap: 8 },
   findBtn: {
     flex: 1,
@@ -369,22 +368,22 @@ const s = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     gap: 8,
-    backgroundColor: '#111',
+    backgroundColor: AppColors.surface,
     borderRadius: 12,
     paddingVertical: 14,
   },
-  findBtnText: { color: '#fff', fontSize: 15, fontWeight: '600' },
+  findBtnText: { color: AppColors.text, fontSize: 15, fontWeight: '600' },
   filterBtn: {
     width: 48,
     height: 48,
-    backgroundColor: '#fff',
+    backgroundColor: AppColors.surface,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#e0e0e0',
+    borderColor: AppColors.border,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  filterBtnActive: { borderColor: '#4A90D9', backgroundColor: '#EBF3FD' },
+  filterBtnActive: { borderColor: AppColors.interactive, backgroundColor: AppColors.card },
   filterBadge: {
     position: 'absolute',
     top: 8,
@@ -392,16 +391,16 @@ const s = StyleSheet.create({
     width: 7,
     height: 7,
     borderRadius: 4,
-    backgroundColor: '#4A90D9',
+    backgroundColor: AppColors.interactive,
   },
   matchesSection: { gap: 8 },
-  matchesTitle: { fontSize: 15, fontWeight: '600', color: '#111' },
-  noMatches: { fontSize: 14, color: '#999', textAlign: 'center', marginTop: 8 },
+  matchesTitle: { fontSize: 15, fontWeight: '600', color: AppColors.text },
+  noMatches: { fontSize: 14, color: AppColors.muted, textAlign: 'center', marginTop: 8 },
   matchCard: {
-    backgroundColor: '#fff',
+    backgroundColor: AppColors.card,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#ebebeb',
+    borderColor: AppColors.border,
     padding: 12,
     gap: 10,
   },
@@ -409,15 +408,15 @@ const s = StyleSheet.create({
   matchSwatch: { width: 48, height: 48, borderRadius: 8 },
   matchInfo: { flex: 1, gap: 2 },
   matchNameRow: { flexDirection: 'row', alignItems: 'center', gap: 8, flexWrap: 'wrap' },
-  matchName: { fontSize: 15, fontWeight: '600', color: '#111' },
+  matchName: { fontSize: 15, fontWeight: '600', color: AppColors.text },
   inventoryBadge: {
-    backgroundColor: '#111',
+    backgroundColor: AppColors.surface,
     borderRadius: 6,
     paddingHorizontal: 7,
     paddingVertical: 2,
   },
-  inventoryBadgeText: { fontSize: 11, color: '#fff', fontWeight: '500' },
-  matchBrand: { fontSize: 13, color: '#888' },
+  inventoryBadgeText: { fontSize: 11, color: AppColors.interactive, fontWeight: '500' },
+  matchBrand: { fontSize: 13, color: AppColors.muted },
   actionRow: { flexDirection: 'row' },
   mixBtn: {
     flex: 1,
@@ -425,7 +424,7 @@ const s = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     gap: 8,
-    backgroundColor: '#6B4EFF',
+    backgroundColor: AppColors.accent,
     borderRadius: 12,
     paddingVertical: 14,
   },
