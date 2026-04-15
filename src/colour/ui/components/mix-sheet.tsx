@@ -116,20 +116,6 @@ export function MixSheet({
     [paintA, paintB, ratioA]
   );
 
-  const distanceToGoal = useMemo((): number | null => {
-    if (!mixedRgb) return null;
-    const mixXyz = munsellLikeToXYZ(deriveMunsellLikeFromOKLCH(convertSRGBToOKLCH(mixedRgb)));
-    return munsellXYZDistance(mixXyz, goal.coordinate);
-  }, [mixedRgb, goal]);
-
-  const matchLabel = useMemo(() => {
-    if (distanceToGoal === null) return null;
-    if (distanceToGoal < 5) return { text: 'Excellent match', color: AppColors.success };
-    if (distanceToGoal < 15) return { text: 'Good match', color: AppColors.interactive };
-    if (distanceToGoal < 30) return { text: 'Moderate match', color: AppColors.highlight };
-    return { text: 'Far off', color: AppColors.action };
-  }, [distanceToGoal]);
-
   const brands = useMemo(
     () => [...new Set(allColours.filter((c) => c.id !== goal.id).map((c) => c.brand))].sort(),
     [allColours, goal.id]
@@ -186,11 +172,6 @@ export function MixSheet({
             <Text style={ms.goalName}>{goal.name}</Text>
             <Text style={ms.goalBrand}>{goal.brand}</Text>
           </View>
-          {matchLabel && (
-            <View style={[ms.matchBadge, { borderColor: matchLabel.color, backgroundColor: matchLabel.color + '18' }]}>
-              <Text style={[ms.matchBadgeText, { color: matchLabel.color }]}>{matchLabel.text}</Text>
-            </View>
-          )}
         </View>
 
         {/* Filter chips */}
@@ -395,8 +376,6 @@ const ms = StyleSheet.create({
   goalHint: { fontSize: 11, color: AppColors.muted, marginBottom: 2 },
   goalName: { fontSize: 15, fontWeight: '700', color: AppColors.text },
   goalBrand: { fontSize: 12, color: AppColors.muted },
-  matchBadge: { borderWidth: 1, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 5 },
-  matchBadgeText: { fontSize: 11, fontWeight: '700' },
   selectorRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 12 },
   selectorBtn: {
     flex: 1,
