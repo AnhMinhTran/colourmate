@@ -1,5 +1,12 @@
+import mixbox from 'mixbox';
 import { RGB } from '../ui/types';
 
+/**
+ * Computes the Euclidean distance between two points in Munsell XYZ space.
+ * @param a - First XYZ coordinate
+ * @param b - Second XYZ coordinate
+ * @returns Euclidean distance between the two points
+ */
 export function munsellXYZDistance(
   a: { x: number; y: number; z: number },
   b: { x: number; y: number; z: number }
@@ -10,37 +17,18 @@ export function munsellXYZDistance(
   return Math.sqrt(dx * dx + dy * dy + dz * dz);
 }
 
-function linearizeChannel(v: number): number {
-  const c = v / 255;
-  return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
-}
-
-function delinearizeChannel(v: number): number {
-  const c = v <= 0.0031308 ? v * 12.92 : 1.055 * Math.pow(v, 1 / 2.4) - 0.055;
-  return Math.max(0, Math.min(255, Math.round(c * 255)));
-}
-
 /**
- * Mixes two paints using simplified Kubelka-Munk theory.
- * Each linearised RGB channel is treated as a reflectance value.
- * K/S ratios are mixed linearly by concentration then reconstructed
- * back to reflectance, giving better results than geometric mean
- * especially for dark colours and complementary pairs.
- * @param a - First paint RGB
- * @param b - Second paint RGB
- * @param ratioA - Proportion of paint A (0.0 to 1.0)
+ * Mixes two paints using mixbox pigment-based mixing, which produces
+ * more realistic results than linear RGB blending (e.g. blue + yellow = green).
+ * @param a - First paint RGB (each channel 0–255)
+ * @param b - Second paint RGB (each channel 0–255)
+ * @param ratioA - Proportion of paint A (0.0 to 1.0); ratioA=1 returns pure A
+ * @returns Mixed RGB colour
  */
 export function mixPaints(a: RGB, b: RGB, ratioA: number): RGB {
-  const mix = (ca: number, cb: number): number => {
-    const ra = Math.max(linearizeChannel(ca), 1e-6);
-    const rb = Math.max(linearizeChannel(cb), 1e-6);
-    const ksA = (1 - ra) ** 2 / (2 * ra);
-    const ksB = (1 - rb) ** 2 / (2 * rb);
-    const ksMix = ratioA * ksA + (1 - ratioA) * ksB;
-    const rMix = 1 + ksMix - Math.sqrt(ksMix ** 2 + 2 * ksMix);
-    return delinearizeChannel(Math.max(0, Math.min(1, rMix)));
-  };
-  return { r: mix(a.r, b.r), g: mix(a.g, b.g), b: mix(a.b, b.b) };
+  const t = 1 - ratioA;
+  const [r, g, b_] = mixbox.lerp([a.r, a.g, a.b], [b.r, b.g, b.b], t);
+  return { r: r, g: g, b: b_ };
 }
 
 export interface MixSuggestion {
