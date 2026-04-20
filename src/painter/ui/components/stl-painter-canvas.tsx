@@ -9,7 +9,7 @@ import { ParsedSTL } from "../../services/stlLoaderService";
 
 const INITIAL_THETA = Math.PI / 4;
 const INITIAL_PHI = Math.PI / 6;
-const INITIAL_ZOOM = 3;
+const INITIAL_ZOOM = 8;  // Increased from 3 to move camera further back
 const MIN_ZOOM = 0.5;
 const MAX_ZOOM = 10;
 const ORBIT_SENSITIVITY = 0.005;
@@ -46,9 +46,11 @@ export function StlPainterCanvas({
     const thetaRef = useRef(INITIAL_THETA);
     const phiRef = useRef(INITIAL_PHI);
     const zoomRef = useRef(INITIAL_ZOOM);
+    const rollRef = useRef(0);
     const savedThetaRef = useRef(INITIAL_THETA);
     const savedPhiRef = useRef(INITIAL_PHI);
     const savedZoomRef = useRef(INITIAL_ZOOM);
+    const savedRollRef = useRef(0);
     const layoutRef = useRef({ width: 0, height: 0 });
 
     useEffect(() => {
@@ -57,7 +59,15 @@ export function StlPainterCanvas({
 
     useEffect(() => {
         if (parsedSTL) {
-            loadMesh(parsedSTL.positions, parsedSTL.normals, parsedSTL.faceCount);
+            console.log("🎨 Canvas useEffect: parsedSTL available, scheduling mesh load in 100ms");
+            // Give the GL context time to initialize (onContextCreate needs to run first)
+            const timer = setTimeout(() => {
+                console.log("⏱️ 100ms timeout complete, calling loadMesh now");
+                loadMesh(parsedSTL.positions, parsedSTL.normals, parsedSTL.faceCount);
+            }, 100);
+            return () => clearTimeout(timer);
+        } else {
+            console.log("⚠️ Canvas useEffect: parsedSTL is null");
         }
     }, [parsedSTL, loadMesh]);
 
@@ -94,7 +104,7 @@ export function StlPainterCanvas({
         .onUpdate((event) => {
             thetaRef.current = savedThetaRef.current + event.translationX * ORBIT_SENSITIVITY;
             phiRef.current = savedPhiRef.current + event.translationY * ORBIT_SENSITIVITY;
-            updateCamera(thetaRef.current, phiRef.current, zoomRef.current);
+            updateCamera(thetaRef.current, phiRef.current, zoomRef.current, rollRef.current);
         });
 
     const brushPanGesture = Gesture.Pan()
@@ -113,7 +123,17 @@ export function StlPainterCanvas({
         .onUpdate((event) => {
             const newZoom = savedZoomRef.current / event.scale;
             zoomRef.current = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, newZoom));
-            updateCamera(thetaRef.current, phiRef.current, zoomRef.current);
+            updateCamera(thetaRef.current, phiRef.current, zoomRef.current, rollRef.current);
+        });
+
+    const rotationGesture = Gesture.Rotation()
+        .runOnJS(true)
+        .onBegin(() => {
+            savedRollRef.current = rollRef.current;
+        })
+        .onUpdate((event) => {
+            rollRef.current = savedRollRef.current + event.rotation;
+            updateCamera(thetaRef.current, phiRef.current, zoomRef.current, rollRef.current);
         });
 
     const tapGesture = Gesture.Tap()
@@ -126,11 +146,11 @@ export function StlPainterCanvas({
         paintMode === "brush"
             ? Gesture.Race(
                   brushPanGesture,
-                  Gesture.Simultaneous(panGesture, pinchGesture),
+                  Gesture.Simultaneous(panGesture, pinchGesture, rotationGesture),
               )
             : Gesture.Race(
                   tapGesture,
-                  Gesture.Simultaneous(panGesture, pinchGesture),
+                  Gesture.Simultaneous(panGesture, pinchGesture, rotationGesture),
               );
 
     const handleLayout = useCallback(

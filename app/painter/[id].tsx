@@ -1,6 +1,6 @@
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSQLiteContext } from "expo-sqlite";
-import * as FileSystem from "expo-file-system";
+import * as FileSystem from "expo-file-system/legacy";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ActivityIndicator, Alert, Pressable, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -31,7 +31,7 @@ import { useStlPainterScene } from "@/src/painter/ui/hooks/use-stl-painter-scene
 import { IconSymbol } from "@/src/ui/components/icon-symbol";
 import { AppColors } from "@/src/ui/constants/theme";
 
-const MAX_FACES_BEFORE_DECIMATE = 50_000;
+const MAX_FACES_BEFORE_DECIMATE = 500_000;
 
 /**
  * Main painter screen. Loads a saved project, reads the STL file,
@@ -74,45 +74,56 @@ export default function PainterScreen() {
      */
     async function loadProject() {
         try {
+            console.log("📂 Loading project with id:", id);
             const project = await projectRepo.findById(id);
             if (!project) {
+                console.error("❌ Project not found");
                 Alert.alert("Error", "Project not found");
                 router.back();
                 return;
             }
+            console.log("✅ Project found:", project.name, "STL URI:", project.stl_uri);
             setProjectName(project.name);
 
             const fileInfo = await FileSystem.getInfoAsync(project.stl_uri);
             if (!fileInfo.exists) {
+                console.error("❌ STL file not found at:", project.stl_uri);
                 Alert.alert("Error", "STL file not found");
                 router.back();
                 return;
             }
+            console.log("✅ STL file exists, size:", fileInfo.size, "bytes");
 
             const base64 = await FileSystem.readAsStringAsync(project.stl_uri, {
                 encoding: FileSystem.EncodingType.Base64,
             });
+            console.log("📖 Read base64, length:", base64.length);
             const binaryStr = atob(base64);
             const bytes = new Uint8Array(binaryStr.length);
             for (let i = 0; i < binaryStr.length; i++) {
                 bytes[i] = binaryStr.charCodeAt(i);
             }
             const buffer = bytes.buffer;
+            console.log("🔄 Converted to buffer, size:", buffer.byteLength, "bytes");
 
             let stl = parseSTL(buffer);
+            console.log("✅ STL parsed - faceCount:", stl.faceCount, "positions:", stl.positions.length, "normals:", stl.normals.length);
 
-            if (stl.faceCount > MAX_FACES_BEFORE_DECIMATE) {
-                const decimated = decimateMesh(
-                    stl.positions,
-                    stl.normals,
-                    MAX_FACES_BEFORE_DECIMATE,
-                );
-                stl = decimated;
-            }
+            // Decimation disabled to preserve full STL detail
+            // if (stl.faceCount > MAX_FACES_BEFORE_DECIMATE) {
+            //     const decimated = decimateMesh(
+            //         stl.positions,
+            //         stl.normals,
+            //         MAX_FACES_BEFORE_DECIMATE,
+            //     );
+            //     stl = decimated;
+            // }
 
+            console.log("🎨 Calling setParsedSTL with faceCount:", stl.faceCount);
             setParsedSTL(stl);
 
             const savedFaces = await facePaintRepo.findByProjectId(id);
+            console.log("💾 Loaded", savedFaces.length, "previously painted faces");
             const faceMap = new Map<number, FaceEntry>();
             for (const fp of savedFaces) {
                 faceMap.set(fp.face_index, {
@@ -139,7 +150,9 @@ export default function PainterScreen() {
             }, 500);
 
             setLoading(false);
+            console.log("✅ Project loaded successfully");
         } catch (e) {
+            console.error("❌ Project load error:", e);
             Alert.alert("Error", `Failed to load project: ${String(e)}`);
             router.back();
         }

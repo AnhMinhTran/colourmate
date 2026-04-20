@@ -68,17 +68,15 @@ export function PainterToolbar({
             </View>
 
             {paintMode === "brush" && (
-                <View style={styles.sliderRow}>
+                <View style={styles.brushSizeContainer}>
                     <Text style={styles.sliderLabel}>Size</Text>
-                    <View style={styles.sliderContainer}>
-                        <SliderComponent
-                            value={brushRadius}
-                            onValueChange={onBrushRadiusChange}
-                            minimumValue={0.05}
-                            maximumValue={0.5}
-                            step={0.01}
-                        />
-                    </View>
+                    <SliderComponent
+                        value={brushRadius}
+                        onValueChange={onBrushRadiusChange}
+                        minimumValue={0.05}
+                        maximumValue={0.5}
+                        step={0.01}
+                    />
                     <Text style={styles.sliderValue}>{brushRadius.toFixed(2)}</Text>
                 </View>
             )}
@@ -123,77 +121,89 @@ function SliderComponent({
 const styles = StyleSheet.create({
     container: {
         position: "absolute",
-        bottom: 0,
-        left: 0,
-        right: 0,
-        backgroundColor: "rgba(15, 15, 26, 0.9)",
-        borderTopLeftRadius: 16,
-        borderTopRightRadius: 16,
-        paddingHorizontal: 16,
-        paddingTop: 12,
-        paddingBottom: 8,
+        top: 16,
+        left: 16,
+        bottom: 16,
+        backgroundColor: "rgba(15, 15, 26, 0.95)",
+        borderRadius: 16,
+        paddingVertical: 12,
+        paddingHorizontal: 12,
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        gap: 12,
+        width: 70,
     },
     row: {
-        flexDirection: "row",
+        flexDirection: "column",
         alignItems: "center",
-        justifyContent: "space-around",
+        justifyContent: "flex-start",
         gap: 12,
     },
     paletteBtn: {
-        flexDirection: "row",
+        flexDirection: "column",
         alignItems: "center",
-        gap: 8,
-        paddingVertical: 8,
-        paddingHorizontal: 12,
+        gap: 6,
+        paddingVertical: 10,
+        paddingHorizontal: 8,
         backgroundColor: AppColors.card,
         borderRadius: 10,
+        width: "100%",
     },
     activeColourSwatch: {
-        width: 24,
-        height: 24,
-        borderRadius: 6,
+        width: 36,
+        height: 36,
+        borderRadius: 8,
         borderWidth: 1,
         borderColor: AppColors.border,
     },
     modeBtn: {
-        flexDirection: "row",
+        flexDirection: "column",
         alignItems: "center",
-        gap: 6,
-        paddingVertical: 8,
-        paddingHorizontal: 12,
+        gap: 4,
+        paddingVertical: 10,
+        paddingHorizontal: 8,
         backgroundColor: AppColors.card,
         borderRadius: 10,
         borderWidth: 1,
         borderColor: "transparent",
+        width: "100%",
     },
     modeBtnActive: {
         borderColor: AppColors.interactive,
     },
     resetBtn: {
-        flexDirection: "row",
+        flexDirection: "column",
         alignItems: "center",
-        gap: 6,
-        paddingVertical: 8,
-        paddingHorizontal: 12,
+        gap: 4,
+        paddingVertical: 10,
+        paddingHorizontal: 8,
         backgroundColor: AppColors.card,
         borderRadius: 10,
+        width: "100%",
     },
     btnText: {
-        fontSize: 13,
+        fontSize: 11,
         fontWeight: "600",
         color: AppColors.text,
+        textAlign: "center",
     },
     btnTextActive: {
         color: AppColors.interactive,
     },
-    sliderRow: {
-        flexDirection: "row",
+    brushSizeContainer: {
+        flexDirection: "column",
         alignItems: "center",
-        marginTop: 8,
-        gap: 8,
+        marginTop: 12,
+        gap: 6,
+        width: "100%",
+        backgroundColor: AppColors.card,
+        borderRadius: 10,
+        paddingVertical: 10,
+        paddingHorizontal: 8,
     },
     sliderLabel: {
-        fontSize: 13,
+        fontSize: 11,
         color: AppColors.muted,
         fontWeight: "500",
     },
@@ -201,11 +211,10 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     sliderValue: {
-        fontSize: 13,
+        fontSize: 11,
         color: AppColors.text,
         fontWeight: "500",
-        width: 40,
-        textAlign: "right",
+        textAlign: "center",
     },
     fallbackSlider: {
         flex: 1,
